@@ -1,8 +1,8 @@
 {
-  "versionName": "2.6.2-REL",
-  "versionCode": 67,
+  "versionName": "2.6.3-REL",
+  "versionCode": 68,
   "testing": false,
-  "buildTime": "2025-12-15 22:40:05",
-  "releaseVersion": "v2.6.2-REL-stable",
-  "releaseFilename": "netamade-stable-2.6.2-REL-67.apk"
+  "buildTime": "2025-12-16 22:04:44",
+  "releaseVersion": "v2.6.3-REL-stable",
+  "releaseFilename": "netamade-stable-2.6.3-REL-68.apk"
 }
