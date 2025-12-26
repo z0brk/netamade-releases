@@ -1,8 +1,8 @@
 {
-  "versionName": "2.7.5-TEST-1225_0947",
-  "versionCode": 81,
+  "versionName": "2.7.8-TEST-1226_2227",
+  "versionCode": 84,
   "testing": true,
-  "buildTime": "2025-12-25 09:50:59",
-  "releaseVersion": "v2.7.5-TEST-1225_0947-testing",
-  "releaseFilename": "netamade-testing-2.7.5-TEST-1225_0947-81.apk"
+  "buildTime": "2025-12-26 22:29:30",
+  "releaseVersion": "v2.7.8-TEST-1226_2227-testing",
+  "releaseFilename": "netamade-testing-2.7.8-TEST-1226_2227-84.apk"
 }
