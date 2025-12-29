@@ -1,8 +1,8 @@
 {
-  "versionName": "2.8.0-REL",
+  "versionName": "2.8.1-REL",
   "versionCode": 85,
   "testing": false,
-  "buildTime": "2025-12-28 21:17:47",
-  "releaseVersion": "v2.8.0-REL-stable",
-  "releaseFilename": "netamade-stable-2.8.0-REL-85.apk"
+  "buildTime": "2025-12-29 21:34:52",
+  "releaseVersion": "v2.8.1-REL-stable",
+  "releaseFilename": "netamade-stable-2.8.1-REL-85.apk"
 }
