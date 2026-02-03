@@ -1,8 +1,8 @@
 {
-  "versionName": "3.3.5-TEST-0203_0013",
+  "versionName": "3.3.5-TEST-0203_1102",
   "versionCode": 111,
   "testing": true,
-  "buildTime": "2026-02-03 00:17:02",
-  "releaseVersion": "v3.3.5-TEST-0203_0013-testing",
-  "releaseFilename": "netamade-testing-3.3.5-TEST-0203_0013-111.apk"
+  "buildTime": "2026-02-03 11:05:00",
+  "releaseVersion": "v3.3.5-TEST-0203_1102-testing",
+  "releaseFilename": "netamade-testing-3.3.5-TEST-0203_1102-111.apk"
 }
