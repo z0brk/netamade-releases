@@ -1,8 +1,8 @@
 {
-  "versionName": "3.6.9-TEST-0413_2037",
-  "versionCode": 139,
+  "versionName": "3.6.10-TEST-0413_2337",
+  "versionCode": 140,
   "testing": true,
-  "buildTime": "2026-04-13 20:40:18",
-  "releaseVersion": "v3.6.9-TEST-0413_2037-testing",
-  "releaseFilename": "netamade-testing-3.6.9-TEST-0413_2037-139.apk"
+  "buildTime": "2026-04-13 23:40:24",
+  "releaseVersion": "v3.6.10-TEST-0413_2337-testing",
+  "releaseFilename": "netamade-testing-3.6.10-TEST-0413_2337-140.apk"
 }
