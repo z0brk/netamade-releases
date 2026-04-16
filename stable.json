@@ -1,8 +1,8 @@
 {
-  "versionName": "3.7.1-REL",
-  "versionCode": 145,
+  "versionName": "3.7.2-REL",
+  "versionCode": 146,
   "testing": false,
-  "buildTime": "2026-04-15 23:24:49",
-  "releaseVersion": "v3.7.1-REL-stable",
-  "releaseFilename": "netamade-stable-3.7.1-REL-145.apk"
+  "buildTime": "2026-04-16 20:52:01",
+  "releaseVersion": "v3.7.2-REL-stable",
+  "releaseFilename": "netamade-stable-3.7.2-REL-146.apk"
 }
