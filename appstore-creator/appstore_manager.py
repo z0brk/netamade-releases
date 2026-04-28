@@ -3,13 +3,16 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import shutil
 import uuid
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from pyaxmlparser import APK
+from pyaxmlparser.axmlprinter import AXMLPrinter
 
 INCOMPATIBILITY_OPTIONS = ["ALL", "EP32", "EP36", "EP40", "EP41"]
 ICON_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
@@ -45,24 +48,31 @@ def extract_icon_from_apk(apk_path: Path, output_dir: Path, output_name: str = "
         parser = APK(str(apk_path))
     except Exception:  # noqa: BLE001
         return None
-    candidates: list[str] = []
+    candidate_scores: dict[str, int] = {}
 
+    # 1) 走 Manifest -> resources 的精确解析，优先级最高
+    for file_name in _resolve_manifest_icon_candidates(parser):
+        if Path(file_name).suffix.lower() in ICON_EXTENSIONS:
+            candidate_scores[file_name] = max(candidate_scores.get(file_name, -1), 100 + _icon_candidate_score(file_name))
+
+    # 2) 兼容 pyaxmlparser 直接给出的 icon 文件路径
     icon_info = parser.get_app_icon()
     if icon_info and Path(icon_info).suffix.lower() in ICON_EXTENSIONS:
-        candidates.append(icon_info)
+        candidate_scores[icon_info] = max(candidate_scores.get(icon_info, -1), 90 + _icon_candidate_score(icon_info))
 
+    # 3) 回退兜底：按文件名关键词扫描
     for file_name in parser.get_files():
         lower = file_name.lower()
         ext = Path(lower).suffix
         if ext not in ICON_EXTENSIONS:
             continue
         if "ic_launcher" in lower or "app_icon" in lower or "/icon" in lower:
-            candidates.append(file_name)
+            candidate_scores[file_name] = max(candidate_scores.get(file_name, -1), _icon_candidate_score(file_name))
 
-    if not candidates:
+    if not candidate_scores:
         return None
 
-    ranked_candidates = sorted(set(candidates), key=_icon_candidate_score, reverse=True)
+    ranked_candidates = sorted(candidate_scores.keys(), key=lambda item: candidate_scores[item], reverse=True)
     output_dir.mkdir(parents=True, exist_ok=True)
     for icon_file in ranked_candidates:
         try:
@@ -79,6 +89,185 @@ def extract_icon_from_apk(apk_path: Path, output_dir: Path, output_name: str = "
         return output_path
 
     return None
+
+
+def _resolve_manifest_icon_candidates(parser: APK) -> list[str]:
+    if not hasattr(parser, "get_android_resources"):
+        return []
+    res_parser = parser.get_android_resources()
+    if not res_parser:
+        return []
+
+    refs: list[str] = []
+    try:
+        main_activity_name = parser.get_main_activity()
+        if main_activity_name:
+            activity_icon = parser.get_attribute_value("activity", "icon", name=main_activity_name)
+            if activity_icon:
+                refs.append(activity_icon)
+    except Exception:  # noqa: BLE001
+        pass
+
+    try:
+        app_icon = parser.get_attribute_value("application", "icon")
+        if app_icon:
+            refs.append(app_icon)
+    except Exception:  # noqa: BLE001
+        pass
+
+    if not refs:
+        for type_name in ("mipmap", "drawable"):
+            try:
+                res_id = res_parser.get_res_id_by_key(parser.package, type_name, "ic_launcher")
+            except Exception:  # noqa: BLE001
+                res_id = None
+            if res_id:
+                refs.append(f"@{res_id:x}")
+
+    results: list[str] = []
+    seen: set[str] = set()
+    for ref in refs:
+        for file_name in _resolve_resource_ref_to_files(ref, parser, res_parser, depth=0, visited_refs=set()):
+            if file_name not in seen:
+                seen.add(file_name)
+                results.append(file_name)
+    return results
+
+
+def _resolve_resource_ref_to_files(
+    ref: str,
+    parser: APK,
+    res_parser: Any,
+    depth: int,
+    visited_refs: set[str],
+) -> list[str]:
+    if not ref or depth > 6:
+        return []
+    ref = ref.strip()
+    if not ref:
+        return []
+    if ref in visited_refs:
+        return []
+    visited_refs.add(ref)
+
+    ext = Path(ref).suffix.lower()
+    if ext in ICON_EXTENSIONS:
+        return [ref]
+    if ext == ".xml":
+        return _resolve_icon_files_from_adaptive_xml(ref, parser, res_parser, depth, visited_refs)
+
+    if not ref.startswith("@"):
+        return []
+
+    res_id = _resolve_res_id_from_ref(ref, parser.package, res_parser)
+    if not res_id:
+        return []
+
+    try:
+        configs = res_parser.get_resolved_res_configs(res_id)
+    except Exception:  # noqa: BLE001
+        configs = []
+    files: list[str] = []
+    for item in configs:
+        file_name = item[1] if isinstance(item, tuple) and len(item) > 1 else None
+        if not isinstance(file_name, str):
+            continue
+        file_name = file_name.strip()
+        if not file_name:
+            continue
+        item_ext = Path(file_name).suffix.lower()
+        if item_ext in ICON_EXTENSIONS:
+            files.append(file_name)
+            continue
+        if item_ext == ".xml":
+            files.extend(_resolve_icon_files_from_adaptive_xml(file_name, parser, res_parser, depth + 1, visited_refs))
+    return _dedupe_keep_order(files)
+
+
+def _resolve_res_id_from_ref(ref: str, package_name: str, res_parser: Any) -> int | None:
+    # @7f080123 / @android:7f080123 / @mipmap/ic_launcher / @android:mipmap/ic_launcher
+    value = ref[1:]
+    if ":" in value:
+        _, value = value.split(":", 1)
+    if "/" in value:
+        type_name, name = value.split("/", 1)
+        try:
+            return res_parser.get_res_id_by_key(package_name, type_name, name)
+        except Exception:  # noqa: BLE001
+            return None
+    try:
+        return int(value, 16)
+    except ValueError:
+        return None
+
+
+def _resolve_icon_files_from_adaptive_xml(
+    xml_file: str,
+    parser: APK,
+    res_parser: Any,
+    depth: int,
+    visited_refs: set[str],
+) -> list[str]:
+    try:
+        raw = parser.get_file(xml_file)
+    except Exception:  # noqa: BLE001
+        return []
+    if not raw:
+        return []
+
+    xml_root = _parse_android_xml(raw)
+    if xml_root is None:
+        return []
+
+    refs: list[str] = []
+    for element in xml_root.iter():
+        tag_name = _xml_local_name(element.tag).lower()
+        if tag_name not in {"adaptive-icon", "foreground", "background", "monochrome"}:
+            continue
+        for attr_key, attr_value in element.attrib.items():
+            if _xml_local_name(attr_key).lower() == "drawable" and isinstance(attr_value, str) and attr_value.strip():
+                refs.append(attr_value.strip())
+
+    files: list[str] = []
+    for ref in refs:
+        files.extend(_resolve_resource_ref_to_files(ref, parser, res_parser, depth + 1, visited_refs))
+    return _dedupe_keep_order(files)
+
+
+def _parse_android_xml(raw: bytes):
+    stripped = raw.lstrip()
+    if stripped.startswith(b"<"):
+        try:
+            return ET.fromstring(raw)
+        except Exception:  # noqa: BLE001
+            pass
+    try:
+        printer = AXMLPrinter(raw)
+        if printer.is_valid():
+            return printer.get_xml_obj()
+    except Exception:  # noqa: BLE001
+        pass
+    return None
+
+
+def _xml_local_name(name: Any) -> str:
+    text = str(name or "")
+    if "}" in text:
+        return text.split("}", 1)[1]
+    if ":" in text:
+        return text.split(":", 1)[1]
+    return text
+
+
+def _dedupe_keep_order(items: list[str]) -> list[str]:
+    seen: set[str] = set()
+    result: list[str] = []
+    for item in items:
+        if item in seen:
+            continue
+        seen.add(item)
+        result.append(item)
+    return result
 
 
 def normalize_incompatibility(values: list[str]) -> list[str]:
@@ -231,6 +420,40 @@ class AppStoreManager:
                 del apps[idx]
                 return True
         return False
+
+    def cleanup_entry_assets(self, data: dict[str, Any], deleted_entry: dict[str, Any]) -> bool:
+        """
+        删除应用后清理其 apks 目录；如果仍被其他应用引用则不删。
+        """
+        code = infer_existing_code(deleted_entry)
+        if not code:
+            return False
+        for app in data.get("apps", []):
+            if infer_existing_code(app) == code:
+                return False
+        target_dir = self.apks_dir / code
+        if target_dir.is_dir():
+            shutil.rmtree(target_dir, ignore_errors=True)
+            return True
+        return False
+
+    def cleanup_orphan_asset_dirs(self, data: dict[str, Any]) -> list[str]:
+        """
+        清理 apks 目录下不在 appstore.json 应用列表中引用的目录。
+        返回被删除的目录名列表。
+        """
+        referenced_codes = {infer_existing_code(app) for app in data.get("apps", [])}
+        referenced_codes.discard(None)
+        removed: list[str] = []
+        for item in self.apks_dir.iterdir():
+            if not item.is_dir():
+                continue
+            if item.name in referenced_codes:
+                continue
+            shutil.rmtree(item, ignore_errors=True)
+            removed.append(item.name)
+        removed.sort()
+        return removed
 
     def ensure_category(self, data: dict[str, Any], category: str) -> None:
         categories = data.setdefault("categories", [])

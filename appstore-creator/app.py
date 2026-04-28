@@ -268,10 +268,15 @@ def delete_app():
 
     data = manager.load_data()
     manager.ensure_entry_ids(data)
+    deleted_entry = find_entry_by_id(data.get("apps", []), entry_id)
+    if not deleted_entry:
+        flash(f"未找到应用: {entry_id}", "error")
+        return redirect(url_for("index"))
     deleted = manager.delete_entry(data, entry_id)
     if not deleted:
         flash(f"未找到应用: {entry_id}", "error")
         return redirect(url_for("index"))
+    manager.cleanup_entry_assets(data, deleted_entry)
 
     manager.save_data(data)
     flash(f"已删除应用: {entry_id}", "success")

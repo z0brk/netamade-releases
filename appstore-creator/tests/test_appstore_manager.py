@@ -85,6 +85,30 @@ class AppStoreManagerTests(unittest.TestCase):
         self.assertTrue(deleted)
         self.assertEqual(data["apps"], [])
 
+    def test_cleanup_entry_assets(self) -> None:
+        data = self.manager.load_data()
+        app_dir = self.apks_dir / "sfgj-abcd12"
+        app_dir.mkdir(parents=True, exist_ok=True)
+        (app_dir / "demo.apk").write_bytes(b"1")
+        entry = data["apps"][0]
+        data["apps"].clear()
+        removed = self.manager.cleanup_entry_assets(data, entry)
+        self.assertTrue(removed)
+        self.assertFalse(app_dir.exists())
+
+    def test_cleanup_orphan_asset_dirs(self) -> None:
+        data = self.manager.load_data()
+        keep = self.apks_dir / "sfgj-abcd12"
+        keep.mkdir(parents=True, exist_ok=True)
+        (keep / "keep.apk").write_bytes(b"1")
+        orphan = self.apks_dir / "orphan-1"
+        orphan.mkdir(parents=True, exist_ok=True)
+        (orphan / "orphan.apk").write_bytes(b"1")
+        removed = self.manager.cleanup_orphan_asset_dirs(data)
+        self.assertIn("orphan-1", removed)
+        self.assertFalse(orphan.exists())
+        self.assertTrue(keep.exists())
+
     def test_backfill_entry_metadata_fill_code_only(self) -> None:
         app_dir = self.apks_dir / "demo-100001"
         app_dir.mkdir(parents=True, exist_ok=True)
@@ -118,6 +142,65 @@ class AppStoreManagerTests(unittest.TestCase):
         assert icon_path is not None
         self.assertTrue(icon_path.is_file())
         self.assertEqual(icon_path.read_bytes(), b"icon-bytes")
+
+    def test_extract_icon_from_apk_adaptive_icon_xml(self) -> None:
+        class FakeRes:
+            def get_res_id_by_key(self, package: str, type_name: str, name: str):
+                mapping = {
+                    ("com.demo.app", "mipmap", "ic_launcher"): 0x7F080001,
+                    ("com.demo.app", "mipmap", "ic_launcher_foreground"): 0x7F080002,
+                }
+                return mapping.get((package, type_name, name))
+
+            def get_resolved_res_configs(self, res_id: int):
+                if res_id == 0x7F080001:
+                    return [(object(), "res/mipmap-anydpi-v26/ic_launcher.xml")]
+                if res_id == 0x7F080002:
+                    return [(object(), "res/mipmap-xxhdpi/ic_launcher_foreground.png")]
+                return []
+
+        class FakeAPK:
+            package = "com.demo.app"
+
+            def __init__(self, _: str) -> None:
+                pass
+
+            def get_android_resources(self):
+                return FakeRes()
+
+            def get_main_activity(self):
+                return None
+
+            def get_attribute_value(self, kind: str, key: str, name: str | None = None):
+                if kind == "application" and key == "icon":
+                    return "@mipmap/ic_launcher"
+                return None
+
+            def get_app_icon(self):
+                return None
+
+            def get_files(self):
+                return []
+
+            def get_file(self, filename: str) -> bytes:
+                if filename == "res/mipmap-anydpi-v26/ic_launcher.xml":
+                    return (
+                        b'<?xml version="1.0" encoding="utf-8"?>'
+                        b'<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">'
+                        b'<foreground android:drawable="@mipmap/ic_launcher_foreground"/>'
+                        b"</adaptive-icon>"
+                    )
+                if filename == "res/mipmap-xxhdpi/ic_launcher_foreground.png":
+                    return b"fg-icon"
+                return b""
+
+        output_dir = self.tmp_root / "icons2"
+        with patch("appstore_manager.APK", FakeAPK):
+            icon_path = extract_icon_from_apk(Path("fake.apk"), output_dir)
+        self.assertIsNotNone(icon_path)
+        assert icon_path is not None
+        self.assertEqual(icon_path.name, "icon.png")
+        self.assertEqual(icon_path.read_bytes(), b"fg-icon")
 
     def test_find_entry_by_id(self) -> None:
         data = self.manager.load_data()
