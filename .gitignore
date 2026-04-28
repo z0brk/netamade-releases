@@ -2,6 +2,6 @@
 .idea/
 .vscode/
 
-appstore-creator/.venv/
-appstore-creator/__pycache__/
-appstore-creator/tests/__pycache__/
+.venv/
+__pycache__/
+tests/__pycache__/

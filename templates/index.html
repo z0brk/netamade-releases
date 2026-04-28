@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppStore Creator</title>
+    <style>
+      :root {
+        --bg: #f5f6f8;
+        --panel: #ffffff;
+        --panel-soft: #f8f9fb;
+        --line: #e5e7eb;
+        --text: #111827;
+        --muted: #6b7280;
+        --primary: #0a84ff;
+        --danger: #d61f3a;
+        --radius: 16px;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: radial-gradient(circle at top, #eef6ff, var(--bg) 28%);
+        color: var(--text);
+        font-family: "SF Pro Display", "SF Pro Text", "PingFang SC", sans-serif;
+      }
+      .wrap {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: clamp(12px, 2.2vw, 28px) clamp(12px, 2.2vw, 32px) clamp(20px, 3vw, 40px);
+      }
+      .hero {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        margin-bottom: 16px;
+        box-shadow: 0 10px 25px rgba(17, 24, 39, 0.05);
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: 30px;
+        letter-spacing: 0.2px;
+      }
+      .hero p {
+        margin: 8px 0 0;
+        color: var(--muted);
+      }
+      .tabs {
+        display: flex;
+        gap: 10px;
+        margin: 16px 0;
+      }
+      .tab-btn {
+        appearance: none;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
+        font-weight: 600;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+      .tab-btn.active {
+        color: #fff;
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .panel {
+        display: none;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(17, 24, 39, 0.05);
+      }
+      .panel.active { display: block; }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 22px;
+      }
+      .sub {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
+      .flash {
+        margin: 10px 0 0;
+        border-radius: 12px;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        font-size: 14px;
+      }
+      .flash.success { color: #166534; background: #ecfdf3; border-color: #b8f0d2; }
+      .flash.error { color: #991b1b; background: #fef2f2; border-color: #fecaca; }
+      textarea, input[type="text"], input[type="file"], select {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px 12px;
+        font: inherit;
+        background: #fff;
+      }
+      textarea { min-height: 112px; resize: vertical; }
+      button {
+        appearance: none;
+        border: 0;
+        border-radius: 12px;
+        background: var(--primary);
+        color: #fff;
+        padding: 10px 16px;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn-ghost {
+        background: #fff;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+      .btn-danger { background: var(--danger); }
+      .upload-card {
+        border: 1px dashed #cdd5df;
+        border-radius: 14px;
+        padding: 18px;
+        background: var(--panel-soft);
+      }
+      .app-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(clamp(220px, 23vw, 320px), 1fr));
+        gap: clamp(10px, 1.4vw, 16px);
+      }
+      .filter-wrap {
+        margin-top: 12px;
+      }
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .filter-btn {
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .filter-btn.active {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: #eef6ff;
+      }
+      .filter-summary {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .app-item {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px;
+        background: #fff;
+        cursor: pointer;
+      }
+      .app-head {
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        gap: 10px;
+        align-items: center;
+      }
+      .app-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        object-fit: cover;
+        background: #eef2f7;
+      }
+      .app-name {
+        margin: 0;
+        font-size: 17px;
+      }
+      .app-package {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 12px;
+        word-break: break-all;
+      }
+      .app-desc {
+        margin-top: 8px;
+        color: #374151;
+        font-size: 14px;
+        line-height: 1.45;
+        min-height: 42px;
+      }
+      .app-meta {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .cats-list {
+        display: grid;
+        gap: 10px;
+      }
+      .cat-row {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        gap: 8px;
+        align-items: center;
+      }
+      dialog {
+        width: min(860px, calc(100% - 24px));
+        border: 0;
+        border-radius: 18px;
+        padding: 0;
+      }
+      dialog::backdrop { background: rgba(17, 24, 39, 0.42); }
+      .dialog-wrap { padding: 18px; }
+      .dialog-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+      .dialog-top h3 { margin: 0; font-size: 22px; }
+      .dialog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 10px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 12px;
+      }
+      .icon-preview {
+        margin-top: 8px;
+        width: 92px;
+        height: 92px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        object-fit: cover;
+        background: #eef2f7;
+      }
+      .dialog-actions {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+      .sr { display: none; }
+      @media (max-width: 700px) {
+        .wrap { padding: 16px; }
+        .hero h1 { font-size: 25px; }
+        .cat-row { grid-template-columns: 1fr auto; }
+      }
+      @media (min-width: 1700px) {
+        .app-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>AppStore Creator</h1>
+        <p>管理公告、应用与分类。上传 APK 后自动解析元数据并弹出编辑对话框。</p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </section>
+
+      <nav class="tabs" aria-label="主标签页">
+        <button type="button" class="tab-btn active" data-tab="notice">公告</button>
+        <button type="button" class="tab-btn" data-tab="apps">应用列表</button>
+        <button type="button" class="tab-btn" data-tab="categories">分类</button>
+      </nav>
+
+      <section class="panel active" id="panel-notice">
+        <h2>公告</h2>
+        <p class="sub">客户端首页公告文案。</p>
+        <form action="/notice" method="post">
+          <textarea id="notice" name="notice" placeholder="请输入公告">{{ notice }}</textarea>
+          <div class="dialog-actions">
+            <button type="submit">保存公告</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-apps">
+        <h2>应用列表</h2>
+        <p class="sub">上传新区包或点击已有应用编辑。共 {{ apps|length }} 个应用。</p>
+        <div class="upload-card">
+          <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
+            <input id="apk" name="apk" type="file" accept=".apk,.apk.1,.1,application/vnd.android.package-archive" class="sr" required />
+            <button type="button" id="upload-btn">上传 APK</button>
+          </form>
+        </div>
+        <div class="filter-wrap">
+          <div class="filter-bar" id="cat-filter"></div>
+          <div class="filter-summary" id="filter-summary"></div>
+        </div>
+        <div class="app-grid" style="margin-top: 14px;">
+          {% for app in apps %}
+            <article class="app-item edit-app-btn" data-app-id="{{ app.id }}" data-category="{{ app.category or '未分类' }}" tabindex="0" role="button">
+              <div class="app-head">
+                <img class="app-icon" src="{{ preview_asset_url(app.icon) }}" alt="{{ app.name }} icon" />
+                <div>
+                  <h3 class="app-name">{{ app.name }}</h3>
+                  <div class="app-package">{{ app.package }}</div>
+                </div>
+              </div>
+              <div class="app-desc">{{ app.description or "暂无描述" }}</div>
+              <div class="app-meta">分类: {{ app.category or "-" }} · 版本: {{ app.versionName or "-" }}</div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="panel" id="panel-categories">
+        <h2>分类</h2>
+        <p class="sub">按列表形式管理分类顺序。</p>
+        <form action="/categories" method="post" id="categories-form">
+          <div class="cats-list" id="cats-list">
+            {% for category in categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="{{ category }}" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endfor %}
+            {% if not categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="未分类" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endif %}
+          </div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="cat-add">新增分类</button>
+            <button type="submit">保存分类</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <dialog id="edit-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top">
+          <h3 id="dialog-title">编辑应用</h3>
+          <button type="button" id="dialog-close" class="btn-ghost">关闭</button>
+        </div>
+        <form action="/apps/update" method="post" id="edit-form">
+          <input type="hidden" name="app_id" id="edit-id-hidden" />
+          <div class="dialog-grid">
+            <div>
+              <label for="edit-name">名称</label>
+              <input id="edit-name" name="name" type="text" required />
+            </div>
+            <div>
+              <label for="edit-category">分类</label>
+              <select id="edit-category" name="category"></select>
+            </div>
+            <div>
+              <label for="edit-package">package</label>
+              <input id="edit-package" name="package" type="text" />
+            </div>
+            <div>
+              <label for="edit-version">versionName</label>
+              <input id="edit-version" name="versionName" type="text" />
+            </div>
+            <div>
+              <label for="edit-code">code</label>
+              <input id="edit-code" name="code" type="text" />
+            </div>
+            <div>
+              <label for="edit-filesize">filesize</label>
+              <input id="edit-filesize" name="filesize" type="text" />
+            </div>
+            <div>
+              <label for="edit-md5sum">md5sum</label>
+              <input id="edit-md5sum" name="md5sum" type="text" />
+            </div>
+            <div>
+              <label for="edit-update-time">updateTime</label>
+              <input id="edit-update-time" name="updateTime" type="text" />
+            </div>
+            <div>
+              <label for="edit-icon">icon</label>
+              <input id="edit-icon" name="icon" type="text" />
+              <img id="preview-icon" class="icon-preview" src="" alt="icon preview" />
+            </div>
+            <div>
+              <label for="edit-apk">apk</label>
+              <input id="edit-apk" name="apk" type="text" />
+            </div>
+          </div>
+          <div style="margin-top:10px;">
+            <label for="edit-description">描述</label>
+            <textarea id="edit-description" name="description"></textarea>
+          </div>
+          <div style="margin-top:10px;">
+            <label>incompatibility</label>
+            <div class="chips">
+              {% for value in incompatibility_options %}
+                <label class="chip">
+                  <input type="checkbox" class="edit-incompatibility" name="incompatibility" value="{{ value }}" />
+                  {{ value }}
+                </label>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="dialog-actions">
+            <button type="submit">保存修改</button>
+          </div>
+        </form>
+        <form action="/apps/delete" method="post" id="delete-form">
+          <input type="hidden" name="app_id" id="delete-id-hidden" />
+          <div class="dialog-actions">
+            <button type="submit" class="btn-danger" id="delete-btn">删除应用</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <script>
+      const APPS = {{ apps|tojson }};
+      const APP_MAP = new Map((APPS || []).map((item) => [item.id, item]));
+      const CATEGORIES = {{ categories|tojson }};
+      const ACTIVE_TAB = "{{ active_tab }}";
+      const AUTO_EDIT_ID = "{{ auto_edit_id }}";
+      const AUTO_EDIT_APP = {{ auto_edit_app|tojson }};
+      const dialog = document.getElementById("edit-dialog");
+      const closeBtn = document.getElementById("dialog-close");
+      const deleteBtn = document.getElementById("delete-btn");
+      const iconInput = document.getElementById("edit-icon");
+      const uploadBtn = document.getElementById("upload-btn");
+      const apkInput = document.getElementById("apk");
+      const uploadForm = document.getElementById("upload-form");
+      const editButtons = document.querySelectorAll(".edit-app-btn");
+      const editCategorySelect = document.getElementById("edit-category");
+      const filterBar = document.getElementById("cat-filter");
+      const filterSummary = document.getElementById("filter-summary");
+
+      function switchTab(name) {
+        document.querySelectorAll(".tab-btn").forEach((item) => {
+          item.classList.toggle("active", item.dataset.tab === name);
+        });
+        document.querySelectorAll(".panel").forEach((item) => {
+          item.classList.toggle("active", item.id === `panel-${name}`);
+        });
+      }
+      document.querySelectorAll(".tab-btn").forEach((item) => {
+        item.addEventListener("click", () => switchTab(item.dataset.tab));
+      });
+      switchTab(ACTIVE_TAB || "notice");
+
+      function resolvePreviewUrl(path) {
+        const value = (path || "").trim();
+        if (!value) return "";
+        if (value.startsWith("http://") || value.startsWith("https://")) return value;
+        const normalized = value.startsWith("/") ? value.slice(1) : value;
+        return `/preview/${normalized}`;
+      }
+
+      function setCheckboxValues(values) {
+        const selected = new Set(values || []);
+        document.querySelectorAll(".edit-incompatibility").forEach((item) => {
+          item.checked = selected.has(item.value);
+        });
+      }
+
+      function ensureCategoryOption(value) {
+        const normalized = (value || "").trim();
+        if (!normalized) return;
+        if ([...editCategorySelect.options].some((option) => option.value === normalized)) return;
+        const opt = document.createElement("option");
+        opt.value = normalized;
+        opt.textContent = normalized;
+        editCategorySelect.appendChild(opt);
+      }
+
+      function fillCategorySelect(selectedValue) {
+        editCategorySelect.innerHTML = "";
+        const values = CATEGORIES.length > 0 ? CATEGORIES : ["未分类"];
+        values.forEach((value) => {
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = value;
+          editCategorySelect.appendChild(opt);
+        });
+        ensureCategoryOption(selectedValue);
+        editCategorySelect.value = (selectedValue || "未分类");
+      }
+
+      function fillDialog(app) {
+        document.getElementById("dialog-title").textContent = `编辑应用: ${app.name || app.package}`;
+        document.getElementById("edit-id-hidden").value = app.id || "";
+        document.getElementById("delete-id-hidden").value = app.id || "";
+        document.getElementById("edit-name").value = app.name || "";
+        fillCategorySelect(app.category || "未分类");
+        document.getElementById("edit-package").value = app.package || "";
+        document.getElementById("edit-version").value = app.versionName || "";
+        document.getElementById("edit-code").value = app.code || "";
+        document.getElementById("edit-filesize").value = app.filesize || "";
+        document.getElementById("edit-md5sum").value = app.md5sum || "";
+        document.getElementById("edit-update-time").value = app.updateTime || "";
+        document.getElementById("edit-icon").value = app.icon || "";
+        document.getElementById("edit-apk").value = app.apk || "";
+        document.getElementById("edit-description").value = app.description || "";
+        document.getElementById("preview-icon").src = resolvePreviewUrl(app.icon || "");
+        setCheckboxValues(app.incompatibility || []);
+      }
+
+      function openDialog(app) {
+        fillDialog(app);
+        switchTab("apps");
+        try {
+          dialog.showModal();
+        } catch (err) {
+          dialog.setAttribute("open", "open");
+        }
+      }
+
+      editButtons.forEach((button) => {
+        const openFn = () => {
+          const appId = button.dataset.appId || "";
+          const app = APP_MAP.get(appId) || {};
+          openDialog(app);
+        };
+        button.addEventListener("click", openFn);
+        button.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openFn();
+          }
+        });
+      });
+
+      iconInput.addEventListener("input", () => {
+        document.getElementById("preview-icon").src = resolvePreviewUrl(iconInput.value);
+      });
+      closeBtn.addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        const rect = dialog.getBoundingClientRect();
+        const inDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+          && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+        if (!inDialog) dialog.close();
+      });
+      deleteBtn.addEventListener("click", (event) => {
+        if (!window.confirm("确认删除该应用？")) event.preventDefault();
+      });
+
+      uploadBtn.addEventListener("click", () => apkInput.click());
+      apkInput.addEventListener("change", () => {
+        if (apkInput.files && apkInput.files.length > 0) {
+          uploadForm.requestSubmit();
+        }
+      });
+
+      if (AUTO_EDIT_APP && AUTO_EDIT_APP.id) {
+        openDialog(AUTO_EDIT_APP);
+        const url = new URL(window.location.href);
+        url.searchParams.delete("edit");
+        window.history.replaceState({}, "", url.toString());
+      } else if (AUTO_EDIT_ID && APP_MAP.has(AUTO_EDIT_ID)) {
+        openDialog(APP_MAP.get(AUTO_EDIT_ID) || {});
+        const url = new URL(window.location.href);
+        url.searchParams.delete("edit");
+        window.history.replaceState({}, "", url.toString());
+      }
+
+      const catsList = document.getElementById("cats-list");
+      const catAdd = document.getElementById("cat-add");
+
+      function bindCatRow(row) {
+        row.querySelector(".cat-up").addEventListener("click", () => {
+          const prev = row.previousElementSibling;
+          if (prev) catsList.insertBefore(row, prev);
+        });
+        row.querySelector(".cat-down").addEventListener("click", () => {
+          const next = row.nextElementSibling;
+          if (next) catsList.insertBefore(next, row);
+        });
+        row.querySelector(".cat-del").addEventListener("click", () => {
+          const rows = catsList.querySelectorAll(".cat-row");
+          if (rows.length <= 1) return;
+          row.remove();
+        });
+      }
+      document.querySelectorAll(".cat-row").forEach(bindCatRow);
+      catAdd.addEventListener("click", () => {
+        const row = document.createElement("div");
+        row.className = "cat-row";
+        row.innerHTML = `
+          <input type="text" name="categories" value="" required />
+          <button type="button" class="btn-ghost cat-up">上移</button>
+          <button type="button" class="btn-ghost cat-down">下移</button>
+          <button type="button" class="btn-danger cat-del">删除</button>
+        `;
+        catsList.appendChild(row);
+        bindCatRow(row);
+      });
+
+      function normalizeCategory(value) {
+        const text = (value || "").trim();
+        return text || "未分类";
+      }
+
+      function buildCategoryCounts() {
+        const counts = new Map();
+        (APPS || []).forEach((app) => {
+          const category = normalizeCategory(app.category);
+          counts.set(category, (counts.get(category) || 0) + 1);
+        });
+        return counts;
+      }
+
+      function applyCategoryFilter(filterValue) {
+        const appItems = document.querySelectorAll(".app-item");
+        let visibleCount = 0;
+        appItems.forEach((item) => {
+          const category = normalizeCategory(item.dataset.category);
+          const visible = filterValue === "__ALL__" || category === filterValue;
+          item.style.display = visible ? "" : "none";
+          if (visible) visibleCount += 1;
+        });
+        filterSummary.textContent = filterValue === "__ALL__"
+          ? `共 ${visibleCount} 个应用`
+          : `${filterValue} 分类共 ${visibleCount} 个应用`;
+      }
+
+      function renderCategoryFilters() {
+        const counts = buildCategoryCounts();
+        const orderedCategories = [...(CATEGORIES || []).map(normalizeCategory)];
+        counts.forEach((_, category) => {
+          if (!orderedCategories.includes(category)) orderedCategories.push(category);
+        });
+        const totalCount = [...counts.values()].reduce((sum, value) => sum + value, 0);
+
+        const createButton = (key, label) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "filter-btn";
+          btn.dataset.filter = key;
+          btn.textContent = label;
+          btn.addEventListener("click", () => {
+            document.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("active"));
+            btn.classList.add("active");
+            applyCategoryFilter(key);
+          });
+          return btn;
+        };
+
+        filterBar.innerHTML = "";
+        const allBtn = createButton("__ALL__", `全部 (${totalCount})`);
+        allBtn.classList.add("active");
+        filterBar.appendChild(allBtn);
+
+        orderedCategories.forEach((category) => {
+          const count = counts.get(category) || 0;
+          filterBar.appendChild(createButton(category, `${category} (${count})`));
+        });
+
+        applyCategoryFilter("__ALL__");
+      }
+
+      renderCategoryFilters();
+    </script>
+  </body>
+</html>
