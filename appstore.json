@@ -61,6 +61,36 @@
       "apk": "/manager-ad1c6e/EXv1.5.5.apk"
     },
     {
+      "id": "06ff4259022b",
+      "code": "mobile-e8006a",
+      "name": "LX Music",
+      "category": "影音娱乐",
+      "icon": "/mobile-e8006a/icon.png",
+      "package": "cn.toside.music.mobile",
+      "md5sum": "5c4b059fc8d84245514940dc35428d8e",
+      "filesize": 14030650,
+      "updateTime": "2026-04-28T09:28:44Z",
+      "versionName": "1.8.2",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/mobile-e8006a/music.apk.1"
+    },
+    {
+      "id": "a224dee3a354",
+      "code": "plus-9e8df3",
+      "name": "MT Manager",
+      "category": "未分类",
+      "icon": "",
+      "package": "bin.mt.plus",
+      "md5sum": "8a1841b84f6521e2ecd3f864aeaceda5",
+      "filesize": 30219687,
+      "updateTime": "2026-04-28T09:29:08Z",
+      "versionName": "2.26.4",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/plus-9e8df3/MT2.26.4.apk"
+    },
+    {
       "code": "car-9bbb04",
       "name": "MusicFree",
       "category": "影音娱乐",
@@ -183,6 +213,21 @@
       "apk": "/easyconn-9645f6/7.0.1__.apk.1"
     },
     {
+      "id": "f1cd4eb1173e",
+      "code": "easyconn-9645f6-2",
+      "name": "亿连手机互联",
+      "category": "未分类",
+      "icon": "/easyconn-9645f6-2/icon.png",
+      "package": "net.easyconn",
+      "md5sum": "078ea06bc5271101c8f2515d6fd4339d",
+      "filesize": 42759120,
+      "updateTime": "2026-04-28T09:29:25Z",
+      "versionName": "7.0.1-9011d330b-202404121051",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/easyconn-9645f6-2/7.0.1__.apk.1"
+    },
+    {
       "id": "76a2503fb735",
       "code": "isulewtools-a4c447",
       "name": "哪吒互联",
@@ -275,6 +320,21 @@
       "apk": "/aweme-2332cb/apk.1"
     },
     {
+      "id": "24eca314776f",
+      "code": "permissiondog-5caf28",
+      "name": "权限狗",
+      "category": "实用工具",
+      "icon": "/permissiondog-5caf28/icon.png",
+      "package": "com.web1n.permissiondog",
+      "md5sum": "cea18a461dd561b10ed604a21725f187",
+      "filesize": 1438313,
+      "updateTime": "2026-04-28T09:30:08Z",
+      "versionName": "0.1.0.45",
+      "description": "没必要使用，美式【应用管理】已经可以完全替代此物。",
+      "incompatibility": [],
+      "apk": "/permissiondog-5caf28/permissiondog.apk"
+    },
+    {
       "id": "d62472bccdf3",
       "code": "car-82a073",
       "name": "汽水音乐车机版",
@@ -318,6 +378,21 @@
       "description": "",
       "incompatibility": [],
       "apk": "/lite-74b000/com.xs.fm.lite.apk"
+    },
+    {
+      "id": "99b4cf985cfe",
+      "code": "carlifevehicle-3836c9-2",
+      "name": "百度 CarLife",
+      "category": "手车互联",
+      "icon": "/carlifevehicle-3836c9-2/icon.png",
+      "package": "com.muyetuge.carlifevehicle",
+      "md5sum": "8c7f5b8a843d8fa03c971d7e2629d794",
+      "filesize": 7427661,
+      "updateTime": "2026-04-28T09:30:55Z",
+      "versionName": "2025.09.29",
+      "description": "不知道谁传的版本，自己尝试",
+      "incompatibility": [],
+      "apk": "/carlifevehicle-3836c9-2/com.muyetuge.carlifevehicle-2025.09.29-20250929.apk"
     },
     {
       "id": "e7e44f6c3bdd",
