@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+.vscode/
+
+appstore-creator/.venv/
+appstore-creator/__pycache__/
+appstore-creator/tests/__pycache__/
