@@ -24,11 +24,7 @@
       "versionName": "1.3.0.0",
       "description": "Openpilot 点对点导航，依赖 Openpilot 设备和高德地图车机版。",
       "incompatibility": [
-        "ALL",
-        "EP32",
-        "EP36",
-        "EP40",
-        "EP41"
+        "ALL"
       ],
       "apk": "/amapnavi-c98a57/AmapNavi-V1.3.0.0.apk.1"
     },
