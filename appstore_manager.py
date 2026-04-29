@@ -11,8 +11,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from pyaxmlparser import APK
-from pyaxmlparser.axmlprinter import AXMLPrinter
+try:
+    from pyaxmlparser import APK
+    from pyaxmlparser.axmlprinter import AXMLPrinter
+except ModuleNotFoundError:  # pragma: no cover - 依赖缺失时只影响 APK 解析相关能力
+    APK = None
+    AXMLPrinter = None
 
 INCOMPATIBILITY_OPTIONS = ["ALL", "EP32", "EP36", "EP40", "EP41"]
 ICON_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
@@ -25,8 +29,16 @@ class ApkMetadata:
     name: str
 
 
+@dataclass
+class WorkflowBundleMetadata:
+    workflow_count: int
+    workflow_names: list[str]
+    tags: list[str]
+
+
 def parse_apk_metadata(apk_path: Path) -> ApkMetadata:
     # 核心流程：直接解析 APK 的 AndroidManifest，拿到包名和版本信息
+    _require_pyaxmlparser()
     parser = APK(str(apk_path))
     package_name = (parser.package or "").strip()
     if not package_name:
@@ -37,6 +49,49 @@ def parse_apk_metadata(apk_path: Path) -> ApkMetadata:
     return ApkMetadata(package=package_name, version_name=version_name, name=app_name)
 
 
+def parse_workflow_bundle(workflow_path: Path) -> WorkflowBundleMetadata:
+    # 核心流程：上传后先解析工作流概要，只把索引需要的摘要字段写进 workflows.json
+    try:
+        raw = json.loads(workflow_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"工作流 JSON 解析失败: {exc}") from exc
+
+    if isinstance(raw, dict):
+        items = [raw]
+    elif isinstance(raw, list):
+        items = raw
+    else:
+        raise ValueError("工作流文件必须是 JSON 对象或数组")
+
+    workflow_names: list[str] = []
+    tags: list[str] = []
+    seen_tags: set[str] = set()
+
+    for item in items:
+        if not isinstance(item, dict):
+            raise ValueError("工作流列表中的每一项都必须是 JSON 对象")
+        workflow_block = item.get("workflow", {})
+        if isinstance(workflow_block, dict):
+            workflow_name = str(workflow_block.get("name", "")).strip()
+            if workflow_name:
+                workflow_names.append(workflow_name)
+            config = workflow_block.get("config", {})
+            if isinstance(config, dict):
+                raw_tags = config.get("tags", [])
+                if isinstance(raw_tags, list):
+                    for tag in raw_tags:
+                        value = str(tag).strip()
+                        if value and value not in seen_tags:
+                            tags.append(value)
+                            seen_tags.add(value)
+
+    return WorkflowBundleMetadata(
+        workflow_count=len(items),
+        workflow_names=workflow_names,
+        tags=tags,
+    )
+
+
 def extract_icon_from_apk(apk_path: Path, output_dir: Path, output_name: str = "icon") -> Path | None:
     """
     从 APK 中提取图标文件并写入 output_dir，返回生成的本地路径。
@@ -44,6 +99,8 @@ def extract_icon_from_apk(apk_path: Path, output_dir: Path, output_name: str = "
     1) Manifest 解析出的主图标
     2) 回退扫描 APK 内 ic_launcher 相关图片
     """
+    if APK is None:
+        return None
     try:
         parser = APK(str(apk_path))
     except Exception:  # noqa: BLE001
@@ -241,6 +298,8 @@ def _parse_android_xml(raw: bytes):
             return ET.fromstring(raw)
         except Exception:  # noqa: BLE001
             pass
+    if AXMLPrinter is None:
+        return None
     try:
         printer = AXMLPrinter(raw)
         if printer.is_valid():
@@ -268,6 +327,11 @@ def _dedupe_keep_order(items: list[str]) -> list[str]:
         seen.add(item)
         result.append(item)
     return result
+
+
+def _require_pyaxmlparser() -> None:
+    if APK is None:
+        raise ModuleNotFoundError("缺少 pyaxmlparser，请先安装 requirements.txt 中的依赖")
 
 
 def normalize_incompatibility(values: list[str]) -> list[str]:
@@ -304,6 +368,20 @@ def infer_existing_code(entry: dict[str, Any] | None) -> str | None:
 
     apk = str(entry.get("apk", "")).strip()
     parts = [segment for segment in apk.split("/") if segment]
+    if len(parts) >= 2:
+        return parts[-2]
+    return None
+
+
+def infer_workflow_code(entry: dict[str, Any] | None) -> str | None:
+    if not entry:
+        return None
+    code = str(entry.get("code", "")).strip()
+    if code:
+        return code
+
+    workflow_file = str(entry.get("file", "")).strip()
+    parts = [segment for segment in workflow_file.split("/") if segment]
     if len(parts) >= 2:
         return parts[-2]
     return None
@@ -369,7 +447,8 @@ class AppStoreManager:
     def save_data(self, data: dict[str, Any]) -> None:
         self.json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    def compute_md5(self, file_path: Path) -> str:
+    @staticmethod
+    def compute_md5(file_path: Path) -> str:
         digest = hashlib.md5()  # noqa: S324
         with file_path.open("rb") as fp:
             while True:
@@ -379,7 +458,8 @@ class AppStoreManager:
                 digest.update(chunk)
         return digest.hexdigest()
 
-    def utc_now_iso(self) -> str:
+    @staticmethod
+    def utc_now_iso() -> str:
         return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
     def resolve_code(self, package_name: str, app_name: str, preferred_code: str | None = None) -> str:
@@ -574,3 +654,169 @@ class AppStoreManager:
             result.append(value)
             seen.add(value)
         return result
+
+
+class WorkflowManager:
+    def __init__(self, json_path: Path, workflows_dir: Path) -> None:
+        self.json_path = json_path
+        self.workflows_dir = workflows_dir
+
+    def ensure_initialized(self) -> None:
+        self.workflows_dir.mkdir(parents=True, exist_ok=True)
+        if self.json_path.exists():
+            return
+        self.save_data({"categories": [], "workflows": []})
+
+    def load_data(self) -> dict[str, Any]:
+        self.ensure_initialized()
+        raw = self.json_path.read_text(encoding="utf-8").strip()
+        if not raw:
+            return {"categories": [], "workflows": []}
+        data = json.loads(raw)
+        if "categories" not in data or not isinstance(data["categories"], list):
+            data["categories"] = []
+        if "workflows" not in data or not isinstance(data["workflows"], list):
+            data["workflows"] = []
+        data["categories"] = AppStoreManager._dedupe_categories(data.get("categories", []))
+        return data
+
+    def save_data(self, data: dict[str, Any]) -> None:
+        self.json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    def list_codes(self) -> list[str]:
+        data = self.load_data()
+        codes: list[str] = []
+        for entry in data.get("workflows", []):
+            code = infer_workflow_code(entry)
+            if code:
+                codes.append(code)
+        return codes
+
+    def ensure_category(self, data: dict[str, Any], category: str) -> None:
+        categories = data.setdefault("categories", [])
+        normalized = normalize_category(category)
+        if not normalized:
+            return
+        if normalized not in categories:
+            categories.append(normalized)
+
+    def replace_categories(self, data: dict[str, Any], categories: list[str]) -> None:
+        data["categories"] = AppStoreManager._dedupe_categories(categories)
+
+    def resolve_code(self, workflow_name: str, file_md5: str, preferred_code: str | None = None) -> str:
+        existing_codes = set(self.list_codes())
+        if preferred_code:
+            return preferred_code
+
+        base = AppStoreManager._slugify(workflow_name) or "workflow"
+        suffix = (file_md5 or uuid.uuid4().hex)[:6]
+        candidate = f"{base}-{suffix}"
+        if candidate not in existing_codes:
+            return candidate
+
+        index = 2
+        while f"{candidate}-{index}" in existing_codes:
+            index += 1
+        return f"{candidate}-{index}"
+
+    def upsert_entry(self, data: dict[str, Any], entry: dict[str, Any]) -> None:
+        workflows = data.setdefault("workflows", [])
+        entry_id = str(entry.get("id", "")).strip()
+        for idx, item in enumerate(workflows):
+            if entry_id and str(item.get("id", "")).strip() == entry_id:
+                workflows[idx] = entry
+                return
+        workflows.append(entry)
+        workflows.sort(key=lambda item: str(item.get("name", "")).lower())
+
+    def delete_entry(self, data: dict[str, Any], entry_id: str) -> bool:
+        workflows = data.setdefault("workflows", [])
+        for idx, item in enumerate(workflows):
+            if str(item.get("id", "")).strip() == entry_id:
+                del workflows[idx]
+                return True
+        return False
+
+    def cleanup_entry_assets(self, data: dict[str, Any], deleted_entry: dict[str, Any]) -> bool:
+        code = infer_workflow_code(deleted_entry)
+        if not code:
+            return False
+        for item in data.get("workflows", []):
+            if infer_workflow_code(item) == code:
+                return False
+        target_dir = self.workflows_dir / code
+        if target_dir.is_dir():
+            shutil.rmtree(target_dir, ignore_errors=True)
+            return True
+        return False
+
+    def backfill_entry_metadata(self, entry: dict[str, Any]) -> bool:
+        changed = False
+        workflow_rel = str(entry.get("file", "")).strip()
+        if not workflow_rel:
+            return False
+        workflow_file = self.workflows_dir / workflow_rel.lstrip("/")
+        if not workflow_file.is_file():
+            return False
+
+        if not str(entry.get("md5sum", "")).strip():
+            entry["md5sum"] = AppStoreManager.compute_md5(workflow_file)
+            changed = True
+        if not entry.get("filesize"):
+            entry["filesize"] = workflow_file.stat().st_size
+            changed = True
+        if not str(entry.get("updateTime", "")).strip():
+            entry["updateTime"] = AppStoreManager.utc_now_iso()
+            changed = True
+
+        code = str(entry.get("code", "")).strip()
+        inferred_code = infer_workflow_code(entry)
+        if not code and inferred_code:
+            entry["code"] = inferred_code
+            changed = True
+
+        if not str(entry.get("filename", "")).strip():
+            entry["filename"] = workflow_file.name
+            changed = True
+        if not str(entry.get("name", "")).strip():
+            entry["name"] = workflow_file.stem
+            changed = True
+
+        need_parse = (
+            not entry.get("workflowCount")
+            or not isinstance(entry.get("workflowNames"), list)
+            or not isinstance(entry.get("tags"), list)
+        )
+        if need_parse:
+            metadata = parse_workflow_bundle(workflow_file)
+            entry["workflowCount"] = metadata.workflow_count
+            entry["workflowNames"] = metadata.workflow_names
+            entry["tags"] = metadata.tags
+            changed = True
+
+        if "author" not in entry:
+            entry["author"] = ""
+            changed = True
+        if "description" not in entry:
+            entry["description"] = ""
+            changed = True
+        if not str(entry.get("category", "")).strip():
+            entry["category"] = "未分类"
+            changed = True
+
+        return changed
+
+    def ensure_entry_ids(self, data: dict[str, Any]) -> bool:
+        workflows = data.setdefault("workflows", [])
+        existing_ids: set[str] = set()
+        changed = False
+        for item in workflows:
+            entry_id = str(item.get("id", "")).strip()
+            if entry_id and entry_id not in existing_ids:
+                existing_ids.add(entry_id)
+                continue
+            new_id = AppStoreManager.generate_entry_id(existing_ids)
+            item["id"] = new_id
+            existing_ids.add(new_id)
+            changed = True
+        return changed

@@ -12,22 +12,35 @@ from werkzeug.utils import secure_filename
 from appstore_manager import (
     INCOMPATIBILITY_OPTIONS,
     AppStoreManager,
+    WorkflowManager,
     extract_icon_from_apk,
     find_entry_by_id,
     normalize_category,
     normalize_incompatibility,
     parse_apk_metadata,
+    parse_workflow_bundle,
 )
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR
 APPSTORE_JSON_PATH = REPO_ROOT / "appstore.json"
 APKS_DIR = REPO_ROOT / "apks"
+WORKFLOWS_JSON_PATH = REPO_ROOT / "workflows.json"
+WORKFLOWS_DIR = REPO_ROOT / "workflows"
 
 
 def is_supported_apk_filename(filename: str) -> bool:
     lower = (filename or "").strip().lower()
     return lower.endswith(".apk") or lower.endswith(".apk.1")
+
+
+def is_supported_workflow_filename(filename: str) -> bool:
+    return (filename or "").strip().lower().endswith(".json")
+
+
+def sanitize_storage_filename(filename: str, fallback: str) -> str:
+    normalized = (filename or "").replace("\\", "/").split("/")[-1].strip().replace("\x00", "")
+    return normalized or fallback
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("APPSTORE_CREATOR_SECRET", "appstore-creator-dev")
@@ -35,6 +48,7 @@ app.config["SECRET_KEY"] = os.environ.get("APPSTORE_CREATOR_SECRET", "appstore-c
 app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024 * 1024  # 1 GiB
 
 manager = AppStoreManager(json_path=APPSTORE_JSON_PATH, apks_dir=APKS_DIR)
+workflow_manager = WorkflowManager(json_path=WORKFLOWS_JSON_PATH, workflows_dir=WORKFLOWS_DIR)
 
 
 def preview_asset_url(path: str) -> str:
@@ -58,6 +72,17 @@ def preview_asset(asset_path: str):
     return send_from_directory(str(APKS_DIR), asset_path)
 
 
+@app.get("/workflow-files/<path:workflow_path>")
+def download_workflow_file(workflow_path: str):
+    safe_path = Path(workflow_path)
+    if safe_path.is_absolute() or ".." in safe_path.parts:
+        abort(400)
+    target = WORKFLOWS_DIR / safe_path
+    if not target.is_file():
+        abort(404)
+    return send_from_directory(str(WORKFLOWS_DIR), workflow_path, as_attachment=True, download_name=target.name)
+
+
 @app.get("/")
 def index() -> str:
     data = manager.load_data()
@@ -72,20 +97,49 @@ def index() -> str:
             changed = True
     if changed:
         manager.save_data(data)
+
+    workflow_data = workflow_manager.load_data()
+    workflow_changed = False
+    if workflow_manager.ensure_entry_ids(workflow_data):
+        workflow_changed = True
+    for workflow_entry in workflow_data.get("workflows", []):
+        if workflow_manager.backfill_entry_metadata(workflow_entry):
+            workflow_changed = True
+        workflow_category = normalize_category(str(workflow_entry.get("category", "")).strip()) or "未分类"
+        if workflow_entry.get("category") != workflow_category:
+            workflow_entry["category"] = workflow_category
+            workflow_changed = True
+        before_count = len(workflow_data.get("categories", []))
+        workflow_manager.ensure_category(workflow_data, workflow_category)
+        if len(workflow_data.get("categories", [])) != before_count:
+            workflow_changed = True
+    if workflow_changed:
+        workflow_manager.save_data(workflow_data)
+
     auto_edit_id = request.args.get("edit", "").strip()
     auto_edit_app = find_entry_by_id(data.get("apps", []), auto_edit_id) if auto_edit_id else None
+    auto_edit_workflow_id = request.args.get("workflow_edit", "").strip()
+    auto_edit_workflow = (
+        find_entry_by_id(workflow_data.get("workflows", []), auto_edit_workflow_id)
+        if auto_edit_workflow_id
+        else None
+    )
     active_tab = request.args.get("tab", "notice").strip().lower()
-    if active_tab not in {"notice", "apps", "categories"}:
+    if active_tab not in {"notice", "apps", "workflows", "categories"}:
         active_tab = "notice"
     return render_template(
         "index.html",
         apps=data.get("apps", []),
+        workflows=workflow_data.get("workflows", []),
+        workflow_categories=workflow_data.get("categories", []),
         notice=data.get("notice", ""),
         categories=data.get("categories", []),
         incompatibility_options=INCOMPATIBILITY_OPTIONS,
         preview_asset_url=preview_asset_url,
         auto_edit_id=auto_edit_id,
         auto_edit_app=auto_edit_app,
+        auto_edit_workflow_id=auto_edit_workflow_id,
+        auto_edit_workflow=auto_edit_workflow,
         active_tab=active_tab,
     )
 
@@ -174,6 +228,72 @@ def upload_apk():
     return redirect(url_for("index", edit=entry_id))
 
 
+@app.post("/workflows/upload")
+def upload_workflow():
+    workflow_file = request.files.get("workflow")
+    if workflow_file is None or not workflow_file.filename:
+        flash("请选择工作流 JSON 文件", "error")
+        return redirect(url_for("index", tab="workflows"))
+
+    raw_filename = (workflow_file.filename or "").strip()
+    if not is_supported_workflow_filename(raw_filename):
+        flash("仅支持上传 .json 工作流文件", "error")
+        return redirect(url_for("index", tab="workflows"))
+
+    workflow_filename = sanitize_storage_filename(raw_filename, "workflow.json")
+    tmp_dir = Path(tempfile.mkdtemp(prefix="appstore-workflow-"))
+    tmp_workflow_path = tmp_dir / workflow_filename
+
+    try:
+        workflow_file.save(tmp_workflow_path)
+        workflow_metadata = parse_workflow_bundle(tmp_workflow_path)
+    except Exception as exc:  # noqa: BLE001
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+        flash(f"工作流解析失败: {exc}", "error")
+        return redirect(url_for("index", tab="workflows"))
+
+    data = workflow_manager.load_data()
+    workflow_manager.ensure_entry_ids(data)
+    file_md5 = manager.compute_md5(tmp_workflow_path)
+    display_name = request.form.get("name", "").strip() or Path(workflow_filename).stem
+    generated_code = workflow_manager.resolve_code(display_name, file_md5)
+    category = normalize_category(request.form.get("category", "")) or "未分类"
+    workflow_manager.ensure_category(data, category)
+
+    workflow_dir = WORKFLOWS_DIR / generated_code
+    workflow_dir.mkdir(parents=True, exist_ok=True)
+    workflow_final_path = workflow_dir / workflow_filename
+    shutil.copyfile(tmp_workflow_path, workflow_final_path)
+
+    entry_id = manager.generate_entry_id({str(item.get("id", "")).strip() for item in data.get("workflows", [])})
+    entry = {
+        "id": entry_id,
+        "code": generated_code,
+        "name": display_name,
+        "category": category,
+        "author": request.form.get("author", "").strip(),
+        "description": request.form.get("description", "").strip(),
+        "filename": workflow_filename,
+        "file": f"/{generated_code}/{workflow_filename}",
+        "md5sum": file_md5,
+        "filesize": workflow_final_path.stat().st_size,
+        "updateTime": manager.utc_now_iso(),
+        "workflowCount": workflow_metadata.workflow_count,
+        "workflowNames": workflow_metadata.workflow_names,
+        "tags": workflow_metadata.tags,
+    }
+
+    workflow_manager.upsert_entry(data, entry)
+    workflow_manager.save_data(data)
+
+    shutil.rmtree(tmp_dir, ignore_errors=True)
+    flash(
+        f"已上传工作流包 {display_name} | 含 {workflow_metadata.workflow_count} 个工作流 | md5={entry['md5sum']}",
+        "success",
+    )
+    return redirect(url_for("index", tab="workflows", workflow_edit=entry_id))
+
+
 @app.post("/categories")
 def save_categories():
     categories = [item.strip() for item in request.form.getlist("categories") if item.strip()]
@@ -182,6 +302,16 @@ def save_categories():
     manager.save_data(data)
     flash("分类列表已更新", "success")
     return redirect(url_for("index"))
+
+
+@app.post("/workflows/categories")
+def save_workflow_categories():
+    categories = [item.strip() for item in request.form.getlist("categories") if item.strip()]
+    data = workflow_manager.load_data()
+    workflow_manager.replace_categories(data, categories)
+    workflow_manager.save_data(data)
+    flash("工作流分类列表已更新", "success")
+    return redirect(url_for("index", tab="categories"))
 
 
 @app.post("/notice")
@@ -289,6 +419,62 @@ def delete_app():
     return redirect(url_for("index", tab="apps"))
 
 
+@app.post("/workflows/update")
+def update_workflow():
+    entry_id = request.form.get("workflow_id", "").strip()
+    if not entry_id:
+        flash("缺少 workflow_id", "error")
+        return redirect(url_for("index", tab="workflows"))
+
+    data = workflow_manager.load_data()
+    workflow_manager.ensure_entry_ids(data)
+    entry = find_entry_by_id(data.get("workflows", []), entry_id)
+    if not entry:
+        flash(f"未找到工作流: {entry_id}", "error")
+        return redirect(url_for("index", tab="workflows"))
+
+    updated_entry = dict(entry)
+    updated_entry.update(
+        {
+            "id": entry_id,
+            "name": request.form.get("name", "").strip() or str(entry.get("name", "")).strip() or "未命名工作流",
+            "category": normalize_category(request.form.get("category", "")) or "未分类",
+            "author": request.form.get("author", "").strip(),
+            "description": request.form.get("description", "").strip(),
+        }
+    )
+    workflow_manager.ensure_category(data, str(updated_entry.get("category", "")).strip())
+
+    workflow_manager.upsert_entry(data, updated_entry)
+    workflow_manager.save_data(data)
+    flash(f"已更新工作流: {updated_entry['name']}", "success")
+    return redirect(url_for("index", tab="workflows"))
+
+
+@app.post("/workflows/delete")
+def delete_workflow():
+    entry_id = request.form.get("workflow_id", "").strip()
+    if not entry_id:
+        flash("缺少 workflow_id", "error")
+        return redirect(url_for("index", tab="workflows"))
+
+    data = workflow_manager.load_data()
+    workflow_manager.ensure_entry_ids(data)
+    deleted_entry = find_entry_by_id(data.get("workflows", []), entry_id)
+    if not deleted_entry:
+        flash(f"未找到工作流: {entry_id}", "error")
+        return redirect(url_for("index", tab="workflows"))
+    deleted = workflow_manager.delete_entry(data, entry_id)
+    if not deleted:
+        flash(f"未找到工作流: {entry_id}", "error")
+        return redirect(url_for("index", tab="workflows"))
+    workflow_manager.cleanup_entry_assets(data, deleted_entry)
+
+    workflow_manager.save_data(data)
+    flash(f"已删除工作流: {entry_id}", "success")
+    return redirect(url_for("index", tab="workflows"))
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="AppStore Creator")
     parser.add_argument(
@@ -317,4 +503,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     manager.ensure_initialized()
+    workflow_manager.ensure_initialized()
     app.run(host=args.host, port=args.port, debug=args.debug)

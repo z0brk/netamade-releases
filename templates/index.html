@@ -200,6 +200,42 @@
         color: var(--muted);
         font-size: 12px;
       }
+      .workflow-badge {
+        width: 58px;
+        height: 58px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: linear-gradient(135deg, #eef6ff, #dbeafe);
+        display: grid;
+        place-items: center;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--primary);
+      }
+      .workflow-extra {
+        margin-top: 10px;
+        color: #374151;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      .tag {
+        border-radius: 999px;
+        padding: 5px 10px;
+        background: #eef6ff;
+        color: #1d4ed8;
+        font-size: 12px;
+        line-height: 1.2;
+      }
+      .tag-empty {
+        background: #f3f4f6;
+        color: var(--muted);
+      }
       .cats-list {
         display: grid;
         gap: 10px;
@@ -255,6 +291,22 @@
         justify-content: flex-end;
         gap: 8px;
       }
+      .action-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        padding: 10px 16px;
+        color: var(--text);
+        text-decoration: none;
+        background: #fff;
+        font-weight: 600;
+      }
+      .action-link.is-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
       .sr { display: none; }
       @media (max-width: 700px) {
         .wrap { padding: 16px; }
@@ -285,6 +337,7 @@
       <nav class="tabs" aria-label="主标签页">
         <button type="button" class="tab-btn active" data-tab="notice">公告</button>
         <button type="button" class="tab-btn" data-tab="apps">应用列表</button>
+        <button type="button" class="tab-btn" data-tab="workflows">工作流</button>
         <button type="button" class="tab-btn" data-tab="categories">分类</button>
       </nav>
 
@@ -331,8 +384,9 @@
 
       <section class="panel" id="panel-categories">
         <h2>分类</h2>
-        <p class="sub">按列表形式管理分类顺序。</p>
+        <p class="sub">分别维护应用分类和工作流分类顺序。</p>
         <form action="/categories" method="post" id="categories-form">
+          <h3 style="margin:0 0 10px;font-size:18px;">应用分类</h3>
           <div class="cats-list" id="cats-list">
             {% for category in categories %}
               <div class="cat-row">
@@ -356,6 +410,73 @@
             <button type="submit">保存分类</button>
           </div>
         </form>
+        <form action="/workflows/categories" method="post" id="workflow-categories-form" style="margin-top:20px;">
+          <h3 style="margin:0 0 10px;font-size:18px;">工作流分类</h3>
+          <div class="cats-list" id="workflow-cats-list">
+            {% for category in workflow_categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="{{ category }}" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endfor %}
+            {% if not workflow_categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="未分类" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endif %}
+          </div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="workflow-cat-add">新增工作流分类</button>
+            <button type="submit">保存工作流分类</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-workflows">
+        <h2>工作流</h2>
+        <p class="sub">上传并维护 `workflows.json`。共 {{ workflows|length }} 个工作流包。</p>
+        <div class="upload-card">
+          <form action="/workflows/upload" method="post" enctype="multipart/form-data" id="workflow-upload-form">
+            <input id="workflow-file" name="workflow" type="file" accept=".json,application/json" class="sr" required />
+            <button type="button" id="workflow-upload-btn">上传工作流 JSON</button>
+          </form>
+        </div>
+        <div class="filter-wrap">
+          <div class="filter-bar" id="workflow-cat-filter"></div>
+          <div class="filter-summary" id="workflow-filter-summary"></div>
+        </div>
+        <div class="app-grid" style="margin-top: 14px;">
+          {% for workflow in workflows %}
+            <article class="app-item edit-workflow-btn" data-workflow-id="{{ workflow.id }}" data-category="{{ workflow.category or '未分类' }}" tabindex="0" role="button">
+              <div class="app-head">
+                <div class="workflow-badge">{{ workflow.workflowCount or 0 }}</div>
+                <div>
+                  <h3 class="app-name">{{ workflow.name }}</h3>
+                  <div class="app-package">{{ workflow.author or "未填写作者" }}</div>
+                </div>
+              </div>
+              <div class="app-desc">{{ workflow.description or "暂无描述" }}</div>
+              <div class="app-meta">分类: {{ workflow.category or "未分类" }} · 文件: {{ workflow.filename or "-" }} · 内含: {{ workflow.workflowCount or 0 }} 个工作流</div>
+              <div class="workflow-extra">
+                {{ (workflow.workflowNames or [])|join(" / ") if workflow.workflowNames else "未解析到工作流名称" }}
+              </div>
+              <div class="tag-list">
+                {% if workflow.tags %}
+                  {% for tag in workflow.tags %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                {% else %}
+                  <span class="tag tag-empty">无 tags</span>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
       </section>
     </main>
 
@@ -438,13 +559,90 @@
       </div>
     </dialog>
 
+    <dialog id="workflow-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top">
+          <h3 id="workflow-dialog-title">编辑工作流</h3>
+          <button type="button" id="workflow-dialog-close" class="btn-ghost">关闭</button>
+        </div>
+        <form action="/workflows/update" method="post" id="workflow-edit-form">
+          <input type="hidden" name="workflow_id" id="workflow-id-hidden" />
+          <div class="dialog-grid">
+            <div>
+              <label for="workflow-name">名称</label>
+              <input id="workflow-name" name="name" type="text" required />
+            </div>
+            <div>
+              <label for="workflow-category">分类</label>
+              <select id="workflow-category" name="category"></select>
+            </div>
+            <div>
+              <label for="workflow-author">作者</label>
+              <input id="workflow-author" name="author" type="text" />
+            </div>
+            <div>
+              <label for="workflow-filename">文件名</label>
+              <input id="workflow-filename" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-file-path">文件路径</label>
+              <input id="workflow-file-path" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-count">工作流数量</label>
+              <input id="workflow-count" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-update-time">updateTime</label>
+              <input id="workflow-update-time" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-md5sum">md5sum</label>
+              <input id="workflow-md5sum" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-filesize">filesize</label>
+              <input id="workflow-filesize" type="text" readonly />
+            </div>
+          </div>
+          <div style="margin-top:10px;">
+            <label for="workflow-description">描述</label>
+            <textarea id="workflow-description" name="description"></textarea>
+          </div>
+          <div style="margin-top:10px;">
+            <label>包含工作流</label>
+            <div id="workflow-name-list" class="tag-list"></div>
+          </div>
+          <div style="margin-top:10px;">
+            <label>tags</label>
+            <div id="workflow-tag-list" class="tag-list"></div>
+          </div>
+          <div class="dialog-actions">
+            <a id="workflow-download-link" class="action-link" href="#" target="_blank" rel="noreferrer">下载 JSON</a>
+            <button type="submit">保存修改</button>
+          </div>
+        </form>
+        <form action="/workflows/delete" method="post" id="workflow-delete-form">
+          <input type="hidden" name="workflow_id" id="workflow-delete-id-hidden" />
+          <div class="dialog-actions">
+            <button type="submit" class="btn-danger" id="workflow-delete-btn">删除工作流</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
     <script>
       const APPS = {{ apps|tojson }};
       const APP_MAP = new Map((APPS || []).map((item) => [item.id, item]));
+      const WORKFLOWS = {{ workflows|tojson }};
+      const WORKFLOW_MAP = new Map((WORKFLOWS || []).map((item) => [item.id, item]));
       const CATEGORIES = {{ categories|tojson }};
+      const WORKFLOW_CATEGORIES = {{ workflow_categories|tojson }};
       const ACTIVE_TAB = "{{ active_tab }}";
       const AUTO_EDIT_ID = "{{ auto_edit_id }}";
       const AUTO_EDIT_APP = {{ auto_edit_app|tojson }};
+      const AUTO_EDIT_WORKFLOW_ID = "{{ auto_edit_workflow_id }}";
+      const AUTO_EDIT_WORKFLOW = {{ auto_edit_workflow|tojson }};
       const dialog = document.getElementById("edit-dialog");
       const closeBtn = document.getElementById("dialog-close");
       const deleteBtn = document.getElementById("delete-btn");
@@ -456,6 +654,16 @@
       const editCategorySelect = document.getElementById("edit-category");
       const filterBar = document.getElementById("cat-filter");
       const filterSummary = document.getElementById("filter-summary");
+      const workflowFilterBar = document.getElementById("workflow-cat-filter");
+      const workflowFilterSummary = document.getElementById("workflow-filter-summary");
+      const workflowDialog = document.getElementById("workflow-dialog");
+      const workflowCloseBtn = document.getElementById("workflow-dialog-close");
+      const workflowDeleteBtn = document.getElementById("workflow-delete-btn");
+      const workflowUploadBtn = document.getElementById("workflow-upload-btn");
+      const workflowFileInput = document.getElementById("workflow-file");
+      const workflowUploadForm = document.getElementById("workflow-upload-form");
+      const workflowButtons = document.querySelectorAll(".edit-workflow-btn");
+      const workflowCategorySelect = document.getElementById("workflow-category");
 
       function switchTab(name) {
         document.querySelectorAll(".tab-btn").forEach((item) => {
@@ -508,6 +716,55 @@
         editCategorySelect.value = (selectedValue || "未分类");
       }
 
+      function ensureWorkflowCategoryOption(value) {
+        const normalized = (value || "").trim();
+        if (!normalized) return;
+        if ([...workflowCategorySelect.options].some((option) => option.value === normalized)) return;
+        const opt = document.createElement("option");
+        opt.value = normalized;
+        opt.textContent = normalized;
+        workflowCategorySelect.appendChild(opt);
+      }
+
+      function fillWorkflowCategorySelect(selectedValue) {
+        workflowCategorySelect.innerHTML = "";
+        const values = WORKFLOW_CATEGORIES.length > 0 ? WORKFLOW_CATEGORIES : ["未分类"];
+        values.forEach((value) => {
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = value;
+          workflowCategorySelect.appendChild(opt);
+        });
+        ensureWorkflowCategoryOption(selectedValue);
+        workflowCategorySelect.value = (selectedValue || "未分类");
+      }
+
+      function resolveWorkflowDownloadUrl(path) {
+        const value = (path || "").trim();
+        if (!value) return "";
+        const normalized = value.startsWith("/") ? value.slice(1) : value;
+        return `/workflow-files/${encodeURI(normalized)}`;
+      }
+
+      function renderTagList(elementId, values, emptyText) {
+        const container = document.getElementById(elementId);
+        container.innerHTML = "";
+        const items = (values || []).filter((item) => `${item || ""}`.trim());
+        if (items.length === 0) {
+          const empty = document.createElement("span");
+          empty.className = "tag tag-empty";
+          empty.textContent = emptyText;
+          container.appendChild(empty);
+          return;
+        }
+        items.forEach((value) => {
+          const chip = document.createElement("span");
+          chip.className = "tag";
+          chip.textContent = value;
+          container.appendChild(chip);
+        });
+      }
+
       function fillDialog(app) {
         document.getElementById("dialog-title").textContent = `编辑应用: ${app.name || app.package}`;
         document.getElementById("edit-id-hidden").value = app.id || "";
@@ -527,6 +784,29 @@
         setCheckboxValues(app.incompatibility || []);
       }
 
+      function fillWorkflowDialog(workflow) {
+        document.getElementById("workflow-dialog-title").textContent = `编辑工作流: ${workflow.name || workflow.filename || "未命名工作流"}`;
+        document.getElementById("workflow-id-hidden").value = workflow.id || "";
+        document.getElementById("workflow-delete-id-hidden").value = workflow.id || "";
+        document.getElementById("workflow-name").value = workflow.name || "";
+        fillWorkflowCategorySelect(workflow.category || "未分类");
+        document.getElementById("workflow-author").value = workflow.author || "";
+        document.getElementById("workflow-filename").value = workflow.filename || "";
+        document.getElementById("workflow-file-path").value = workflow.file || "";
+        document.getElementById("workflow-count").value = workflow.workflowCount || 0;
+        document.getElementById("workflow-update-time").value = workflow.updateTime || "";
+        document.getElementById("workflow-md5sum").value = workflow.md5sum || "";
+        document.getElementById("workflow-filesize").value = workflow.filesize || "";
+        document.getElementById("workflow-description").value = workflow.description || "";
+        renderTagList("workflow-name-list", workflow.workflowNames || [], "未解析到工作流名称");
+        renderTagList("workflow-tag-list", workflow.tags || [], "无 tags");
+
+        const downloadLink = document.getElementById("workflow-download-link");
+        const downloadUrl = resolveWorkflowDownloadUrl(workflow.file || "");
+        downloadLink.href = downloadUrl || "#";
+        downloadLink.classList.toggle("is-disabled", !downloadUrl);
+      }
+
       function openDialog(app) {
         fillDialog(app);
         switchTab("apps");
@@ -537,11 +817,36 @@
         }
       }
 
+      function openWorkflowDialog(workflow) {
+        fillWorkflowDialog(workflow);
+        switchTab("workflows");
+        try {
+          workflowDialog.showModal();
+        } catch (err) {
+          workflowDialog.setAttribute("open", "open");
+        }
+      }
+
       editButtons.forEach((button) => {
         const openFn = () => {
           const appId = button.dataset.appId || "";
           const app = APP_MAP.get(appId) || {};
           openDialog(app);
+        };
+        button.addEventListener("click", openFn);
+        button.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openFn();
+          }
+        });
+      });
+
+      workflowButtons.forEach((button) => {
+        const openFn = () => {
+          const workflowId = button.dataset.workflowId || "";
+          const workflow = WORKFLOW_MAP.get(workflowId) || {};
+          openWorkflowDialog(workflow);
         };
         button.addEventListener("click", openFn);
         button.addEventListener("keydown", (event) => {
@@ -565,11 +870,27 @@
       deleteBtn.addEventListener("click", (event) => {
         if (!window.confirm("确认删除该应用？")) event.preventDefault();
       });
+      workflowCloseBtn.addEventListener("click", () => workflowDialog.close());
+      workflowDialog.addEventListener("click", (event) => {
+        const rect = workflowDialog.getBoundingClientRect();
+        const inDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+          && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+        if (!inDialog) workflowDialog.close();
+      });
+      workflowDeleteBtn.addEventListener("click", (event) => {
+        if (!window.confirm("确认删除该工作流？")) event.preventDefault();
+      });
 
       uploadBtn.addEventListener("click", () => apkInput.click());
       apkInput.addEventListener("change", () => {
         if (apkInput.files && apkInput.files.length > 0) {
           uploadForm.requestSubmit();
+        }
+      });
+      workflowUploadBtn.addEventListener("click", () => workflowFileInput.click());
+      workflowFileInput.addEventListener("change", () => {
+        if (workflowFileInput.files && workflowFileInput.files.length > 0) {
+          workflowUploadForm.requestSubmit();
         }
       });
 
@@ -583,28 +904,40 @@
         const url = new URL(window.location.href);
         url.searchParams.delete("edit");
         window.history.replaceState({}, "", url.toString());
+      } else if (AUTO_EDIT_WORKFLOW && AUTO_EDIT_WORKFLOW.id) {
+        openWorkflowDialog(AUTO_EDIT_WORKFLOW);
+        const url = new URL(window.location.href);
+        url.searchParams.delete("workflow_edit");
+        window.history.replaceState({}, "", url.toString());
+      } else if (AUTO_EDIT_WORKFLOW_ID && WORKFLOW_MAP.has(AUTO_EDIT_WORKFLOW_ID)) {
+        openWorkflowDialog(WORKFLOW_MAP.get(AUTO_EDIT_WORKFLOW_ID) || {});
+        const url = new URL(window.location.href);
+        url.searchParams.delete("workflow_edit");
+        window.history.replaceState({}, "", url.toString());
       }
 
       const catsList = document.getElementById("cats-list");
       const catAdd = document.getElementById("cat-add");
+      const workflowCatsList = document.getElementById("workflow-cats-list");
+      const workflowCatAdd = document.getElementById("workflow-cat-add");
 
-      function bindCatRow(row) {
+      function bindCatRow(row, listEl) {
         row.querySelector(".cat-up").addEventListener("click", () => {
           const prev = row.previousElementSibling;
-          if (prev) catsList.insertBefore(row, prev);
+          if (prev) listEl.insertBefore(row, prev);
         });
         row.querySelector(".cat-down").addEventListener("click", () => {
           const next = row.nextElementSibling;
-          if (next) catsList.insertBefore(next, row);
+          if (next) listEl.insertBefore(next, row);
         });
         row.querySelector(".cat-del").addEventListener("click", () => {
-          const rows = catsList.querySelectorAll(".cat-row");
+          const rows = listEl.querySelectorAll(".cat-row");
           if (rows.length <= 1) return;
           row.remove();
         });
       }
-      document.querySelectorAll(".cat-row").forEach(bindCatRow);
-      catAdd.addEventListener("click", () => {
+
+      function createCategoryRow() {
         const row = document.createElement("div");
         row.className = "cat-row";
         row.innerHTML = `
@@ -613,8 +946,20 @@
           <button type="button" class="btn-ghost cat-down">下移</button>
           <button type="button" class="btn-danger cat-del">删除</button>
         `;
+        return row;
+      }
+
+      catsList.querySelectorAll(".cat-row").forEach((row) => bindCatRow(row, catsList));
+      workflowCatsList.querySelectorAll(".cat-row").forEach((row) => bindCatRow(row, workflowCatsList));
+      catAdd.addEventListener("click", () => {
+        const row = createCategoryRow();
         catsList.appendChild(row);
-        bindCatRow(row);
+        bindCatRow(row, catsList);
+      });
+      workflowCatAdd.addEventListener("click", () => {
+        const row = createCategoryRow();
+        workflowCatsList.appendChild(row);
+        bindCatRow(row, workflowCatsList);
       });
 
       function normalizeCategory(value) {
@@ -622,17 +967,17 @@
         return text || "未分类";
       }
 
-      function buildCategoryCounts() {
+      function buildCategoryCounts(items) {
         const counts = new Map();
-        (APPS || []).forEach((app) => {
-          const category = normalizeCategory(app.category);
+        (items || []).forEach((item) => {
+          const category = normalizeCategory(item.category);
           counts.set(category, (counts.get(category) || 0) + 1);
         });
         return counts;
       }
 
-      function applyCategoryFilter(filterValue) {
-        const appItems = document.querySelectorAll(".app-item");
+      function applyCategoryFilter(filterValue, itemSelector, summaryEl, itemLabel) {
+        const appItems = document.querySelectorAll(itemSelector);
         let visibleCount = 0;
         appItems.forEach((item) => {
           const category = normalizeCategory(item.dataset.category);
@@ -640,14 +985,14 @@
           item.style.display = visible ? "" : "none";
           if (visible) visibleCount += 1;
         });
-        filterSummary.textContent = filterValue === "__ALL__"
-          ? `共 ${visibleCount} 个应用`
-          : `${filterValue} 分类共 ${visibleCount} 个应用`;
+        summaryEl.textContent = filterValue === "__ALL__"
+          ? `共 ${visibleCount} 个${itemLabel}`
+          : `${filterValue} 分类共 ${visibleCount} 个${itemLabel}`;
       }
 
-      function renderCategoryFilters() {
-        const counts = buildCategoryCounts();
-        const orderedCategories = [...(CATEGORIES || []).map(normalizeCategory)];
+      function renderCategoryFilters({ items, categories, filterContainer, summaryEl, itemSelector, itemLabel }) {
+        const counts = buildCategoryCounts(items);
+        const orderedCategories = [...(categories || []).map(normalizeCategory)];
         counts.forEach((_, category) => {
           if (!orderedCategories.includes(category)) orderedCategories.push(category);
         });
@@ -660,27 +1005,42 @@
           btn.dataset.filter = key;
           btn.textContent = label;
           btn.addEventListener("click", () => {
-            document.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("active"));
+            filterContainer.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("active"));
             btn.classList.add("active");
-            applyCategoryFilter(key);
+            applyCategoryFilter(key, itemSelector, summaryEl, itemLabel);
           });
           return btn;
         };
 
-        filterBar.innerHTML = "";
+        filterContainer.innerHTML = "";
         const allBtn = createButton("__ALL__", `全部 (${totalCount})`);
         allBtn.classList.add("active");
-        filterBar.appendChild(allBtn);
+        filterContainer.appendChild(allBtn);
 
         orderedCategories.forEach((category) => {
           const count = counts.get(category) || 0;
-          filterBar.appendChild(createButton(category, `${category} (${count})`));
+          filterContainer.appendChild(createButton(category, `${category} (${count})`));
         });
 
-        applyCategoryFilter("__ALL__");
+        applyCategoryFilter("__ALL__", itemSelector, summaryEl, itemLabel);
       }
 
-      renderCategoryFilters();
+      renderCategoryFilters({
+        items: APPS,
+        categories: CATEGORIES,
+        filterContainer: filterBar,
+        summaryEl: filterSummary,
+        itemSelector: "#panel-apps .app-item",
+        itemLabel: "应用",
+      });
+      renderCategoryFilters({
+        items: WORKFLOWS,
+        categories: WORKFLOW_CATEGORIES,
+        filterContainer: workflowFilterBar,
+        summaryEl: workflowFilterSummary,
+        itemSelector: "#panel-workflows .app-item",
+        itemLabel: "工作流",
+      });
     </script>
   </body>
 </html>

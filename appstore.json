@@ -76,21 +76,6 @@
       "apk": "/mobile-e8006a/music.apk.1"
     },
     {
-      "id": "a224dee3a354",
-      "code": "plus-9e8df3",
-      "name": "MT Manager",
-      "category": "未分类",
-      "icon": "",
-      "package": "bin.mt.plus",
-      "md5sum": "8a1841b84f6521e2ecd3f864aeaceda5",
-      "filesize": 30219687,
-      "updateTime": "2026-04-28T09:29:08Z",
-      "versionName": "2.26.4",
-      "description": "",
-      "incompatibility": [],
-      "apk": "/plus-9e8df3/MT2.26.4.apk"
-    },
-    {
       "code": "car-9bbb04",
       "name": "MusicFree",
       "category": "影音娱乐",
@@ -211,21 +196,6 @@
       "description": "手机投屏软件，适用于安卓手机，无需盒子，功能类似carlife软件，导航自动走头枕通道，会显示状态栏。",
       "incompatibility": [],
       "apk": "/easyconn-9645f6/7.0.1__.apk.1"
-    },
-    {
-      "id": "f1cd4eb1173e",
-      "code": "easyconn-9645f6-2",
-      "name": "亿连手机互联",
-      "category": "未分类",
-      "icon": "/easyconn-9645f6-2/icon.png",
-      "package": "net.easyconn",
-      "md5sum": "078ea06bc5271101c8f2515d6fd4339d",
-      "filesize": 42759120,
-      "updateTime": "2026-04-28T09:29:25Z",
-      "versionName": "7.0.1-9011d330b-202404121051",
-      "description": "",
-      "incompatibility": [],
-      "apk": "/easyconn-9645f6-2/7.0.1__.apk.1"
     },
     {
       "id": "76a2503fb735",
