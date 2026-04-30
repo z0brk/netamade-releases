@@ -440,6 +440,21 @@
       "apk": "/kwmusiccar-28105f/v7.4.3.21_.apk"
     },
     {
+      "id": "9e42a9bab41e",
+      "code": "auto-bad607",
+      "name": "酷狗音乐",
+      "category": "未分类",
+      "icon": "/auto-bad607/icon.png",
+      "package": "com.kugou.android.auto",
+      "md5sum": "4d7a841a45dfb47a0f5b70f103c0c1bb",
+      "filesize": 108786592,
+      "updateTime": "2026-04-30T05:36:39Z",
+      "versionName": "6.1.0",
+      "description": "酷狗车机版V6.1.0\r\n支持蝰蛇音效，母带音质，支持14种主题切换，支持5种播放器样式切换。美式方控完美支持，美式授权后可以在线更新。",
+      "incompatibility": [],
+      "apk": "/auto-bad607/com.kugou.android.auto.apk.1"
+    },
+    {
       "id": "4825334ac7e6",
       "code": "minimap-ca6ee2",
       "name": "高德地图",
