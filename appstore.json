@@ -4,11 +4,11 @@
     "导航地图",
     "影音娱乐",
     "手车互联",
+    "K 歌软件",
     "实用工具",
     "应用市场",
     "浏览器",
-    "未分类",
-    "不好用"
+    "未分类"
   ],
   "apps": [
     {
@@ -617,6 +617,66 @@
         "EP41"
       ],
       "apk": "/light-cbd5cc-2/nav_v2.6.0_20260429_1048.apk"
+    },
+    {
+      "id": "c04a03b7102b",
+      "code": "tv-633b0f",
+      "name": "咪咕爱唱",
+      "category": "K 歌软件",
+      "icon": "/tv-633b0f/icon.png",
+      "package": "com.iflytek.aichang.tv",
+      "md5sum": "0c7f2a7b46df3fa15e38359f586a0ee0",
+      "filesize": 15613508,
+      "updateTime": "2026-04-30T08:09:32Z",
+      "versionName": "9.9.012",
+      "description": "网上收集，可用性自测，VIP 版，登录即是连续包月会员",
+      "incompatibility": [],
+      "apk": "/tv-633b0f/9.9.012.apk"
+    },
+    {
+      "id": "918c5887d519",
+      "code": "desktop-7df69d",
+      "name": "智享K歌",
+      "category": "K 歌软件",
+      "icon": "/desktop-7df69d/icon.png",
+      "package": "com.huiaichang.sdm.desktop",
+      "md5sum": "762e9eca9f8569ee24e06efd8dd65c17",
+      "filesize": 74092117,
+      "updateTime": "2026-04-30T08:09:56Z",
+      "versionName": "2.16.58.2411111420",
+      "description": "网上收集，可用性自测，解锁会员版、支持扫码点歌，汇集 70w + 首歌曲，可在线更新曲库，全是 HD 高画质，支持语音助手",
+      "incompatibility": [],
+      "apk": "/desktop-7df69d/K_2.16.58.2411111420.apk"
+    },
+    {
+      "id": "57d80b6c5c3f",
+      "code": "desktop-7df69d-2",
+      "name": "智能K歌",
+      "category": "K 歌软件",
+      "icon": "/desktop-7df69d-2/icon.png",
+      "package": "com.huiaichang.sdm.desktop",
+      "md5sum": "b4c579dd3289f890c52dcba6b6ddb9da",
+      "filesize": 73004849,
+      "updateTime": "2026-04-30T08:10:14Z",
+      "versionName": "2.17.48.2505081546",
+      "description": "网上收集，可用性自测，解锁会员版、支持扫码点歌，汇集 70w + 首歌曲，可在线更新曲库，全是 HD 高画质，支持语音助手",
+      "incompatibility": [],
+      "apk": "/desktop-7df69d-2/Ktv_TVv2.17_.apk"
+    },
+    {
+      "id": "27b2ae3e59cd",
+      "code": "karaoketv-5aed64",
+      "name": "全民K歌",
+      "category": "K 歌软件",
+      "icon": "/karaoketv-5aed64/icon.png",
+      "package": "com.tencent.karaoketv",
+      "md5sum": "cde1c91a2561fde6a7e858b6ee86974d",
+      "filesize": 42160104,
+      "updateTime": "2026-04-30T08:10:22Z",
+      "versionName": "5.9.8.1",
+      "description": "联想盒子提取免登录版",
+      "incompatibility": [],
+      "apk": "/karaoketv-5aed64/K_5.9.8.1VIP.apk"
     }
   ],
   "messageBoard": [
