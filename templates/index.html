@@ -163,6 +163,18 @@
         padding: 12px;
         background: #fff;
         cursor: pointer;
+        position: relative;
+      }
+      .app-sort-actions {
+        display: flex;
+        gap: 6px;
+        justify-content: flex-end;
+        margin-top: 10px;
+      }
+      .app-sort-actions button {
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 12px;
       }
       .app-head {
         display: grid;
@@ -266,6 +278,43 @@
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 10px;
       }
+      .message-board {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .message-card {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px;
+        background: var(--panel-soft);
+      }
+      .message-card-top {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        gap: 8px;
+        align-items: start;
+      }
+      .message-pair-head,
+      .message-pair-row {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.9fr) minmax(260px, 1.4fr) auto auto auto;
+        gap: 8px;
+        align-items: start;
+        margin-top: 8px;
+      }
+      .message-pair-head {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .message-pair-row textarea {
+        min-height: 54px;
+      }
+      .message-pair-row .message-value {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
       .chips {
         display: flex;
         flex-wrap: wrap;
@@ -312,6 +361,11 @@
         .wrap { padding: 16px; }
         .hero h1 { font-size: 25px; }
         .cat-row { grid-template-columns: 1fr auto; }
+        .message-card-top,
+        .message-pair-head,
+        .message-pair-row {
+          grid-template-columns: 1fr;
+        }
       }
       @media (min-width: 1700px) {
         .app-grid {
@@ -336,6 +390,7 @@
 
       <nav class="tabs" aria-label="主标签页">
         <button type="button" class="tab-btn active" data-tab="notice">公告</button>
+        <button type="button" class="tab-btn" data-tab="messageboard">留言板</button>
         <button type="button" class="tab-btn" data-tab="apps">应用列表</button>
         <button type="button" class="tab-btn" data-tab="workflows">工作流</button>
         <button type="button" class="tab-btn" data-tab="categories">分类</button>
@@ -352,6 +407,19 @@
         </form>
       </section>
 
+      <section class="panel" id="panel-messageboard">
+        <h2>留言板</h2>
+        <p class="sub">维护客户端留言内容，保存到 appstore.json 的 messageBoard 字段。</p>
+        <form action="/message-board" method="post" id="message-board-form">
+          <input type="hidden" name="messageBoard" id="message-board-json" />
+          <div id="message-board-list" class="message-board"></div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="message-add">新增留言</button>
+            <button type="submit">保存留言板</button>
+          </div>
+        </form>
+      </section>
+
       <section class="panel" id="panel-apps">
         <h2>应用列表</h2>
         <p class="sub">上传新区包或点击已有应用编辑。共 {{ apps|length }} 个应用。</p>
@@ -364,8 +432,12 @@
         <div class="filter-wrap">
           <div class="filter-bar" id="cat-filter"></div>
           <div class="filter-summary" id="filter-summary"></div>
+          <form action="/apps/reorder" method="post" id="app-order-form" class="dialog-actions">
+            <input type="hidden" name="appOrder" id="app-order-json" />
+            <button type="submit" class="btn-ghost">保存排序</button>
+          </form>
         </div>
-        <div class="app-grid" style="margin-top: 14px;">
+        <div class="app-grid" id="apps-grid" style="margin-top: 14px;">
           {% for app in apps %}
             <article class="app-item edit-app-btn" data-app-id="{{ app.id }}" data-category="{{ app.category or '未分类' }}" tabindex="0" role="button">
               <div class="app-head">
@@ -377,6 +449,11 @@
               </div>
               <div class="app-desc">{{ app.description or "暂无描述" }}</div>
               <div class="app-meta">分类: {{ app.category or "-" }} · 版本: {{ app.versionName or "-" }}</div>
+              <div class="app-sort-actions">
+                <button type="button" class="btn-ghost app-sort-top">置顶</button>
+                <button type="button" class="btn-ghost app-sort-up">上移</button>
+                <button type="button" class="btn-ghost app-sort-down">下移</button>
+              </div>
             </article>
           {% endfor %}
         </div>
@@ -547,8 +624,13 @@
             </div>
           </div>
           <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="replace-apk-btn">替换 APK</button>
             <button type="submit">保存修改</button>
           </div>
+        </form>
+        <form action="/apps/replace-apk" method="post" enctype="multipart/form-data" id="replace-apk-form">
+          <input type="hidden" name="app_id" id="replace-apk-id-hidden" />
+          <input id="replace-apk-file" name="apk" type="file" accept=".apk,.apk.1,.1,application/vnd.android.package-archive" class="sr" required />
         </form>
         <form action="/apps/delete" method="post" id="delete-form">
           <input type="hidden" name="app_id" id="delete-id-hidden" />
@@ -638,6 +720,7 @@
       const WORKFLOW_MAP = new Map((WORKFLOWS || []).map((item) => [item.id, item]));
       const CATEGORIES = {{ categories|tojson }};
       const WORKFLOW_CATEGORIES = {{ workflow_categories|tojson }};
+      const MESSAGE_BOARD = {{ message_board|tojson }};
       const ACTIVE_TAB = "{{ active_tab }}";
       const AUTO_EDIT_ID = "{{ auto_edit_id }}";
       const AUTO_EDIT_APP = {{ auto_edit_app|tojson }};
@@ -647,13 +730,24 @@
       const closeBtn = document.getElementById("dialog-close");
       const deleteBtn = document.getElementById("delete-btn");
       const iconInput = document.getElementById("edit-icon");
+      const messageBoardList = document.getElementById("message-board-list");
+      const messageAddBtn = document.getElementById("message-add");
+      const messageBoardJson = document.getElementById("message-board-json");
+      const messageBoardForm = document.getElementById("message-board-form");
+      const replaceApkBtn = document.getElementById("replace-apk-btn");
+      const replaceApkFile = document.getElementById("replace-apk-file");
+      const replaceApkForm = document.getElementById("replace-apk-form");
       const uploadBtn = document.getElementById("upload-btn");
       const apkInput = document.getElementById("apk");
       const uploadForm = document.getElementById("upload-form");
       const editButtons = document.querySelectorAll(".edit-app-btn");
       const editCategorySelect = document.getElementById("edit-category");
+      const appsGrid = document.getElementById("apps-grid");
+      const appOrderForm = document.getElementById("app-order-form");
+      const appOrderJson = document.getElementById("app-order-json");
       const filterBar = document.getElementById("cat-filter");
       const filterSummary = document.getElementById("filter-summary");
+      let currentAppFilter = "__ALL__";
       const workflowFilterBar = document.getElementById("workflow-cat-filter");
       const workflowFilterSummary = document.getElementById("workflow-filter-summary");
       const workflowDialog = document.getElementById("workflow-dialog");
@@ -765,10 +859,144 @@
         });
       }
 
+      function normalizeMessageBoard(items) {
+        if (!Array.isArray(items)) return [];
+        return items.map((item) => {
+          const title = `${item && item.title ? item.title : ""}`.trim();
+          const contents = Array.isArray(item && item.contents) ? item.contents : [];
+          return {
+            title,
+            contents: contents.map((content) => ({
+              text: `${content && content.text ? content.text : ""}`.trim(),
+              canCopy: Boolean(content && content.canCopy),
+            })).filter((content) => content.text),
+          };
+        }).filter((item) => item.title || item.contents.length > 0);
+      }
+
+      function pairMessageContents(contents) {
+        const pairs = [];
+        const values = Array.isArray(contents) ? contents : [];
+        for (let index = 0; index < values.length; index += 1) {
+          const current = values[index] || {};
+          const next = values[index + 1] || {};
+          if (!current.canCopy && next.canCopy) {
+            pairs.push({ label: current.text || "", value: next.text || "" });
+            index += 1;
+            continue;
+          }
+          if (current.canCopy) {
+            pairs.push({ label: "", value: current.text || "" });
+          } else {
+            pairs.push({ label: current.text || "", value: "" });
+          }
+        }
+        return pairs;
+      }
+
+      function createMessagePairRow(pair = {}) {
+        const row = document.createElement("div");
+        row.className = "message-pair-row";
+        row.innerHTML = `
+          <textarea class="message-label" placeholder="说明，如：讴歌&#10;附带直播"></textarea>
+          <textarea class="message-value" placeholder="可复制内容，如 URL / 口令 / 文本"></textarea>
+          <button type="button" class="btn-ghost message-pair-top">置顶</button>
+          <button type="button" class="btn-ghost message-pair-down">下移</button>
+          <button type="button" class="btn-danger message-pair-del">删除</button>
+        `;
+        row.querySelector(".message-label").value = pair.label || "";
+        row.querySelector(".message-value").value = pair.value || "";
+        row.querySelector(".message-pair-top").addEventListener("click", () => {
+          const list = row.parentElement;
+          const first = list.querySelector(".message-pair-row");
+          if (first && first !== row) list.insertBefore(row, first);
+        });
+        row.querySelector(".message-pair-down").addEventListener("click", () => {
+          const next = row.nextElementSibling;
+          if (next) row.parentElement.insertBefore(next, row);
+        });
+        row.querySelector(".message-pair-del").addEventListener("click", () => row.remove());
+        return row;
+      }
+
+      function createMessageCard(item = {}) {
+        const card = document.createElement("div");
+        card.className = "message-card";
+        card.innerHTML = `
+          <div class="message-card-top">
+            <input type="text" class="message-title" placeholder="标题" />
+            <button type="button" class="btn-ghost message-top">置顶</button>
+            <button type="button" class="btn-ghost message-up">上移</button>
+            <button type="button" class="btn-ghost message-down">下移</button>
+            <button type="button" class="btn-danger message-del">删除留言</button>
+          </div>
+          <div class="message-pair-head">
+            <div>说明</div>
+            <div>可复制内容</div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="message-contents"></div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost message-content-add">新增一组</button>
+          </div>
+        `;
+        card.querySelector(".message-title").value = item.title || "";
+        const contentsEl = card.querySelector(".message-contents");
+        const pairs = pairMessageContents(item.contents);
+        pairs.forEach((pair) => contentsEl.appendChild(createMessagePairRow(pair)));
+        if (pairs.length === 0) {
+          contentsEl.appendChild(createMessagePairRow());
+        }
+        card.querySelector(".message-content-add").addEventListener("click", () => {
+          contentsEl.appendChild(createMessagePairRow());
+        });
+        card.querySelector(".message-top").addEventListener("click", () => {
+          const first = messageBoardList.querySelector(".message-card");
+          if (first && first !== card) messageBoardList.insertBefore(card, first);
+        });
+        card.querySelector(".message-up").addEventListener("click", () => {
+          const prev = card.previousElementSibling;
+          if (prev) messageBoardList.insertBefore(card, prev);
+        });
+        card.querySelector(".message-down").addEventListener("click", () => {
+          const next = card.nextElementSibling;
+          if (next) messageBoardList.insertBefore(next, card);
+        });
+        card.querySelector(".message-del").addEventListener("click", () => card.remove());
+        return card;
+      }
+
+      function renderMessageBoard(items) {
+        messageBoardList.innerHTML = "";
+        const values = normalizeMessageBoard(items);
+        values.forEach((item) => messageBoardList.appendChild(createMessageCard(item)));
+        if (values.length === 0) {
+          messageBoardList.appendChild(createMessageCard());
+        }
+      }
+
+      function collectMessageBoard() {
+        const items = [...messageBoardList.querySelectorAll(".message-card")].map((card) => {
+          const title = card.querySelector(".message-title").value.trim();
+          const contents = [];
+          [...card.querySelectorAll(".message-pair-row")].forEach((row) => {
+            const label = row.querySelector(".message-label").value.trim();
+            const value = row.querySelector(".message-value").value.trim();
+            if (label) contents.push({ text: label, canCopy: false });
+            if (value) contents.push({ text: value, canCopy: true });
+          });
+          return { title, contents };
+        });
+        return normalizeMessageBoard(items);
+      }
+
       function fillDialog(app) {
         document.getElementById("dialog-title").textContent = `编辑应用: ${app.name || app.package}`;
         document.getElementById("edit-id-hidden").value = app.id || "";
         document.getElementById("delete-id-hidden").value = app.id || "";
+        document.getElementById("replace-apk-id-hidden").value = app.id || "";
         document.getElementById("edit-name").value = app.name || "";
         fillCategorySelect(app.category || "未分类");
         document.getElementById("edit-package").value = app.package || "";
@@ -842,6 +1070,70 @@
         });
       });
 
+      function visibleAppItems() {
+        return [...appsGrid.querySelectorAll(".app-item")].filter((item) => item.style.display !== "none");
+      }
+
+      function applyVisibleAppOrder(visibleItems, reorderedVisibleItems, focusedItem) {
+        const allItems = [...appsGrid.querySelectorAll(".app-item")];
+        const queue = [...reorderedVisibleItems];
+        allItems.forEach((current) => {
+          if (visibleItems.includes(current)) {
+            appsGrid.appendChild(queue.shift());
+          } else {
+            appsGrid.appendChild(current);
+          }
+        });
+        if (focusedItem && focusedItem.focus) {
+          focusedItem.focus();
+        }
+        applyCategoryFilter(currentAppFilter, "#panel-apps .app-item", filterSummary, "应用");
+      }
+
+      function moveAppItem(item, direction) {
+        const visibleItems = visibleAppItems();
+        const index = visibleItems.indexOf(item);
+        if (index === -1) return;
+        const target = visibleItems[index + direction];
+        if (!target) return;
+
+        const reorderedVisibleItems = [...visibleItems];
+        reorderedVisibleItems[index] = target;
+        reorderedVisibleItems[index + direction] = item;
+        applyVisibleAppOrder(visibleItems, reorderedVisibleItems, item);
+      }
+
+      function topAppItem(item) {
+        const visibleItems = visibleAppItems();
+        const index = visibleItems.indexOf(item);
+        if (index <= 0) return;
+
+        const reorderedVisibleItems = [...visibleItems];
+        reorderedVisibleItems.splice(index, 1);
+        reorderedVisibleItems.unshift(item);
+        applyVisibleAppOrder(visibleItems, reorderedVisibleItems, item);
+      }
+
+      appsGrid.querySelectorAll(".app-sort-top, .app-sort-up, .app-sort-down").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const item = button.closest(".app-item");
+          if (!item) return;
+          if (button.classList.contains("app-sort-top")) {
+            topAppItem(item);
+            return;
+          }
+          moveAppItem(item, button.classList.contains("app-sort-up") ? -1 : 1);
+        });
+      });
+
+      appOrderForm.addEventListener("submit", () => {
+        appOrderJson.value = JSON.stringify(
+          [...appsGrid.querySelectorAll(".app-item")].map((item) => item.dataset.appId || "").filter(Boolean)
+        );
+      });
+
       workflowButtons.forEach((button) => {
         const openFn = () => {
           const workflowId = button.dataset.workflowId || "";
@@ -859,6 +1151,19 @@
 
       iconInput.addEventListener("input", () => {
         document.getElementById("preview-icon").src = resolvePreviewUrl(iconInput.value);
+      });
+      messageAddBtn.addEventListener("click", () => {
+        messageBoardList.appendChild(createMessageCard());
+      });
+      messageBoardForm.addEventListener("submit", () => {
+        messageBoardJson.value = JSON.stringify(collectMessageBoard());
+      });
+      renderMessageBoard(MESSAGE_BOARD || []);
+      replaceApkBtn.addEventListener("click", () => replaceApkFile.click());
+      replaceApkFile.addEventListener("change", () => {
+        if (replaceApkFile.files && replaceApkFile.files.length > 0) {
+          replaceApkForm.requestSubmit();
+        }
       });
       closeBtn.addEventListener("click", () => dialog.close());
       dialog.addEventListener("click", (event) => {
@@ -1007,6 +1312,9 @@
           btn.addEventListener("click", () => {
             filterContainer.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("active"));
             btn.classList.add("active");
+            if (filterContainer === filterBar) {
+              currentAppFilter = key;
+            }
             applyCategoryFilter(key, itemSelector, summaryEl, itemLabel);
           });
           return btn;

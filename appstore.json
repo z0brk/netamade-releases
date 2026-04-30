@@ -12,21 +12,23 @@
   ],
   "apps": [
     {
-      "id": "67e85113c7dd",
-      "code": "amapnavi-c98a57",
-      "name": "AmapNavi",
+      "id": "2be0f9204784",
+      "code": "amapauto-d02f31-2",
+      "name": "高德地图车机版-L专版-哪吒音色-不能头枕",
       "category": "导航地图",
-      "icon": "/amapnavi-c98a57/icon.png",
-      "package": "com.carrot.amapnavi",
-      "md5sum": "c853f086faf9bb4c6cd6311f09ad0489",
-      "filesize": 72718855,
-      "updateTime": "2026-04-28T07:25:19Z",
-      "versionName": "1.3.0.0",
-      "description": "Openpilot 点对点导航，依赖 Openpilot 设备和高德地图车机版。",
+      "icon": "/amapauto-d02f31-2/icon.png",
+      "package": "com.autonavi.amapauto",
+      "md5sum": "693100202727fb10491184f7f5c3a241",
+      "filesize": 139659032,
+      "updateTime": "2026-04-30T07:58:21Z",
+      "versionName": "9.1.0.600087@美式股东版",
+      "description": "哪吒原车音色（不能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 支持哪吒音色播报导航/自定义语音包（下载不同的文件版本，自定义语音包只能从车机版自带的里面选）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
       "incompatibility": [
-        "ALL"
+        "EP36",
+        "EP40",
+        "EP41"
       ],
-      "apk": "/amapnavi-c98a57/AmapNavi-V1.3.0.0.apk.1"
+      "apk": "/amapauto-d02f31-2/-L--2026-04-30-03.apk"
     },
     {
       "id": "868ca5a1d0ae",
@@ -42,6 +44,111 @@
       "description": "适用车连易carplay",
       "incompatibility": [],
       "apk": "/phonemirrorbox-97e435/AutoKit_2025.03.19.1126.apk.1"
+    },
+    {
+      "id": "eda86739097e",
+      "code": "aweme-2332cb",
+      "name": "抖音车机版",
+      "category": "影音娱乐",
+      "icon": "/aweme-2332cb/icon.webp",
+      "package": "com.ss.android.ugc.aweme",
+      "md5sum": "7ed9bfa4bba14d6c583f48bf4870a394",
+      "filesize": 32507202,
+      "updateTime": "2026-04-28T07:39:33Z",
+      "versionName": "9.9.2002",
+      "description": "支持方向盘切歌",
+      "incompatibility": [],
+      "apk": "/aweme-2332cb/apk.1"
+    },
+    {
+      "code": "car-9bbb04",
+      "name": "MusicFree",
+      "category": "影音娱乐",
+      "icon": "/car-9bbb04/icon.webp",
+      "package": "fun.upup.musicfree.car",
+      "md5sum": "99093c7de1b6b27ee95f58d557454d8d",
+      "filesize": 18941232,
+      "updateTime": "2026-04-28T04:11:07Z",
+      "versionName": "1.0.0-car-car",
+      "description": "免费的听歌软件",
+      "incompatibility": [],
+      "apk": "/car-9bbb04/MusicFree-Car-v1.0.0.apk",
+      "id": "b8ea2f116687"
+    },
+    {
+      "id": "d62472bccdf3",
+      "code": "car-82a073",
+      "name": "汽水音乐车机版",
+      "category": "影音娱乐",
+      "icon": "/car-82a073/icon.webp",
+      "package": "com.luna.music.car",
+      "md5sum": "8f4243660a2616f14d835229f921461a",
+      "filesize": 39036285,
+      "updateTime": "2026-04-28T04:44:58Z",
+      "versionName": "1.0.10",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/car-82a073/-1.0.10.apk"
+    },
+    {
+      "id": "eaaa83ff7986",
+      "code": "appmanage-8418ca",
+      "name": "应用管家",
+      "category": "实用工具",
+      "icon": "/appmanage-8418ca/icon.png",
+      "package": "com.yunpan.appmanage",
+      "md5sum": "a50c9071a0b88d72219d05fa585aa430",
+      "filesize": 15472101,
+      "updateTime": "2026-04-28T04:55:03Z",
+      "versionName": "1.7.7",
+      "description": "对车机上的应用进行管理、支持扫码传输文件、卸载等功能",
+      "incompatibility": [],
+      "apk": "/appmanage-8418ca/1.77.apk.1"
+    },
+    {
+      "id": "06ff4259022b",
+      "code": "mobile-e8006a",
+      "name": "LX Music",
+      "category": "影音娱乐",
+      "icon": "/mobile-e8006a/icon.png",
+      "package": "cn.toside.music.mobile",
+      "md5sum": "5c4b059fc8d84245514940dc35428d8e",
+      "filesize": 14030650,
+      "updateTime": "2026-04-28T09:28:44Z",
+      "versionName": "1.8.2",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/mobile-e8006a/music.apk.1"
+    },
+    {
+      "id": "da968ac726c9",
+      "code": "simple-live-tv-c95078",
+      "name": "Simple Live TV",
+      "category": "影音娱乐",
+      "icon": "/simple-live-tv-c95078/icon.png",
+      "package": "com.xycz.simple_live_tv",
+      "md5sum": "5e84251a09a43c0f1ce163b03a9d4624",
+      "filesize": 35379107,
+      "updateTime": "2026-04-28T05:51:09Z",
+      "versionName": "1.6.4",
+      "description": "多平台聚合直播，支持直播平台：虎牙直播、斗鱼直播、哔哩哔哩直播、抖音直播",
+      "incompatibility": [],
+      "apk": "/simple-live-tv-c95078/simplelive-B-v1.6.5.apk"
+    },
+    {
+      "id": "4e4293b73fb7",
+      "code": "himovceie-1f598e",
+      "name": "影视仓",
+      "category": "影音娱乐",
+      "icon": "/himovceie-1f598e/icon.png",
+      "package": "com.huawei.himovceie",
+      "md5sum": "0fd1d364b026e06b6b20c707edaf16f9",
+      "filesize": 39103626,
+      "updateTime": "2026-04-28T07:11:30Z",
+      "versionName": "6.2.0",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/himovceie-1f598e/6.2.0_opt.apk.1"
     },
     {
       "id": "3665bbc32341",
@@ -74,128 +181,19 @@
       "apk": "/car-063149/DJv4.2.0fun_apk.apk"
     },
     {
-      "id": "d1540a7584be",
-      "code": "tv-a7ee02",
-      "name": "DongYuTvWeb",
-      "category": "影音娱乐",
-      "icon": "/tv-a7ee02/icon.webp",
-      "package": "xyz.jdynb.tv",
-      "md5sum": "53d1d59e8a2e9538404b95d613b1ea9b",
-      "filesize": 2858405,
-      "updateTime": "2026-04-30T06:03:31Z",
-      "versionName": "1.0.6.3",
-      "description": "",
-      "incompatibility": [],
-      "apk": "/tv-a7ee02/DongYuTVWeb_v1.0.6.3.apk"
-    },
-    {
-      "id": "1c3b24918c36",
-      "code": "manager-ad1c6e",
-      "name": "EX File Manager",
+      "id": "0f9463626899",
+      "code": "launcher-15e1ec",
+      "name": "布丁UI",
       "category": "实用工具",
-      "icon": "/manager-ad1c6e/icon.png",
-      "package": "com.ace.ex.file.manager",
-      "md5sum": "448859072ab4a0f0151acf7a87c9d26b",
-      "filesize": 100483158,
-      "updateTime": "2026-04-28T07:34:11Z",
-      "versionName": "1.5.5",
-      "description": "解锁高级版去除弹窗",
-      "incompatibility": [
-        "ALL"
-      ],
-      "apk": "/manager-ad1c6e/EXv1.5.5.apk"
-    },
-    {
-      "id": "06ff4259022b",
-      "code": "mobile-e8006a",
-      "name": "LX Music",
-      "category": "影音娱乐",
-      "icon": "/mobile-e8006a/icon.png",
-      "package": "cn.toside.music.mobile",
-      "md5sum": "5c4b059fc8d84245514940dc35428d8e",
-      "filesize": 14030650,
-      "updateTime": "2026-04-28T09:28:44Z",
-      "versionName": "1.8.2",
-      "description": "",
+      "icon": "/launcher-15e1ec/icon.png",
+      "package": "com.sfcar.launcher",
+      "md5sum": "48c00abe026acfb3e5c9e9a0a83ab42b",
+      "filesize": 46384369,
+      "updateTime": "2026-04-28T05:52:35Z",
+      "versionName": "2.0.4",
+      "description": "不要更新，更新后不可用",
       "incompatibility": [],
-      "apk": "/mobile-e8006a/music.apk.1"
-    },
-    {
-      "code": "car-9bbb04",
-      "name": "MusicFree",
-      "category": "影音娱乐",
-      "icon": "/car-9bbb04/icon.webp",
-      "package": "fun.upup.musicfree.car",
-      "md5sum": "99093c7de1b6b27ee95f58d557454d8d",
-      "filesize": 18941232,
-      "updateTime": "2026-04-28T04:11:07Z",
-      "versionName": "1.0.0-car-car",
-      "description": "免费的听歌软件",
-      "incompatibility": [],
-      "apk": "/car-9bbb04/MusicFree-Car-v1.0.0.apk",
-      "id": "b8ea2f116687"
-    },
-    {
-      "id": "87c3c74c4b0b",
-      "code": "ad-f2cb81",
-      "name": "MX Player",
-      "category": "影音娱乐",
-      "icon": "/ad-f2cb81/icon.webp",
-      "package": "com.mxtech.videoplayer.ad",
-      "md5sum": "54610e602173117bf85becbe5cb2abf4",
-      "filesize": 87028471,
-      "updateTime": "2026-04-28T07:33:29Z",
-      "versionName": "2.12.2",
-      "description": "",
-      "incompatibility": [],
-      "apk": "/ad-f2cb81/MX_Player_2.12.2-youarefinished.apk"
-    },
-    {
-      "id": "9a6af73759ef",
-      "code": "tv-917e3a",
-      "name": "OK影视",
-      "category": "影音娱乐",
-      "icon": "/tv-917e3a/icon.png",
-      "package": "com.fongmi.android.tv",
-      "md5sum": "56dfe9aa7d9a222d6aab85c8986a09c8",
-      "filesize": 81665926,
-      "updateTime": "2026-04-28T04:55:09Z",
-      "versionName": "3.7.3",
-      "description": "",
-      "incompatibility": [],
-      "apk": "/tv-917e3a/OK3.7.3-64.apk.1"
-    },
-    {
-      "id": "da968ac726c9",
-      "code": "simple-live-tv-c95078",
-      "name": "Simple Live TV",
-      "category": "影音娱乐",
-      "icon": "/simple-live-tv-c95078/icon.png",
-      "package": "com.xycz.simple_live_tv",
-      "md5sum": "5e84251a09a43c0f1ce163b03a9d4624",
-      "filesize": 35379107,
-      "updateTime": "2026-04-28T05:51:09Z",
-      "versionName": "1.6.4",
-      "description": "多平台聚合直播，支持直播平台：虎牙直播、斗鱼直播、哔哩哔哩直播、抖音直播",
-      "incompatibility": [],
-      "apk": "/simple-live-tv-c95078/simplelive-B-v1.6.5.apk"
-    },
-    {
-      "id": "5314543acd6e",
-      "code": "solidexplorer2-e24af0",
-      "name": "Solid Explorer",
-      "category": "实用工具",
-      "icon": "/solidexplorer2-e24af0/icon.png",
-      "package": "pl.solidexplorer2",
-      "md5sum": "da3c3c4a0d80daadb24eea2110436925",
-      "filesize": 25339230,
-      "updateTime": "2026-04-28T07:33:57Z",
-      "versionName": "3.4.7",
-      "description": "专业绿色版",
-      "incompatibility": [
-        "ALL"
-      ],
-      "apk": "/solidexplorer2-e24af0/Solid_Explorer_3.4.7-Balatan.apk"
+      "apk": "/launcher-15e1ec/ui2.0.4.apk"
     },
     {
       "id": "2ca0b844f3bb",
@@ -243,49 +241,53 @@
       "apk": "/easyconn-9645f6/7.0.1__.apk.1"
     },
     {
-      "id": "71a1dfb5d1d2",
-      "code": "wasuvideoplayer-0fa1f5",
-      "name": "华数TV",
+      "id": "d1540a7584be",
+      "code": "tv-a7ee02",
+      "name": "DongYuTvWeb",
       "category": "影音娱乐",
-      "icon": "/wasuvideoplayer-0fa1f5/icon.png",
-      "package": "com.wasu.wasuvideoplayer",
-      "md5sum": "265bddf317d3eb25639204f2c7e8af12",
-      "filesize": 51327832,
-      "updateTime": "2026-04-30T06:03:24Z",
-      "versionName": "7.2.9.0",
+      "icon": "/tv-a7ee02/icon.webp",
+      "package": "xyz.jdynb.tv",
+      "md5sum": "53d1d59e8a2e9538404b95d613b1ea9b",
+      "filesize": 2858405,
+      "updateTime": "2026-04-30T06:03:31Z",
+      "versionName": "1.0.6.3",
       "description": "",
       "incompatibility": [],
-      "apk": "/wasuvideoplayer-0fa1f5/TV_v7.2.9.0.apk"
+      "apk": "/tv-a7ee02/DongYuTVWeb_v1.0.6.3.apk"
     },
     {
-      "id": "76a2503fb735",
-      "code": "isulewtools-a4c447",
-      "name": "哪吒互联",
+      "id": "1c3b24918c36",
+      "code": "manager-ad1c6e",
+      "name": "EX File Manager",
       "category": "实用工具",
-      "icon": "/isulewtools-a4c447/icon.webp",
-      "package": "com.neta.isulewtools",
-      "md5sum": "956dacfebf77ee145eff51a4149c79fe",
-      "filesize": 35536733,
-      "updateTime": "2026-04-28T04:45:20Z",
-      "versionName": "2.1.8",
-      "description": "哪吒互联是一款车机增强应用，支持自定义仪表盘和小组件，也能通过插件扩展功能。它可实时读取车辆数据，提供悬浮窗查看和日志排查，同时支持蓝牙切换、按键映射，让日常驾驶操作更顺手。飞佬 Carplay 功能正在开发中，功能未出，敬请期待",
-      "incompatibility": [],
-      "apk": "/isulewtools-a4c447/NETA_CONNECT-v2.1.8.apk"
+      "icon": "/manager-ad1c6e/icon.png",
+      "package": "com.ace.ex.file.manager",
+      "md5sum": "448859072ab4a0f0151acf7a87c9d26b",
+      "filesize": 100483158,
+      "updateTime": "2026-04-28T07:34:11Z",
+      "versionName": "1.5.5",
+      "description": "解锁高级版去除弹窗",
+      "incompatibility": [
+        "ALL"
+      ],
+      "apk": "/manager-ad1c6e/EXv1.5.5.apk"
     },
     {
-      "id": "0f9463626899",
-      "code": "launcher-15e1ec",
-      "name": "布丁UI",
-      "category": "影音娱乐",
-      "icon": "/launcher-15e1ec/icon.png",
-      "package": "com.sfcar.launcher",
-      "md5sum": "48c00abe026acfb3e5c9e9a0a83ab42b",
-      "filesize": 46384369,
-      "updateTime": "2026-04-28T05:52:35Z",
-      "versionName": "2.0.4",
-      "description": "不要更新，更新后不可用",
-      "incompatibility": [],
-      "apk": "/launcher-15e1ec/ui2.0.4.apk"
+      "id": "5314543acd6e",
+      "code": "solidexplorer2-e24af0",
+      "name": "Solid Explorer",
+      "category": "实用工具",
+      "icon": "/solidexplorer2-e24af0/icon.png",
+      "package": "pl.solidexplorer2",
+      "md5sum": "da3c3c4a0d80daadb24eea2110436925",
+      "filesize": 25339230,
+      "updateTime": "2026-04-28T07:33:57Z",
+      "versionName": "3.4.7",
+      "description": "专业绿色版",
+      "incompatibility": [
+        "ALL"
+      ],
+      "apk": "/solidexplorer2-e24af0/Solid_Explorer_3.4.7-Balatan.apk"
     },
     {
       "id": "48ef61c20f91",
@@ -305,49 +307,49 @@
       "apk": "/qqdownloader-84e559/apk"
     },
     {
-      "id": "eaaa83ff7986",
-      "code": "appmanage-8418ca",
-      "name": "应用管家",
+      "id": "76a2503fb735",
+      "code": "isulewtools-a4c447",
+      "name": "哪吒互联",
       "category": "实用工具",
-      "icon": "/appmanage-8418ca/icon.png",
-      "package": "com.yunpan.appmanage",
-      "md5sum": "a50c9071a0b88d72219d05fa585aa430",
-      "filesize": 15472101,
-      "updateTime": "2026-04-28T04:55:03Z",
-      "versionName": "1.7.7",
-      "description": "对车机上的应用进行管理、支持扫码传输文件、卸载等功能",
+      "icon": "/isulewtools-a4c447/icon.webp",
+      "package": "com.neta.isulewtools",
+      "md5sum": "956dacfebf77ee145eff51a4149c79fe",
+      "filesize": 35536733,
+      "updateTime": "2026-04-28T04:45:20Z",
+      "versionName": "2.1.8",
+      "description": "哪吒互联是一款车机增强应用，支持自定义仪表盘和小组件，也能通过插件扩展功能。它可实时读取车辆数据，提供悬浮窗查看和日志排查，同时支持蓝牙切换、按键映射，让日常驾驶操作更顺手。飞佬 Carplay 功能正在开发中，功能未出，敬请期待",
       "incompatibility": [],
-      "apk": "/appmanage-8418ca/1.77.apk.1"
+      "apk": "/isulewtools-a4c447/NETA_CONNECT-v2.1.8.apk"
     },
     {
-      "id": "4e4293b73fb7",
-      "code": "himovceie-1f598e",
-      "name": "影视仓",
+      "id": "87c3c74c4b0b",
+      "code": "ad-f2cb81",
+      "name": "MX Player",
       "category": "影音娱乐",
-      "icon": "/himovceie-1f598e/icon.png",
-      "package": "com.huawei.himovceie",
-      "md5sum": "0fd1d364b026e06b6b20c707edaf16f9",
-      "filesize": 39103626,
-      "updateTime": "2026-04-28T07:11:30Z",
-      "versionName": "6.2.0",
+      "icon": "/ad-f2cb81/icon.webp",
+      "package": "com.mxtech.videoplayer.ad",
+      "md5sum": "54610e602173117bf85becbe5cb2abf4",
+      "filesize": 87028471,
+      "updateTime": "2026-04-28T07:33:29Z",
+      "versionName": "2.12.2",
       "description": "",
       "incompatibility": [],
-      "apk": "/himovceie-1f598e/6.2.0_opt.apk.1"
+      "apk": "/ad-f2cb81/MX_Player_2.12.2-youarefinished.apk"
     },
     {
-      "id": "eda86739097e",
-      "code": "aweme-2332cb",
-      "name": "抖音车机版",
+      "id": "9a6af73759ef",
+      "code": "tv-917e3a",
+      "name": "OK影视",
       "category": "影音娱乐",
-      "icon": "/aweme-2332cb/icon.webp",
-      "package": "com.ss.android.ugc.aweme",
-      "md5sum": "7ed9bfa4bba14d6c583f48bf4870a394",
-      "filesize": 32507202,
-      "updateTime": "2026-04-28T07:39:33Z",
-      "versionName": "9.9.2002",
-      "description": "支持方向盘切歌",
+      "icon": "/tv-917e3a/icon.png",
+      "package": "com.fongmi.android.tv",
+      "md5sum": "56dfe9aa7d9a222d6aab85c8986a09c8",
+      "filesize": 81665926,
+      "updateTime": "2026-04-28T04:55:09Z",
+      "versionName": "3.7.3",
+      "description": "",
       "incompatibility": [],
-      "apk": "/aweme-2332cb/apk.1"
+      "apk": "/tv-917e3a/OK3.7.3-64.apk.1"
     },
     {
       "id": "24eca314776f",
@@ -365,6 +367,21 @@
       "apk": "/permissiondog-5caf28/permissiondog.apk"
     },
     {
+      "id": "71a1dfb5d1d2",
+      "code": "wasuvideoplayer-0fa1f5",
+      "name": "华数TV",
+      "category": "影音娱乐",
+      "icon": "/wasuvideoplayer-0fa1f5/icon.png",
+      "package": "com.wasu.wasuvideoplayer",
+      "md5sum": "265bddf317d3eb25639204f2c7e8af12",
+      "filesize": 51327832,
+      "updateTime": "2026-04-30T06:03:24Z",
+      "versionName": "7.2.9.0",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/wasuvideoplayer-0fa1f5/TV_v7.2.9.0.apk"
+    },
+    {
       "id": "7af516d367a0",
       "code": "ad1-94a636",
       "name": "毒舌电影",
@@ -378,21 +395,6 @@
       "description": "",
       "incompatibility": [],
       "apk": "/ad1-94a636/v1.1.2fun_apk.apk"
-    },
-    {
-      "id": "d62472bccdf3",
-      "code": "car-82a073",
-      "name": "汽水音乐车机版",
-      "category": "影音娱乐",
-      "icon": "/car-82a073/icon.webp",
-      "package": "com.luna.music.car",
-      "md5sum": "8f4243660a2616f14d835229f921461a",
-      "filesize": 39036285,
-      "updateTime": "2026-04-28T04:44:58Z",
-      "versionName": "1.0.10",
-      "description": "",
-      "incompatibility": [],
-      "apk": "/car-82a073/-1.0.10.apk"
     },
     {
       "code": "markethd-cf79bf",
@@ -470,19 +472,23 @@
       "id": "ef3fe4af4eb8"
     },
     {
-      "id": "d81157180e94",
-      "code": "wecarnavi-7b31ab",
-      "name": "腾讯地图车机版",
+      "code": "amapauto-d02f31",
+      "name": "高德地图车机版-L专版-头枕出声",
       "category": "导航地图",
-      "icon": "/wecarnavi-7b31ab/icon.png",
-      "package": "com.tencent.wecarnavi",
-      "md5sum": "66f0324b74b91436d80edaca320f163b",
-      "filesize": 129970812,
-      "updateTime": "2026-04-28T04:54:49Z",
-      "versionName": "9.6.0.75",
-      "description": "",
-      "incompatibility": [],
-      "apk": "/wecarnavi-7b31ab/V9.6.0.75.apk.1"
+      "icon": "/amapauto-d02f31/icon.png",
+      "package": "com.autonavi.amapauto",
+      "md5sum": "ea1c54118427163f501affaeaad79c7a",
+      "filesize": 139659032,
+      "updateTime": "2026-04-30T07:58:34Z",
+      "versionName": "9.1.0.600087@美式股东版",
+      "description": "高德车机版音色（能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
+      "incompatibility": [
+        "EP36",
+        "EP40",
+        "EP41"
+      ],
+      "apk": "/amapauto-d02f31/-L--2026-04-30-03.apk",
+      "id": "9206951660cd"
     },
     {
       "id": "a097f00ab681",
@@ -530,59 +536,6 @@
       "apk": "/auto-bad607/com.kugou.android.auto.apk.1"
     },
     {
-      "id": "4825334ac7e6",
-      "code": "minimap-ca6ee2",
-      "name": "高德地图",
-      "category": "导航地图",
-      "icon": "/minimap-ca6ee2/icon.png",
-      "package": "com.autonavi.minimap",
-      "md5sum": "6180201aa60a18b0d25b37d986c770d4",
-      "filesize": 169374026,
-      "updateTime": "2026-04-28T07:47:38Z",
-      "versionName": "16.10.0.2015",
-      "description": "这是哪小吒联合 10 个车友众筹花钱请别人为适配哪吒精简的高德地图手机版本（网上的精简版在哪吒车上白屏打不开），支持车道级，不能走头枕，修改内容为：去下巴、右上角变设置、去首页下拉AI广告、去首页上方条形广告、去首页右上角圆球广告，你的搜索结果的网页广告去不掉，首页下拉3-4个有限数量的非AI广告去不掉，支持分屏、支持画中画、强开车道级。流畅度比官版有一定提升，但也没那么大，首次打开时该卡还是卡。",
-      "incompatibility": [],
-      "apk": "/minimap-ca6ee2/V16.10.0.2015_.apk"
-    },
-    {
-      "id": "2be0f9204784",
-      "code": "amapauto-d02f31-2",
-      "name": "高德地图车机版-L专版-哪吒音色-不能头枕",
-      "category": "导航地图",
-      "icon": "/amapauto-d02f31-2/icon.png",
-      "package": "com.autonavi.amapauto",
-      "md5sum": "0ae922cee88c6ab62abf2e33d8548dea",
-      "filesize": 135583082,
-      "updateTime": "2026-04-28T04:39:01Z",
-      "versionName": "9.1.0.600087@美式股东版",
-      "description": "哪吒原车音色（不能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 支持哪吒音色播报导航/自定义语音包（下载不同的文件版本，自定义语音包只能从车机版自带的里面选）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
-      "incompatibility": [
-        "EP36",
-        "EP40",
-        "EP41"
-      ],
-      "apk": "/amapauto-d02f31-2/-L---2026-04-27-33.apk"
-    },
-    {
-      "code": "amapauto-d02f31",
-      "name": "高德地图车机版-L专版-头枕出声",
-      "category": "导航地图",
-      "icon": "/amapauto-d02f31/icon.png",
-      "package": "com.autonavi.amapauto",
-      "md5sum": "6c7733136cf717e9c8e9d55d9922a97b",
-      "filesize": 135583082,
-      "updateTime": "2026-04-28T04:34:02Z",
-      "versionName": "9.1.0.600087@美式股东版",
-      "description": "高德车机版音色（能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
-      "incompatibility": [
-        "EP36",
-        "EP40",
-        "EP41"
-      ],
-      "apk": "/amapauto-d02f31/-L--2026-04-27-33.apk",
-      "id": "9206951660cd"
-    },
-    {
       "id": "870940c255c6",
       "code": "amapauto-d02f31-3",
       "name": "高德地图车机版-S_GT_猎装专版",
@@ -598,6 +551,175 @@
         "EP32"
       ],
       "apk": "/amapauto-d02f31-3/SGT__V9.1LOGO9TTS-signed.apk"
+    },
+    {
+      "id": "4825334ac7e6",
+      "code": "minimap-ca6ee2",
+      "name": "高德地图",
+      "category": "导航地图",
+      "icon": "/minimap-ca6ee2/icon.png",
+      "package": "com.autonavi.minimap",
+      "md5sum": "6180201aa60a18b0d25b37d986c770d4",
+      "filesize": 169374026,
+      "updateTime": "2026-04-28T07:47:38Z",
+      "versionName": "16.10.0.2015",
+      "description": "这是哪小吒联合 10 个车友众筹花钱请别人为适配哪吒精简的高德地图手机版本（网上的精简版在哪吒车上白屏打不开），支持车道级，不能走头枕，修改内容为：去下巴、右上角变设置、去首页下拉AI广告、去首页上方条形广告、去首页右上角圆球广告，你的搜索结果的网页广告去不掉，首页下拉3-4个有限数量的非AI广告去不掉，支持分屏、支持画中画、强开车道级。流畅度比官版有一定提升，但也没那么大，首次打开时该卡还是卡。",
+      "incompatibility": [],
+      "apk": "/minimap-ca6ee2/V16.10.0.2015_.apk"
+    },
+    {
+      "id": "d81157180e94",
+      "code": "wecarnavi-7b31ab",
+      "name": "腾讯地图车机版",
+      "category": "导航地图",
+      "icon": "/wecarnavi-7b31ab/icon.png",
+      "package": "com.tencent.wecarnavi",
+      "md5sum": "66f0324b74b91436d80edaca320f163b",
+      "filesize": 129970812,
+      "updateTime": "2026-04-28T04:54:49Z",
+      "versionName": "9.6.0.75",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/wecarnavi-7b31ab/V9.6.0.75.apk.1"
+    },
+    {
+      "id": "67e85113c7dd",
+      "code": "amapnavi-c98a57",
+      "name": "AmapNavi",
+      "category": "导航地图",
+      "icon": "/amapnavi-c98a57/icon.png",
+      "package": "com.carrot.amapnavi",
+      "md5sum": "c853f086faf9bb4c6cd6311f09ad0489",
+      "filesize": 72718855,
+      "updateTime": "2026-04-28T07:25:19Z",
+      "versionName": "1.3.0.0",
+      "description": "Openpilot 点对点导航，依赖 Openpilot 设备和高德地图车机版。",
+      "incompatibility": [
+        "ALL"
+      ],
+      "apk": "/amapnavi-c98a57/AmapNavi-V1.3.0.0.apk.1"
+    },
+    {
+      "id": "9ebca9e8eb35",
+      "code": "light-cbd5cc-2",
+      "name": "红绿灯领航",
+      "category": "导航地图",
+      "icon": "/light-cbd5cc-2/icon.webp",
+      "package": "com.mojoxing.light",
+      "md5sum": "cee7756b08589c239e5b5d7b6e89a9c2",
+      "filesize": 6768515,
+      "updateTime": "2026-04-30T07:57:12Z",
+      "versionName": "2.6.0",
+      "description": "新版本在S、GT、猎装使用悬浮窗还有问题",
+      "incompatibility": [
+        "EP36",
+        "EP40",
+        "EP41"
+      ],
+      "apk": "/light-cbd5cc-2/nav_v2.6.0_20260429_1048.apk"
+    }
+  ],
+  "messageBoard": [
+    {
+      "title": "影视仓视频源",
+      "contents": [
+        {
+          "text": "小米",
+          "canCopy": false
+        },
+        {
+          "text": "http://miqk.cc/小米/DEMO.json",
+          "canCopy": true
+        },
+        {
+          "text": "讴歌\n附带直播",
+          "canCopy": false
+        },
+        {
+          "text": "http://tv.nxog.top/m/",
+          "canCopy": true
+        },
+        {
+          "text": "肥猫",
+          "canCopy": false
+        },
+        {
+          "text": "http://肥猫.com",
+          "canCopy": true
+        },
+        {
+          "text": "4k 源\n附带直播",
+          "canCopy": false
+        },
+        {
+          "text": "https://16409.kstore.vip/tv/ngzmods.json",
+          "canCopy": true
+        },
+        {
+          "text": "王二小",
+          "canCopy": false
+        },
+        {
+          "text": "https://9280.kstore.vip/newwex.json",
+          "canCopy": true
+        },
+        {
+          "text": "OK",
+          "canCopy": false
+        },
+        {
+          "text": "http://ok213.top/ok",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒",
+          "canCopy": false
+        },
+        {
+          "text": "https://9877.kstore.space/AnotherD/api.json",
+          "canCopy": true
+        },
+        {
+          "text": "摸鱼儿",
+          "canCopy": false
+        },
+        {
+          "text": "http://我不是。摸鱼儿.com",
+          "canCopy": true
+        },
+        {
+          "text": "小虎斑\n仅供测试",
+          "canCopy": false
+        },
+        {
+          "text": "http://hb.小虎斑.site:25252/",
+          "canCopy": true
+        },
+        {
+          "text": "南风",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json",
+          "canCopy": true
+        },
+        {
+          "text": "香雅情",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+          "canCopy": true
+        },
+        {
+          "text": "开心直播\n只能直播（可以看英超、西甲等）",
+          "canCopy": false
+        },
+        {
+          "text": "http://rihou.cc:555/gggg.nzk",
+          "canCopy": true
+        }
+      ]
     }
   ]
 }

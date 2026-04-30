@@ -14,6 +14,7 @@ from appstore_manager import (
     infer_existing_code,
     infer_workflow_code,
     normalize_incompatibility,
+    normalize_message_board,
     parse_workflow_bundle,
 )
 
@@ -62,6 +63,31 @@ class AppStoreManagerTests(unittest.TestCase):
         result = normalize_incompatibility(["EP41", "ALL", "EP41", "INVALID"])
         self.assertEqual(result, ["ALL", "EP41"])
 
+    def test_normalize_message_board(self) -> None:
+        result = normalize_message_board(
+            [
+                {
+                    "title": "  安装说明 ",
+                    "contents": [
+                        {"text": "  打开后授权  ", "canCopy": True, "extra": "ignored"},
+                        {"text": "", "canCopy": True},
+                    ],
+                    "extra": "ignored",
+                },
+                {"title": "", "contents": []},
+                "invalid",
+            ]
+        )
+        self.assertEqual(
+            result,
+            [
+                {
+                    "title": "安装说明",
+                    "contents": [{"text": "打开后授权", "canCopy": True}],
+                }
+            ],
+        )
+
     def test_infer_existing_code(self) -> None:
         entry = {"apk": "/demo-xxxxxx/app.apk"}
         self.assertEqual(infer_existing_code(entry), "demo-xxxxxx")
@@ -79,6 +105,7 @@ class AppStoreManagerTests(unittest.TestCase):
         data = json.loads(self.json_path.read_text(encoding="utf-8"))
         self.manager.upsert_entry(data, {"id": "entry002", "name": "New App", "package": "com.demo.new", "category": "娱乐"})
         self.assertEqual(len(data["apps"]), 2)
+        self.assertEqual([item["id"] for item in data["apps"]], ["entry001", "entry002"])
 
     def test_upsert_entry_allow_same_package(self) -> None:
         data = self.manager.load_data()
@@ -86,9 +113,38 @@ class AppStoreManagerTests(unittest.TestCase):
         self.assertEqual(len(data["apps"]), 2)
         self.assertEqual(sum(1 for item in data["apps"] if item.get("package") == "com.demo.sfgj"), 2)
 
+    def test_reorder_entries(self) -> None:
+        data = self.manager.load_data()
+        self.manager.upsert_entry(data, {"id": "entry002", "name": "New App", "package": "com.demo.new", "category": "娱乐"})
+        changed = self.manager.reorder_entries(data, ["entry002", "entry001"])
+        self.assertTrue(changed)
+        self.assertEqual([item["id"] for item in data["apps"]], ["entry002", "entry001"])
+
+    def test_reorder_entries_reject_missing_id(self) -> None:
+        data = self.manager.load_data()
+        self.manager.upsert_entry(data, {"id": "entry002", "name": "New App", "package": "com.demo.new", "category": "娱乐"})
+        changed = self.manager.reorder_entries(data, ["entry002"])
+        self.assertFalse(changed)
+        self.assertEqual([item["id"] for item in data["apps"]], ["entry001", "entry002"])
+
     def test_load_data_dedup_categories(self) -> None:
         data = self.manager.load_data()
         self.assertEqual(data["categories"], ["工具", "娱乐"])
+        self.assertEqual(data["messageBoard"], [])
+
+    def test_load_data_normalize_message_board(self) -> None:
+        data = json.loads(self.json_path.read_text(encoding="utf-8"))
+        data["messageBoard"] = [
+            {"title": " 提示 ", "contents": [{"text": " 可复制内容 ", "canCopy": True, "extra": "ignored"}]},
+            {"title": "", "contents": []},
+        ]
+        self.manager.save_data(data)
+
+        loaded = self.manager.load_data()
+        self.assertEqual(
+            loaded["messageBoard"],
+            [{"title": "提示", "contents": [{"text": "可复制内容", "canCopy": True}]}],
+        )
 
     def test_ensure_category(self) -> None:
         data = self.manager.load_data()

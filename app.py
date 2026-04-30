@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import shutil
 import tempfile
@@ -15,8 +16,10 @@ from appstore_manager import (
     WorkflowManager,
     extract_icon_from_apk,
     find_entry_by_id,
+    infer_existing_code,
     normalize_category,
     normalize_incompatibility,
+    normalize_message_board,
     parse_apk_metadata,
     parse_workflow_bundle,
 )
@@ -41,6 +44,17 @@ def is_supported_workflow_filename(filename: str) -> bool:
 def sanitize_storage_filename(filename: str, fallback: str) -> str:
     normalized = (filename or "").replace("\\", "/").split("/")[-1].strip().replace("\x00", "")
     return normalized or fallback
+
+
+def load_message_board_from_form() -> list[dict]:
+    raw_value = request.form.get("messageBoard", "").strip()
+    if not raw_value:
+        return []
+    try:
+        raw_items = json.loads(raw_value)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"留言板 JSON 解析失败: {exc}") from exc
+    return normalize_message_board(raw_items)
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("APPSTORE_CREATOR_SECRET", "appstore-creator-dev")
@@ -125,7 +139,7 @@ def index() -> str:
         else None
     )
     active_tab = request.args.get("tab", "notice").strip().lower()
-    if active_tab not in {"notice", "apps", "workflows", "categories"}:
+    if active_tab not in {"notice", "messageboard", "apps", "workflows", "categories"}:
         active_tab = "notice"
     return render_template(
         "index.html",
@@ -133,6 +147,7 @@ def index() -> str:
         workflows=workflow_data.get("workflows", []),
         workflow_categories=workflow_data.get("categories", []),
         notice=data.get("notice", ""),
+        message_board=data.get("messageBoard", []),
         categories=data.get("categories", []),
         incompatibility_options=INCOMPATIBILITY_OPTIONS,
         preview_asset_url=preview_asset_url,
@@ -323,6 +338,41 @@ def save_notice():
     return redirect(url_for("index"))
 
 
+@app.post("/message-board")
+def save_message_board():
+    data = manager.load_data()
+    try:
+        data["messageBoard"] = load_message_board_from_form()
+    except ValueError as exc:
+        flash(str(exc), "error")
+        return redirect(url_for("index", tab="messageboard"))
+    manager.save_data(data)
+    flash("留言板已更新", "success")
+    return redirect(url_for("index", tab="messageboard"))
+
+
+@app.post("/apps/reorder")
+def reorder_apps():
+    raw_value = request.form.get("appOrder", "").strip()
+    try:
+        ordered_ids = json.loads(raw_value) if raw_value else []
+    except json.JSONDecodeError as exc:
+        flash(f"应用排序 JSON 解析失败: {exc}", "error")
+        return redirect(url_for("index", tab="apps"))
+    if not isinstance(ordered_ids, list):
+        flash("应用排序数据格式错误", "error")
+        return redirect(url_for("index", tab="apps"))
+
+    data = manager.load_data()
+    manager.ensure_entry_ids(data)
+    if manager.reorder_entries(data, [str(item).strip() for item in ordered_ids]):
+        manager.save_data(data)
+        flash("应用排序已保存", "success")
+    else:
+        flash("应用排序未变化", "success")
+    return redirect(url_for("index", tab="apps"))
+
+
 @app.post("/apps/update")
 def update_app():
     entry_id = request.form.get("app_id", "").strip()
@@ -393,6 +443,85 @@ def update_app():
     manager.save_data(data)
     flash(f"已更新应用: {app_name}", "success")
     return redirect(url_for("index", tab="apps"))
+
+
+@app.post("/apps/replace-apk")
+def replace_app_apk():
+    entry_id = request.form.get("app_id", "").strip()
+    if not entry_id:
+        flash("缺少 app_id", "error")
+        return redirect(url_for("index", tab="apps"))
+
+    apk_file = request.files.get("apk")
+    if apk_file is None or not apk_file.filename:
+        flash("请选择 APK 文件", "error")
+        return redirect(url_for("index", edit=entry_id))
+
+    raw_filename = (apk_file.filename or "").strip()
+    if not is_supported_apk_filename(raw_filename):
+        flash("仅支持上传 .apk 或 .apk.1 文件", "error")
+        return redirect(url_for("index", edit=entry_id))
+
+    apk_filename = secure_filename(raw_filename)
+    if not apk_filename:
+        apk_filename = "update.apk.1" if raw_filename.lower().endswith(".apk.1") else "update.apk"
+
+    tmp_dir = Path(tempfile.mkdtemp(prefix="appstore-apk-replace-"))
+    tmp_apk_path = tmp_dir / apk_filename
+
+    try:
+        apk_file.save(tmp_apk_path)
+        metadata = parse_apk_metadata(tmp_apk_path)
+    except Exception as exc:  # noqa: BLE001
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+        flash(f"APK 解析失败: {exc}", "error")
+        return redirect(url_for("index", edit=entry_id))
+
+    data = manager.load_data()
+    manager.ensure_entry_ids(data)
+    entry = find_entry_by_id(data.get("apps", []), entry_id)
+    if not entry:
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+        flash(f"未找到应用: {entry_id}", "error")
+        return redirect(url_for("index", tab="apps"))
+
+    code = str(entry.get("code", "")).strip() or infer_existing_code(entry) or manager.resolve_code(
+        package_name=metadata.package,
+        app_name=str(entry.get("name", "")).strip() or metadata.name,
+        preferred_code=None,
+    )
+    app_dir = APKS_DIR / code
+    app_dir.mkdir(parents=True, exist_ok=True)
+
+    # 核心流程：替换 APK 时保留当前应用条目，只刷新包文件和可解析元数据
+    apk_storage_name = secure_filename(apk_filename) or f"{code}.apk"
+    apk_final_path = app_dir / apk_storage_name
+    shutil.copyfile(tmp_apk_path, apk_final_path)
+
+    updated_entry = dict(entry)
+    updated_entry["code"] = code
+    updated_entry["package"] = metadata.package
+    updated_entry["versionName"] = metadata.version_name
+    updated_entry["apk"] = f"/{code}/{apk_storage_name}"
+    updated_entry["md5sum"] = manager.compute_md5(apk_final_path)
+    updated_entry["filesize"] = apk_final_path.stat().st_size
+    updated_entry["updateTime"] = manager.utc_now_iso()
+    if not str(updated_entry.get("name", "")).strip():
+        updated_entry["name"] = metadata.name
+
+    extracted_icon = extract_icon_from_apk(tmp_apk_path, app_dir)
+    if extracted_icon:
+        updated_entry["icon"] = f"/{code}/{extracted_icon.name}"
+
+    manager.upsert_entry(data, updated_entry)
+    manager.save_data(data)
+    shutil.rmtree(tmp_dir, ignore_errors=True)
+
+    flash(
+        f"已替换 APK: {updated_entry.get('name', metadata.name)} | version={metadata.version_name} | md5={updated_entry['md5sum']}",
+        "success",
+    )
+    return redirect(url_for("index", edit=entry_id, tab="apps"))
 
 
 @app.post("/apps/delete")

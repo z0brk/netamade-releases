@@ -92,6 +92,37 @@ def parse_workflow_bundle(workflow_path: Path) -> WorkflowBundleMetadata:
     )
 
 
+def normalize_message_board(raw_items: Any) -> list[dict[str, Any]]:
+    # 核心流程：只保存前端需要的 title/contents/text/canCopy，过滤空留言和未知字段
+    if not isinstance(raw_items, list):
+        return []
+
+    result: list[dict[str, Any]] = []
+    for raw_item in raw_items:
+        if not isinstance(raw_item, dict):
+            continue
+        title = str(raw_item.get("title", "")).strip()
+        raw_contents = raw_item.get("contents", [])
+        contents: list[dict[str, Any]] = []
+        if isinstance(raw_contents, list):
+            for raw_content in raw_contents:
+                if not isinstance(raw_content, dict):
+                    continue
+                text = str(raw_content.get("text", "")).strip()
+                if not text:
+                    continue
+                contents.append(
+                    {
+                        "text": text,
+                        "canCopy": bool(raw_content.get("canCopy", False)),
+                    }
+                )
+        if not title and not contents:
+            continue
+        result.append({"title": title, "contents": contents})
+    return result
+
+
 def extract_icon_from_apk(apk_path: Path, output_dir: Path, output_name: str = "icon") -> Path | None:
     """
     从 APK 中提取图标文件并写入 output_dir，返回生成的本地路径。
@@ -426,17 +457,21 @@ class AppStoreManager:
         self.apks_dir.mkdir(parents=True, exist_ok=True)
         if self.json_path.exists():
             return
-        self.save_data({"notice": "", "categories": [], "apps": []})
+        self.save_data({"notice": "", "messageBoard": [], "categories": [], "apps": []})
 
     def load_data(self) -> dict[str, Any]:
         # 核心流程：统一兜底 notice/apps，避免历史 json 缺字段导致页面崩溃
         self.ensure_initialized()
         raw = self.json_path.read_text(encoding="utf-8").strip()
         if not raw:
-            return {"notice": "", "categories": [], "apps": []}
+            return {"notice": "", "messageBoard": [], "categories": [], "apps": []}
         data = json.loads(raw)
         if "notice" not in data:
             data["notice"] = ""
+        if "messageBoard" not in data or not isinstance(data["messageBoard"], list):
+            data["messageBoard"] = []
+        else:
+            data["messageBoard"] = normalize_message_board(data["messageBoard"])
         if "categories" not in data or not isinstance(data["categories"], list):
             data["categories"] = []
         if "apps" not in data or not isinstance(data["apps"], list):
@@ -491,7 +526,31 @@ class AppStoreManager:
                 apps[idx] = entry
                 return
         apps.append(entry)
-        apps.sort(key=lambda item: str(item.get("name", "")).lower())
+
+    def reorder_entries(self, data: dict[str, Any], ordered_ids: list[str]) -> bool:
+        # 核心流程：前端提交完整 id 顺序，后端只按已有条目重排，避免丢失应用
+        apps = data.setdefault("apps", [])
+        if not ordered_ids:
+            return False
+
+        by_id = {str(app.get("id", "")).strip(): app for app in apps if str(app.get("id", "")).strip()}
+        ordered_unique: list[str] = []
+        seen: set[str] = set()
+        for raw_id in ordered_ids:
+            entry_id = str(raw_id).strip()
+            if not entry_id or entry_id in seen or entry_id not in by_id:
+                continue
+            ordered_unique.append(entry_id)
+            seen.add(entry_id)
+
+        if set(ordered_unique) != set(by_id):
+            return False
+
+        reordered = [by_id[entry_id] for entry_id in ordered_unique]
+        if [str(app.get("id", "")).strip() for app in apps] == ordered_unique:
+            return False
+        data["apps"] = reordered
+        return True
 
     def delete_entry(self, data: dict[str, Any], entry_id: str) -> bool:
         apps = data.setdefault("apps", [])
