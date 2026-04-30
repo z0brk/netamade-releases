@@ -22,7 +22,7 @@
       "filesize": 139659032,
       "updateTime": "2026-04-30T07:58:21Z",
       "versionName": "9.1.0.600087@美式股东版",
-      "description": "哪吒原车音色（不能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 支持哪吒音色播报导航/自定义语音包（下载不同的文件版本，自定义语音包只能从车机版自带的里面选）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
+      "description": "修复了一个字一个字播报的问题\r\n\r\n哪吒原车音色（不能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 支持哪吒音色播报导航/自定义语音包（下载不同的文件版本，自定义语音包只能从车机版自带的里面选）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
       "incompatibility": [
         "EP36",
         "EP40",
@@ -481,7 +481,7 @@
       "filesize": 139659032,
       "updateTime": "2026-04-30T07:58:34Z",
       "versionName": "9.1.0.600087@美式股东版",
-      "description": "高德车机版音色（能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
+      "description": "修复了一个字一个字播报的问题\r\n\r\n高德车机版音色（能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
       "incompatibility": [
         "EP36",
         "EP40",
@@ -777,6 +777,56 @@
         },
         {
           "text": "http://rihou.cc:555/gggg.nzk",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "MusicFree 插件",
+      "contents": [
+        {
+          "text": "yuanli",
+          "canCopy": false
+        },
+        {
+          "text": "https://13413.kstore.vip/yuanli/yuanli.json",
+          "canCopy": true
+        },
+        {
+          "text": "Huibq",
+          "canCopy": false
+        },
+        {
+          "text": "https://fastly.jsdelivr.net/gh/Huibq/keep-alive/Music_Free/myPlugins.json",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "洛雪音源",
+      "contents": [
+        {
+          "text": "有些歌播放不了",
+          "canCopy": false
+        },
+        {
+          "text": "https://m-api.ceseet.me/script",
+          "canCopy": true
+        },
+        {
+          "text": "六音",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghproxy.net/raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "ikun",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghproxy.net/raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js",
           "canCopy": true
         }
       ]
