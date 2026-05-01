@@ -18,9 +18,9 @@
       "category": "导航地图",
       "icon": "/amapauto-d02f31-2/icon.png",
       "package": "com.autonavi.amapauto",
-      "md5sum": "693100202727fb10491184f7f5c3a241",
+      "md5sum": "fab1f3f484730bf3a7f1874dcf93f120",
       "filesize": 139659032,
-      "updateTime": "2026-04-30T07:58:21Z",
+      "updateTime": "2026-05-01T05:51:17Z",
       "versionName": "9.1.0.600087@美式股东版",
       "description": "修复了一个字一个字播报的问题\r\n\r\n哪吒原车音色（不能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 支持哪吒音色播报导航/自定义语音包（下载不同的文件版本，自定义语音包只能从车机版自带的里面选）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
       "incompatibility": [
@@ -28,7 +28,7 @@
         "EP40",
         "EP41"
       ],
-      "apk": "/amapauto-d02f31-2/-L--2026-04-30-03.apk"
+      "apk": "/amapauto-d02f31-2/-L--2026-05-01-31.apk"
     },
     {
       "id": "868ca5a1d0ae",
@@ -477,9 +477,9 @@
       "category": "导航地图",
       "icon": "/amapauto-d02f31/icon.png",
       "package": "com.autonavi.amapauto",
-      "md5sum": "ea1c54118427163f501affaeaad79c7a",
+      "md5sum": "8ddfa138a68097f477c34c241fb3d65f",
       "filesize": 139659032,
-      "updateTime": "2026-04-30T07:58:34Z",
+      "updateTime": "2026-05-01T05:51:26Z",
       "versionName": "9.1.0.600087@美式股东版",
       "description": "修复了一个字一个字播报的问题\r\n\r\n高德车机版音色（能走头枕），无车道级，和原车地图是两个软件，不能覆盖也不能替换，只能主页劫持\r\n\r\n# 支持功能\r\n- 巡航播报+红绿灯\r\n- 地图同步跟随车机主题颜色\r\n- 锁定导航通道出声（L导航通道就是主驾头枕）\r\n- 移除启动时的 “尊敬的美式股东 XXX”",
       "incompatibility": [
@@ -487,7 +487,7 @@
         "EP40",
         "EP41"
       ],
-      "apk": "/amapauto-d02f31/-L--2026-04-30-03.apk",
+      "apk": "/amapauto-d02f31/-L--2026-05-01-31.apk",
       "id": "9206951660cd"
     },
     {
