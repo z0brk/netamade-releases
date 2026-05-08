@@ -1,8 +1,8 @@
 {
-  "versionName": "4.1.2-TEST-0507_2010",
-  "versionCode": 159,
+  "versionName": "4.1.3-TEST-0508_1029",
+  "versionCode": 160,
   "testing": true,
-  "buildTime": "2026-05-07 20:14:50",
-  "releaseVersion": "v4.1.2-TEST-0507_2010-testing",
-  "releaseFilename": "netamade-testing-4.1.2-TEST-0507_2010-159.apk"
+  "buildTime": "2026-05-08 10:33:50",
+  "releaseVersion": "v4.1.3-TEST-0508_1029-testing",
+  "releaseFilename": "netamade-testing-4.1.3-TEST-0508_1029-160.apk"
 }
