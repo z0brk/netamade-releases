@@ -429,13 +429,13 @@
       "category": "手车互联",
       "icon": "/carlifevehicle-3836c9/icon.png",
       "package": "com.muyetuge.carlifevehicle",
-      "md5sum": "b94dee457d1479e627c78ae6aa892c7b",
-      "filesize": 4461766,
-      "updateTime": "2026-04-28T07:07:06Z",
-      "versionName": "2026.01.31.1511-android",
-      "description": "车手互联软件，安卓版carplay，无需盒子即可用于手机投屏到车机屏幕。此版本为大橙修改版百度Carlife4.0_2026.01.31.1511_支持HUD，支持哪吒竖屏车机全屏半屏切换_支持WLAN直连_支持连接成功自启_支持有线USB自动帮点击，支持自动化事件，方控切歌等，更多功能自行探索。",
+      "md5sum": "29f90c3936dc25c9dd1a085843303e88",
+      "filesize": 11149415,
+      "updateTime": "2026-05-11T05:37:58Z",
+      "versionName": "2025.09.26",
+      "description": "车手互联软件，安卓版carplay，无需盒子即可用于手机投屏到车机屏幕。此版本为大橙修改版百度Carlife4.0_2025.9.30，_改哪吒图标_支持哪吒竖屏车机全屏半屏切换_支持WLAN直连_支持连接成功自启_支持有线USB帮点击，方控切歌等，更多功能自行探索。使用中发现最稳定，后面的新版不是直连连不上就是切换后台再返回后黑屏等等问题。推荐手机热点或有线连接方式，最流畅，WLAN直连和车机热点连接方式都比较卡，非常不推荐。",
       "incompatibility": [],
-      "apk": "/carlifevehicle-3836c9/CarLife___v2026.01.31.1511.apk.1"
+      "apk": "/carlifevehicle-3836c9/Carlife4.0_2025.9.30__S_WLAN__USB.apk"
     },
     {
       "id": "8910ab6915dd",
