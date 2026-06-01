@@ -1,8 +1,8 @@
 {
-  "versionName": "4.2.5-REL",
+  "versionName": "4.2.6-TEST-0601_1513",
   "versionCode": 171,
   "testing": true,
-  "buildTime": "2026-06-01 15:04:54",
-  "releaseVersion": "v4.2.5-REL-testing",
-  "releaseFilename": "netamade-testing-4.2.5-REL-171.apk"
+  "buildTime": "2026-06-01 15:21:08",
+  "releaseVersion": "v4.2.6-TEST-0601_1513-testing",
+  "releaseFilename": "netamade-testing-4.2.6-TEST-0601_1513-171.apk"
 }
