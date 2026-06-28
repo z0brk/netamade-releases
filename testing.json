@@ -1,9 +1,9 @@
 {
-  "versionName": "4.3.7-TEST-0628_0945",
+  "versionName": "4.3.7-TEST-0628_1431",
   "versionCode": 183,
   "testing": true,
-  "buildTime": "2026-06-28 09:50:20",
-  "releaseVersion": "v4.3.7-TEST-0628_0945-testing",
-  "releaseFilename": "netamade-testing-4.3.7-TEST-0628_0945-183.apk",
-  "apkMd5": "8b7beeadc97fba0c4fc99de1d4396436"
+  "buildTime": "2026-06-28 14:35:51",
+  "releaseVersion": "v4.3.7-TEST-0628_1431-testing",
+  "releaseFilename": "netamade-testing-4.3.7-TEST-0628_1431-183.apk",
+  "apkMd5": "2de78af51dda9b60561b29729aad1e5b"
 }
