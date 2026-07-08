@@ -31,15 +31,15 @@
       "code": "aweme-2332cb",
       "name": "抖音车机版",
       "category": "影音娱乐",
-      "icon": "/aweme-2332cb/icon.webp",
+      "icon": "/aweme-2332cb/icon.jpg",
       "package": "com.ss.android.ugc.aweme",
-      "md5sum": "7ed9bfa4bba14d6c583f48bf4870a394",
-      "filesize": 32507202,
-      "updateTime": "2026-04-28T07:39:33Z",
-      "versionName": "9.9.2002",
+      "md5sum": "8532df749d9e1ca967c0e6a958ce907b",
+      "filesize": 14457370,
+      "updateTime": "2026-07-08T12:52:32Z",
+      "versionName": "9.9.82",
       "description": "支持方向盘切歌",
       "incompatibility": [],
-      "apk": "/aweme-2332cb/apk.1"
+      "apk": "/aweme-2332cb/apk"
     },
     {
       "code": "car-9bbb04",
@@ -656,6 +656,21 @@
         "EP41"
       ],
       "apk": "/music-04e5ce/V1.0.3.apk.1"
+    },
+    {
+      "id": "273fa8c1e9e6",
+      "code": "audiobox-7089c6",
+      "name": "腾讯视频",
+      "category": "影音娱乐",
+      "icon": "/audiobox-7089c6/icon.png",
+      "package": "com.tencent.qqlive.audiobox",
+      "md5sum": "a3670efb26c7bd63825ae5465c53e212",
+      "filesize": 39848952,
+      "updateTime": "2026-07-08T12:56:42Z",
+      "versionName": "2.7.0.18",
+      "description": "哪吒 S 车机内提取的腾讯视频",
+      "incompatibility": [],
+      "apk": "/audiobox-7089c6/TxVideo.apk"
     }
   ],
   "messageBoard": [
