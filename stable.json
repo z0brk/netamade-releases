@@ -1,9 +1,9 @@
 {
   "versionName": "4.4.2-REL",
-  "versionCode": 189,
+  "versionCode": 190,
   "testing": false,
-  "buildTime": "2026-07-07 21:55:20",
+  "buildTime": "2026-07-08 09:12:31",
   "releaseVersion": "v4.4.2-REL-stable",
-  "releaseFilename": "netamade-stable-4.4.2-REL-189.apk",
-  "apkMd5": "08f453a62b2fe0f5d86a5493c05d0567"
+  "releaseFilename": "netamade-stable-4.4.2-REL-190.apk",
+  "apkMd5": "20b44d505e84782da29207bf80ac5e98"
 }
