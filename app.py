@@ -23,6 +23,7 @@ from appstore_manager import (
     parse_apk_metadata,
     parse_workflow_bundle,
 )
+from soundstore_manager import SUPPORTED_SOUND_EXTENSIONS, SoundStoreManager, normalize_tags
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR
@@ -30,6 +31,8 @@ APPSTORE_JSON_PATH = REPO_ROOT / "appstore.json"
 APKS_DIR = REPO_ROOT / "apks"
 WORKFLOWS_JSON_PATH = REPO_ROOT / "workflows.json"
 WORKFLOWS_DIR = REPO_ROOT / "workflows"
+SOUNDS_JSON_PATH = REPO_ROOT / "sounds.json"
+SOUNDS_DIR = REPO_ROOT / "sounds"
 
 
 def is_supported_apk_filename(filename: str) -> bool:
@@ -63,6 +66,7 @@ app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024 * 1024  # 1 GiB
 
 manager = AppStoreManager(json_path=APPSTORE_JSON_PATH, apks_dir=APKS_DIR)
 workflow_manager = WorkflowManager(json_path=WORKFLOWS_JSON_PATH, workflows_dir=WORKFLOWS_DIR)
+sound_manager = SoundStoreManager(json_path=SOUNDS_JSON_PATH, sounds_dir=SOUNDS_DIR)
 
 
 def preview_asset_url(path: str) -> str:
@@ -95,6 +99,17 @@ def download_workflow_file(workflow_path: str):
     if not target.is_file():
         abort(404)
     return send_from_directory(str(WORKFLOWS_DIR), workflow_path, as_attachment=True, download_name=target.name)
+
+
+@app.get("/sound-files/<path:sound_path>")
+def download_sound_file(sound_path: str):
+    safe_path = Path(sound_path)
+    if safe_path.is_absolute() or ".." in safe_path.parts:
+        abort(400)
+    target = SOUNDS_DIR / safe_path
+    if not target.is_file():
+        abort(404)
+    return send_from_directory(str(SOUNDS_DIR), sound_path)
 
 
 @app.get("/")
@@ -130,6 +145,10 @@ def index() -> str:
     if workflow_changed:
         workflow_manager.save_data(workflow_data)
 
+    sound_data = sound_manager.load_data()
+    sounds = sound_data.get("sounds", [])
+    sound_tags = sorted({tag for entry in sounds for tag in normalize_tags(entry.get("tags", []))})
+
     auto_edit_id = request.args.get("edit", "").strip()
     auto_edit_app = find_entry_by_id(data.get("apps", []), auto_edit_id) if auto_edit_id else None
     auto_edit_workflow_id = request.args.get("workflow_edit", "").strip()
@@ -139,12 +158,14 @@ def index() -> str:
         else None
     )
     active_tab = request.args.get("tab", "notice").strip().lower()
-    if active_tab not in {"notice", "messageboard", "apps", "workflows", "categories"}:
+    if active_tab not in {"notice", "messageboard", "apps", "workflows", "sounds", "categories"}:
         active_tab = "notice"
     return render_template(
         "index.html",
         apps=data.get("apps", []),
         workflows=workflow_data.get("workflows", []),
+        sounds=sounds,
+        sound_tags=sound_tags,
         workflow_categories=workflow_data.get("categories", []),
         notice=data.get("notice", ""),
         message_board=data.get("messageBoard", []),
@@ -157,6 +178,126 @@ def index() -> str:
         auto_edit_workflow=auto_edit_workflow,
         active_tab=active_tab,
     )
+
+
+@app.post("/sounds/upload")
+def upload_sounds():
+    uploads = [item for item in request.files.getlist("sounds") if item and item.filename]
+    if not uploads:
+        flash("请选择音频文件", "error")
+        return redirect(url_for("index", tab="sounds"))
+
+    tags = normalize_tags(request.form.get("tags", ""))
+    tmp_dir = Path(tempfile.mkdtemp(prefix="appstore-sounds-"))
+    prepared: list[tuple[Path, str]] = []
+    created_dirs: list[Path] = []
+    try:
+        for index, upload in enumerate(uploads):
+            original_filename = (upload.filename or "").replace("\\", "/").split("/")[-1].strip()
+            extension = Path(original_filename).suffix.lower()
+            if extension not in SUPPORTED_SOUND_EXTENSIONS:
+                raise ValueError(f"不支持的音频格式: {original_filename}")
+            tmp_path = tmp_dir / f"{index}{extension}"
+            upload.save(tmp_path)
+            prepared.append((tmp_path, original_filename))
+
+        data = sound_manager.load_data()
+        entries: list[dict] = []
+        for tmp_path, original_filename in prepared:
+            entry, created_dir = sound_manager.create_entry(tmp_path, original_filename, tags)
+            entries.append(entry)
+            created_dirs.append(created_dir)
+        data.setdefault("sounds", []).extend(entries)
+        sound_manager.save_data(data)
+    except Exception as exc:  # noqa: BLE001
+        for created_dir in created_dirs:
+            shutil.rmtree(created_dir, ignore_errors=True)
+        flash(f"音效上传失败: {exc}", "error")
+        return redirect(url_for("index", tab="sounds"))
+    finally:
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+
+    flash(f"已上传 {len(prepared)} 个音效", "success")
+    return redirect(url_for("index", tab="sounds"))
+
+
+@app.post("/sounds/update")
+def update_sound():
+    entry_id = request.form.get("sound_id", "").strip()
+    data = sound_manager.load_data()
+    if not sound_manager.update_entry(
+        data,
+        entry_id,
+        request.form.get("name", ""),
+        normalize_tags(request.form.get("tags", "")),
+    ):
+        flash(f"未找到音效: {entry_id}", "error")
+    else:
+        sound_manager.save_data(data)
+        flash("音效信息已更新", "success")
+    return redirect(url_for("index", tab="sounds"))
+
+
+@app.post("/sounds/reorder")
+def reorder_sounds():
+    try:
+        ordered_ids = json.loads(request.form.get("soundOrder", "[]"))
+    except json.JSONDecodeError as exc:
+        flash(f"音效排序 JSON 解析失败: {exc}", "error")
+        return redirect(url_for("index", tab="sounds"))
+    if not isinstance(ordered_ids, list):
+        flash("音效排序数据格式错误", "error")
+        return redirect(url_for("index", tab="sounds"))
+    data = sound_manager.load_data()
+    normalized_ids = [str(item).strip() for item in ordered_ids]
+    current_ids = [str(item.get("id", "")).strip() for item in data.get("sounds", [])]
+    if normalized_ids == current_ids:
+        flash("音效排序未变化", "success")
+    elif sound_manager.reorder_entries(data, normalized_ids):
+        sound_manager.save_data(data)
+        flash("音效排序已保存", "success")
+    else:
+        flash("音效排序顺序不完整", "error")
+    return redirect(url_for("index", tab="sounds"))
+
+
+@app.post("/sounds/bulk-tags")
+def update_sound_tags():
+    entry_ids = request.form.getlist("sound_ids")
+    if not entry_ids:
+        flash("请先选择音效", "error")
+        return redirect(url_for("index", tab="sounds"))
+    data = sound_manager.load_data()
+    changed = sound_manager.update_tags(
+        data,
+        entry_ids,
+        normalize_tags(request.form.get("add_tags", "")),
+        normalize_tags(request.form.get("remove_tags", "")),
+    )
+    if changed:
+        sound_manager.save_data(data)
+    flash(f"已更新 {changed} 个音效的标签", "success")
+    return redirect(url_for("index", tab="sounds"))
+
+
+@app.post("/sounds/delete")
+def delete_sounds():
+    entry_ids = request.form.getlist("sound_ids")
+    if not entry_ids:
+        single_id = request.form.get("sound_id", "").strip()
+        entry_ids = [single_id] if single_id else []
+    if not entry_ids:
+        flash("请先选择音效", "error")
+        return redirect(url_for("index", tab="sounds"))
+    data = sound_manager.load_data()
+    deleted = sound_manager.delete_entries(data, entry_ids)
+    if not deleted:
+        flash("未找到要删除的音效", "error")
+        return redirect(url_for("index", tab="sounds"))
+    sound_manager.save_data(data)
+    sound_manager.cleanup_entry_assets(data, deleted)
+    flash(f"已删除 {len(deleted)} 个音效", "success")
+    return redirect(url_for("index", tab="sounds"))
 
 
 @app.post("/upload")
@@ -633,4 +774,5 @@ if __name__ == "__main__":
 
     manager.ensure_initialized()
     workflow_manager.ensure_initialized()
+    sound_manager.ensure_initialized()
     app.run(host=args.host, port=args.port, debug=args.debug)

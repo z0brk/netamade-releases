@@ -356,6 +356,28 @@
         opacity: 0.5;
         pointer-events: none;
       }
+      .sound-toolbar {
+        display: grid;
+        grid-template-columns: minmax(220px, 1fr) minmax(180px, 280px) auto;
+        gap: 10px;
+        margin: 14px 0;
+        align-items: center;
+      }
+      .sound-select {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 20px;
+        height: 20px;
+      }
+      .sound-item { padding-right: 44px; }
+      .sound-item audio { width: 100%; margin-top: 10px; }
+      .bulk-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto auto;
+        gap: 8px;
+        margin-top: 14px;
+      }
       .sr { display: none; }
       @media (max-width: 700px) {
         .wrap { padding: 16px; }
@@ -366,6 +388,7 @@
         .message-pair-row {
           grid-template-columns: 1fr;
         }
+        .sound-toolbar, .bulk-actions { grid-template-columns: 1fr; }
       }
       @media (min-width: 1700px) {
         .app-grid {
@@ -393,6 +416,7 @@
         <button type="button" class="tab-btn" data-tab="messageboard">留言板</button>
         <button type="button" class="tab-btn" data-tab="apps">应用列表</button>
         <button type="button" class="tab-btn" data-tab="workflows">工作流</button>
+        <button type="button" class="tab-btn" data-tab="sounds">车机音效</button>
         <button type="button" class="tab-btn" data-tab="categories">分类</button>
       </nav>
 
@@ -457,6 +481,68 @@
             </article>
           {% endfor %}
         </div>
+      </section>
+
+      <section class="panel" id="panel-sounds">
+        <h2>车机音效</h2>
+        <p class="sub">维护 sounds.json 与 CDN 音效资源。共 {{ sounds|length }} 个音效。</p>
+        <div class="upload-card">
+          <form action="/sounds/upload" method="post" enctype="multipart/form-data">
+            <div class="dialog-grid">
+              <div>
+                <label for="sound-files">音频文件</label>
+                <input id="sound-files" name="sounds" type="file" accept=".mp3,.wav,.m4a,.aac,.ogg,.flac,audio/*" multiple required />
+              </div>
+              <div>
+                <label for="sound-upload-tags">本批标签（逗号分隔）</label>
+                <input id="sound-upload-tags" name="tags" type="text" placeholder="锁车, 提示音" />
+              </div>
+            </div>
+            <div class="dialog-actions"><button type="submit">上传音效</button></div>
+          </form>
+        </div>
+
+        <div class="sound-toolbar">
+          <input id="sound-search" type="text" placeholder="搜索名称或文件名" />
+          <select id="sound-tag-filter">
+            <option value="">全部标签</option>
+            {% for tag in sound_tags %}<option value="{{ tag }}">{{ tag }}</option>{% endfor %}
+          </select>
+          <button type="button" class="btn-ghost" id="sound-select-visible">全选当前结果</button>
+        </div>
+
+        <div class="app-grid" id="sounds-grid">
+          {% for sound in sounds %}
+            <article class="app-item sound-item" data-sound-id="{{ sound.id }}" data-name="{{ sound.name }} {{ sound.filename }}" data-tags="{{ (sound.tags or [])|join('||') }}">
+              <input class="sound-select" type="checkbox" aria-label="选择 {{ sound.name }}" />
+              <h3 class="app-name">{{ sound.name }}</h3>
+              <div class="app-package">{{ sound.filename }}</div>
+              <div class="tag-list">
+                {% for tag in sound.tags or [] %}<span class="tag">{{ tag }}</span>{% endfor %}
+                {% if not sound.tags %}<span class="tag tag-empty">无标签</span>{% endif %}
+              </div>
+              <div class="app-meta">{{ sound.filesize or 0 }} bytes · {{ sound.updateTime or "-" }}</div>
+              <audio controls preload="none" src="/sound-files/{{ sound.file.lstrip('/') }}"></audio>
+              <div class="app-sort-actions">
+                <button type="button" class="btn-ghost sound-edit">编辑</button>
+                <button type="button" class="btn-ghost sound-sort-top">置顶</button>
+                <button type="button" class="btn-ghost sound-sort-up">上移</button>
+                <button type="button" class="btn-ghost sound-sort-down">下移</button>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <form action="/sounds/reorder" method="post" id="sound-order-form" class="dialog-actions">
+          <input type="hidden" name="soundOrder" id="sound-order-json" />
+          <button type="submit" class="btn-ghost" id="sound-save-order">保存排序</button>
+        </form>
+        <form action="/sounds/bulk-tags" method="post" id="sound-bulk-tags-form" class="bulk-actions">
+          <input name="add_tags" type="text" placeholder="批量增加标签，逗号分隔" />
+          <input name="remove_tags" type="text" placeholder="批量移除标签，逗号分隔" />
+          <button type="submit">更新标签</button>
+          <button type="submit" class="btn-danger" formaction="/sounds/delete" id="sound-bulk-delete">批量删除</button>
+        </form>
       </section>
 
       <section class="panel" id="panel-categories">
@@ -641,6 +727,27 @@
       </div>
     </dialog>
 
+    <dialog id="sound-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top">
+          <h3 id="sound-dialog-title">编辑音效</h3>
+          <button type="button" id="sound-dialog-close" class="btn-ghost">关闭</button>
+        </div>
+        <form action="/sounds/update" method="post">
+          <input type="hidden" name="sound_id" id="sound-edit-id" />
+          <div class="dialog-grid">
+            <div><label for="sound-edit-name">名称</label><input id="sound-edit-name" name="name" type="text" required /></div>
+            <div><label for="sound-edit-tags">标签（逗号分隔）</label><input id="sound-edit-tags" name="tags" type="text" /></div>
+          </div>
+          <div class="dialog-actions"><button type="submit">保存修改</button></div>
+        </form>
+        <form action="/sounds/delete" method="post" id="sound-single-delete-form">
+          <input type="hidden" name="sound_id" id="sound-delete-id" />
+          <div class="dialog-actions"><button type="submit" class="btn-danger">删除音效</button></div>
+        </form>
+      </div>
+    </dialog>
+
     <dialog id="workflow-dialog">
       <div class="dialog-wrap">
         <div class="dialog-top">
@@ -721,6 +828,8 @@
       const CATEGORIES = {{ categories|tojson }};
       const WORKFLOW_CATEGORIES = {{ workflow_categories|tojson }};
       const MESSAGE_BOARD = {{ message_board|tojson }};
+      const SOUNDS = {{ sounds|tojson }};
+      const SOUND_MAP = new Map((SOUNDS || []).map((item) => [item.id, item]));
       const ACTIVE_TAB = "{{ active_tab }}";
       const AUTO_EDIT_ID = "{{ auto_edit_id }}";
       const AUTO_EDIT_APP = {{ auto_edit_app|tojson }};
@@ -758,6 +867,16 @@
       const workflowUploadForm = document.getElementById("workflow-upload-form");
       const workflowButtons = document.querySelectorAll(".edit-workflow-btn");
       const workflowCategorySelect = document.getElementById("workflow-category");
+      const soundsGrid = document.getElementById("sounds-grid");
+      const soundSearch = document.getElementById("sound-search");
+      const soundTagFilter = document.getElementById("sound-tag-filter");
+      const soundSelectVisible = document.getElementById("sound-select-visible");
+      const soundOrderForm = document.getElementById("sound-order-form");
+      const soundOrderJson = document.getElementById("sound-order-json");
+      const soundSaveOrder = document.getElementById("sound-save-order");
+      const soundBulkTagsForm = document.getElementById("sound-bulk-tags-form");
+      const soundBulkDelete = document.getElementById("sound-bulk-delete");
+      const soundDialog = document.getElementById("sound-dialog");
 
       function switchTab(name) {
         document.querySelectorAll(".tab-btn").forEach((item) => {
@@ -1133,6 +1252,128 @@
           [...appsGrid.querySelectorAll(".app-item")].map((item) => item.dataset.appId || "").filter(Boolean)
         );
       });
+
+      function soundItems() {
+        return [...soundsGrid.querySelectorAll(".sound-item")];
+      }
+
+      function isSoundFilterActive() {
+        return soundSearch.value.trim() !== "" || soundTagFilter.value !== "";
+      }
+
+      function applySoundFilter() {
+        const query = soundSearch.value.trim().toLowerCase();
+        const tag = soundTagFilter.value;
+        let visibleCount = 0;
+        soundItems().forEach((item) => {
+          const tags = (item.dataset.tags || "").split("||").filter(Boolean);
+          const visible = (!query || (item.dataset.name || "").toLowerCase().includes(query))
+            && (!tag || tags.includes(tag));
+          item.style.display = visible ? "" : "none";
+          if (visible) visibleCount += 1;
+        });
+        const disabled = isSoundFilterActive();
+        soundSaveOrder.disabled = disabled;
+        soundsGrid.querySelectorAll(".sound-sort-top, .sound-sort-up, .sound-sort-down").forEach((button) => {
+          button.disabled = disabled;
+        });
+        soundSelectVisible.textContent = `全选当前结果 (${visibleCount})`;
+      }
+
+      function moveSoundItem(item, direction, toTop = false) {
+        if (isSoundFilterActive()) return;
+        const items = soundItems();
+        const index = items.indexOf(item);
+        if (index < 0) return;
+        if (toTop) {
+          if (index > 0) soundsGrid.insertBefore(item, items[0]);
+          return;
+        }
+        const target = items[index + direction];
+        if (!target) return;
+        if (direction < 0) soundsGrid.insertBefore(item, target);
+        else soundsGrid.insertBefore(target, item);
+      }
+
+      soundsGrid.querySelectorAll(".sound-sort-top, .sound-sort-up, .sound-sort-down").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".sound-item");
+          if (!item) return;
+          moveSoundItem(
+            item,
+            button.classList.contains("sound-sort-up") ? -1 : 1,
+            button.classList.contains("sound-sort-top")
+          );
+        });
+      });
+
+      soundsGrid.querySelectorAll(".sound-edit").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".sound-item");
+          const sound = SOUND_MAP.get(item ? item.dataset.soundId : "") || {};
+          document.getElementById("sound-dialog-title").textContent = `编辑音效: ${sound.name || sound.filename || "未命名"}`;
+          document.getElementById("sound-edit-id").value = sound.id || "";
+          document.getElementById("sound-delete-id").value = sound.id || "";
+          document.getElementById("sound-edit-name").value = sound.name || "";
+          document.getElementById("sound-edit-tags").value = (sound.tags || []).join(", ");
+          soundDialog.showModal();
+        });
+      });
+
+      soundSearch.addEventListener("input", applySoundFilter);
+      soundTagFilter.addEventListener("change", applySoundFilter);
+      soundSelectVisible.addEventListener("click", () => {
+        const visible = soundItems().filter((item) => item.style.display !== "none");
+        const shouldSelect = visible.some((item) => !item.querySelector(".sound-select").checked);
+        visible.forEach((item) => { item.querySelector(".sound-select").checked = shouldSelect; });
+      });
+      soundOrderForm.addEventListener("submit", (event) => {
+        if (isSoundFilterActive()) {
+          event.preventDefault();
+          return;
+        }
+        soundOrderJson.value = JSON.stringify(soundItems().map((item) => item.dataset.soundId).filter(Boolean));
+      });
+
+      function appendSelectedSoundIds(form) {
+        form.querySelectorAll('input[data-generated="sound-id"]').forEach((item) => item.remove());
+        const ids = soundItems()
+          .filter((item) => item.querySelector(".sound-select").checked)
+          .map((item) => item.dataset.soundId)
+          .filter(Boolean);
+        ids.forEach((id) => {
+          const input = document.createElement("input");
+          input.type = "hidden";
+          input.name = "sound_ids";
+          input.value = id;
+          input.dataset.generated = "sound-id";
+          form.appendChild(input);
+        });
+        return ids;
+      }
+
+      soundBulkTagsForm.addEventListener("submit", (event) => {
+        const ids = appendSelectedSoundIds(soundBulkTagsForm);
+        if (ids.length === 0) {
+          event.preventDefault();
+          window.alert("请先选择音效");
+        }
+      });
+      soundBulkDelete.addEventListener("click", (event) => {
+        const count = soundItems().filter((item) => item.querySelector(".sound-select").checked).length;
+        if (count === 0 || !window.confirm(`确认删除选中的 ${count} 个音效？`)) event.preventDefault();
+      });
+      document.getElementById("sound-dialog-close").addEventListener("click", () => soundDialog.close());
+      document.getElementById("sound-single-delete-form").addEventListener("submit", (event) => {
+        if (!window.confirm("确认删除该音效？")) event.preventDefault();
+      });
+      soundDialog.addEventListener("click", (event) => {
+        const rect = soundDialog.getBoundingClientRect();
+        const inside = rect.top <= event.clientY && event.clientY <= rect.bottom
+          && rect.left <= event.clientX && event.clientX <= rect.right;
+        if (!inside) soundDialog.close();
+      });
+      applySoundFilter();
 
       workflowButtons.forEach((button) => {
         const openFn = () => {
