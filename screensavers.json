@@ -1,0 +1,2105 @@
+{
+  "schemaVersion": 1,
+  "screensavers": [
+    {
+      "id": "ee982e36b6b4",
+      "name": "2026发财雪景",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-ee982e36/21cb6577c015.mp4",
+      "preview": "/screensaver-ee982e36/preview.webp",
+      "md5sum": "21cb6577c0155972486a7bdd39bbe3bb",
+      "filesize": 692492,
+      "updateTime": "2026-07-17T04:10:50Z"
+    },
+    {
+      "id": "a5907313f265",
+      "name": "2026新年雪人",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a5907313/22e169cee238.png",
+      "preview": "/screensaver-a5907313/preview.webp",
+      "md5sum": "22e169cee238f681dc0c4726f5d7fd91",
+      "filesize": 1032951,
+      "updateTime": "2026-07-17T04:10:50Z"
+    },
+    {
+      "id": "5e2578d9e212",
+      "name": "EVA明日香",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-5e2578d9/3bc7724835d8.mp4",
+      "preview": "/screensaver-5e2578d9/preview.webp",
+      "md5sum": "3bc7724835d82958309f06f633d95559",
+      "filesize": 351559,
+      "updateTime": "2026-07-17T04:10:50Z"
+    },
+    {
+      "id": "ba651e7de0cc",
+      "name": "KaiSilva战士",
+      "type": "VIDEO",
+      "width": 1280,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-ba651e7d/492156eaeffa.mp4",
+      "preview": "/screensaver-ba651e7d/preview.webp",
+      "md5sum": "492156eaeffaed5127a8367c4d2aa0b9",
+      "filesize": 1517350,
+      "updateTime": "2026-07-17T04:10:50Z"
+    },
+    {
+      "id": "2e3b8cc554f6",
+      "name": "五条悟",
+      "type": "IMAGE",
+      "width": 6880,
+      "height": 2880,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-2e3b8cc5/2b7c93e253c3.jpg",
+      "preview": "/screensaver-2e3b8cc5/preview.webp",
+      "md5sum": "2b7c93e253c3f0b584ef89cea8aadb84",
+      "filesize": 2917048,
+      "updateTime": "2026-07-17T04:10:50Z"
+    },
+    {
+      "id": "cafc7360828c",
+      "name": "仙侠双人",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-cafc7360/95b9365ebe7a.jpg",
+      "preview": "/screensaver-cafc7360/preview.webp",
+      "md5sum": "95b9365ebe7ac50a5b8efb2b10a0fa3e",
+      "filesize": 484305,
+      "updateTime": "2026-07-17T04:10:51Z"
+    },
+    {
+      "id": "b39d26ceb6da",
+      "name": "兜帽动漫人物",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-b39d26ce/e255e9c2afa8.mp4",
+      "preview": "/screensaver-b39d26ce/preview.webp",
+      "md5sum": "e255e9c2afa88b425861e58e6702d960",
+      "filesize": 11907859,
+      "updateTime": "2026-07-17T04:10:51Z"
+    },
+    {
+      "id": "662fc60bed7d",
+      "name": "冰蓝少女",
+      "type": "VIDEO",
+      "width": 1924,
+      "height": 1076,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-662fc60b/af9524496af5.mp4",
+      "preview": "/screensaver-662fc60b/preview.webp",
+      "md5sum": "af9524496af50adad0558af76f49a593",
+      "filesize": 1381740,
+      "updateTime": "2026-07-17T04:10:51Z"
+    },
+    {
+      "id": "b000805189ba",
+      "name": "动漫少年对决",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b0008051/14826724032d.jpg",
+      "preview": "/screensaver-b0008051/preview.webp",
+      "md5sum": "14826724032d4e281262d322791c26a5",
+      "filesize": 2962748,
+      "updateTime": "2026-07-17T04:10:51Z"
+    },
+    {
+      "id": "86de5916e0a2",
+      "name": "古装女团",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-86de5916/68538961d7e8.jpg",
+      "preview": "/screensaver-86de5916/preview.webp",
+      "md5sum": "68538961d7e86837844f38857e5bcae4",
+      "filesize": 1287722,
+      "updateTime": "2026-07-17T04:10:51Z"
+    },
+    {
+      "id": "1fac64099e3c",
+      "name": "名侦探柯南剪影",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-1fac6409/8dbe78eb27a6.mp4",
+      "preview": "/screensaver-1fac6409/preview.webp",
+      "md5sum": "8dbe78eb27a6c74273e4e2ea3c212c50",
+      "filesize": 292612,
+      "updateTime": "2026-07-17T04:10:51Z"
+    },
+    {
+      "id": "f9ef3de4c893",
+      "name": "哆啦A梦涂鸦墙",
+      "type": "IMAGE",
+      "width": 2732,
+      "height": 1536,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-f9ef3de4/b6cba331b0a4.jpg",
+      "preview": "/screensaver-f9ef3de4/preview.webp",
+      "md5sum": "b6cba331b0a40df71131744378d7f703",
+      "filesize": 1863882,
+      "updateTime": "2026-07-17T04:10:51Z"
+    },
+    {
+      "id": "a22f6c295426",
+      "name": "哪吒之魔童闹海-哪吒",
+      "type": "IMAGE",
+      "width": 1100,
+      "height": 777,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "L_MAIN_HALF"
+      ],
+      "file": "/screensaver-a22f6c29/4073764d99c5.webp",
+      "preview": "/screensaver-a22f6c29/preview.webp",
+      "md5sum": "4073764d99c5ed0f65eabdcc909c1058",
+      "filesize": 112340,
+      "updateTime": "2026-07-17T04:10:52Z"
+    },
+    {
+      "id": "a1f32915622d",
+      "name": "哪吒之魔童闹海-敖丙",
+      "type": "IMAGE",
+      "width": 1100,
+      "height": 777,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "L_MAIN_HALF"
+      ],
+      "file": "/screensaver-a1f32915/603d1d27bcd5.webp",
+      "preview": "/screensaver-a1f32915/preview.webp",
+      "md5sum": "603d1d27bcd59644905a3e92b78e0188",
+      "filesize": 105992,
+      "updateTime": "2026-07-17T04:10:52Z"
+    },
+    {
+      "id": "2734ccc309ec",
+      "name": "围栏猫咪",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-2734ccc3/51c4ce8d709c.jpg",
+      "preview": "/screensaver-2734ccc3/preview.webp",
+      "md5sum": "51c4ce8d709c9bc813cf9bb2c9d01b17",
+      "filesize": 330815,
+      "updateTime": "2026-07-17T04:10:52Z"
+    },
+    {
+      "id": "f2a3390105b0",
+      "name": "女团合影",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-f2a33901/fccdce7774cd.mp4",
+      "preview": "/screensaver-f2a33901/preview.webp",
+      "md5sum": "fccdce7774cd259f70e75a55ecd142ea",
+      "filesize": 2670120,
+      "updateTime": "2026-07-17T04:10:52Z"
+    },
+    {
+      "id": "e18bc59aba91",
+      "name": "女团躺卧合影",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-e18bc59a/fc26c7ba7833.jpg",
+      "preview": "/screensaver-e18bc59a/preview.webp",
+      "md5sum": "fc26c7ba7833861af1c0560dbcea0a11",
+      "filesize": 2061891,
+      "updateTime": "2026-07-17T04:10:52Z"
+    },
+    {
+      "id": "61b49c094458",
+      "name": "小黄人特写",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-61b49c09/dbf05a368767.mp4",
+      "preview": "/screensaver-61b49c09/preview.webp",
+      "md5sum": "dbf05a36876722a88ae23cecc49d333a",
+      "filesize": 1889333,
+      "updateTime": "2026-07-17T04:10:52Z"
+    },
+    {
+      "id": "78d0895269e5",
+      "name": "山间列车",
+      "type": "VIDEO",
+      "width": 1600,
+      "height": 2560,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_MAIN"
+      ],
+      "file": "/screensaver-78d08952/508abb6226a1.mp4",
+      "preview": "/screensaver-78d08952/preview.webp",
+      "md5sum": "508abb6226a1ed8aab7168e092e316b1",
+      "filesize": 37810048,
+      "updateTime": "2026-07-17T04:10:53Z"
+    },
+    {
+      "id": "48c0038103bf",
+      "name": "山间飞行少年",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-48c00381/a1d486a7dc2b.mp4",
+      "preview": "/screensaver-48c00381/preview.webp",
+      "md5sum": "a1d486a7dc2ba7c3591b858655599d17",
+      "filesize": 27286001,
+      "updateTime": "2026-07-17T04:10:53Z"
+    },
+    {
+      "id": "7155d2a4a343",
+      "name": "忍野忍线稿",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-7155d2a4/509c99da5984.mp4",
+      "preview": "/screensaver-7155d2a4/preview.webp",
+      "md5sum": "509c99da5984d1a9453ac7b1ca3b8166",
+      "filesize": 19997153,
+      "updateTime": "2026-07-17T04:10:53Z"
+    },
+    {
+      "id": "838c3bc22e71",
+      "name": "拉布布励志文字",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-838c3bc2/0c8ae32980d7.jpg",
+      "preview": "/screensaver-838c3bc2/preview.webp",
+      "md5sum": "0c8ae32980d759aa3cf48358d5b656eb",
+      "filesize": 1431110,
+      "updateTime": "2026-07-17T04:10:53Z"
+    },
+    {
+      "id": "6fe3d2d81bc7",
+      "name": "拉布布森林",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-6fe3d2d8/c0db62f49a34.jpg",
+      "preview": "/screensaver-6fe3d2d8/preview.webp",
+      "md5sum": "c0db62f49a341a5028bfca983635eeff",
+      "filesize": 3229842,
+      "updateTime": "2026-07-17T04:10:54Z"
+    },
+    {
+      "id": "a8f5a0241d47",
+      "name": "拉布布花丛",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a8f5a024/e3cc0243b726.jpg",
+      "preview": "/screensaver-a8f5a024/preview.webp",
+      "md5sum": "e3cc0243b72676a48171112069ec3e03",
+      "filesize": 2084133,
+      "updateTime": "2026-07-17T04:10:54Z"
+    },
+    {
+      "id": "845571b494e3",
+      "name": "拉布布花园",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-845571b4/86042ab2909e.jpg",
+      "preview": "/screensaver-845571b4/preview.webp",
+      "md5sum": "86042ab2909eb6e653811405f0e5d7ae",
+      "filesize": 1844697,
+      "updateTime": "2026-07-17T04:10:54Z"
+    },
+    {
+      "id": "81364edaf2ad",
+      "name": "拉布布荷塘",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-81364eda/a9671d72d1d6.jpg",
+      "preview": "/screensaver-81364eda/preview.webp",
+      "md5sum": "a9671d72d1d6c7e2d9fdcc351d2628ed",
+      "filesize": 854037,
+      "updateTime": "2026-07-17T04:10:54Z"
+    },
+    {
+      "id": "9c2d1eced470",
+      "name": "新年落地顺顺利利",
+      "type": "IMAGE",
+      "width": 2056,
+      "height": 1280,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-9c2d1ece/35573cff584e.jpg",
+      "preview": "/screensaver-9c2d1ece/preview.webp",
+      "md5sum": "35573cff584e9ff863ccaf4e0de0dde6",
+      "filesize": 198077,
+      "updateTime": "2026-07-17T04:10:54Z"
+    },
+    {
+      "id": "c98627d8d5de",
+      "name": "星月兔",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-c98627d8/2b82fab86d57.jpg",
+      "preview": "/screensaver-c98627d8/preview.webp",
+      "md5sum": "2b82fab86d570d917bc3eb0167ad0a81",
+      "filesize": 1693947,
+      "updateTime": "2026-07-17T04:10:54Z"
+    },
+    {
+      "id": "66cba731789d",
+      "name": "星际飞船",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-66cba731/5593d5a220d0.mp4",
+      "preview": "/screensaver-66cba731/preview.webp",
+      "md5sum": "5593d5a220d0919fe543ab6940a7ba33",
+      "filesize": 11957732,
+      "updateTime": "2026-07-17T04:10:55Z"
+    },
+    {
+      "id": "9101f27c8343",
+      "name": "暗夜机甲",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-9101f27c/1a8db716282d.mp4",
+      "preview": "/screensaver-9101f27c/preview.webp",
+      "md5sum": "1a8db716282d283c6fca20ad266541be",
+      "filesize": 11243899,
+      "updateTime": "2026-07-17T04:10:55Z"
+    },
+    {
+      "id": "a3250b83a83a",
+      "name": "暗色极简",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-a3250b83/4d563523ae3b.mp4",
+      "preview": "/screensaver-a3250b83/preview.webp",
+      "md5sum": "4d563523ae3b4211c88fcc39addf0cac",
+      "filesize": 113665735,
+      "updateTime": "2026-07-17T04:10:55Z"
+    },
+    {
+      "id": "9a62f2592c07",
+      "name": "暗黑红瞳人物",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-9a62f259/c4ef47b8dd31.jpg",
+      "preview": "/screensaver-9a62f259/preview.webp",
+      "md5sum": "c4ef47b8dd310bdab0d8740d7a8ea3d1",
+      "filesize": 788561,
+      "updateTime": "2026-07-17T04:10:55Z"
+    },
+    {
+      "id": "26d81d6f6087",
+      "name": "暗黑蓝瞳少年",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 1440,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-26d81d6f/1a9cd0b1edbc.jpg",
+      "preview": "/screensaver-26d81d6f/preview.webp",
+      "md5sum": "1a9cd0b1edbc0a64825db44e54eaba68",
+      "filesize": 1607642,
+      "updateTime": "2026-07-17T04:10:55Z"
+    },
+    {
+      "id": "17e0776b6504",
+      "name": "朱迪尼克合影",
+      "type": "IMAGE",
+      "width": 5120,
+      "height": 2880,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-17e0776b/508661efc466.jpg",
+      "preview": "/screensaver-17e0776b/preview.webp",
+      "md5sum": "508661efc466b15d8bede9723683a97e",
+      "filesize": 5410837,
+      "updateTime": "2026-07-17T04:10:56Z"
+    },
+    {
+      "id": "48b2add289c3",
+      "name": "朱迪尼克捧花",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-48b2add2/cc0b3cccaed4.jpg",
+      "preview": "/screensaver-48b2add2/preview.webp",
+      "md5sum": "cc0b3cccaed476e19ec2a6268d2045d6",
+      "filesize": 2428180,
+      "updateTime": "2026-07-17T04:10:56Z"
+    },
+    {
+      "id": "1731e3babd9f",
+      "name": "朱迪尼克海边",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-1731e3ba/e01b89617671.jpg",
+      "preview": "/screensaver-1731e3ba/preview.webp",
+      "md5sum": "e01b89617671ad9ce196e534e4bafd57",
+      "filesize": 2422581,
+      "updateTime": "2026-07-17T04:10:56Z"
+    },
+    {
+      "id": "8fa1d76c1de1",
+      "name": "柠檬树下精灵",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-8fa1d76c/4b8175f202d6.jpg",
+      "preview": "/screensaver-8fa1d76c/preview.webp",
+      "md5sum": "4b8175f202d6ca44b5a472f0ca8d727e",
+      "filesize": 2261828,
+      "updateTime": "2026-07-17T04:10:56Z"
+    },
+    {
+      "id": "61e67f4cb820",
+      "name": "树叶下猫咪",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-61e67f4c/217cfbc75633.jpg",
+      "preview": "/screensaver-61e67f4c/preview.webp",
+      "md5sum": "217cfbc75633425b7af2acd496d59e20",
+      "filesize": 403087,
+      "updateTime": "2026-07-17T04:10:56Z"
+    },
+    {
+      "id": "54240ce95cef",
+      "name": "梅花与猫",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-54240ce9/9f01ba3e1634.jpg",
+      "preview": "/screensaver-54240ce9/preview.webp",
+      "md5sum": "9f01ba3e16348808f9e31a5476b9073c",
+      "filesize": 942230,
+      "updateTime": "2026-07-17T04:10:56Z"
+    },
+    {
+      "id": "a9a545f6dfd4",
+      "name": "水下白发蓝瞳少女",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a9a545f6/173a9e88eda3.mp4",
+      "preview": "/screensaver-a9a545f6/preview.webp",
+      "md5sum": "173a9e88eda3c03a240509537292d75f",
+      "filesize": 746684,
+      "updateTime": "2026-07-17T04:10:57Z"
+    },
+    {
+      "id": "e5f81de963fe",
+      "name": "水下蓝发少女",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-e5f81de9/05201c836828.mp4",
+      "preview": "/screensaver-e5f81de9/preview.webp",
+      "md5sum": "05201c83682842d649bf72063d409b73",
+      "filesize": 2722405,
+      "updateTime": "2026-07-17T04:10:57Z"
+    },
+    {
+      "id": "54f96598911e",
+      "name": "水下闭眼少女",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-54f96598/43e35cb7fdc1.mp4",
+      "preview": "/screensaver-54f96598/preview.webp",
+      "md5sum": "43e35cb7fdc1b8e91ebea14e8182dc36",
+      "filesize": 2306918,
+      "updateTime": "2026-07-17T04:10:57Z"
+    },
+    {
+      "id": "0abce6258674",
+      "name": "水中粉发少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-0abce625/81fba384aac7.mp4",
+      "preview": "/screensaver-0abce625/preview.webp",
+      "md5sum": "81fba384aac72718f8ce1b414db1de75",
+      "filesize": 1461436,
+      "updateTime": "2026-07-17T04:10:57Z"
+    },
+    {
+      "id": "1738c4fab15e",
+      "name": "水中红瞳少女",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-1738c4fa/558a5ce85009.mp4",
+      "preview": "/screensaver-1738c4fa/preview.webp",
+      "md5sum": "558a5ce85009e3b6d27f153f27789d3e",
+      "filesize": 2456260,
+      "updateTime": "2026-07-17T04:10:57Z"
+    },
+    {
+      "id": "285064d9d0e1",
+      "name": "水墨山水湖泊",
+      "type": "IMAGE",
+      "width": 5120,
+      "height": 2880,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-285064d9/0bf72fc3c369.jpg",
+      "preview": "/screensaver-285064d9/preview.webp",
+      "md5sum": "0bf72fc3c369c4fec47955bcc1168cfd",
+      "filesize": 2571861,
+      "updateTime": "2026-07-17T04:10:57Z"
+    },
+    {
+      "id": "e5e957f895ee",
+      "name": "水墨山水湖泊二",
+      "type": "IMAGE",
+      "width": 5120,
+      "height": 2880,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-e5e957f8/8b9b6adbe256.jpg",
+      "preview": "/screensaver-e5e957f8/preview.webp",
+      "md5sum": "8b9b6adbe25676da70d6c4651896047b",
+      "filesize": 3179521,
+      "updateTime": "2026-07-17T04:10:57Z"
+    },
+    {
+      "id": "19c02b940d5f",
+      "name": "水墨柿子",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-19c02b94/f486e6cc637b.jpg",
+      "preview": "/screensaver-19c02b94/preview.webp",
+      "md5sum": "f486e6cc637bb71d7d036662e6c55b14",
+      "filesize": 2781115,
+      "updateTime": "2026-07-17T04:10:58Z"
+    },
+    {
+      "id": "14b4db51911d",
+      "name": "江南水乡",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-14b4db51/a04197086982.jpg",
+      "preview": "/screensaver-14b4db51/preview.webp",
+      "md5sum": "a041970869820a4c063cbb74bb28e3f1",
+      "filesize": 7131838,
+      "updateTime": "2026-07-17T04:10:58Z"
+    },
+    {
+      "id": "d88fea02d677",
+      "name": "海贼王全员",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-d88fea02/d5a3507e5d6c.jpg",
+      "preview": "/screensaver-d88fea02/preview.webp",
+      "md5sum": "d5a3507e5d6c86b146a053faed0ba03d",
+      "filesize": 3075890,
+      "updateTime": "2026-07-17T04:10:58Z"
+    },
+    {
+      "id": "0862eb7da73e",
+      "name": "海贼船",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-0862eb7d/5c9aaf65bd21.mp4",
+      "preview": "/screensaver-0862eb7d/preview.webp",
+      "md5sum": "5c9aaf65bd21aaac37b6a929f5f243f8",
+      "filesize": 27950250,
+      "updateTime": "2026-07-17T04:10:58Z"
+    },
+    {
+      "id": "906a4a08d58a",
+      "name": "海边路飞",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-906a4a08/349ca320c8e6.jpg",
+      "preview": "/screensaver-906a4a08/preview.webp",
+      "md5sum": "349ca320c8e61bf3c3e2dab45a2c140b",
+      "filesize": 2551570,
+      "updateTime": "2026-07-17T04:10:58Z"
+    },
+    {
+      "id": "7fea0032292e",
+      "name": "火焰兜帽人物",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 1276,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "S_GT_MAIN"
+      ],
+      "file": "/screensaver-7fea0032/ebb0a5ab7a9c.mp4",
+      "preview": "/screensaver-7fea0032/preview.webp",
+      "md5sum": "ebb0a5ab7a9cb74b40b689a321951210",
+      "filesize": 1249347,
+      "updateTime": "2026-07-17T04:10:59Z"
+    },
+    {
+      "id": "56d0d73967e2",
+      "name": "火焰动漫少年",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 683,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-56d0d739/fb672c729424.jpg",
+      "preview": "/screensaver-56d0d739/preview.webp",
+      "md5sum": "fb672c729424b879ab4d680846e9058f",
+      "filesize": 847547,
+      "updateTime": "2026-07-17T04:10:59Z"
+    },
+    {
+      "id": "a15ac4fd46c6",
+      "name": "猫咪长卷",
+      "type": "IMAGE",
+      "width": 10000,
+      "height": 1218,
+      "suitability": "UNSUITABLE",
+      "targets": [],
+      "file": "/screensaver-a15ac4fd/bcc1985d028f.jpg",
+      "preview": "/screensaver-a15ac4fd/preview.webp",
+      "md5sum": "bcc1985d028f9338b3cea32c1244d12e",
+      "filesize": 1071275,
+      "updateTime": "2026-07-17T04:10:59Z"
+    },
+    {
+      "id": "6308d7087b74",
+      "name": "疯狂动物城",
+      "type": "IMAGE",
+      "width": 1100,
+      "height": 619,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-6308d708/dabb7a9fe143.webp",
+      "preview": "/screensaver-6308d708/preview.webp",
+      "md5sum": "dabb7a9fe14336d30a0be6b9e8404584",
+      "filesize": 57356,
+      "updateTime": "2026-07-17T04:10:59Z"
+    },
+    {
+      "id": "93dd5735d5b7",
+      "name": "疯狂动物城城市",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-93dd5735/2b8becd44f5c.mp4",
+      "preview": "/screensaver-93dd5735/preview.webp",
+      "md5sum": "2b8becd44f5c50827e73fb2ee64fc808",
+      "filesize": 12175339,
+      "updateTime": "2026-07-17T04:10:59Z"
+    },
+    {
+      "id": "5190a15ad297",
+      "name": "疯狂动物城城市二",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-5190a15a/c23f7453986a.mp4",
+      "preview": "/screensaver-5190a15a/preview.webp",
+      "md5sum": "c23f7453986a097b62e764881b3a4f8e",
+      "filesize": 778918,
+      "updateTime": "2026-07-17T04:10:59Z"
+    },
+    {
+      "id": "dc27caeb4ee0",
+      "name": "疯狂动物城摩托夜景",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-dc27caeb/f1ae334957fb.jpg",
+      "preview": "/screensaver-dc27caeb/preview.webp",
+      "md5sum": "f1ae334957fb05d2ac28d97c9bd7b479",
+      "filesize": 3322602,
+      "updateTime": "2026-07-17T04:11:00Z"
+    },
+    {
+      "id": "6d9916d58d50",
+      "name": "疯狂动物城摩托日景",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-6d9916d5/7a759f7fb8d4.jpg",
+      "preview": "/screensaver-6d9916d5/preview.webp",
+      "md5sum": "7a759f7fb8d4225f65f2de688b9e5b31",
+      "filesize": 3004542,
+      "updateTime": "2026-07-17T04:11:00Z"
+    },
+    {
+      "id": "320f4ca0e9e0",
+      "name": "疯狂动物城烟花",
+      "type": "VIDEO",
+      "width": 854,
+      "height": 480,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-320f4ca0/0e5bc3c8c740.mov",
+      "preview": "/screensaver-320f4ca0/preview.webp",
+      "md5sum": "0e5bc3c8c740dcb34b77db3e7475a1af",
+      "filesize": 594080,
+      "updateTime": "2026-07-17T04:11:00Z"
+    },
+    {
+      "id": "e23c87b8e7a8",
+      "name": "白发少女",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-e23c87b8/026e7851d6dd.jpg",
+      "preview": "/screensaver-e23c87b8/preview.webp",
+      "md5sum": "026e7851d6dd29690db7528eadfdcd88",
+      "filesize": 634811,
+      "updateTime": "2026-07-17T04:11:00Z"
+    },
+    {
+      "id": "fbd23b0094b6",
+      "name": "白发少女竖屏",
+      "type": "VIDEO",
+      "width": 1080,
+      "height": 1920,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "S_GT_MAIN"
+      ],
+      "file": "/screensaver-fbd23b00/0c66be8e998b.mp4",
+      "preview": "/screensaver-fbd23b00/preview.webp",
+      "md5sum": "0c66be8e998bdfae36511c213d1f9167",
+      "filesize": 2933765,
+      "updateTime": "2026-07-17T04:11:00Z"
+    },
+    {
+      "id": "015ac17927ae",
+      "name": "白发泪痕少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-015ac179/3cf4922d3161.mp4",
+      "preview": "/screensaver-015ac179/preview.webp",
+      "md5sum": "3cf4922d316128576427de89febb0869",
+      "filesize": 1286096,
+      "updateTime": "2026-07-17T04:11:00Z"
+    },
+    {
+      "id": "7af88c32c159",
+      "name": "白发猫耳少女",
+      "type": "IMAGE",
+      "width": 5456,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-7af88c32/b13a827d72bd.jpg",
+      "preview": "/screensaver-7af88c32/preview.webp",
+      "md5sum": "b13a827d72bdab7694d0b458ceaca504",
+      "filesize": 2387905,
+      "updateTime": "2026-07-17T04:11:01Z"
+    },
+    {
+      "id": "01846b101946",
+      "name": "白发红瞳少女",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-01846b10/ecc62420b17d.mp4",
+      "preview": "/screensaver-01846b10/preview.webp",
+      "md5sum": "ecc62420b17d756c693dbe5143d9a690",
+      "filesize": 965658,
+      "updateTime": "2026-07-17T04:11:01Z"
+    },
+    {
+      "id": "ae60797b6020",
+      "name": "白发红瞳少女二",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-ae60797b/6ae4db55a5a8.mp4",
+      "preview": "/screensaver-ae60797b/preview.webp",
+      "md5sum": "6ae4db55a5a8b95546bba0b953204670",
+      "filesize": 2804489,
+      "updateTime": "2026-07-17T04:11:01Z"
+    },
+    {
+      "id": "a8536460e1b8",
+      "name": "白发红瞳战士",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-a8536460/8012433a26de.mp4",
+      "preview": "/screensaver-a8536460/preview.webp",
+      "md5sum": "8012433a26de97cfdd9bcaaed48fe113",
+      "filesize": 10931263,
+      "updateTime": "2026-07-17T04:11:01Z"
+    },
+    {
+      "id": "497871bf7603",
+      "name": "白发蓝瞳少女",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-497871bf/c3d98dacaed4.mp4",
+      "preview": "/screensaver-497871bf/preview.webp",
+      "md5sum": "c3d98dacaed4c01c996ac3d075ee76cd",
+      "filesize": 860445,
+      "updateTime": "2026-07-17T04:11:01Z"
+    },
+    {
+      "id": "fa512a6c59d7",
+      "name": "白猫森林",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-fa512a6c/4cdadc5a579f.jpg",
+      "preview": "/screensaver-fa512a6c/preview.webp",
+      "md5sum": "4cdadc5a579f398f98b9d8ff6bf867af",
+      "filesize": 693827,
+      "updateTime": "2026-07-17T04:11:01Z"
+    },
+    {
+      "id": "b0e36b3e1d97",
+      "name": "白色未来城市",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-b0e36b3e/7c5f64fede7d.mp4",
+      "preview": "/screensaver-b0e36b3e/preview.webp",
+      "md5sum": "7c5f64fede7d8cfdab11791218ba1c1f",
+      "filesize": 50312782,
+      "updateTime": "2026-07-17T04:11:02Z"
+    },
+    {
+      "id": "a97681c28196",
+      "name": "白色线条标志",
+      "type": "IMAGE",
+      "width": 2279,
+      "height": 1129,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a97681c2/4980c9cf8b93.jpg",
+      "preview": "/screensaver-a97681c2/preview.webp",
+      "md5sum": "4980c9cf8b93a6059545bb7ed1522d3d",
+      "filesize": 189166,
+      "updateTime": "2026-07-17T04:11:02Z"
+    },
+    {
+      "id": "35dcbb01e100",
+      "name": "白龙少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-35dcbb01/2765f32f9571.mp4",
+      "preview": "/screensaver-35dcbb01/preview.webp",
+      "md5sum": "2765f32f957119546ac10bfb18e9ea60",
+      "filesize": 1794133,
+      "updateTime": "2026-07-17T04:11:02Z"
+    },
+    {
+      "id": "ee0102401a96",
+      "name": "石墙猫咪",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-ee010240/655e548933bb.jpg",
+      "preview": "/screensaver-ee010240/preview.webp",
+      "md5sum": "655e548933bbb4dccdebb2ed799f4d75",
+      "filesize": 723442,
+      "updateTime": "2026-07-17T04:11:02Z"
+    },
+    {
+      "id": "b20417270d0a",
+      "name": "礼帽魔法少女",
+      "type": "VIDEO",
+      "width": 1152,
+      "height": 720,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b2041727/ac33ba328e64.mp4",
+      "preview": "/screensaver-b2041727/preview.webp",
+      "md5sum": "ac33ba328e647ecd3429b1a0c54158f7",
+      "filesize": 695110,
+      "updateTime": "2026-07-17T04:11:02Z"
+    },
+    {
+      "id": "cf1ceaf9f10f",
+      "name": "窗边猫咪",
+      "type": "VIDEO",
+      "width": 854,
+      "height": 480,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-cf1ceaf9/9b360017d152.mov",
+      "preview": "/screensaver-cf1ceaf9/preview.webp",
+      "md5sum": "9b360017d1524f0f5ab797fe293cb985",
+      "filesize": 769352,
+      "updateTime": "2026-07-17T04:11:02Z"
+    },
+    {
+      "id": "43be8e698d0a",
+      "name": "竹林绿衣少女",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-43be8e69/6deccd395d3a.jpg",
+      "preview": "/screensaver-43be8e69/preview.webp",
+      "md5sum": "6deccd395d3ae8ca72c0a49a763b0418",
+      "filesize": 1049969,
+      "updateTime": "2026-07-17T04:11:02Z"
+    },
+    {
+      "id": "ab954f1e305c",
+      "name": "粉发动漫少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-ab954f1e/8cd1402947c5.mp4",
+      "preview": "/screensaver-ab954f1e/preview.webp",
+      "md5sum": "8cd1402947c595766f513e9b7c7e42b4",
+      "filesize": 27388337,
+      "updateTime": "2026-07-17T04:11:03Z"
+    },
+    {
+      "id": "5675ce6c036c",
+      "name": "粉发狐耳少女",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-5675ce6c/5512d2ac5bb4.mp4",
+      "preview": "/screensaver-5675ce6c/preview.webp",
+      "md5sum": "5512d2ac5bb43cac5b9b756366fb75b8",
+      "filesize": 321960,
+      "updateTime": "2026-07-17T04:11:03Z"
+    },
+    {
+      "id": "ea2950a571a5",
+      "name": "粉发狐耳少女二",
+      "type": "VIDEO",
+      "width": 1270,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-ea2950a5/ffb7640f0505.mp4",
+      "preview": "/screensaver-ea2950a5/preview.webp",
+      "md5sum": "ffb7640f0505003d80e6ab1bc943ff02",
+      "filesize": 931996,
+      "updateTime": "2026-07-17T04:11:03Z"
+    },
+    {
+      "id": "287fb83662ed",
+      "name": "紫瞳冷酷人物",
+      "type": "IMAGE",
+      "width": 2358,
+      "height": 1284,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-287fb836/b965df9357b3.jpg",
+      "preview": "/screensaver-287fb836/preview.webp",
+      "md5sum": "b965df9357b32548e5696df8f623ae7a",
+      "filesize": 235284,
+      "updateTime": "2026-07-17T04:11:03Z"
+    },
+    {
+      "id": "be901b1de25e",
+      "name": "紫瞳动漫少女特写",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-be901b1d/804c95f51bdf.jpg",
+      "preview": "/screensaver-be901b1d/preview.webp",
+      "md5sum": "804c95f51bdfe2ac10e52e4e251f6580",
+      "filesize": 472127,
+      "updateTime": "2026-07-17T04:11:03Z"
+    },
+    {
+      "id": "be5c12fcfe0c",
+      "name": "紫瞳少女",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-be5c12fc/7c981d2dfead.mp4",
+      "preview": "/screensaver-be5c12fc/preview.webp",
+      "md5sum": "7c981d2dfeadef5603f076ff1ffbb7c7",
+      "filesize": 2676633,
+      "updateTime": "2026-07-17T04:11:03Z"
+    },
+    {
+      "id": "6033800a9171",
+      "name": "紫瞳水中少女",
+      "type": "VIDEO",
+      "width": 852,
+      "height": 478,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-6033800a/2a798e3af08d.mp4",
+      "preview": "/screensaver-6033800a/preview.webp",
+      "md5sum": "2a798e3af08d03978245251dca41761c",
+      "filesize": 2772246,
+      "updateTime": "2026-07-17T04:11:04Z"
+    },
+    {
+      "id": "95acbda0dbb9",
+      "name": "紫色剪影少女",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-95acbda0/5d62e37afca9.jpg",
+      "preview": "/screensaver-95acbda0/preview.webp",
+      "md5sum": "5d62e37afca9747aaa562ae4068320a8",
+      "filesize": 360487,
+      "updateTime": "2026-07-17T04:11:04Z"
+    },
+    {
+      "id": "e9e9d86feaa3",
+      "name": "紫色星球公路",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-e9e9d86f/59e990bf4b18.mp4",
+      "preview": "/screensaver-e9e9d86f/preview.webp",
+      "md5sum": "59e990bf4b18d8e5dcc49bbd3bd58b0f",
+      "filesize": 20764521,
+      "updateTime": "2026-07-17T04:11:04Z"
+    },
+    {
+      "id": "a681804a5f39",
+      "name": "紫色暗影怪兽",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-a681804a/328732331e26.mp4",
+      "preview": "/screensaver-a681804a/preview.webp",
+      "md5sum": "328732331e26c18fb18f6e8b671a78e2",
+      "filesize": 17343378,
+      "updateTime": "2026-07-17T04:11:04Z"
+    },
+    {
+      "id": "29097a00b215",
+      "name": "紫色浪潮",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-29097a00/60ecef3c8a01.mp4",
+      "preview": "/screensaver-29097a00/preview.webp",
+      "md5sum": "60ecef3c8a0100619bbe37fa7b3e1e3e",
+      "filesize": 19586761,
+      "updateTime": "2026-07-17T04:11:04Z"
+    },
+    {
+      "id": "b520725e98ef",
+      "name": "紫色浪潮二",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b520725e/d4061c56e54f.mp4",
+      "preview": "/screensaver-b520725e/preview.webp",
+      "md5sum": "d4061c56e54fa66a8f801c8bb01c27c0",
+      "filesize": 27205336,
+      "updateTime": "2026-07-17T04:11:05Z"
+    },
+    {
+      "id": "b324d7e716aa",
+      "name": "紫色赛博少女",
+      "type": "VIDEO",
+      "width": 1284,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b324d7e7/0fd28ff6be7f.mp4",
+      "preview": "/screensaver-b324d7e7/preview.webp",
+      "md5sum": "0fd28ff6be7fc0767fba41016f58df1c",
+      "filesize": 1507275,
+      "updateTime": "2026-07-17T04:11:05Z"
+    },
+    {
+      "id": "441d9fb5ed6e",
+      "name": "红发少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-441d9fb5/997ae665914a.mp4",
+      "preview": "/screensaver-441d9fb5/preview.webp",
+      "md5sum": "997ae665914aca52a0d38951409e71e8",
+      "filesize": 28721925,
+      "updateTime": "2026-07-17T04:11:05Z"
+    },
+    {
+      "id": "147312d0185d",
+      "name": "红发背影",
+      "type": "VIDEO",
+      "width": 1080,
+      "height": 720,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "L_MAIN_HALF"
+      ],
+      "file": "/screensaver-147312d0/952a0539bd10.mp4",
+      "preview": "/screensaver-147312d0/preview.webp",
+      "md5sum": "952a0539bd10b42c649c03cfd3f00f1c",
+      "filesize": 1393977,
+      "updateTime": "2026-07-17T04:11:05Z"
+    },
+    {
+      "id": "39b017c15b75",
+      "name": "红瞳动漫少女特写",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-39b017c1/744e7335488f.jpg",
+      "preview": "/screensaver-39b017c1/preview.webp",
+      "md5sum": "744e7335488f6c10597ddb38ebd3ca2d",
+      "filesize": 1580541,
+      "updateTime": "2026-07-17T04:11:05Z"
+    },
+    {
+      "id": "0dc10d006e36",
+      "name": "红瞳暗黑人物",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-0dc10d00/9dc23147fab9.jpg",
+      "preview": "/screensaver-0dc10d00/preview.webp",
+      "md5sum": "9dc23147fab9bf67440ae20b52b45ce7",
+      "filesize": 4303882,
+      "updateTime": "2026-07-17T04:11:05Z"
+    },
+    {
+      "id": "b1f60e3b079c",
+      "name": "红色蒙面人物",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 1280,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "S_GT_MAIN"
+      ],
+      "file": "/screensaver-b1f60e3b/230081d93be5.mp4",
+      "preview": "/screensaver-b1f60e3b/preview.webp",
+      "md5sum": "230081d93be543ca60683c0803f53c3a",
+      "filesize": 1145132,
+      "updateTime": "2026-07-17T04:11:06Z"
+    },
+    {
+      "id": "b642d1cbfb90",
+      "name": "红黑长发少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b642d1cb/cbd0e570e504.mp4",
+      "preview": "/screensaver-b642d1cb/preview.webp",
+      "md5sum": "cbd0e570e504238c25b31c395902d019",
+      "filesize": 1439581,
+      "updateTime": "2026-07-17T04:11:06Z"
+    },
+    {
+      "id": "2f4bd8f3a72d",
+      "name": "花间少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-2f4bd8f3/eba458ccdb25.mp4",
+      "preview": "/screensaver-2f4bd8f3/preview.webp",
+      "md5sum": "eba458ccdb25e97e9dec8423e103292a",
+      "filesize": 1773716,
+      "updateTime": "2026-07-17T04:11:06Z"
+    },
+    {
+      "id": "23997b590324",
+      "name": "草原动漫少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-23997b59/e5eb3407eb11.mp4",
+      "preview": "/screensaver-23997b59/preview.webp",
+      "md5sum": "e5eb3407eb11542eca686aaafe2a4c46",
+      "filesize": 16341420,
+      "updateTime": "2026-07-17T04:11:06Z"
+    },
+    {
+      "id": "cc0bf401075c",
+      "name": "蒙面女侠蓝瞳暗黑火焰",
+      "type": "IMAGE",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-cc0bf401/bd9aaddc102f.jpg",
+      "preview": "/screensaver-cc0bf401/preview.webp",
+      "md5sum": "bd9aaddc102fd7b04c94d0f13007d138",
+      "filesize": 1699755,
+      "updateTime": "2026-07-17T04:11:06Z"
+    },
+    {
+      "id": "75ad46dc31c6",
+      "name": "蒙面忍者",
+      "type": "VIDEO",
+      "width": 1280,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-75ad46dc/c5c0420d08f9.mp4",
+      "preview": "/screensaver-75ad46dc/preview.webp",
+      "md5sum": "c5c0420d08f9ac395e90b8b07a79b47a",
+      "filesize": 423772,
+      "updateTime": "2026-07-17T04:11:06Z"
+    },
+    {
+      "id": "5fe65082d50a",
+      "name": "蓝发少女",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-5fe65082/8aeb5c09a2e9.mp4",
+      "preview": "/screensaver-5fe65082/preview.webp",
+      "md5sum": "8aeb5c09a2e9ee007ec8d66d66f9b1e5",
+      "filesize": 2844136,
+      "updateTime": "2026-07-17T04:11:07Z"
+    },
+    {
+      "id": "ffb1fdd41dc7",
+      "name": "蓝发持剑少年",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-ffb1fdd4/1ae430caa557.mp4",
+      "preview": "/screensaver-ffb1fdd4/preview.webp",
+      "md5sum": "1ae430caa5576c64576b590302604743",
+      "filesize": 1383026,
+      "updateTime": "2026-07-17T04:11:07Z"
+    },
+    {
+      "id": "623e480c922f",
+      "name": "蓝天下果树",
+      "type": "IMAGE",
+      "width": 1922,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-623e480c/1eb6344990f2.jpg",
+      "preview": "/screensaver-623e480c/preview.webp",
+      "md5sum": "1eb6344990f2e844bb3cb17e8fd70d34",
+      "filesize": 1193253,
+      "updateTime": "2026-07-17T04:11:07Z"
+    },
+    {
+      "id": "de6559640864",
+      "name": "蓝瞳少女",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-de655964/710f03c643b9.jpg",
+      "preview": "/screensaver-de655964/preview.webp",
+      "md5sum": "710f03c643b983735e8ccce097572f63",
+      "filesize": 251691,
+      "updateTime": "2026-07-17T04:11:07Z"
+    },
+    {
+      "id": "4083b68c03aa",
+      "name": "蓝瞳蒙面少女",
+      "type": "IMAGE",
+      "width": 1080,
+      "height": 1920,
+      "suitability": "CANDIDATE",
+      "targets": [
+        "S_GT_MAIN"
+      ],
+      "file": "/screensaver-4083b68c/68bea36435b4.jpg",
+      "preview": "/screensaver-4083b68c/preview.webp",
+      "md5sum": "68bea36435b48d86486c5977bca09325",
+      "filesize": 160444,
+      "updateTime": "2026-07-17T04:11:07Z"
+    },
+    {
+      "id": "eb7bd201d496",
+      "name": "蓝色神龙少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-eb7bd201/9ddcdeb44399.mp4",
+      "preview": "/screensaver-eb7bd201/preview.webp",
+      "md5sum": "9ddcdeb44399262c75f4d88b1f8dc7e3",
+      "filesize": 2331092,
+      "updateTime": "2026-07-17T04:11:07Z"
+    },
+    {
+      "id": "079878829f73",
+      "name": "蜡笔小新夜晚入睡",
+      "type": "VIDEO",
+      "width": 1280,
+      "height": 480,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-07987882/77daed20dce3.mp4",
+      "preview": "/screensaver-07987882/preview.webp",
+      "md5sum": "77daed20dce3ec44d15c2d6e467da292",
+      "filesize": 702335,
+      "updateTime": "2026-07-17T04:11:08Z"
+    },
+    {
+      "id": "de9fb564f48e",
+      "name": "蜡笔小新庭院",
+      "type": "VIDEO",
+      "width": 854,
+      "height": 480,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-de9fb564/b2ad74f29832.mov",
+      "preview": "/screensaver-de9fb564/preview.webp",
+      "md5sum": "b2ad74f29832a8830b4fe4e5e9414f38",
+      "filesize": 598715,
+      "updateTime": "2026-07-17T04:11:08Z"
+    },
+    {
+      "id": "5506984d162f",
+      "name": "蜡笔小新柠檬",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-5506984d/429ae0f0ef8f.jpg",
+      "preview": "/screensaver-5506984d/preview.webp",
+      "md5sum": "429ae0f0ef8f7bc981ed06a4f43c64f5",
+      "filesize": 2288677,
+      "updateTime": "2026-07-17T04:11:08Z"
+    },
+    {
+      "id": "44760a9b38d4",
+      "name": "蜡笔小新海绵宝宝元旦",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-44760a9b/3fa1c41de963.mp4",
+      "preview": "/screensaver-44760a9b/preview.webp",
+      "md5sum": "3fa1c41de96335285f05ee79a8f3a739",
+      "filesize": 877222,
+      "updateTime": "2026-07-17T04:11:08Z"
+    },
+    {
+      "id": "1ea30c981001",
+      "name": "蜡笔小新竹筏",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-1ea30c98/01a8f29b4214.jpg",
+      "preview": "/screensaver-1ea30c98/preview.webp",
+      "md5sum": "01a8f29b4214a0b3d92a1a288402f272",
+      "filesize": 2852190,
+      "updateTime": "2026-07-17T04:11:08Z"
+    },
+    {
+      "id": "386007986ff6",
+      "name": "蜡笔小新花园",
+      "type": "VIDEO",
+      "width": 1280,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-38600798/bc13f075a8b6.mp4",
+      "preview": "/screensaver-38600798/preview.webp",
+      "md5sum": "bc13f075a8b60181140ca5ba46855a61",
+      "filesize": 2012253,
+      "updateTime": "2026-07-17T04:11:08Z"
+    },
+    {
+      "id": "fdd60c9751c5",
+      "name": "蜡笔小新荷塘",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-fdd60c97/a3f6dfefb36e.jpg",
+      "preview": "/screensaver-fdd60c97/preview.webp",
+      "md5sum": "a3f6dfefb36e70931c206f1c2d946b29",
+      "filesize": 2421443,
+      "updateTime": "2026-07-17T04:11:09Z"
+    },
+    {
+      "id": "4075a7a94a87",
+      "name": "蜡笔小新雨中",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-4075a7a9/b5905aab1cdd.jpg",
+      "preview": "/screensaver-4075a7a9/preview.webp",
+      "md5sum": "b5905aab1cdd99e896132ff3d09b5dc8",
+      "filesize": 1886951,
+      "updateTime": "2026-07-17T04:11:09Z"
+    },
+    {
+      "id": "71851e2efe72",
+      "name": "蜡笔小新雨伞",
+      "type": "IMAGE",
+      "width": 5472,
+      "height": 3072,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-71851e2e/ef3fd754c3e6.jpg",
+      "preview": "/screensaver-71851e2e/preview.webp",
+      "md5sum": "ef3fd754c3e63656f2fa3682a65688d9",
+      "filesize": 2239132,
+      "updateTime": "2026-07-17T04:11:09Z"
+    },
+    {
+      "id": "c8833e63cb18",
+      "name": "赛博城市",
+      "type": "VIDEO",
+      "width": 1600,
+      "height": 2560,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_MAIN"
+      ],
+      "file": "/screensaver-c8833e63/0436e95f59f5.mp4",
+      "preview": "/screensaver-c8833e63/preview.webp",
+      "md5sum": "0436e95f59f5ceb5aca5aac88e99cdb0",
+      "filesize": 90458907,
+      "updateTime": "2026-07-17T04:11:09Z"
+    },
+    {
+      "id": "bb17a3a818e5",
+      "name": "赛博控制室",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-bb17a3a8/a6e776d900cd.mp4",
+      "preview": "/screensaver-bb17a3a8/preview.webp",
+      "md5sum": "a6e776d900cdff70048e58ed49fb3140",
+      "filesize": 35007467,
+      "updateTime": "2026-07-17T04:11:09Z"
+    },
+    {
+      "id": "cf5d7a48f0c9",
+      "name": "金色眼眸少女",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-cf5d7a48/82e7a36ff709.mp4",
+      "preview": "/screensaver-cf5d7a48/preview.webp",
+      "md5sum": "82e7a36ff7092d74a1446418f0a09a28",
+      "filesize": 2247193,
+      "updateTime": "2026-07-17T04:11:10Z"
+    },
+    {
+      "id": "3c395093e106",
+      "name": "金色眼眸少女二",
+      "type": "VIDEO",
+      "width": 720,
+      "height": 404,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-3c395093/db84da0a8b09.mp4",
+      "preview": "/screensaver-3c395093/preview.webp",
+      "md5sum": "db84da0a8b0977b986faefb3fa5e8883",
+      "filesize": 2247193,
+      "updateTime": "2026-07-17T04:11:10Z"
+    },
+    {
+      "id": "d679e454fc19",
+      "name": "雨樱",
+      "type": "VIDEO",
+      "width": 3840,
+      "height": 2160,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-d679e454/7dce33849c72.mp4",
+      "preview": "/screensaver-d679e454/preview.webp",
+      "md5sum": "7dce33849c72dad4b6608df79404e5d1",
+      "filesize": 211809107,
+      "updateTime": "2026-07-17T04:11:10Z"
+    },
+    {
+      "id": "5d5902ac1d97",
+      "name": "雪中动漫群像",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 544,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-5d5902ac/6826c61b1c4c.mp4",
+      "preview": "/screensaver-5d5902ac/preview.webp",
+      "md5sum": "6826c61b1c4cf86c526747d597653e58",
+      "filesize": 924314,
+      "updateTime": "2026-07-17T04:11:11Z"
+    },
+    {
+      "id": "429cc4b21f87",
+      "name": "马上发财",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-429cc4b2/30d00dfcd6a5.png",
+      "preview": "/screensaver-429cc4b2/preview.webp",
+      "md5sum": "30d00dfcd6a51ae2295806bbd8155da3",
+      "filesize": 2301878,
+      "updateTime": "2026-07-17T04:11:11Z"
+    },
+    {
+      "id": "f6d37163ed0d",
+      "name": "黄色背景蓝瞳黑猫",
+      "type": "VIDEO",
+      "width": 960,
+      "height": 540,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-f6d37163/ff65c4a8c712.mp4",
+      "preview": "/screensaver-f6d37163/preview.webp",
+      "md5sum": "ff65c4a8c7123d1dac709fcb35d3c68f",
+      "filesize": 205909,
+      "updateTime": "2026-07-17T04:11:11Z"
+    },
+    {
+      "id": "4a28ec307167",
+      "name": "黑发幻想少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-4a28ec30/cf108f618c1c.mp4",
+      "preview": "/screensaver-4a28ec30/preview.webp",
+      "md5sum": "cf108f618c1cda616c17c2480c224f69",
+      "filesize": 2911545,
+      "updateTime": "2026-07-17T04:11:11Z"
+    },
+    {
+      "id": "47bbe431ab6c",
+      "name": "黑猫动漫少女",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-47bbe431/ef5c1e7f5bea.jpg",
+      "preview": "/screensaver-47bbe431/preview.webp",
+      "md5sum": "ef5c1e7f5bea3016f5114764f311c953",
+      "filesize": 785989,
+      "updateTime": "2026-07-17T04:11:11Z"
+    },
+    {
+      "id": "9ee459ba0a1c",
+      "name": "黑白光环少女",
+      "type": "VIDEO",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-9ee459ba/5edf2dd53c18.mp4",
+      "preview": "/screensaver-9ee459ba/preview.webp",
+      "md5sum": "5edf2dd53c18d6c7e9442d2800fa6593",
+      "filesize": 8557014,
+      "updateTime": "2026-07-17T04:11:11Z"
+    },
+    {
+      "id": "ef85c58e5b62",
+      "name": "龙猫雨伞",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-ef85c58e/1c976fec56c3.jpg",
+      "preview": "/screensaver-ef85c58e/preview.webp",
+      "md5sum": "1c976fec56c3b350686e677f6a376b8f",
+      "filesize": 362514,
+      "updateTime": "2026-07-17T04:11:12Z"
+    }
+  ]
+}

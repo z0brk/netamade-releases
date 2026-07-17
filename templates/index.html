@@ -417,6 +417,7 @@
         <button type="button" class="tab-btn" data-tab="apps">应用列表</button>
         <button type="button" class="tab-btn" data-tab="workflows">工作流</button>
         <button type="button" class="tab-btn" data-tab="sounds">车机音效</button>
+        <button type="button" class="tab-btn" data-tab="screensavers">在线屏保</button>
         <button type="button" class="tab-btn" data-tab="categories">分类</button>
       </nav>
 
@@ -543,6 +544,47 @@
           <button type="submit">更新标签</button>
           <button type="submit" class="btn-danger" formaction="/sounds/delete" id="sound-bulk-delete">批量删除</button>
         </form>
+      </section>
+
+      <section class="panel" id="panel-screensavers">
+        <h2>在线屏保</h2>
+        <p class="sub">维护独立的 screensavers.json 与 CDN 媒体资源。共 {{ screensavers|length }} 个屏保。</p>
+        <div class="upload-card">
+          <form action="/screensavers/upload" method="post" enctype="multipart/form-data">
+            <div class="dialog-grid">
+              <div><label>屏保文件</label><input name="screensavers" type="file" accept="image/*,video/*" multiple required /></div>
+              <div><label>适配状态</label><select name="suitability"><option value="SUITABLE">适合</option><option value="CANDIDATE">候选</option><option value="UNSUITABLE">不适合</option></select></div>
+            </div>
+            <div class="chips" style="margin-top:10px;">
+              {% for value, label in [('L_MAIN_FULL','L 主屏全屏'),('L_MAIN_HALF','L 主屏半屏'),('L_SECONDARY_FULL','L 副屏'),('S_GT_MAIN','S/GT 主屏'),('S_GT_SECONDARY','S/GT 副屏')] %}
+                <label class="chip"><input type="checkbox" name="targets" value="{{ value }}" />{{ label }}</label>
+              {% endfor %}
+            </div>
+            <div class="dialog-actions"><button type="submit">上传屏保</button></div>
+          </form>
+        </div>
+        <div class="sound-toolbar">
+          <input id="screensaver-search" type="text" placeholder="搜索名称" />
+          <select id="screensaver-suitability-filter"><option value="">全部适配状态</option><option value="SUITABLE">适合</option><option value="CANDIDATE">候选</option><option value="UNSUITABLE">不适合</option></select>
+          <select id="screensaver-type-filter"><option value="">全部类型</option><option value="VIDEO">动态</option><option value="IMAGE">静态</option></select>
+          <button type="button" class="btn-ghost" id="screensaver-select-visible">全选当前结果</button>
+        </div>
+        <div class="app-grid" id="screensavers-grid">
+          {% for item in screensavers %}
+            <article class="app-item screensaver-item" data-id="{{ item.id }}" data-name="{{ item.name }}" data-suitability="{{ item.suitability }}" data-type="{{ item.type }}">
+              <input class="screensaver-select" type="checkbox" aria-label="选择 {{ item.name }}" />
+              <img src="/screensaver-files/{{ item.preview.lstrip('/') }}" alt="{{ item.name }}" loading="lazy" style="width:100%;height:150px;object-fit:contain;background:#111;border-radius:8px;" />
+              <h3 class="app-name">{{ item.name }}</h3>
+              <div class="app-meta">{{ item.type }} · {{ item.width }}x{{ item.height }} · {{ item.suitability }}</div>
+              <div class="tag-list">{% for target in item.targets %}<span class="tag">{{ target }}</span>{% endfor %}</div>
+              <div class="app-sort-actions">
+                <button type="button" class="btn-ghost screensaver-edit">编辑</button><button type="button" class="btn-ghost screensaver-top">置顶</button><button type="button" class="btn-ghost screensaver-up">上移</button><button type="button" class="btn-ghost screensaver-down">下移</button>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+        <form action="/screensavers/reorder" method="post" id="screensaver-order-form" class="dialog-actions"><input type="hidden" name="screensaverOrder" id="screensaver-order-json" /><button type="submit" class="btn-ghost" id="screensaver-save-order">保存排序</button></form>
+        <form action="/screensavers/delete" method="post" id="screensaver-bulk-delete-form" class="dialog-actions"><button type="submit" class="btn-danger">批量删除</button></form>
       </section>
 
       <section class="panel" id="panel-categories">
@@ -727,6 +769,18 @@
       </div>
     </dialog>
 
+    <dialog id="screensaver-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top"><h3>编辑屏保</h3><button type="button" id="screensaver-dialog-close" class="btn-ghost">关闭</button></div>
+        <form action="/screensavers/update" method="post">
+          <input type="hidden" name="screensaver_id" id="screensaver-edit-id" />
+          <div class="dialog-grid"><div><label>名称</label><input name="name" id="screensaver-edit-name" required /></div><div><label>适配状态</label><select name="suitability" id="screensaver-edit-suitability"><option value="SUITABLE">适合</option><option value="CANDIDATE">候选</option><option value="UNSUITABLE">不适合</option></select></div></div>
+          <div class="chips" style="margin-top:10px;">{% for value, label in [('L_MAIN_FULL','L 主屏全屏'),('L_MAIN_HALF','L 主屏半屏'),('L_SECONDARY_FULL','L 副屏'),('S_GT_MAIN','S/GT 主屏'),('S_GT_SECONDARY','S/GT 副屏')] %}<label class="chip"><input class="screensaver-edit-target" type="checkbox" name="targets" value="{{ value }}" />{{ label }}</label>{% endfor %}</div>
+          <div class="dialog-actions"><button type="submit">保存修改</button></div>
+        </form>
+      </div>
+    </dialog>
+
     <dialog id="sound-dialog">
       <div class="dialog-wrap">
         <div class="dialog-top">
@@ -829,6 +883,8 @@
       const WORKFLOW_CATEGORIES = {{ workflow_categories|tojson }};
       const MESSAGE_BOARD = {{ message_board|tojson }};
       const SOUNDS = {{ sounds|tojson }};
+      const SCREENSAVERS = {{ screensavers|tojson }};
+      const SCREENSAVER_MAP = new Map((SCREENSAVERS || []).map((item) => [item.id, item]));
       const SOUND_MAP = new Map((SOUNDS || []).map((item) => [item.id, item]));
       const ACTIVE_TAB = "{{ active_tab }}";
       const AUTO_EDIT_ID = "{{ auto_edit_id }}";
@@ -877,6 +933,8 @@
       const soundBulkTagsForm = document.getElementById("sound-bulk-tags-form");
       const soundBulkDelete = document.getElementById("sound-bulk-delete");
       const soundDialog = document.getElementById("sound-dialog");
+      const screensaverGrid = document.getElementById("screensavers-grid");
+      const screensaverDialog = document.getElementById("screensaver-dialog");
 
       function switchTab(name) {
         document.querySelectorAll(".tab-btn").forEach((item) => {
@@ -1374,6 +1432,24 @@
         if (!inside) soundDialog.close();
       });
       applySoundFilter();
+
+      function screensaverItems() { return [...screensaverGrid.querySelectorAll(".screensaver-item")]; }
+      function screensaverFilterActive() { return document.getElementById("screensaver-search").value.trim() !== "" || document.getElementById("screensaver-suitability-filter").value !== "" || document.getElementById("screensaver-type-filter").value !== ""; }
+      function applyScreensaverFilter() {
+        const query = document.getElementById("screensaver-search").value.trim().toLowerCase();
+        const suitability = document.getElementById("screensaver-suitability-filter").value;
+        const type = document.getElementById("screensaver-type-filter").value;
+        screensaverItems().forEach((item) => { item.style.display = (!query || item.dataset.name.toLowerCase().includes(query)) && (!suitability || item.dataset.suitability === suitability) && (!type || item.dataset.type === type) ? "" : "none"; });
+        document.getElementById("screensaver-save-order").disabled = screensaverFilterActive();
+      }
+      ["screensaver-search", "screensaver-suitability-filter", "screensaver-type-filter"].forEach((id) => document.getElementById(id).addEventListener(id === "screensaver-search" ? "input" : "change", applyScreensaverFilter));
+      document.getElementById("screensaver-select-visible").addEventListener("click", () => { const visible = screensaverItems().filter((item) => item.style.display !== "none"); const selected = visible.some((item) => !item.querySelector(".screensaver-select").checked); visible.forEach((item) => { item.querySelector(".screensaver-select").checked = selected; }); });
+      screensaverGrid.querySelectorAll(".screensaver-edit").forEach((button) => button.addEventListener("click", () => { const item = SCREENSAVER_MAP.get(button.closest(".screensaver-item").dataset.id); document.getElementById("screensaver-edit-id").value = item.id; document.getElementById("screensaver-edit-name").value = item.name; document.getElementById("screensaver-edit-suitability").value = item.suitability; document.querySelectorAll(".screensaver-edit-target").forEach((target) => { target.checked = (item.targets || []).includes(target.value); }); screensaverDialog.showModal(); }));
+      screensaverGrid.querySelectorAll(".screensaver-top, .screensaver-up, .screensaver-down").forEach((button) => button.addEventListener("click", () => { if (screensaverFilterActive()) return; const item = button.closest(".screensaver-item"); const items = screensaverItems(); const index = items.indexOf(item); if (button.classList.contains("screensaver-top")) { if (index > 0) screensaverGrid.insertBefore(item, items[0]); return; } const direction = button.classList.contains("screensaver-up") ? -1 : 1; const target = items[index + direction]; if (!target) return; if (direction < 0) screensaverGrid.insertBefore(item, target); else screensaverGrid.insertBefore(target, item); }));
+      document.getElementById("screensaver-order-form").addEventListener("submit", (event) => { if (screensaverFilterActive()) { event.preventDefault(); return; } document.getElementById("screensaver-order-json").value = JSON.stringify(screensaverItems().map((item) => item.dataset.id)); });
+      document.getElementById("screensaver-bulk-delete-form").addEventListener("submit", (event) => { const form = event.currentTarget; form.querySelectorAll('[data-generated="screensaver-id"]').forEach((input) => input.remove()); const ids = screensaverItems().filter((item) => item.querySelector(".screensaver-select").checked).map((item) => item.dataset.id); if (!ids.length || !window.confirm(`确认删除选中的 ${ids.length} 个屏保？`)) { event.preventDefault(); return; } ids.forEach((id) => { const input = document.createElement("input"); input.type = "hidden"; input.name = "screensaver_ids"; input.value = id; input.dataset.generated = "screensaver-id"; form.appendChild(input); }); });
+      document.getElementById("screensaver-dialog-close").addEventListener("click", () => screensaverDialog.close());
+      applyScreensaverFilter();
 
       workflowButtons.forEach((button) => {
         const openFn = () => {

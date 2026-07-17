@@ -6,3 +6,5 @@ sounds/**/*.m4a filter=lfs diff=lfs merge=lfs -text
 sounds/**/*.aac filter=lfs diff=lfs merge=lfs -text
 sounds/**/*.ogg filter=lfs diff=lfs merge=lfs -text
 sounds/**/*.flac filter=lfs diff=lfs merge=lfs -text
+screensavers/**/* filter=lfs diff=lfs merge=lfs -text
+screensavers/**/preview.webp -filter -diff -merge binary

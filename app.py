@@ -24,6 +24,7 @@ from appstore_manager import (
     parse_workflow_bundle,
 )
 from soundstore_manager import SUPPORTED_SOUND_EXTENSIONS, SoundStoreManager, normalize_tags
+from screensaver_manager import ScreensaverManager
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR
@@ -33,6 +34,8 @@ WORKFLOWS_JSON_PATH = REPO_ROOT / "workflows.json"
 WORKFLOWS_DIR = REPO_ROOT / "workflows"
 SOUNDS_JSON_PATH = REPO_ROOT / "sounds.json"
 SOUNDS_DIR = REPO_ROOT / "sounds"
+SCREENSAVERS_JSON_PATH = REPO_ROOT / "screensavers.json"
+SCREENSAVERS_DIR = REPO_ROOT / "screensavers"
 
 
 def is_supported_apk_filename(filename: str) -> bool:
@@ -67,6 +70,7 @@ app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024 * 1024  # 1 GiB
 manager = AppStoreManager(json_path=APPSTORE_JSON_PATH, apks_dir=APKS_DIR)
 workflow_manager = WorkflowManager(json_path=WORKFLOWS_JSON_PATH, workflows_dir=WORKFLOWS_DIR)
 sound_manager = SoundStoreManager(json_path=SOUNDS_JSON_PATH, sounds_dir=SOUNDS_DIR)
+screensaver_manager = ScreensaverManager(json_path=SCREENSAVERS_JSON_PATH, screensavers_dir=SCREENSAVERS_DIR)
 
 
 def preview_asset_url(path: str) -> str:
@@ -112,6 +116,17 @@ def download_sound_file(sound_path: str):
     return send_from_directory(str(SOUNDS_DIR), sound_path)
 
 
+@app.get("/screensaver-files/<path:screensaver_path>")
+def download_screensaver_file(screensaver_path: str):
+    safe_path = Path(screensaver_path)
+    if safe_path.is_absolute() or ".." in safe_path.parts:
+        abort(400)
+    target = SCREENSAVERS_DIR / safe_path
+    if not target.is_file():
+        abort(404)
+    return send_from_directory(str(SCREENSAVERS_DIR), screensaver_path)
+
+
 @app.get("/")
 def index() -> str:
     data = manager.load_data()
@@ -148,6 +163,8 @@ def index() -> str:
     sound_data = sound_manager.load_data()
     sounds = sound_data.get("sounds", [])
     sound_tags = sorted({tag for entry in sounds for tag in normalize_tags(entry.get("tags", []))})
+    screensaver_data = screensaver_manager.load_data()
+    screensavers = screensaver_data.get("screensavers", [])
 
     auto_edit_id = request.args.get("edit", "").strip()
     auto_edit_app = find_entry_by_id(data.get("apps", []), auto_edit_id) if auto_edit_id else None
@@ -158,7 +175,7 @@ def index() -> str:
         else None
     )
     active_tab = request.args.get("tab", "notice").strip().lower()
-    if active_tab not in {"notice", "messageboard", "apps", "workflows", "sounds", "categories"}:
+    if active_tab not in {"notice", "messageboard", "apps", "workflows", "sounds", "screensavers", "categories"}:
         active_tab = "notice"
     return render_template(
         "index.html",
@@ -166,6 +183,7 @@ def index() -> str:
         workflows=workflow_data.get("workflows", []),
         sounds=sounds,
         sound_tags=sound_tags,
+        screensavers=screensavers,
         workflow_categories=workflow_data.get("categories", []),
         notice=data.get("notice", ""),
         message_board=data.get("messageBoard", []),
@@ -178,6 +196,93 @@ def index() -> str:
         auto_edit_workflow=auto_edit_workflow,
         active_tab=active_tab,
     )
+
+
+@app.post("/screensavers/upload")
+def upload_screensavers():
+    uploads = [item for item in request.files.getlist("screensavers") if item and item.filename]
+    if not uploads:
+        flash("请选择屏保文件", "error")
+        return redirect(url_for("index", tab="screensavers"))
+    suitability = request.form.get("suitability", "SUITABLE")
+    targets = request.form.getlist("targets")
+    tmp_dir = Path(tempfile.mkdtemp(prefix="appstore-screensavers-"))
+    staging_dir = tmp_dir / "staging"
+    staging_dir.mkdir()
+    entries: list[dict] = []
+    staged_dirs: list[Path] = []
+    try:
+        for index, upload in enumerate(uploads):
+            original = (upload.filename or "").replace("\\", "/").split("/")[-1].strip()
+            source = tmp_dir / f"upload-{index}{Path(original).suffix.lower()}"
+            upload.save(source)
+            entry, staged_dir = screensaver_manager.prepare_entry(
+                source, original, suitability, targets, staging_dir
+            )
+            entries.append(entry)
+            staged_dirs.append(staged_dir)
+        screensaver_manager.commit_batch(screensaver_manager.load_data(), entries, staged_dirs)
+    except Exception as exc:  # noqa: BLE001
+        flash(f"屏保上传失败: {exc}", "error")
+        return redirect(url_for("index", tab="screensavers"))
+    finally:
+        shutil.rmtree(tmp_dir, ignore_errors=True)
+    flash(f"已上传 {len(entries)} 个屏保", "success")
+    return redirect(url_for("index", tab="screensavers"))
+
+
+@app.post("/screensavers/update")
+def update_screensaver():
+    data = screensaver_manager.load_data()
+    try:
+        changed = screensaver_manager.update_entry(
+            data,
+            request.form.get("screensaver_id", ""),
+            request.form.get("name", ""),
+            request.form.get("suitability", ""),
+            request.form.getlist("targets"),
+        )
+        if changed:
+            screensaver_manager.save_data(data)
+            flash("屏保信息已更新", "success")
+        else:
+            flash("未找到屏保", "error")
+    except ValueError as exc:
+        flash(str(exc), "error")
+    return redirect(url_for("index", tab="screensavers"))
+
+
+@app.post("/screensavers/reorder")
+def reorder_screensavers():
+    try:
+        ordered_ids = json.loads(request.form.get("screensaverOrder", "[]"))
+    except json.JSONDecodeError as exc:
+        flash(f"屏保排序 JSON 解析失败: {exc}", "error")
+        return redirect(url_for("index", tab="screensavers"))
+    data = screensaver_manager.load_data()
+    if not isinstance(ordered_ids, list) or not screensaver_manager.reorder_entries(data, ordered_ids):
+        flash("屏保排序未变化或顺序不完整", "error")
+    else:
+        screensaver_manager.save_data(data)
+        flash("屏保排序已保存", "success")
+    return redirect(url_for("index", tab="screensavers"))
+
+
+@app.post("/screensavers/delete")
+def delete_screensavers():
+    entry_ids = request.form.getlist("screensaver_ids")
+    single_id = request.form.get("screensaver_id", "").strip()
+    if single_id:
+        entry_ids.append(single_id)
+    data = screensaver_manager.load_data()
+    deleted = screensaver_manager.delete_entries(data, entry_ids)
+    if not deleted:
+        flash("未找到要删除的屏保", "error")
+    else:
+        screensaver_manager.save_data(data)
+        screensaver_manager.cleanup_entry_assets(deleted)
+        flash(f"已删除 {len(deleted)} 个屏保", "success")
+    return redirect(url_for("index", tab="screensavers"))
 
 
 @app.post("/sounds/upload")
