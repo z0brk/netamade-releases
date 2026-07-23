@@ -686,6 +686,21 @@
       "description": "这款音乐律动频谱APP拥有超高自定义权限，频谱颜色、跳动速率、柱条密度、显示高度全部支持精细化调节，内置十余种视觉款式随心切换；显示布局灵活多变，既能全屏铺满营造氛围感，也可做成边框灯带，还能拆分独立显示在屏幕左右侧、顶部或底部。软件兼容性极强，若无法正常抓取音乐播放信息，可开启自动律动模式，无需音源读取也能生成流畅动态光影效果。内存占用约0.1GB。",
       "incompatibility": [],
       "apk": "/muvizedge-b97646/muvizEdge.apk"
+    },
+    {
+      "id": "81f9fd1ba0ee",
+      "code": "huntianling-ad641b",
+      "name": "混天绫-车载音乐频谱可视化",
+      "category": "实用工具",
+      "icon": "/huntianling-ad641b/icon.png",
+      "package": "io.neta.huntianling",
+      "md5sum": "9ea8f3db611ecd62bfafc1a49d8a5358",
+      "filesize": 12457179,
+      "updateTime": "2026-07-23T11:54:47Z",
+      "versionName": "5.1.0.0",
+      "description": "车载音乐频谱可视化工具，内含39款不同风格律动模板，支持三层样式叠加混搭，原生组合共9919种视觉方案；色彩、渐变自由调配，频谱尺寸、疏密、通透度全部自定义微调。已解锁完整会员功能，移除谷歌服务联网认证限制，无需谷歌框架，轻量化低负载，搭配行车录像后台同开也不卡顿。（可以和muviz adge搭配食用）",
+      "incompatibility": [],
+      "apk": "/huntianling-ad641b/apk"
     }
   ],
   "messageBoard": [
