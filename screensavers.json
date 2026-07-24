@@ -1169,7 +1169,7 @@
     },
     {
       "id": "a97681c28196",
-      "name": "白色线条标志",
+      "name": "合众汽车",
       "type": "IMAGE",
       "width": 2279,
       "height": 1129,
@@ -2100,6 +2100,23 @@
       "md5sum": "1c976fec56c3b350686e677f6a376b8f",
       "filesize": 362514,
       "updateTime": "2026-07-17T04:11:12Z"
+    },
+    {
+      "id": "a4142edd6ec7",
+      "name": "共产主义接班人",
+      "type": "IMAGE",
+      "width": 4096,
+      "height": 2306,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a4142edd/f86ccd3eba6e.png",
+      "preview": "/screensaver-a4142edd/preview.webp",
+      "md5sum": "f86ccd3eba6e07f88ac99f79e78d413c",
+      "filesize": 999517,
+      "updateTime": "2026-07-24T09:09:41Z"
     }
   ]
 }
