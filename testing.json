@@ -1,9 +1,9 @@
 {
-  "versionName": "4.5.8-TEST-0801_2009",
+  "versionName": "4.5.8-TEST-0801_2154",
   "versionCode": 203,
   "testing": true,
-  "buildTime": "2026-08-01 20:09:51",
-  "releaseVersion": "v4.5.8-TEST-0801_2009-testing",
-  "releaseFilename": "netamade-testing-4.5.8-TEST-0801_2009-203.apk",
-  "apkMd5": "ea2e11017faec5f2732b5c3a2baa3ed5"
+  "buildTime": "2026-08-01 21:54:03",
+  "releaseVersion": "v4.5.8-TEST-0801_2154-testing",
+  "releaseFilename": "netamade-testing-4.5.8-TEST-0801_2154-203.apk",
+  "apkMd5": "858fe0fc563848913341730203410536"
 }
