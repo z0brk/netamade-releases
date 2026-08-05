@@ -1,9 +1,9 @@
 {
-  "versionName": "4.6.1-TEST-0805_1549",
+  "versionName": "4.6.1-TEST-0805_1719",
   "versionCode": 204,
   "testing": true,
-  "buildTime": "2026-08-05 15:49:15",
-  "releaseVersion": "v4.6.1-TEST-0805_1549-testing",
-  "releaseFilename": "netamade-testing-4.6.1-TEST-0805_1549-204.apk",
-  "apkMd5": "27aec36d2a6b277e52b1a4bafca68f01"
+  "buildTime": "2026-08-05 17:19:54",
+  "releaseVersion": "v4.6.1-TEST-0805_1719-testing",
+  "releaseFilename": "netamade-testing-4.6.1-TEST-0805_1719-204.apk",
+  "apkMd5": "85bc623b7b99a2a68bf4876f6c2f89b4"
 }
