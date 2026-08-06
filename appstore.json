@@ -46,14 +46,14 @@
       "name": "MusicFree",
       "category": "影音娱乐",
       "icon": "/car-9bbb04/icon.webp",
-      "package": "fun.upup.musicfree.car",
-      "md5sum": "99093c7de1b6b27ee95f58d557454d8d",
-      "filesize": 18941232,
-      "updateTime": "2026-04-28T04:11:07Z",
-      "versionName": "1.0.0-car-car",
+      "package": "fun.upup.musicfree",
+      "md5sum": "c1e762291bcb9c072c87e62c75b609ff",
+      "filesize": 30246301,
+      "updateTime": "2026-08-06T06:17:46Z",
+      "versionName": "1.0.7",
       "description": "免费的听歌软件",
       "incompatibility": [],
-      "apk": "/car-9bbb04/MusicFree-Car-v1.0.0.apk",
+      "apk": "/car-9bbb04/MusicFree-1.0.7-universal.apk",
       "id": "b8ea2f116687"
     },
     {
@@ -701,6 +701,21 @@
       "description": "车载音乐频谱可视化工具，内含39款不同风格律动模板，支持三层样式叠加混搭，原生组合共9919种视觉方案；色彩、渐变自由调配，频谱尺寸、疏密、通透度全部自定义微调。已解锁完整会员功能，移除谷歌服务联网认证限制，无需谷歌框架，轻量化低负载，搭配行车录像后台同开也不卡顿。（可以和muviz adge搭配食用）",
       "incompatibility": [],
       "apk": "/huntianling-ad641b/apk"
+    },
+    {
+      "id": "1eca0aa41ff6",
+      "code": "mobile-e8006a-2",
+      "name": "风火轮音乐-车友定制",
+      "category": "影音娱乐",
+      "icon": "/mobile-e8006a-2/icon.png",
+      "package": "cn.toside.music.mobile",
+      "md5sum": "cef41110748124acbec6c7971689ae22",
+      "filesize": 19677336,
+      "updateTime": "2026-08-06T06:16:23Z",
+      "versionName": "3.0.10-car",
+      "description": "基于 LX Music Mobile 开源内核，支持在线搜歌、本地播放、歌词、歌单和后台播放。针对车载场景优化，支持横屏界面、方向盘控制、语音点歌、音乐悬浮窗、实时 K 歌和智能断播恢复。",
+      "incompatibility": [],
+      "apk": "/mobile-e8006a-2/fenghuolun-music-v3.0.10-car-arm64-v8a.apk"
     }
   ],
   "messageBoard": [
