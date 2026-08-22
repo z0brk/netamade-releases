@@ -716,6 +716,21 @@
       "description": "基于 LX Music Mobile 开源内核，支持在线搜歌、本地播放、歌词、歌单和后台播放。针对车载场景优化，支持横屏界面、方向盘控制、语音点歌、音乐悬浮窗、实时 K 歌和智能断播恢复。",
       "incompatibility": [],
       "apk": "/mobile-e8006a-2/fenghuolun-music-v3.0.10-car-arm64-v8a.apk"
+    },
+    {
+      "id": "ed6c09992520",
+      "code": "awemenplay-a28813",
+      "name": "抖音短视频车机版",
+      "category": "影音娱乐",
+      "icon": "/awemenplay-a28813/icon.png",
+      "package": "com.ss.android.ugc.awemenplay",
+      "md5sum": "005033e536b485cd09262dd80715ffda",
+      "filesize": 19621239,
+      "updateTime": "2026-08-22T05:58:41Z",
+      "versionName": "9.9.1504",
+      "description": "暂未适配",
+      "incompatibility": [],
+      "apk": "/awemenplay-a28813/Douyin_Car_Edition.apk"
     }
   ],
   "messageBoard": [
