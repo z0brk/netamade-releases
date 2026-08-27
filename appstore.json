@@ -731,6 +731,36 @@
       "description": "暂未适配",
       "incompatibility": [],
       "apk": "/awemenplay-a28813/Douyin_Car_Edition.apk"
+    },
+    {
+      "id": "6b9f5c7530ad",
+      "code": "tv-8874e7",
+      "name": "NewBox",
+      "category": "影音娱乐",
+      "icon": "/tv-8874e7/icon.png",
+      "package": "com.newbox.tv",
+      "md5sum": "18afcb4d52efc370fc608e231475e79f",
+      "filesize": 43955339,
+      "updateTime": "2026-08-27T08:04:35Z",
+      "versionName": "1.9.6",
+      "description": "TV版本代替影视仓，启动比较快，关键是切换全屏/半屏没有影视仓那个半截的bug",
+      "incompatibility": [],
+      "apk": "/tv-8874e7/NewBox_v1.9.6_TV_64.apk.apk.1"
+    },
+    {
+      "id": "4480c68cba50",
+      "code": "bn-85b98b",
+      "name": "NewBox",
+      "category": "影音娱乐",
+      "icon": "/bn-85b98b/icon.png",
+      "package": "com.truthvision.homecare.nb.bn",
+      "md5sum": "594cda9eae65ee5ad65da3717bc9543b",
+      "filesize": 119593228,
+      "updateTime": "2026-08-27T08:05:03Z",
+      "versionName": "1.9.6",
+      "description": "手机版本代替影视仓，启动比较快，关键是切换全屏/半屏没有影视仓那个半截的bug",
+      "incompatibility": [],
+      "apk": "/bn-85b98b/NewBox_v1.9.6__20260824.apk.1"
     }
   ],
   "messageBoard": [
