@@ -47,13 +47,13 @@
       "category": "影音娱乐",
       "icon": "/car-9bbb04/icon.png",
       "package": "fun.upup.musicfree",
-      "md5sum": "78ddc2a7ed3c9c0bc5a6e7813b0e51cc",
-      "filesize": 35643013,
-      "updateTime": "2026-08-22T05:44:58Z",
-      "versionName": "2.0.0",
-      "description": "v2.0.0 修复QQ歌单导入、歌词显示、内置音源管理\r\n修复：内置平台插件（小秋QQ/小芸网易云/小枸酷狗/小蜜咪咕/小蜗酷我/奇水汽水）被误删，导致歌词全部无法显示、QQ歌单无法导入的问题\r\n新增：统一歌单导入，粘贴任意歌单链接自动识别来源（GD优先，各平台插件兜底）\r\n新增：QQ音乐歌单链接自动识别导入（ryqq_v2 等新版分享链接）\r\n修复：GD音乐台歌词获取改为多音源逐个尝试，提升歌词命中率\r\n优化：插件请求超时由2秒延长到8秒，避免网络波动导致歌词/导入失败\r\n优化：内置音源启动时自动补齐缺失文件，防止功能失效",
+      "md5sum": "ab987a1e777989a36068f2733235ff0a",
+      "filesize": 35646093,
+      "updateTime": "2026-08-27T08:19:31Z",
+      "versionName": "2.0.6",
+      "description": "v2.0.6\r\n\r\n 修复QQ歌单导入、歌词显示、内置音源管理\r\n修复：内置平台插件（小秋QQ/小芸网易云/小枸酷狗/小蜜咪咕/小蜗酷我/奇水汽水）被误删，导致歌词全部无法显示、QQ歌单无法导入的问题\r\n新增：统一歌单导入，粘贴任意歌单链接自动识别来源（GD优先，各平台插件兜底）\r\n新增：QQ音乐歌单链接自动识别导入（ryqq_v2 等新版分享链接）\r\n修复：GD音乐台歌词获取改为多音源逐个尝试，提升歌词命中率\r\n优化：插件请求超时由2秒延长到8秒，避免网络波动导致歌词/导入失败\r\n优化：内置音源启动时自动补齐缺失文件，防止功能失效",
       "incompatibility": [],
-      "apk": "/car-9bbb04/MusicFree-2.0.0-universal.apk",
+      "apk": "/car-9bbb04/MusicFree-2.0.6-universal.apk",
       "id": "b8ea2f116687"
     },
     {
@@ -735,17 +735,17 @@
     {
       "id": "6b9f5c7530ad",
       "code": "tv-8874e7",
-      "name": "NewBox",
+      "name": "NewBox TV",
       "category": "影音娱乐",
       "icon": "/tv-8874e7/icon.png",
       "package": "com.newbox.tv",
-      "md5sum": "18afcb4d52efc370fc608e231475e79f",
-      "filesize": 43955339,
-      "updateTime": "2026-08-27T08:04:35Z",
-      "versionName": "1.9.6",
+      "md5sum": "81a591924bf404294ece858e8defe0e2",
+      "filesize": 43959731,
+      "updateTime": "2026-08-27T08:14:30Z",
+      "versionName": "1.9.7",
       "description": "TV版本代替影视仓，启动比较快，关键是切换全屏/半屏没有影视仓那个半截的bug",
       "incompatibility": [],
-      "apk": "/tv-8874e7/NewBox_v1.9.6_TV_64.apk.apk.1"
+      "apk": "/tv-8874e7/NewBox-1.9.7-arm64-generic-64.apk.1"
     },
     {
       "id": "4480c68cba50",
@@ -768,39 +768,100 @@
       "title": "影视仓视频源",
       "contents": [
         {
-          "text": "小米",
+          "text": "影视仓欧哥装B多仓",
           "canCopy": false
         },
         {
-          "text": "http://miqk.cc/小米/DEMO.json",
+          "text": "https://xn--zq2ao005e.u.xn--dkw.xn--6qq986b3xl/nxog/oua.php?b=%E2%9D%A4%EF%B8%8F%E7%BE%8E%E5%BC%8F%E2%98%95%E5%A4%9A%E4%BB%93%E2%9D%A4%EF%B8%8F",
           "canCopy": true
         },
         {
-          "text": "讴歌\n附带直播",
+          "text": "直播（自行下载保存）：",
           "canCopy": false
         },
         {
-          "text": "http://tv.nxog.top/m/",
-          "canCopy": true
-        },
-        {
-          "text": "肥猫",
+          "text": "临时提供直播订阅，以供测试：",
           "canCopy": false
         },
         {
-          "text": "http://肥猫.com",
+          "text": "https://14286.kstore.space/zb/yings/zy/Newbox_webview.txt",
           "canCopy": true
         },
         {
-          "text": "4k 源\n附带直播",
+          "text": "软件下载无内容，需订阅下面任意一条链接，订阅配置推荐（来源网友整理）：",
           "canCopy": false
         },
         {
-          "text": "https://16409.kstore.vip/tv/ngzmods.json",
+          "text": "饭太硬订阅：",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.饭太硬.net/tv",
           "canCopy": true
         },
         {
-          "text": "王二小",
+          "text": "摸鱼订阅：",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.小不点.com",
+          "canCopy": true
+        },
+        {
+          "text": "欧歌订阅：",
+          "canCopy": false
+        },
+        {
+          "text": "https://xn--dxxd-mb1gy821b.v.nxog.top/apia?id=3",
+          "canCopy": true
+        },
+        {
+          "text": "傲呜订阅：",
+          "canCopy": false
+        },
+        {
+          "text": "https://9763.kstore.vip/aowu.json",
+          "canCopy": true
+        },
+        {
+          "text": "肥猫订阅：",
+          "canCopy": false
+        },
+        {
+          "text": "https://jk.catvod.site/",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "TVAPP 接口源",
+      "contents": [
+        {
+          "text": "肥猫接口",
+          "canCopy": false
+        },
+        {
+          "text": "http://肥猫.net",
+          "canCopy": true
+        },
+        {
+          "text": "摸鱼儿接口",
+          "canCopy": false
+        },
+        {
+          "text": "http://我不是.摸鱼儿.top",
+          "canCopy": true
+        },
+        {
+          "text": "王小二放牛娃接口",
+          "canCopy": false
+        },
+        {
+          "text": "http://tvbox.王二小放牛娃.top",
+          "canCopy": true
+        },
+        {
+          "text": "王小二放牛娃新接口",
           "canCopy": false
         },
         {
@@ -808,7 +869,47 @@
           "canCopy": true
         },
         {
-          "text": "OK",
+          "text": "哈基米",
+          "canCopy": false
+        },
+        {
+          "text": "https://17264.kstore.space/哈基米.png",
+          "canCopy": true
+        },
+        {
+          "text": "动漫城接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.yingm.cc/dm/dm.json",
+          "canCopy": true
+        },
+        {
+          "text": "俊佬接口",
+          "canCopy": false
+        },
+        {
+          "text": "http://home.jundie.top:81/top98.json",
+          "canCopy": true
+        },
+        {
+          "text": "巧记",
+          "canCopy": false
+        },
+        {
+          "text": "http://cdn.qiaoji8.com/tvbox.json",
+          "canCopy": true
+        },
+        {
+          "text": "OK影视内部接口（暂时不可用）",
+          "canCopy": false
+        },
+        {
+          "text": "http://ok213.top/tv",
+          "canCopy": true
+        },
+        {
+          "text": "OK影视公开接口（暂时不可用）",
           "canCopy": false
         },
         {
@@ -816,35 +917,75 @@
           "canCopy": true
         },
         {
-          "text": "潇洒",
+          "text": "道长接口",
           "canCopy": false
         },
         {
-          "text": "https://9877.kstore.space/AnotherD/api.json",
+          "text": "https://cdn.gitmirror.com/bb/xduo/libs/master/index.json",
           "canCopy": true
         },
         {
-          "text": "摸鱼儿",
+          "text": "T4接口",
           "canCopy": false
         },
         {
-          "text": "http://我不是。摸鱼儿.com",
+          "text": "https://gitee.com/free-kingdom/dc/raw/main/T4.json",
           "canCopy": true
         },
         {
-          "text": "小虎斑\n仅供测试",
+          "text": "南风接口",
           "canCopy": false
         },
         {
-          "text": "http://hb.小虎斑.site:25252/",
+          "text": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
           "canCopy": true
         },
         {
-          "text": "南风",
+          "text": "菜妮丝接口",
           "canCopy": false
         },
         {
-          "text": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json",
+          "text": "https://tv.菜妮丝.top",
+          "canCopy": true
+        },
+        {
+          "text": "HG接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://api.hgyx.vip/hgyx.json",
+          "canCopy": true
+        },
+        {
+          "text": "dxawi",
+          "canCopy": false
+        },
+        {
+          "text": "https://dxawi.github.io/0/0.json",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子单仓",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/xhz",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子4K",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/4k.json",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://9877.kstore.space/ONE/one.json",
           "canCopy": true
         },
         {
@@ -852,15 +993,468 @@
           "canCopy": false
         },
         {
-          "text": "https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+          "text": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
           "canCopy": true
         },
         {
-          "text": "开心直播\n只能直播（可以看英超、西甲等）",
+          "text": "小苹果接口",
           "canCopy": false
         },
         {
-          "text": "http://rihou.cc:555/gggg.nzk",
+          "text": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
+          "canCopy": true
+        },
+        {
+          "text": "宝盒VIP",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json",
+          "canCopy": true
+        },
+        {
+          "text": "欧歌",
+          "canCopy": false
+        },
+        {
+          "text": "https://xn--anna-wn6lw489o.v.nxog.top/m/",
+          "canCopy": true
+        },
+        {
+          "text": "真心",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.252035.xyz/z/FongMi.json",
+          "canCopy": true
+        },
+        {
+          "text": "喵影视",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.meowtv.vip/tvbox.json",
+          "canCopy": true
+        },
+        {
+          "text": "驸马",
+          "canCopy": false
+        },
+        {
+          "text": "http://fmys.top/fmys.json",
+          "canCopy": true
+        },
+        {
+          "text": "高天流云",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+          "canCopy": true
+        },
+        {
+          "text": "分享",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/maoystv/6/main/000.json",
+          "canCopy": true
+        },
+        {
+          "text": "短剧",
+          "canCopy": false
+        },
+        {
+          "text": "https://cnb.cool/fish2018/duanju/-/git/raw/main/tvbox.json",
+          "canCopy": true
+        },
+        {
+          "text": "东篱线路",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+          "canCopy": true
+        },
+        {
+          "text": "嗷呜线路",
+          "canCopy": false
+        },
+        {
+          "text": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/config",
+          "canCopy": true
+        },
+        {
+          "text": "L佬线路",
+          "canCopy": false
+        },
+        {
+          "text": "https://android.lushunming.qzz.io/json/index.json",
+          "canCopy": true
+        },
+        {
+          "text": "天神IY",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitee.com/cpu-iy/iy/raw/master/%E5%A4%A9%E7%A5%9EIY.json",
+          "canCopy": true
+        },
+        {
+          "text": "苹果CMS资源站",
+          "canCopy": false
+        },
+        {
+          "text": "https://pastebin.com/raw/gtbKvnE1",
+          "canCopy": true
+        },
+        {
+          "text": "游魂多仓",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.iyouhun.com/tv/dc",
+          "canCopy": true
+        },
+        {
+          "text": "游魂多仓（备）",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.iyouhun.com/tv/yh",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒单仓",
+          "canCopy": false
+        },
+        {
+          "text": "https://9877.kstore.space/AnotherDS/api.json",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子多仓",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/dc/",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子多仓（备）",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/DC.txt",
+          "canCopy": true
+        },
+        {
+          "text": "拾光多仓",
+          "canCopy": false
+        },
+        {
+          "text": "http://xmbjm.fh4u.org/dc.txt",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "TVAPP 直播源",
+      "contents": [
+        {
+          "text": "游魂直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.iyouhun.com/tv/zb",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV4",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv4.txt",
+          "canCopy": true
+        },
+        {
+          "text": "咪咕IPTV",
+          "canCopy": false
+        },
+        {
+          "text": "https://develop202.github.io/migu_video/interface.txt",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒AI直播 TXT",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/PizazzGY/TV/master/output/user_result.txt",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒AI直播 M3U",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/PizazzGY/TV/master/output/user_result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "IPTV 默认源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "IPTV IPv4",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "IPTV IPv6",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv6/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "myIPTV IPv4",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "myIPTV IPv6",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV4 M3U",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "BurningC4",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "茶客源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/vamoschuck/TV/main/M3U",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV6 TXT",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv6.txt",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV6 M3U",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "范明明直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "范明明直播源国内镜像",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.fanmingming.cn/tv/m3u/ipv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YueChan 直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "央视频道等",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitee.com/xxy002/zhiboyuan/raw/master/dsy",
+          "canCopy": true
+        },
+        {
+          "text": "Kimentanm源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "BigBigGrandG源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YanG集合源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "JackTV直播（海外）",
+          "canCopy": false
+        },
+        {
+          "text": "https://php.946985.filegear-sg.me/jackTV.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "海外TV直播",
+          "canCopy": false
+        },
+        {
+          "text": "https://iptv-org.github.io/iptv/index.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "日本TV直播",
+          "canCopy": false
+        },
+        {
+          "text": "https://web.utako.moe/jp.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国大陆频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国香港频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_hong_kong.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国澳门频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_macau.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国台湾频道（EPG）",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_taiwan.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国台湾频道（IPTV-ORG）",
+          "canCopy": false
+        },
+        {
+          "text": "https://iptv-org.github.io/iptv/countries/tw.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "新加坡频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_singapore.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "马来西亚频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_malaysia.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "世界各地免费电视频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+          "canCopy": true
+        },
+        {
+          "text": "虎牙一起看",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.freetv.top/huyayqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "斗鱼一起看",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.freetv.top/douyuyqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YY轮播",
+          "canCopy": false
+        },
+        {
+          "text": "https://gongdian.top/tv/Mursor/yylunbo.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "哔哩哔哩直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://gongdian.top/tv/Mursor/bililive.m3u",
           "canCopy": true
         }
       ]
@@ -890,19 +1484,35 @@
       "title": "洛雪音源",
       "contents": [
         {
-          "text": "有些歌播放不了",
+          "text": "SixYin",
           "canCopy": false
         },
         {
-          "text": "https://m-api.ceseet.me/script",
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js",
           "canCopy": true
         },
         {
-          "text": "六音",
+          "text": "Huibq",
           "canCopy": false
         },
         {
-          "text": "https://ghproxy.net/raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js",
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "Flower",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "LX",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js",
           "canCopy": true
         },
         {
@@ -910,7 +1520,31 @@
           "canCopy": false
         },
         {
-          "text": "https://ghproxy.net/raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js",
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "Grass",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "JuheApi",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "QDY",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js",
           "canCopy": true
         }
       ]
