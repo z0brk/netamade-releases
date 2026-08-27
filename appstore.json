@@ -1463,7 +1463,7 @@
       "title": "MusicFree 插件",
       "contents": [
         {
-          "text": "yuanli",
+          "text": "元力 1.2.0",
           "canCopy": false
         },
         {
@@ -1476,6 +1476,54 @@
         },
         {
           "text": "https://fastly.jsdelivr.net/gh/Huibq/keep-alive/Music_Free/myPlugins.json",
+          "canCopy": true
+        },
+        {
+          "text": "在线整合插件",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.imwzh.com/musicfree.json",
+          "canCopy": true
+        },
+        {
+          "text": "整合插件本地包（下载页）",
+          "canCopy": false
+        },
+        {
+          "text": "https://wwfo.lanzoue.com/i933R31kewcd",
+          "canCopy": true
+        },
+        {
+          "text": "MusicFreePlugins 作者整合源",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json",
+          "canCopy": true
+        },
+        {
+          "text": "种子",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/zz.js",
+          "canCopy": true
+        },
+        {
+          "text": "彩桐",
+          "canCopy": false
+        },
+        {
+          "text": "http://cdn.teyonds.com/music/plugins.json",
+          "canCopy": true
+        },
+        {
+          "text": "Huibq 小芸",
+          "canCopy": false
+        },
+        {
+          "text": "https://fastly.jsdelivr.net/gh/Huibq/keep-alive/Music_Free/xiaoyun.js",
           "canCopy": true
         }
       ]
