@@ -761,6 +761,21 @@
       "description": "手机版本代替影视仓，启动比较快，关键是切换全屏/半屏没有影视仓那个半截的bug",
       "incompatibility": [],
       "apk": "/bn-85b98b/NewBox_v1.9.6__20260824.apk.1"
+    },
+    {
+      "id": "f56d5bdc523c",
+      "code": "cast-33bf30",
+      "name": "九龙神火罩 —— 车机投屏神器",
+      "category": "手车互联",
+      "icon": "/cast-33bf30/icon.png",
+      "package": "com.jiulong.cast",
+      "md5sum": "caf1519e2da7b11f1d8401c4f4a88e8d",
+      "filesize": 6859278,
+      "updateTime": "2026-08-31T13:53:56Z",
+      "versionName": "2.7",
+      "description": "九龙神火罩 —— 车机投屏神器 v2.6\r\n一个专为哪吒L车机打造的 DLNA 投屏接收端 App，手机上的 B站、夸克等视频一键投到车机大屏看。\r\n手机搜索到车机直接投，支持进度拖动、快进快退、倍速（0.5x~3.0x 二级菜单选择）、双击暂停/播放、滑动屏幕快进\r\n全屏/半屏自由切换：等比适配不畸变，自动隐藏状态栏和 dock）；半屏模式窗口播放，不影响其他功能\r\nK 解码 +硬解优先，车机解码资源被行车记录仪抢占崩溃时自动切软解续播，附缓冲动画，不抢资源\r\n两款背景切换，DPI 三档适配（160/170/180）、设置二级菜单（含一键杀死、日志导出）\r\n手机连车机热点（或同一网络）→ 打开 B站/夸克选「投屏/DLNA」→ 搜到「九龙神火罩」点投即可。\r\n针对 8155/8155P 车机芯片深度优化。\r\n帅逼作者：NetaMadeSS\r\n技术指导：GLM-5.3\r\n适配指导：奔",
+      "incompatibility": [],
+      "apk": "/cast-33bf30/-v2.7-release.apk.1"
     }
   ],
   "messageBoard": [
