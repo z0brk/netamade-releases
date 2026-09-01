@@ -739,13 +739,13 @@
       "category": "影音娱乐",
       "icon": "/tv-8874e7/icon.png",
       "package": "com.newbox.tv",
-      "md5sum": "81a591924bf404294ece858e8defe0e2",
-      "filesize": 43959731,
-      "updateTime": "2026-08-27T08:14:30Z",
-      "versionName": "1.9.7",
+      "md5sum": "3d27990f1b4e0874f88b9115c94aff3c",
+      "filesize": 40173568,
+      "updateTime": "2026-09-01T14:47:40Z",
+      "versionName": "2.0.0",
       "description": "TV版本代替影视仓，启动比较快，关键是切换全屏/半屏没有影视仓那个半截的bug",
       "incompatibility": [],
-      "apk": "/tv-8874e7/NewBox-1.9.7-arm64-generic-64.apk.1"
+      "apk": "/tv-8874e7/NewBox-2.0.0-arm64-generic-64.apk"
     },
     {
       "id": "4480c68cba50",
