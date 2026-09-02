@@ -250,6 +250,90 @@ def delete_enhancement():
     return redirect(url_for("index", tab="enhancements"))
 
 
+@app.post("/enhancements/update")
+def update_enhancement():
+    entry_id = request.form.get("enhancement_id", "").strip()
+    try:
+        data = enhancement_manager.load_data()
+        enhancement_manager.update_entry(data, entry_id, request.form.get("name", ""), request.form.get("package", ""), request.form.get("targetApkPath", ""), request.form.get("simulation") == "true")
+        enhancement_manager.save_data(data)
+        flash("应用增强信息已保存", "success")
+    except Exception as error:
+        flash(str(error), "error")
+    return redirect(url_for("index", tab="enhancements"))
+
+
+@app.post("/enhancements/versions/update")
+def update_enhancement_version():
+    entry_id = request.form.get("enhancement_id", "").strip()
+    try:
+        data = enhancement_manager.load_data()
+        enhancement_manager.update_version(data, entry_id, request.form.get("version_id", "").strip(), request.form.get("version", ""), request.form.get("description", ""), request.form.get("carCode", ""), request.form.get("assemblyVersion", ""), request.form.get("stockPackageVersionName", ""), request.form.get("stockApkSha256", ""))
+        enhancement_manager.save_data(data)
+        flash("增强版本已保存", "success")
+    except Exception as error:
+        flash(str(error), "error")
+    return redirect(url_for("index", tab="enhancements"))
+
+
+@app.post("/enhancements/versions/add")
+def add_enhancement_version():
+    entry_id = request.form.get("enhancement_id", "").strip()
+    upload = request.files.get("apk")
+    tmp = Path(tempfile.mkdtemp(prefix="appstore-enhancement-"))
+    try:
+        data = enhancement_manager.load_data()
+        entry = enhancement_manager.find(data, entry_id)
+        if not entry:
+            raise ValueError("未找到应用增强")
+        if upload and upload.filename:
+            source = tmp / secure_filename(upload.filename)
+            upload.save(source)
+            enhancement_manager.add_upload(data, source, str(entry.get("name", "")), str(entry.get("package", "")), str(entry.get("targetApkPath", "")), request.form.get("version", ""), request.form.get("description", ""), request.form.get("carCode", ""), request.form.get("assemblyVersion", ""), request.form.get("stockApkSha256", ""))
+            added = entry.get("versions", [])[-1]
+            enhancement_manager.update_version(data, entry_id, str(added["id"]), request.form.get("version", ""), request.form.get("description", ""), request.form.get("carCode", ""), request.form.get("assemblyVersion", ""), request.form.get("stockPackageVersionName", ""), request.form.get("stockApkSha256", ""))
+        else:
+            enhancement_manager.add_simulation_version(data, entry_id, request.form.get("version", ""), request.form.get("description", ""), request.form.get("carCode", ""), request.form.get("assemblyVersion", ""), request.form.get("stockPackageVersionName", ""), request.form.get("stockApkSha256", ""))
+        enhancement_manager.save_data(data)
+        flash("增强版本已新增", "success")
+    except Exception as error:
+        flash(str(error), "error")
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+    return redirect(url_for("index", tab="enhancements"))
+
+
+@app.post("/enhancements/versions/replace-apk")
+def replace_enhancement_version_apk():
+    entry_id = request.form.get("enhancement_id", "").strip()
+    upload = request.files.get("apk")
+    if not upload or not upload.filename:
+        flash("请选择 APK", "error")
+        return redirect(url_for("index", tab="enhancements"))
+    tmp = Path(tempfile.mkdtemp(prefix="appstore-enhancement-"))
+    try:
+        source = tmp / secure_filename(upload.filename)
+        upload.save(source)
+        data = enhancement_manager.load_data()
+        enhancement_manager.replace_version_apk(data, entry_id, request.form.get("version_id", "").strip(), source)
+        enhancement_manager.save_data(data)
+        flash("增强版本 APK 已替换", "success")
+    except Exception as error:
+        flash(str(error), "error")
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+    return redirect(url_for("index", tab="enhancements"))
+
+
+@app.post("/enhancements/versions/delete")
+def delete_enhancement_version():
+    data = enhancement_manager.load_data()
+    if enhancement_manager.delete_version(data, request.form.get("enhancement_id", "").strip(), request.form.get("version_id", "").strip()):
+        enhancement_manager.save_data(data)
+        flash("增强版本已删除", "success")
+    return redirect(url_for("index", tab="enhancements"))
+
+
 @app.post("/screensavers/upload")
 def upload_screensavers():
     uploads = [item for item in request.files.getlist("screensavers") if item and item.filename]

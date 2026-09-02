@@ -26,7 +26,8 @@
             ],
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
-          }
+          },
+          "id": "ep32-hmi-v66-v1"
         }
       ]
     },
@@ -55,7 +56,8 @@
               }
             ],
             "stockApkSha256": "4444444444444444444444444444444444444444444444444444444444444444"
-          }
+          },
+          "id": "simulation-hmi-multi-version-v1"
         },
         {
           "version": "EP32-05.33.33-demo",
@@ -75,7 +77,8 @@
               }
             ],
             "stockApkSha256": "5555555555555555555555555555555555555555555555555555555555555555"
-          }
+          },
+          "id": "simulation-hmi-multi-version-v2"
         },
         {
           "version": "EP36-05.28.03-demo",
@@ -95,7 +98,8 @@
               }
             ],
             "stockApkSha256": "1111111111111111111111111111111111111111111111111111111111111111"
-          }
+          },
+          "id": "simulation-hmi-multi-version-v3"
         },
         {
           "version": "EP40-05.31.50-demo",
@@ -115,7 +119,8 @@
               }
             ],
             "stockApkSha256": "2222222222222222222222222222222222222222222222222222222222222222"
-          }
+          },
+          "id": "simulation-hmi-multi-version-v4"
         },
         {
           "version": "EP41-05.31.85-demo",
@@ -135,7 +140,8 @@
               }
             ],
             "stockApkSha256": "3333333333333333333333333333333333333333333333333333333333333333"
-          }
+          },
+          "id": "simulation-hmi-multi-version-v5"
         }
       ]
     }
