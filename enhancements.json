@@ -5,7 +5,6 @@
       "id": "ep32-hmi-v66",
       "name": "哪吒地图",
       "package": "com.hozonauto.launcher",
-      "targetApkPath": "/system/priv-app/HMI/HMI.apk",
       "versions": [
         {
           "updateTime": "2026-09-02",
@@ -36,7 +35,6 @@
       "id": "simulation-hmi-multi-version",
       "name": "HMI 多车型版本模拟",
       "package": "com.hozonauto.launcher",
-      "targetApkPath": "/system/priv-app/HMI/HMI.apk",
       "simulation": true,
       "versions": [
         {

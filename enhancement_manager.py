@@ -6,6 +6,7 @@ import os
 import re
 import shutil
 import uuid
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -37,22 +38,21 @@ class EnhancementManager:
         temp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         os.replace(temp, self.json_path)
 
-    def add_upload(self, data: dict[str, Any], source: Path, name: str, package: str, target: str, update_time: str, description: str, car_code: str, assembly_version: str, stock_hash: str) -> None:
+    def add_upload(self, data: dict[str, Any], source: Path, name: str, package: str, update_time: str, description: str, car_code: str, assembly_version: str, stock_hash: str) -> None:
         if source.suffix.lower() != ".apk":
             raise ValueError("仅支持 APK")
         if not re.fullmatch(r"[a-zA-Z0-9._]+", package.strip()):
             raise ValueError("包名无效")
-        if not target.startswith(("/system/app/", "/system/priv-app/", "/product/app/", "/product/priv-app/")):
-            raise ValueError("目标路径不在允许范围")
         if car_code.strip() not in {"0", "4", "5", "9"}:
             raise ValueError("车型无效")
         if not assembly_version.strip():
             raise ValueError("系统版本不能为空")
         if not re.fullmatch(r"[0-9a-fA-F]{64}", stock_hash.strip()):
             raise ValueError("原厂 APK SHA-256 无效")
+        date.fromisoformat(update_time.strip())
         digest = self.sha256(source)
         existing = next((item for item in data.setdefault("enhancements", [])
-                         if item.get("package") == package.strip() and item.get("targetApkPath") == target.strip()), None)
+                         if item.get("package") == package.strip()), None)
         entry_id = str(existing.get("id")) if existing else uuid.uuid4().hex[:12]
         directory = self.assets_dir / entry_id
         directory.mkdir(parents=True, exist_ok=True)
@@ -80,20 +80,17 @@ class EnhancementManager:
             "id": entry_id,
             "name": name.strip() or package.strip(),
             "package": package.strip(),
-            "targetApkPath": target.strip(),
             "versions": [version_item],
         }
         data.setdefault("enhancements", []).append(item)
 
-    def update_entry(self, data: dict[str, Any], entry_id: str, name: str, package: str, target: str, simulation: bool) -> None:
+    def update_entry(self, data: dict[str, Any], entry_id: str, name: str, package: str, simulation: bool) -> None:
         entry = self.find(data, entry_id)
         if not entry:
             raise ValueError("未找到应用增强")
         if not re.fullmatch(r"[a-zA-Z0-9._]+", package.strip()):
             raise ValueError("包名无效")
-        if not target.startswith(("/system/app/", "/system/priv-app/", "/product/app/", "/product/priv-app/")):
-            raise ValueError("目标路径不在允许范围")
-        entry.update({"name": name.strip() or package.strip(), "package": package.strip(), "targetApkPath": target.strip(), "simulation": bool(simulation)})
+        entry.update({"name": name.strip() or package.strip(), "package": package.strip(), "simulation": bool(simulation)})
 
     def add_simulation_version(self, data: dict[str, Any], entry_id: str, update_time: str, description: str, car_code: str, assembly_version: str, stock_package_version: str, stock_hash: str) -> None:
         entry = self.find(data, entry_id)
@@ -112,6 +109,7 @@ class EnhancementManager:
             raise ValueError("车型或系统版本无效")
         if not re.fullmatch(r"[0-9a-fA-F]{64}", stock_hash.strip()):
             raise ValueError("原厂 APK SHA-256 无效")
+        date.fromisoformat(update_time.strip())
         target.update({"updateTime": update_time.strip(), "description": description.strip()})
         compatibility = target.setdefault("compatibility", {})
         compatibility["allOf"] = [{"property": "ro.hozon.car.code", "equals": car_code.strip()}, {"property": "ro.hozon.car.assembly.version", "equals": assembly_version.strip()}]

@@ -228,7 +228,7 @@ def upload_enhancement():
         data = enhancement_manager.load_data()
         enhancement_manager.add_upload(
             data, source,
-            request.form.get("name", ""), request.form.get("package", ""), request.form.get("targetApkPath", ""),
+            request.form.get("name", ""), request.form.get("package", ""),
             request.form.get("updateTime", ""), request.form.get("description", ""), request.form.get("carCode", ""),
             request.form.get("assemblyVersion", ""), request.form.get("stockApkSha256", ""),
         )
@@ -255,7 +255,7 @@ def update_enhancement():
     entry_id = request.form.get("enhancement_id", "").strip()
     try:
         data = enhancement_manager.load_data()
-        enhancement_manager.update_entry(data, entry_id, request.form.get("name", ""), request.form.get("package", ""), request.form.get("targetApkPath", ""), request.form.get("simulation") == "true")
+        enhancement_manager.update_entry(data, entry_id, request.form.get("name", ""), request.form.get("package", ""), request.form.get("simulation") == "true")
         enhancement_manager.save_data(data)
         flash("应用增强信息已保存", "success")
     except Exception as error:
@@ -289,7 +289,7 @@ def add_enhancement_version():
         if upload and upload.filename:
             source = tmp / secure_filename(upload.filename)
             upload.save(source)
-            enhancement_manager.add_upload(data, source, str(entry.get("name", "")), str(entry.get("package", "")), str(entry.get("targetApkPath", "")), request.form.get("updateTime", ""), request.form.get("description", ""), request.form.get("carCode", ""), request.form.get("assemblyVersion", ""), request.form.get("stockApkSha256", ""))
+            enhancement_manager.add_upload(data, source, str(entry.get("name", "")), str(entry.get("package", "")), request.form.get("updateTime", ""), request.form.get("description", ""), request.form.get("carCode", ""), request.form.get("assemblyVersion", ""), request.form.get("stockApkSha256", ""))
             added = entry.get("versions", [])[-1]
             enhancement_manager.update_version(data, entry_id, str(added["id"]), request.form.get("updateTime", ""), request.form.get("description", ""), request.form.get("carCode", ""), request.form.get("assemblyVersion", ""), request.form.get("stockPackageVersionName", ""), request.form.get("stockApkSha256", ""))
         else:

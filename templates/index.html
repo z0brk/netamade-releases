@@ -598,7 +598,6 @@
               <div><label>补丁 APK</label><input name="apk" type="file" accept=".apk" required /></div>
               <div><label>名称</label><input name="name" type="text" placeholder="HMI 导航增强" required /></div>
               <div><label>包名</label><input name="package" type="text" placeholder="com.hozonauto.launcher" required /></div>
-              <div><label>目标文件路径</label><input name="targetApkPath" type="text" placeholder="/system/priv-app/HMI/HMI.apk" required /></div>
               <div><label>更新日期</label><input name="updateTime" type="date" required /></div>
               <div><label>车型</label><select name="carCode" required><option value="5">EP32</option><option value="4">EP36</option><option value="0">EP40</option><option value="9">EP41</option></select></div>
               <div><label>系统版本</label><input name="assemblyVersion" type="text" placeholder="05.33.33" required /></div>
@@ -612,7 +611,7 @@
           {% for item in enhancements %}
             <article class="app-item enhancement-card" data-enhancement-dialog="enhancement-dialog-{{ item.id }}" tabindex="0" role="button">
               <h3 class="app-name">{{ item.name }}</h3>
-              <div class="app-package">{{ item.package }} · {{ item.targetApkPath }}</div>
+              <div class="app-package">{{ item.package }}</div>
               {% for version in item.versions %}
                 <div class="app-desc">更新日期 {{ version.updateTime or "未注明" }}：{{ version.description }}</div>
                 <div class="app-meta">{{ version.filesize }} bytes · SHA-256 {{ version.sha256 }}</div>
@@ -918,7 +917,6 @@
           <div class="dialog-grid">
             <div><label>名称</label><input name="name" value="{{ item.name }}" required /></div>
             <div><label>包名</label><input name="package" value="{{ item.package }}" required /></div>
-            <div><label>目标文件路径</label><input name="targetApkPath" value="{{ item.targetApkPath }}" required /></div>
             <div><label>模拟数据</label><select name="simulation"><option value="false" {% if not item.simulation %}selected{% endif %}>否</option><option value="true" {% if item.simulation %}selected{% endif %}>是</option></select></div>
           </div>
           <div class="dialog-actions"><button type="submit">保存应用信息</button></div>
