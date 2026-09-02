@@ -37,7 +37,7 @@ class EnhancementManager:
         temp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         os.replace(temp, self.json_path)
 
-    def add_upload(self, data: dict[str, Any], source: Path, name: str, package: str, target: str, version: str, description: str, car_code: str, assembly_version: str, stock_hash: str) -> None:
+    def add_upload(self, data: dict[str, Any], source: Path, name: str, package: str, target: str, update_time: str, description: str, car_code: str, assembly_version: str, stock_hash: str) -> None:
         if source.suffix.lower() != ".apk":
             raise ValueError("仅支持 APK")
         if not re.fullmatch(r"[a-zA-Z0-9._]+", package.strip()):
@@ -60,7 +60,7 @@ class EnhancementManager:
         shutil.copyfile(source, directory / filename)
         version_item = {
             "id": uuid.uuid4().hex[:12],
-            "version": version.strip() or "1.0.0",
+            "updateTime": update_time.strip(),
             "description": description.strip(),
             "apk": f"/enhancements/{entry_id}/{filename}",
             "sha256": digest,
@@ -95,15 +95,15 @@ class EnhancementManager:
             raise ValueError("目标路径不在允许范围")
         entry.update({"name": name.strip() or package.strip(), "package": package.strip(), "targetApkPath": target.strip(), "simulation": bool(simulation)})
 
-    def add_simulation_version(self, data: dict[str, Any], entry_id: str, version: str, description: str, car_code: str, assembly_version: str, stock_package_version: str, stock_hash: str) -> None:
+    def add_simulation_version(self, data: dict[str, Any], entry_id: str, update_time: str, description: str, car_code: str, assembly_version: str, stock_package_version: str, stock_hash: str) -> None:
         entry = self.find(data, entry_id)
         if not entry or not entry.get("simulation"):
             raise ValueError("模拟应用才能新增无 APK 版本")
         version_item = {"id": uuid.uuid4().hex[:12], "apk": "", "sha256": stock_hash.strip().lower(), "filesize": 0}
         entry.setdefault("versions", []).append(version_item)
-        self.update_version(data, entry_id, version_item["id"], version, description, car_code, assembly_version, stock_package_version, stock_hash)
+        self.update_version(data, entry_id, version_item["id"], update_time, description, car_code, assembly_version, stock_package_version, stock_hash)
 
-    def update_version(self, data: dict[str, Any], entry_id: str, version_id: str, version: str, description: str, car_code: str, assembly_version: str, stock_package_version: str, stock_hash: str) -> None:
+    def update_version(self, data: dict[str, Any], entry_id: str, version_id: str, update_time: str, description: str, car_code: str, assembly_version: str, stock_package_version: str, stock_hash: str) -> None:
         entry = self.find(data, entry_id)
         target = next((v for v in (entry or {}).get("versions", []) if str(v.get("id", "")) == version_id), None)
         if not entry or not target:
@@ -112,7 +112,7 @@ class EnhancementManager:
             raise ValueError("车型或系统版本无效")
         if not re.fullmatch(r"[0-9a-fA-F]{64}", stock_hash.strip()):
             raise ValueError("原厂 APK SHA-256 无效")
-        target.update({"version": version.strip() or "1.0.0", "description": description.strip()})
+        target.update({"updateTime": update_time.strip(), "description": description.strip()})
         compatibility = target.setdefault("compatibility", {})
         compatibility["allOf"] = [{"property": "ro.hozon.car.code", "equals": car_code.strip()}, {"property": "ro.hozon.car.assembly.version", "equals": assembly_version.strip()}]
         compatibility["stockPackageVersionName"] = stock_package_version.strip()

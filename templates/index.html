@@ -599,7 +599,7 @@
               <div><label>名称</label><input name="name" type="text" placeholder="HMI 导航增强" required /></div>
               <div><label>包名</label><input name="package" type="text" placeholder="com.hozonauto.launcher" required /></div>
               <div><label>目标文件路径</label><input name="targetApkPath" type="text" placeholder="/system/priv-app/HMI/HMI.apk" required /></div>
-              <div><label>版本</label><input name="version" type="text" placeholder="1.0.0" required /></div>
+              <div><label>更新日期</label><input name="updateTime" type="date" required /></div>
               <div><label>车型</label><select name="carCode" required><option value="5">EP32</option><option value="4">EP36</option><option value="0">EP40</option><option value="9">EP41</option></select></div>
               <div><label>系统版本</label><input name="assemblyVersion" type="text" placeholder="05.33.33" required /></div>
               <div><label>原厂 APK SHA-256</label><input name="stockApkSha256" type="text" placeholder="填写目标车机原厂 APK SHA-256" required /></div>
@@ -614,7 +614,7 @@
               <h3 class="app-name">{{ item.name }}</h3>
               <div class="app-package">{{ item.package }} · {{ item.targetApkPath }}</div>
               {% for version in item.versions %}
-                <div class="app-desc">版本 {{ version.version }}：{{ version.description }}</div>
+                <div class="app-desc">更新日期 {{ version.updateTime or "未注明" }}：{{ version.description }}</div>
                 <div class="app-meta">{{ version.filesize }} bytes · SHA-256 {{ version.sha256 }}</div>
               {% endfor %}
             </article>
@@ -929,7 +929,7 @@
           <form action="/enhancements/versions/update" method="post">
             <input type="hidden" name="enhancement_id" value="{{ item.id }}" /><input type="hidden" name="version_id" value="{{ version.id }}" />
             <div class="dialog-grid">
-              <div><label>版本</label><input name="version" value="{{ version.version }}" required /></div>
+              <div><label>更新日期</label><input name="updateTime" type="date" value="{{ version.updateTime }}" required /></div>
               <div><label>车型</label><select name="carCode" required>{% for code,label in [('5','EP32'),('4','EP36'),('0','EP40'),('9','EP41')] %}<option value="{{ code }}" {% if version.compatibility.allOf[0].equals == code %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>
               <div><label>系统版本</label><input name="assemblyVersion" value="{{ version.compatibility.allOf[1].equals }}" required /></div>
               <div><label>原厂包版本</label><input name="stockPackageVersionName" value="{{ version.compatibility.stockPackageVersionName or '' }}" /></div>
@@ -938,7 +938,7 @@
               <div><label>文件大小</label><input value="{{ version.filesize }} bytes" readonly /></div>
               <div><label>资源路径</label><input value="{{ version.apk or '模拟数据，无 APK' }}" readonly /></div>
             </div>
-            <label>版本说明</label><textarea name="description">{{ version.description }}</textarea>
+            <label>增强说明</label><textarea name="description">{{ version.description }}</textarea>
             <div class="dialog-actions"><button type="submit">保存版本</button></div>
           </form>
           <form action="/enhancements/versions/replace-apk" method="post" enctype="multipart/form-data" class="dialog-actions">
@@ -952,7 +952,7 @@
         <form action="/enhancements/versions/add" method="post" enctype="multipart/form-data">
           <input type="hidden" name="enhancement_id" value="{{ item.id }}" />
           <div class="dialog-grid">
-            <div><label>版本</label><input name="version" required /></div>
+            <div><label>更新日期</label><input name="updateTime" type="date" required /></div>
             <div><label>车型</label><select name="carCode" required><option value="5">EP32</option><option value="4">EP36</option><option value="0">EP40</option><option value="9">EP41</option></select></div>
             <div><label>系统版本</label><input name="assemblyVersion" required /></div>
             <div><label>原厂包版本</label><input name="stockPackageVersionName" /></div>
