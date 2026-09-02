@@ -25,6 +25,7 @@ from appstore_manager import (
 )
 from soundstore_manager import SUPPORTED_SOUND_EXTENSIONS, SoundStoreManager, normalize_tags
 from screensaver_manager import ScreensaverManager
+from enhancement_manager import EnhancementManager
 
 BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR
@@ -36,6 +37,8 @@ SOUNDS_JSON_PATH = REPO_ROOT / "sounds.json"
 SOUNDS_DIR = REPO_ROOT / "sounds"
 SCREENSAVERS_JSON_PATH = REPO_ROOT / "screensavers.json"
 SCREENSAVERS_DIR = REPO_ROOT / "screensavers"
+ENHANCEMENTS_JSON_PATH = REPO_ROOT / "enhancements.json"
+ENHANCEMENTS_DIR = REPO_ROOT / "enhancements"
 
 
 def is_supported_apk_filename(filename: str) -> bool:
@@ -71,6 +74,7 @@ manager = AppStoreManager(json_path=APPSTORE_JSON_PATH, apks_dir=APKS_DIR)
 workflow_manager = WorkflowManager(json_path=WORKFLOWS_JSON_PATH, workflows_dir=WORKFLOWS_DIR)
 sound_manager = SoundStoreManager(json_path=SOUNDS_JSON_PATH, sounds_dir=SOUNDS_DIR)
 screensaver_manager = ScreensaverManager(json_path=SCREENSAVERS_JSON_PATH, screensavers_dir=SCREENSAVERS_DIR)
+enhancement_manager = EnhancementManager(json_path=ENHANCEMENTS_JSON_PATH, assets_dir=ENHANCEMENTS_DIR)
 
 
 def preview_asset_url(path: str) -> str:
@@ -127,6 +131,17 @@ def download_screensaver_file(screensaver_path: str):
     return send_from_directory(str(SCREENSAVERS_DIR), screensaver_path)
 
 
+@app.get("/enhancement-files/<path:enhancement_path>")
+def download_enhancement_file(enhancement_path: str):
+    safe_path = Path(enhancement_path)
+    if safe_path.is_absolute() or ".." in safe_path.parts:
+        abort(400)
+    target = ENHANCEMENTS_DIR / safe_path
+    if not target.is_file():
+        abort(404)
+    return send_from_directory(str(ENHANCEMENTS_DIR), enhancement_path, as_attachment=True, download_name=target.name)
+
+
 @app.get("/")
 def index() -> str:
     data = manager.load_data()
@@ -165,6 +180,7 @@ def index() -> str:
     sound_tags = sorted({tag for entry in sounds for tag in normalize_tags(entry.get("tags", []))})
     screensaver_data = screensaver_manager.load_data()
     screensavers = screensaver_data.get("screensavers", [])
+    enhancement_data = enhancement_manager.load_data()
 
     auto_edit_id = request.args.get("edit", "").strip()
     auto_edit_app = find_entry_by_id(data.get("apps", []), auto_edit_id) if auto_edit_id else None
@@ -175,7 +191,7 @@ def index() -> str:
         else None
     )
     active_tab = request.args.get("tab", "notice").strip().lower()
-    if active_tab not in {"notice", "messageboard", "apps", "workflows", "sounds", "screensavers", "categories"}:
+    if active_tab not in {"notice", "messageboard", "apps", "workflows", "sounds", "screensavers", "enhancements", "categories"}:
         active_tab = "notice"
     return render_template(
         "index.html",
@@ -184,6 +200,7 @@ def index() -> str:
         sounds=sounds,
         sound_tags=sound_tags,
         screensavers=screensavers,
+        enhancements=enhancement_data.get("enhancements", []),
         workflow_categories=workflow_data.get("categories", []),
         notice=data.get("notice", ""),
         message_board=data.get("messageBoard", []),
@@ -196,6 +213,41 @@ def index() -> str:
         auto_edit_workflow=auto_edit_workflow,
         active_tab=active_tab,
     )
+
+
+@app.post("/enhancements/upload")
+def upload_enhancement():
+    upload = request.files.get("apk")
+    if not upload or not upload.filename:
+        flash("请选择 APK", "error")
+        return redirect(url_for("index", tab="enhancements"))
+    tmp = Path(tempfile.mkdtemp(prefix="appstore-enhancement-"))
+    try:
+        source = tmp / secure_filename(upload.filename)
+        upload.save(source)
+        data = enhancement_manager.load_data()
+        enhancement_manager.add_upload(
+            data, source,
+            request.form.get("name", ""), request.form.get("package", ""), request.form.get("targetApkPath", ""),
+            request.form.get("version", ""), request.form.get("description", ""), request.form.get("carCode", ""),
+            request.form.get("assemblyVersion", ""), request.form.get("stockApkSha256", ""),
+        )
+        enhancement_manager.save_data(data)
+        flash("应用增强已保存，摘要已生成", "success")
+    except Exception as error:
+        flash(str(error), "error")
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+    return redirect(url_for("index", tab="enhancements"))
+
+
+@app.post("/enhancements/delete")
+def delete_enhancement():
+    data = enhancement_manager.load_data()
+    if enhancement_manager.delete(data, request.form.get("enhancement_id", "").strip()):
+        enhancement_manager.save_data(data)
+        flash("应用增强已删除", "success")
+    return redirect(url_for("index", tab="enhancements"))
 
 
 @app.post("/screensavers/upload")

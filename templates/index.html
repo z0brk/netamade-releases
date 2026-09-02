@@ -418,6 +418,7 @@
         <button type="button" class="tab-btn" data-tab="workflows">工作流</button>
         <button type="button" class="tab-btn" data-tab="sounds">车机音效</button>
         <button type="button" class="tab-btn" data-tab="screensavers">在线屏保</button>
+        <button type="button" class="tab-btn" data-tab="enhancements">应用增强</button>
         <button type="button" class="tab-btn" data-tab="categories">分类</button>
       </nav>
 
@@ -585,6 +586,40 @@
         </div>
         <form action="/screensavers/reorder" method="post" id="screensaver-order-form" class="dialog-actions"><input type="hidden" name="screensaverOrder" id="screensaver-order-json" /><button type="submit" class="btn-ghost" id="screensaver-save-order">保存排序</button></form>
         <form action="/screensavers/delete" method="post" id="screensaver-bulk-delete-form" class="dialog-actions"><button type="submit" class="btn-danger">批量删除</button></form>
+      </section>
+
+      <section class="panel" id="panel-enhancements">
+        <h2>应用增强</h2>
+        <p class="sub">独立维护 enhancements.json。上传后自动生成 SHA-256 与文件大小。</p>
+        <div class="upload-card">
+          <form action="/enhancements/upload" method="post" enctype="multipart/form-data">
+            <div class="dialog-grid">
+              <div><label>补丁 APK</label><input name="apk" type="file" accept=".apk" required /></div>
+              <div><label>名称</label><input name="name" type="text" placeholder="HMI 导航增强" required /></div>
+              <div><label>包名</label><input name="package" type="text" placeholder="com.hozonauto.launcher" required /></div>
+              <div><label>目标文件路径</label><input name="targetApkPath" type="text" placeholder="/system/priv-app/HMI/HMI.apk" required /></div>
+              <div><label>版本</label><input name="version" type="text" placeholder="1.0.0" required /></div>
+              <div><label>车型</label><select name="carCode" required><option value="5">EP32</option><option value="4">EP36</option><option value="0">EP40</option><option value="9">EP41</option></select></div>
+              <div><label>系统版本</label><input name="assemblyVersion" type="text" placeholder="05.33.33" required /></div>
+              <div><label>原厂 APK SHA-256</label><input name="stockApkSha256" type="text" placeholder="填写目标车机原厂 APK SHA-256" required /></div>
+            </div>
+            <label>版本说明</label><textarea name="description" placeholder="说明变更内容和适用范围"></textarea>
+            <div class="dialog-actions"><button type="submit">保存应用增强</button></div>
+          </form>
+        </div>
+        <div class="app-grid" style="margin-top:14px;">
+          {% for item in enhancements %}
+            <article class="app-item">
+              <h3 class="app-name">{{ item.name }}</h3>
+              <div class="app-package">{{ item.package }} · {{ item.targetApkPath }}</div>
+              {% for version in item.versions %}
+                <div class="app-desc">版本 {{ version.version }}：{{ version.description }}</div>
+                <div class="app-meta">{{ version.filesize }} bytes · SHA-256 {{ version.sha256 }}</div>
+              {% endfor %}
+              <form action="/enhancements/delete" method="post" class="dialog-actions"><input type="hidden" name="enhancement_id" value="{{ item.id }}" /><button type="submit" class="btn-danger">删除</button></form>
+            </article>
+          {% endfor %}
+        </div>
       </section>
 
       <section class="panel" id="panel-categories">

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "enhancements": [
+    {
+      "id": "ep32-hmi-v66",
+      "name": "HMI 导航增强",
+      "package": "com.hozonauto.launcher",
+      "targetApkPath": "/system/priv-app/HMI/HMI.apk",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "description": "增加绿灯倒计时显示，并使导航信息在前台状态下继续通过现有接口发布。",
+          "apk": "/enhancements/ep32-hmi-v66/HMI-patched-signed.apk",
+          "sha256": "460175b239d831a44c9f853e4ffff8fec50ee8bc80157d66e1c46bce3f2db9fc",
+          "filesize": 329005184,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "5"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.33.33"
+              }
+            ],
+            "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
+            "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
+          }
+        }
+      ]
+    },
+    {
+      "id": "simulation-hmi-multi-version",
+      "name": "HMI 多车型版本模拟",
+      "package": "com.hozonauto.launcher",
+      "targetApkPath": "/system/priv-app/HMI/HMI.apk",
+      "simulation": true,
+      "versions": [
+        {
+          "version": "EP32-05.30.53-demo",
+          "description": "模拟测试数据，不提供真实下载，用于检查 EP32 同车型旧系统版本的不兼容提示。",
+          "apk": "",
+          "sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "filesize": 0,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "5"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.30.53"
+              }
+            ],
+            "stockApkSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        {
+          "version": "EP32-05.33.33-demo",
+          "description": "模拟测试数据，不提供真实下载，用于检查 EP32 同车型当前系统版本的兼容展示。",
+          "apk": "",
+          "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+          "filesize": 0,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "5"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.33.33"
+              }
+            ],
+            "stockApkSha256": "5555555555555555555555555555555555555555555555555555555555555555"
+          }
+        },
+        {
+          "version": "EP36-05.28.03-demo",
+          "description": "模拟测试数据，不提供真实下载，用于检查 EP36 车型与系统版本展示。",
+          "apk": "",
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "filesize": 0,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "4"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.28.03"
+              }
+            ],
+            "stockApkSha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          }
+        },
+        {
+          "version": "EP40-05.31.50-demo",
+          "description": "模拟测试数据，不提供真实下载，用于检查 EP40 车型与系统版本展示。",
+          "apk": "",
+          "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+          "filesize": 0,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "0"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.31.50"
+              }
+            ],
+            "stockApkSha256": "2222222222222222222222222222222222222222222222222222222222222222"
+          }
+        },
+        {
+          "version": "EP41-05.31.85-demo",
+          "description": "模拟测试数据，不提供真实下载，用于检查 EP41 车型与系统版本展示。",
+          "apk": "",
+          "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+          "filesize": 0,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "9"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.31.85"
+              }
+            ],
+            "stockApkSha256": "3333333333333333333333333333333333333333333333333333333333333333"
+          }
+        }
+      ]
+    }
+  ]
+}
