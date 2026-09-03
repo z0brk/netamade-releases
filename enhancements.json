@@ -27,6 +27,28 @@
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
           "id": "ep32-hmi-v66-v1"
+        },
+        {
+          "updateTime": "2026-09-03",
+          "description": "新增独立原车地图导航 Binder 数据推送，向哪吒地图提供全量导航状态和详细事件数据。使用前请在应用增强界面启用哪吒地图增强；当前版本已完成静态构建验证，待 EP32 车机验收。",
+          "apk": "/enhancements/ep32-hmi-v66/97c0aedc57bb8f63.apk",
+          "sha256": "97c0aedc57bb8f63a7382a6b0c77a93e572f9392ff910d0d6094de48b687fa31",
+          "filesize": 328284540,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "5"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.33.33"
+              }
+            ],
+            "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
+            "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
+          },
+          "id": "ep32-hmi-v66-v2"
         }
       ],
       "simulation": false
