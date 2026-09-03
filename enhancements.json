@@ -9,8 +9,8 @@
         {
           "updateTime": "2026-09-03",
           "description": "增加绿灯倒计时显示；新增独立原车地图导航 Binder 数据推送；地图主界面显示美式定制徽标。修复五轮崩溃：VerifyError（寄存器配对）、IllegalAccessError（access）、NoSuchMethodError（getActivity）、VerifyError（badgeText Precise Reference）、NPE（PathInfo 内部空段）+ IncompatibleClassChangeError（BuildBadgeDrag 字段 static/instance 不匹配）。",
-          "apk": "/enhancements/ep32-hmi-v66/7aeaf20ab30839c4ede221536240ce5c8cdabc6e886c90d932a0e1c57b5c781e.apk",
-          "sha256": "7aeaf20ab30839c4ede221536240ce5c8cdabc6e886c90d932a0e1c57b5c781e",
+          "apk": "/enhancements/ep32-hmi-v66/da67f91849d02ecc96d03d7d00ea917f78071c91a039b077db748bbb653242e1.apk",
+          "sha256": "da67f91849d02ecc96d03d7d00ea917f78071c91a039b077db748bbb653242e1",
           "filesize": 329005184,
           "compatibility": {
             "allOf": [
@@ -26,7 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v8"
+          "id": "ep32-hmi-v66-v9"
         }
       ],
       "simulation": false
