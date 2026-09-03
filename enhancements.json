@@ -7,10 +7,10 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-02",
+          "updateTime": "2026-09-03",
           "description": "增加绿灯倒计时显示，并使导航信息始终发送，适用于 OP 助手获取导航信息。",
           "apk": "/enhancements/ep32-hmi-v66/HMI-patched-signed.apk",
-          "sha256": "3ec738690df5cc2f2863ef28911a6b5dcc58d64413053835f4107d6fb0148ac5",
+          "sha256": "14d500719ee2e65495f465be0ecfb4201b1088b549d54693a6f32eacb8248af9",
           "filesize": 327985081,
           "compatibility": {
             "allOf": [
