@@ -8,10 +8,10 @@
       "versions": [
         {
           "updateTime": "2026-09-03",
-          "description": "增加绿灯倒计时显示，并使导航信息始终发送，适用于 OP 助手获取导航信息。",
-          "apk": "/enhancements/ep32-hmi-v66/HMI-patched-signed.apk",
-          "sha256": "085a75c9a011d34dea5780c6ad8c6073674f2049e55e8d139917c8de2bcfd595",
-          "filesize": 327985081,
+          "description": "增加绿灯倒计时显示；导航信息始终发送，并新增独立原车地图导航 Binder 数据推送，向哪吒地图提供全量导航状态和详细事件数据。使用前请在应用增强界面启用哪吒地图增强；当前版本已完成静态构建验证，待 EP32 车机验收。",
+          "apk": "/enhancements/ep32-hmi-v66/1b12b56baeb35832e9431175e5563ab670f8e0f70f0f9d16e4d79108a4e1c05c.apk",
+          "sha256": "1b12b56baeb35832e9431175e5563ab670f8e0f70f0f9d16e4d79108a4e1c05c",
+          "filesize": 329005184,
           "compatibility": {
             "allOf": [
               {
@@ -26,29 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v1"
-        },
-        {
-          "updateTime": "2026-09-03",
-          "description": "新增独立原车地图导航 Binder 数据推送，向哪吒地图提供全量导航状态和详细事件数据。使用前请在应用增强界面启用哪吒地图增强；当前版本已完成静态构建验证，待 EP32 车机验收。",
-          "apk": "/enhancements/ep32-hmi-v66/97c0aedc57bb8f63.apk",
-          "sha256": "97c0aedc57bb8f63a7382a6b0c77a93e572f9392ff910d0d6094de48b687fa31",
-          "filesize": 328284540,
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "5"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.33.33"
-              }
-            ],
-            "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
-            "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
-          },
-          "id": "ep32-hmi-v66-v2"
+          "id": "ep32-hmi-v66-v3"
         }
       ],
       "simulation": false
