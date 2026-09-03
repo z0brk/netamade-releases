@@ -8,9 +8,9 @@
       "versions": [
         {
           "updateTime": "2026-09-03",
-          "description": "增加绿灯倒计时显示；新增独立原车地图导航 Binder 数据推送，向哪吒地图提供全量导航状态和详细事件数据。使用前请在应用增强界面启用哪吒地图增强；当前版本已完成静态构建验证，待 EP32 车机验收。",
-          "apk": "/enhancements/ep32-hmi-v66/1b12b56baeb35832e9431175e5563ab670f8e0f70f0f9d16e4d79108a4e1c05c.apk",
-          "sha256": "1b12b56baeb35832e9431175e5563ab670f8e0f70f0f9d16e4d79108a4e1c05c",
+          "description": "增加绿灯倒计时显示；新增独立原车地图导航 Binder 数据推送，向哪吒地图提供全量导航状态和详细事件数据。使用前请在应用增强界面启用哪吒地图增强；当前版本已完成静态构建验证，修复 v3 补丁 NaviInfoManager 寄存器错误导致的 HMI 崩溃循环（VerifyError）。",
+          "apk": "/enhancements/ep32-hmi-v66/52c29a9269a7120756124d5ed497fd090a6faabb6882b3fca7b83f58811f76d9.apk",
+          "sha256": "52c29a9269a7120756124d5ed497fd090a6faabb6882b3fca7b83f58811f76d9",
           "filesize": 329005184,
           "compatibility": {
             "allOf": [
@@ -26,7 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v3"
+          "id": "ep32-hmi-v66-v4"
         }
       ],
       "simulation": false
