@@ -8,9 +8,9 @@
       "versions": [
         {
           "updateTime": "2026-09-03",
-          "description": "增加绿灯倒计时显示；新增独立原车地图导航 Binder 数据推送；地图主界面显示美式定制徽标。修复崩溃链，并修复增强导航完整快照未按协议写入 data 导致 OP 未发送导航帧的问题。",
-          "apk": "/enhancements/ep32-hmi-v66/2f1dde3813adc64e6e754f9dca6b3ad1eb4eeead895c96dc8c2b718c13c97974.apk",
-          "sha256": "2f1dde3813adc64e6e754f9dca6b3ad1eb4eeead895c96dc8c2b718c13c97974",
+          "description": "增加绿灯倒计时显示；新增独立原车地图导航 Binder 数据推送；地图主界面显示美式定制徽标。修复崩溃链、导航开始时完整快照发送，以及长距离路线下增强导航事件中断问题。",
+          "apk": "/enhancements/ep32-hmi-v66/363decd918295570f499f617e42495689fa14ae0b8e431c9a31d25c1adc7b5a2.apk",
+          "sha256": "363decd918295570f499f617e42495689fa14ae0b8e431c9a31d25c1adc7b5a2",
           "filesize": 329005184,
           "compatibility": {
             "allOf": [
@@ -26,7 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v10"
+          "id": "ep32-hmi-v66-v11"
         }
       ],
       "simulation": false
