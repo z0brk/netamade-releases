@@ -7,10 +7,10 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-03",
-          "description": "1.3.1 专用。增加绿灯倒计时显示；新增独立原车地图导航 Binder 数据推送；地图主界面显示应用级美式定制徽标，离开 HMI 后不可见。修复崩溃链、导航开始时完整快照发送，以及长距离路线下增强导航事件中断问题；不发送 tmc_light_bar。",
-          "apk": "/enhancements/ep32-hmi-v66/9b0179b194aa62e6a904263c6803b2490a1b5c734c274cd051c260a0c3bf191a.apk",
-          "sha256": "9b0179b194aa62e6a904263c6803b2490a1b5c734c274cd051c260a0c3bf191a",
+          "updateTime": "2026-09-04",
+          "description": "1.3.1 专用。增加绿灯倒计时显示和原车地图导航 Binder 数据推送；补齐导航限速、电子眼、车道、交通灯和定位增强事件；修复 lane_hide 快照清理。HMI 与 AMap 广播协议分开解释，未确认的车道推荐和交通灯方向不驱动策略。",
+          "apk": "/enhancements/ep32-hmi-v66/5d1bf0437f64f34f.apk",
+          "sha256": "5d1bf0437f64f34fdc100a493558ed74b02a9e79ef74adcb6b77fbb4e09e86b9",
           "filesize": 329005184,
           "compatibility": {
             "allOf": [
@@ -29,10 +29,10 @@
           "id": "ep32-hmi-v66-v12"
         },
         {
-          "updateTime": "2026-09-03",
-          "description": "1.2.1 专用。新增独立原车地图导航 Binder 数据推送；导航开始时发送完整快照；地图主界面显示应用级美式定制徽标，离开 HMI 后不可见；修复长距离路线下增强导航事件中断问题；不发送 tmc_light_bar。",
-          "apk": "/enhancements/ep32-hmi-v66/a360b2f571c71dca1768e9d5043c18f787fae52aad3af7390e321e06d351baa5.apk",
-          "sha256": "a360b2f571c71dca1768e9d5043c18f787fae52aad3af7390e321e06d351baa5",
+          "updateTime": "2026-09-04",
+          "description": "1.2.1 专用。增加原车地图导航 Binder 数据推送；补齐导航限速、电子眼、车道、交通灯和定位增强事件；修复 lane_hide 快照清理。HMI 与 AMap 广播协议分开解释，未确认的车道推荐和交通灯方向不驱动策略。",
+          "apk": "/enhancements/ep32-hmi-v66/a061d115e2512d72a.apk",
+          "sha256": "a061d115e2512d72a38418bd3b39074ff79c719e009128454ac87497f1ee936c",
           "filesize": 323470971,
           "compatibility": {
             "allOf": [
