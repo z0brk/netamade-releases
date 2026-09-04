@@ -8,9 +8,9 @@
       "versions": [
         {
           "updateTime": "2026-09-04",
-          "description": "1.3.1 专用。增加绿灯倒计时显示和原车地图导航 Binder 数据推送；补齐导航限速、电子眼、车道、交通灯和定位增强事件；修复 lane_hide 快照清理。HMI 与 AMap 广播协议分开解释，未确认的车道推荐和交通灯方向不驱动策略。",
-          "apk": "/enhancements/ep32-hmi-v66/5d1bf0437f64f34f.apk",
-          "sha256": "5d1bf0437f64f34fdc100a493558ed74b02a9e79ef74adcb6b77fbb4e09e86b9",
+          "description": "1.3.1 专用。增加绿灯倒计时显示和原车地图导航 Binder 数据推送；补齐导航限速、电子眼、车道、交通灯和定位增强事件；修复 lane_hide 快照清理；修复上车后哪吒账户已恢复但高德未自动登录的问题。HMI 与 AMap 广播协议分开解释，未确认的车道推荐和交通灯方向不驱动策略。",
+          "apk": "/enhancements/ep32-hmi-v66/3f80a77b484d4849.apk",
+          "sha256": "3f80a77b484d48490b3a9846197b70d7aa9ccee7a5c0111b916ac6fd2e947dba",
           "filesize": 329005184,
           "compatibility": {
             "allOf": [
@@ -26,7 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v12"
+          "id": "ep32-hmi-v66-v13"
         },
         {
           "updateTime": "2026-09-04",
