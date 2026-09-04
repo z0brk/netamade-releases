@@ -598,7 +598,7 @@
               <div><label>补丁 APK</label><input name="apk" type="file" accept=".apk" required /></div>
               <div><label>名称</label><input name="name" type="text" placeholder="HMI 导航增强" required /></div>
               <div><label>包名</label><input name="package" type="text" placeholder="com.hozonauto.launcher" required /></div>
-              <div><label>更新日期</label><input name="updateTime" type="date" required /></div>
+              <div><label>更新时间</label><input name="updateTime" type="datetime-local" step="1" required /></div>
               <div><label>车型</label><select name="carCode" required><option value="5">EP32</option><option value="4">EP36</option><option value="0">EP40</option><option value="9">EP41</option></select></div>
               <div><label>系统版本</label><input name="assemblyVersion" type="text" placeholder="05.33.33" required /></div>
               <div><label>原厂 APK SHA-256</label><input name="stockApkSha256" type="text" placeholder="填写目标车机原厂 APK SHA-256" required /></div>
@@ -613,7 +613,7 @@
               <h3 class="app-name">{{ item.name }}</h3>
               <div class="app-package">{{ item.package }}</div>
               {% for version in item.versions %}
-                <div class="app-desc">更新日期 {{ version.updateTime or "未注明" }}：{{ version.description }}</div>
+                <div class="app-desc">更新时间 {{ version.updateTime|update_time }}：{{ version.description }}</div>
                 <div class="app-meta">{{ version.filesize }} bytes · SHA-256 {{ version.sha256 }}</div>
               {% endfor %}
             </article>
@@ -927,7 +927,7 @@
           <form action="/enhancements/versions/update" method="post">
             <input type="hidden" name="enhancement_id" value="{{ item.id }}" /><input type="hidden" name="version_id" value="{{ version.id }}" />
             <div class="dialog-grid">
-              <div><label>更新日期</label><input name="updateTime" type="date" value="{{ version.updateTime }}" required /></div>
+              <div><label>更新时间</label><input name="updateTime" type="datetime-local" step="1" value="{{ version.updateTime|update_time_input }}" required /></div>
               <div><label>车型</label><select name="carCode" required>{% for code,label in [('5','EP32'),('4','EP36'),('0','EP40'),('9','EP41')] %}<option value="{{ code }}" {% if version.compatibility.allOf[0].equals == code %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>
               <div><label>系统版本</label><input name="assemblyVersion" value="{{ version.compatibility.allOf[1].equals }}" required /></div>
               <div><label>原厂包版本</label><input name="stockPackageVersionName" value="{{ version.compatibility.stockPackageVersionName or '' }}" /></div>
@@ -950,7 +950,7 @@
         <form action="/enhancements/versions/add" method="post" enctype="multipart/form-data">
           <input type="hidden" name="enhancement_id" value="{{ item.id }}" />
           <div class="dialog-grid">
-            <div><label>更新日期</label><input name="updateTime" type="date" required /></div>
+            <div><label>更新时间</label><input name="updateTime" type="datetime-local" step="1" required /></div>
             <div><label>车型</label><select name="carCode" required><option value="5">EP32</option><option value="4">EP36</option><option value="0">EP40</option><option value="9">EP41</option></select></div>
             <div><label>系统版本</label><input name="assemblyVersion" required /></div>
             <div><label>原厂包版本</label><input name="stockPackageVersionName" /></div>

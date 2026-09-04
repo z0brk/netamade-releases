@@ -77,6 +77,22 @@ screensaver_manager = ScreensaverManager(json_path=SCREENSAVERS_JSON_PATH, scree
 enhancement_manager = EnhancementManager(json_path=ENHANCEMENTS_JSON_PATH, assets_dir=ENHANCEMENTS_DIR)
 
 
+@app.template_filter("update_time")
+def format_update_time(value: str) -> str:
+    try:
+        return EnhancementManager.normalize_update_time(value).replace("T", " ")
+    except ValueError:
+        return value or "未注明"
+
+
+@app.template_filter("update_time_input")
+def format_update_time_input(value: str) -> str:
+    try:
+        return EnhancementManager.normalize_update_time(value)
+    except ValueError:
+        return ""
+
+
 def preview_asset_url(path: str) -> str:
     value = (path or "").strip()
     if not value:

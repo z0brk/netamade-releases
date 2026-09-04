@@ -6,7 +6,7 @@ import os
 import re
 import shutil
 import uuid
-from datetime import date
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -38,6 +38,13 @@ class EnhancementManager:
         temp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         os.replace(temp, self.json_path)
 
+    @staticmethod
+    def normalize_update_time(value: str) -> str:
+        try:
+            return datetime.fromisoformat(value.strip()).replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%S")
+        except ValueError as error:
+            raise ValueError("更新时间格式无效") from error
+
     def add_upload(self, data: dict[str, Any], source: Path, name: str, package: str, update_time: str, description: str, car_code: str, assembly_version: str, stock_hash: str) -> None:
         if source.suffix.lower() != ".apk":
             raise ValueError("仅支持 APK")
@@ -49,7 +56,7 @@ class EnhancementManager:
             raise ValueError("系统版本不能为空")
         if not re.fullmatch(r"[0-9a-fA-F]{64}", stock_hash.strip()):
             raise ValueError("原厂 APK SHA-256 无效")
-        date.fromisoformat(update_time.strip())
+        update_time = self.normalize_update_time(update_time)
         digest = self.sha256(source)
         existing = next((item for item in data.setdefault("enhancements", [])
                          if item.get("package") == package.strip()), None)
@@ -60,7 +67,7 @@ class EnhancementManager:
         shutil.copyfile(source, directory / filename)
         version_item = {
             "id": uuid.uuid4().hex[:12],
-            "updateTime": update_time.strip(),
+            "updateTime": update_time,
             "description": description.strip(),
             "apk": f"/enhancements/{entry_id}/{filename}",
             "sha256": digest,
@@ -109,8 +116,7 @@ class EnhancementManager:
             raise ValueError("车型或系统版本无效")
         if not re.fullmatch(r"[0-9a-fA-F]{64}", stock_hash.strip()):
             raise ValueError("原厂 APK SHA-256 无效")
-        date.fromisoformat(update_time.strip())
-        target.update({"updateTime": update_time.strip(), "description": description.strip()})
+        target.update({"updateTime": self.normalize_update_time(update_time), "description": description.strip()})
         compatibility = target.setdefault("compatibility", {})
         compatibility["allOf"] = [{"property": "ro.hozon.car.code", "equals": car_code.strip()}, {"property": "ro.hozon.car.assembly.version", "equals": assembly_version.strip()}]
         compatibility["stockPackageVersionName"] = stock_package_version.strip()
