@@ -187,6 +187,36 @@
           "id": "simulation-hmi-multi-version-v5"
         }
       ]
+    },
+    {
+      "id": "ep40-launcher",
+      "name": "哪吒S地图",
+      "package": "com.hozonauto.launcher",
+      "versions": [
+        {
+          "updateTime": "2026-09-05T18:30:00",
+          "description": "【测试版本】哪吒 S 专用，解锁导航页右下角车道级/普通视图切换按钮（原车仅在车道级鉴权通过的道路显示）。点击后进入沉浸视图并隐藏导航红绿灯图层；车道级渲染依赖引擎与鉴权，本包不改变引擎能力。包含原厂全部功能。\n\n* 仅适用于哪吒 S 1.3.x 地图版本（24.08.27），和你的车机版本对不上请勿下载\n* 测试版本未经完整验证，安装后如出现异常请及时反馈并恢复原厂",
+          "apk": "/enhancements/ep40-launcher/c54eb90176f34d81.apk",
+          "sha256": "c54eb90176f34d81e8041cb7288badb6edc4ce6920dd41b02882cd5f6885aeaf",
+          "filesize": 308448743,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "0"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.31.50"
+              }
+            ],
+            "stockPackageVersionName": "24.08.27.1944.e70ad52.P",
+            "stockApkSha256": "5598d08a78b943132eedcd2625878bea142d197cff4443591fcea605956f3548"
+          },
+          "id": "ep40-launcher-v1-test"
+        }
+      ],
+      "simulation": false
     }
   ]
 }
