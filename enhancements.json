@@ -53,8 +53,8 @@
         {
           "updateTime": "2026-09-06T10:29:00",
           "description": "【测试版本】OP助手调试版，仅用于配合 OP 助手排查导航语音与数据发布问题，导航期间会输出大量诊断日志，不明白它是干嘛的请不要下载安装，一般用户请选择上方稳定版。\n\n1. 仅新增导航诊断日志（tag NetamadeNaviEvidence），记录原始回调、发布入口、显示限速与语音请求，用于定位限速/推荐车道漏发\n2. 诊断日志同时写入车机 /sdcard/Android/data/com.hozonauto.launcher/files/nnavi_evidence.log（logcat 被系统限流时以该文件为准），可通过 Netamade「应用日志-全部日志」一键打包上传\n3. 修复导航中 HMI 因原车 AirConditionManager 空指针崩溃的问题\n4. 不改变任何导航数据、地图展示或车辆控制行为，包含稳定版全部功能\n\n* 仅适用于 1.3.1，和你的车机版本对不上请勿下载",
-          "apk": "/enhancements/ep32-hmi-v66/7fc3f50b033b817b.apk",
-          "sha256": "7fc3f50b033b817bd2bd83af29f3467c915609ca2d96bbb1032820f939ba690a",
+          "apk": "/enhancements/ep32-hmi-v66/4d6cfe6b4bc749da.apk",
+          "sha256": "4d6cfe6b4bc749da4748b8b1c7862b574c1e01b3f094a5429626e241b6d2f7b7",
           "filesize": 329005184,
           "compatibility": {
             "allOf": [
@@ -75,8 +75,8 @@
         {
           "updateTime": "2026-09-06T10:29:00",
           "description": "【测试版本】OP助手调试版，仅用于配合 OP 助手排查导航语音与数据发布问题，导航期间会输出大量诊断日志，不明白它是干嘛的请不要下载安装，一般用户请选择上方稳定版。\n\n1. 仅新增导航诊断日志（tag NetamadeNaviEvidence），记录原始回调、发布入口、显示限速与语音请求，用于定位限速/推荐车道漏发\n2. 诊断日志同时写入车机 /sdcard/Android/data/com.hozonauto.launcher/files/nnavi_evidence.log（logcat 被系统限流时以该文件为准），可通过 Netamade「应用日志-全部日志」一键打包上传\n3. 修复导航中 HMI 因原车 AirConditionManager 空指针崩溃的问题\n4. 不改变任何导航数据、地图展示或车辆控制行为，包含稳定版全部功能\n\n* 仅适用于 1.2.1，和你的车机版本对不上请勿下载",
-          "apk": "/enhancements/ep32-hmi-v66/f152e1301851a69f.apk",
-          "sha256": "f152e1301851a69f1c539aee3bf25e78176ac06a707121227cd1c939cae7af67",
+          "apk": "/enhancements/ep32-hmi-v66/1f86cf493af83520.apk",
+          "sha256": "1f86cf493af83520b030074c956d9d9927601846bea67b4c8ec5dea8c4030fa3",
           "filesize": 323470971,
           "compatibility": {
             "allOf": [
