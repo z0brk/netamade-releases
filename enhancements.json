@@ -51,11 +51,11 @@
           "id": "ep32-hmi-v121-v2"
         },
         {
-          "updateTime": "2026-09-06T21:26:00",
-          "description": "【测试版本】OP助手调试版，仅用于配合 OP 助手排查导航语音与数据发布问题，导航期间会输出大量诊断日志，不明白它是干嘛的请不要下载安装，一般用户请选择上方稳定版。\n\n1. 新增 link_speed 诊断：逐引导帧记录 LimitFlag、LinkInfo.getSpeedLimit()、linkType 和 curLinkIdx，验证该接口是否提供道路限速\n2. 诊断日志同时写入车机 /sdcard/Android/data/com.hozonauto.launcher/files/nnavi_evidence.log（logcat 被系统限流时以该文件为准），可通过 Netamade「应用日志-全部日志」一键打包上传\n3. 修复导航中 HMI 因原车 AirConditionManager 空指针崩溃的问题\n4. 不改变任何导航数据、地图展示或车辆控制行为，包含稳定版全部功能\n\n* 仅适用于 1.3.1，和你的车机版本对不上请勿下载",
-          "apk": "/enhancements/ep32-hmi-v66/4b58bf1275350c3d.apk",
-          "sha256": "4b58bf1275350c3d8863e9f018e1993676ff6480304c2ffb70e84357e277108d",
-          "filesize": 329005184,
+          "updateTime": "2026-09-07T10:15:15",
+          "description": "【测试版本】OP助手调试版，仅用于配合 OP 助手排查导航语音与数据发布问题，导航期间会输出大量诊断日志，不明白它是干嘛的请不要下载安装，一般用户请选择上方稳定版。\n\n1. 路线概览 TTS 中的“当前道路限速X”会直接发布为 road_speed，补足引擎道路限速回调为 0 的已知场景\n2. 仅匹配当前道路限速模板；摄像头、区间测速和超速提醒不参与道路限速补值，候选值在路名变化或导航停止时清除\n3. 保留 link_speed 诊断和落盘日志，可通过 Netamade「应用日志-全部日志」一键打包上传\n4. 包含原有 OP 领航、绿灯倒计时和地图登录修复；本项仍待实车导航回归\n\n* 仅适用于 1.3.1，和你的车机版本对不上请勿下载",
+          "apk": "/enhancements/ep32-hmi-v66/ec5b7eeeadc314af.apk",
+          "sha256": "ec5b7eeeadc314af2579c3eb1cd41e9868b15167cc579531f95783bae2d9728f",
+          "filesize": 329021568,
           "compatibility": {
             "allOf": [
               {
@@ -73,10 +73,10 @@
           "id": "ep32-hmi-v66-v18-test"
         },
         {
-          "updateTime": "2026-09-06T21:26:00",
-          "description": "【测试版本】OP助手调试版，仅用于配合 OP 助手排查导航语音与数据发布问题，导航期间会输出大量诊断日志，不明白它是干嘛的请不要下载安装，一般用户请选择上方稳定版。\n\n1. 新增 link_speed 诊断：逐引导帧记录 LimitFlag、LinkInfo.getSpeedLimit()、linkType 和 curLinkIdx，验证该接口是否提供道路限速\n2. 诊断日志同时写入车机 /sdcard/Android/data/com.hozonauto.launcher/files/nnavi_evidence.log（logcat 被系统限流时以该文件为准），可通过 Netamade「应用日志-全部日志」一键打包上传\n3. 修复导航中 HMI 因原车 AirConditionManager 空指针崩溃的问题\n4. 不改变任何导航数据、地图展示或车辆控制行为，包含稳定版全部功能\n\n* 仅适用于 1.2.1，和你的车机版本对不上请勿下载",
-          "apk": "/enhancements/ep32-hmi-v66/e7ed7e201d36d873.apk",
-          "sha256": "e7ed7e201d36d8738faf4d310e1ad23b61b6a2dd8a188ad9e8558eb9be711173",
+          "updateTime": "2026-09-07T10:15:37",
+          "description": "【测试版本】OP助手调试版，仅用于配合 OP 助手排查导航语音与数据发布问题，导航期间会输出大量诊断日志，不明白它是干嘛的请不要下载安装，一般用户请选择上方稳定版。\n\n1. 路线概览 TTS 中的“当前道路限速X”会直接发布为 road_speed，补足引擎道路限速回调为 0 的已知场景\n2. 仅匹配当前道路限速模板；摄像头、区间测速和超速提醒不参与道路限速补值，候选值在路名变化或导航停止时清除\n3. 保留 link_speed 诊断和落盘日志，可通过 Netamade「应用日志-全部日志」一键打包上传\n4. 包含原有 OP 领航、绿灯倒计时和地图登录修复；本项仍待实车导航回归\n\n* 仅适用于 1.2.1，和你的车机版本对不上请勿下载",
+          "apk": "/enhancements/ep32-hmi-v66/6a6c925a3ffc11d4.apk",
+          "sha256": "6a6c925a3ffc11d4cf1d9fb5fa9c627ad512ce4a2799a196e490e1e1262c3491",
           "filesize": 323470971,
           "compatibility": {
             "allOf": [
