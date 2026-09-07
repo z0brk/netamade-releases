@@ -1,9 +1,9 @@
 {
-  "versionName": "5.0.2-REL",
-  "versionCode": 218,
+  "versionName": "5.0.3-REL",
+  "versionCode": 219,
   "testing": false,
-  "buildTime": "2026-09-05 11:59:28",
-  "releaseVersion": "v5.0.2-REL-stable",
-  "releaseFilename": "netamade-stable-5.0.2-REL-218.apk",
-  "apkMd5": "8f1a8e91017ea2720d4ea61813e4a112"
+  "buildTime": "2026-09-07 22:14:44",
+  "releaseVersion": "v5.0.3-REL-stable",
+  "releaseFilename": "netamade-stable-5.0.3-REL-219.apk",
+  "apkMd5": "b380cfff9951adf98e9d453b4b42082f"
 }
