@@ -159,6 +159,28 @@
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
           "id": "ep32-hmi-v66-v21-official-sdk-test"
+        },
+        {
+          "updateTime": "2026-09-08T18:04:00",
+          "description": "【测试版本】官方红绿灯 SDK 接入测试版，仅适用于哪吒 L（EP32）车机系统 1.3.1。\n\n1. 官方 SDK 2.0.12 初始化后设置播报级别为 -1，按最新对接说明禁止返回 TTS 文字；设置失败时停止该次初始化并提示\n2. 设置弹窗改为本机设备 ID，优先使用 IMEI，否则自动生成并保存独立 ID；不再自动沿用旧领航账号 ID，可手工填写已授权的设备 ID，清空保存可停用查询\n3. 修正定位海拔单位，定位约每秒更新、灯态每 500 毫秒读取；当前相位结束后检查下一相位，没有读秒时显示等待、通行或注意\n4. 巡航按官方说明获取前方最近一个路口的多个流向，导航期间停止巡航查询；右转、掉头暂为官方预留字段\n5. 保留导航三灯外观测试：原导航灯重复显示为三个相同直行灯，共用同一灯态、读秒和路口位置，不代表真实方向、三个相位或三个路口，请以实际道路信号灯为准\n6. 保留居中设置弹窗和正版红绿灯领航 APP 免费使用引导\n\n* 设备 ID 自动生成不代表服务端已激活，错误 9 是否解决仍需实车查询确认\n* 尚未完成实车验证，一般用户请选择稳定版；本包保留 OP 助手诊断日志\n* 打包时间：2026-09-08 18:01:47\n* 仅适用于 1.3.1，和你的车机版本对不上请勿下载",
+          "apk": "/enhancements/ep32-hmi-v66/66c5f8bc84256a80.apk",
+          "sha256": "66c5f8bc84256a8081cf71baeb1a06406290c8fc8bdcba42501dcad1666c1b59",
+          "filesize": 329447835,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "5"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.33.33"
+              }
+            ],
+            "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
+            "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
+          },
+          "id": "ep32-hmi-v66-v22-official-sdk-test"
         }
       ],
       "simulation": false
