@@ -7,10 +7,10 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-08T21:00:53",
+          "updateTime": "2026-09-08T21:44:56",
           "description": "【测试版本】哪吒地图增强版，仅适用于哪吒 L（EP32）车机系统 1.3.1。\n\n1. 支持 OP 领航\n2. 补全原车地图绿灯倒计时显示，改善地图账号登录状态恢复\n3. 巡航时可在地图路口旁显示红绿灯状态和倒计时，支持红灯、绿灯、黄灯、黄闪以及无倒计时状态\n4. 同一路口的多个方向灯会合并显示，自动调整大小，并改善灯态反复出现和消失的问题\n5. 导航时默认继续使用巡航红绿灯数据，也可在设置中关闭并恢复原车地图红绿灯显示\n6. 可在设置中调整红绿灯探测距离、播报风格、多灯显示大小和运行日志\n\n* 本版本仍在实车测试中，红绿灯覆盖范围和数据可用性以实际道路为准\n* 仅适用于 1.3.1，和你的车机版本不一致请勿下载",
-          "apk": "/enhancements/ep32-hmi-v66/ece70f4982bdd8fa.apk",
-          "sha256": "ece70f4982bdd8fa04949f2178993f03708f13143ab5251d7018c3e14ceabf40",
+          "apk": "/enhancements/ep32-hmi-v66/bd63a3ca59a8659d.apk",
+          "sha256": "bd63a3ca59a8659d12566eff4c722bd0df564852e319d43e3a17e636e71ec5be",
           "filesize": 329464219,
           "compatibility": {
             "allOf": [
@@ -26,7 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v23-integrated-test"
+          "id": "ep32-hmi-v66-v24-integrated-test"
         },
         {
           "updateTime": "2026-09-05T01:49:35",
