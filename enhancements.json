@@ -7,11 +7,11 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-08T23:30:44",
-          "description": "【测试版本】哪吒地图增强版，仅适用于哪吒 L（EP32）车机系统 1.3.1。\n\n1. 支持 OP 领航\n2. 补全原车地图绿灯倒计时显示，改善地图账号登录状态恢复\n3. 巡航时可在地图路口旁显示红绿灯状态和倒计时，支持红灯、绿灯、黄灯、黄闪以及无倒计时状态\n4. 修复收到多方向红绿灯数据后地图反复重启的问题；同一路口的多个方向灯会合并显示，并保持原车气泡的圆角和尾部不变形\n5. 导航时默认继续使用巡航红绿灯数据，也可在设置中关闭并恢复原车地图红绿灯显示\n6. 设置页面提供更大的文字和操作控件，可调整红绿灯探测距离、播报风格、多灯显示大小和运行日志\n\n* 本版本仍在实车测试中，红绿灯覆盖范围和数据可用性以实际道路为准\n* 仅适用于 1.3.1，和你的车机版本不一致请勿下载",
-          "apk": "/enhancements/ep32-hmi-v66/567cc90aef163aa7.apk",
-          "sha256": "567cc90aef163aa7eb49530cb17678baa8d5c6476dafe5817badba89506a83ca",
-          "filesize": 329464219,
+          "updateTime": "2026-09-09T00:35:05",
+          "description": "【测试版本】哪吒地图增强版，仅适用于哪吒 L（EP32）车机系统 1.3.1。\n\n1. 支持 OP 领航，并保留导航增强事件\n2. 补全原车地图绿灯倒计时显示，改善地图账号登录状态恢复\n3. 巡航或导航时可在地图路口旁显示多方向红绿灯状态和倒计时\n4. 去除额外的灰黑气泡底；没有倒计时的灯不再预留数字空间，多灯会分别按实际内容排列\n5. 黄灯的方向灯珠改为黄橙底色；保留红灯、绿灯、黄灯、黄闪及无倒计时状态\n6. 设置页面可调整探测距离、播报风格、多灯大小、导航显示和运行日志\n\n* 不包含导航或 TTS 诊断日志；本版本仍需实车验证\n* 仅适用于 1.3.1，和你的车机版本不一致请勿下载",
+          "apk": "/enhancements/ep32-hmi-v66/eb0dfaba0993eae4.apk",
+          "sha256": "eb0dfaba0993eae4725d9edf98c7dfd6ef9743af000b6513cc29132c9649ea48",
+          "filesize": 329447835,
           "compatibility": {
             "allOf": [
               {
@@ -26,7 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v27-integrated-test"
+          "id": "ep32-hmi-v66-v28-integrated-test"
         },
         {
           "updateTime": "2026-09-05T01:49:35",
@@ -51,11 +51,11 @@
           "id": "ep32-hmi-v121-v2"
         },
         {
-          "updateTime": "2026-09-07T14:10:59",
-          "description": "【测试版本】OP助手调试版，仅用于配合 OP 助手排查导航语音与数据发布问题，导航期间会输出大量诊断日志，不明白它是干嘛的请不要下载安装，一般用户请选择上方稳定版。\n\n1. 修复当前道路限速 TTS 导致 HMI 重启：1.2.1 调试包此前漏打解析方法，现改为独立类并已纳入 APK\n2. 路线概览 TTS 中的“当前道路限速X”会直接发布为 road_speed，补足引擎道路限速回调为 0 的已知场景\n3. 仅匹配当前道路限速模板；摄像头、区间测速和超速提醒不参与道路限速补值，候选值在路名变化或导航停止时清除\n4. 保留 link_speed 诊断和落盘日志；本项仍待实车导航回归\n\n* 仅适用于 1.2.1，和你的车机版本对不上请勿下载",
-          "apk": "/enhancements/ep32-hmi-v66/5465f3f8dcb501e1.apk",
-          "sha256": "5465f3f8dcb501e12e117e9945b767b06aca713011397561e8c67cbdce105aaa",
-          "filesize": 323470971,
+          "updateTime": "2026-09-09T00:36:07",
+          "description": "【测试版本】哪吒地图增强版，仅适用于哪吒 L（EP32）车机系统 1.2.1。\n\n1. 支持 OP 领航，导航增强事件与 1.3.1 保持一致\n2. 保留原有绿灯倒计时，并增加巡航或导航多方向红绿灯显示\n3. 去除额外的灰黑气泡底；没有倒计时的灯不再预留数字空间，多灯会分别按实际内容排列\n4. 黄灯的方向灯珠改为黄橙底色；保留红灯、绿灯、黄灯、黄闪及无倒计时状态\n5. 设置页面可调整探测距离、播报风格、多灯大小、导航显示和运行日志\n\n* 不包含账号自动登录改动，也不包含导航或 TTS 诊断日志\n* 仅适用于 1.2.1，和你的车机版本不一致请勿下载",
+          "apk": "/enhancements/ep32-hmi-v66/e114681f6f8f086.apk",
+          "sha256": "e114681f6f8f086d144b73a3698bea64eb3bfe3224efba6a7cb924904e2824e7",
+          "filesize": 323913622,
           "compatibility": {
             "allOf": [
               {
@@ -70,7 +70,37 @@
             "stockPackageVersionName": "24.07.30.2141.3bff76c.P",
             "stockApkSha256": "0983aea8c1fd10f59c3a13f52a56155e4bb4fca12188252d92e985738bce73d0"
           },
-          "id": "ep32-hmi-v121-v3-test"
+          "id": "ep32-hmi-v121-v4-integrated-test"
+        }
+      ],
+      "simulation": false
+    },
+    {
+      "id": "ep40-launcher",
+      "name": "哪吒 S 地图",
+      "package": "com.hozonauto.launcher",
+      "versions": [
+        {
+          "updateTime": "2026-09-09T00:37:20",
+          "description": "【测试版本】哪吒 S 地图增强版，仅适用于车机系统 05.31.50、地图版本 24.08.27。\n\n1. 巡航或导航时可在地图路口旁显示多方向红绿灯状态和倒计时\n2. 去除额外的灰黑气泡底；没有倒计时的灯不再预留数字空间，多灯会分别按实际内容排列\n3. 黄灯直接使用 S 原包的黄橙灯珠，不复制 L 的小尺寸图片\n4. 设置页面可调整探测距离、播报风格、多灯大小、导航显示和运行日志\n5. 仅隐藏主地图上的原车灯态，HUD 红绿灯保持原逻辑\n\n* 不包含账号自动登录、OP 导航增强事件或导航/TTS 诊断日志\n* 本版本仍需实车验证，和你的车机版本不一致请勿下载",
+          "apk": "/enhancements/ep40-launcher/ac2b4661cbdd88b.apk",
+          "sha256": "ac2b4661cbdd88b1e9a35558e22ab071a186e0c09ba0656c0a57523bd8c405e5",
+          "filesize": 308907778,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "0"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.31.50"
+              }
+            ],
+            "stockPackageVersionName": "24.08.27.1944.e70ad52.P",
+            "stockApkSha256": "5598d08a78b943132eedcd2625878bea142d197cff4443591fcea605956f3548"
+          },
+          "id": "ep40-launcher-v2-integrated-test"
         }
       ],
       "simulation": false
