@@ -7,10 +7,10 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-09T23:01:37",
+          "updateTime": "2026-09-10T00:25:39",
           "description": "【测试版】只适用于哪吒 L（EP32）车机系统 1.3.1，其他车型或版本请勿使用。\n\n1. 【绿灯读秒】支持解锁「绿灯读秒」功能，让哪吒 L 也能显示绿灯倒计时\n2. 【纯电功能】支持为增程车型解锁纯电车型专属功能，查看电量、续航、预计到达时间和补能信息\n3. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n4. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n5. 【OP 助手】支持连接「OP 助手」，实现 Openpilot 领航辅助变道和控速\n6. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
-          "apk": "/enhancements/ep32-hmi-v66/aa8c0968e2c1a70e.apk",
-          "sha256": "aa8c0968e2c1a70e4e926e8b3102be5d2c3a989ee2980a0476287e1fa14ddaaf",
+          "apk": "/enhancements/ep32-hmi-v66/458cd5ea7e4fc137.apk",
+          "sha256": "458cd5ea7e4fc1379320e801fba780bcd6d40f46b80703797de70903e2db8549",
           "filesize": 329480603,
           "compatibility": {
             "allOf": [
@@ -26,7 +26,7 @@
             "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
             "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
           },
-          "id": "ep32-hmi-v66-v28-integrated-test"
+          "id": "ep32-hmi-v66-v29-ev-unlock-test"
         },
         {
           "updateTime": "2026-09-05T01:49:35",
@@ -51,11 +51,11 @@
           "id": "ep32-hmi-v121-v2"
         },
         {
-          "updateTime": "2026-09-09T23:02:00",
+          "updateTime": "2026-09-10T00:20:06",
           "description": "【测试版】只适用于哪吒 L（EP32）车机系统 1.2.1，其他车型或版本请勿使用。\n\n1. 【绿灯读秒】支持解锁「绿灯读秒」功能，让哪吒 L 也能显示绿灯倒计时\n2. 【纯电功能】支持为增程车型解锁纯电车型专属功能，查看电量、续航、预计到达时间和补能信息\n3. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n4. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n5. 【OP 助手】支持连接「OP 助手」，实现 Openpilot 领航辅助变道和控速\n6. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
-          "apk": "/enhancements/ep32-hmi-v66/10a2edfbea93c96d.apk",
-          "sha256": "10a2edfbea93c96d1f540110c77d6ec8d7711f1b50e5744a7852c2ac85d28240",
-          "filesize": 323930006,
+          "apk": "/enhancements/ep32-hmi-v66/5629ecdc8ac6976d.apk",
+          "sha256": "5629ecdc8ac6976d37af418c81b8021db7ac1c15116b9d79445d29a53fe70e9e",
+          "filesize": 323470971,
           "compatibility": {
             "allOf": [
               {
@@ -70,7 +70,7 @@
             "stockPackageVersionName": "24.07.30.2141.3bff76c.P",
             "stockApkSha256": "0983aea8c1fd10f59c3a13f52a56155e4bb4fca12188252d92e985738bce73d0"
           },
-          "id": "ep32-hmi-v121-v4-integrated-test"
+          "id": "ep32-hmi-v121-v5-ev-unlock-test"
         }
       ],
       "simulation": false
@@ -81,11 +81,11 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-09T23:25:44",
+          "updateTime": "2026-09-10T00:28:36",
           "description": "【测试版】只适用于哪吒 S 车机系统 05.31.50、地图版本 24.08.27，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持为增程车型解锁纯电车型专属功能，查看电量、续航、预计到达时间和补能信息\n2. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n3. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n4. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
-          "apk": "/enhancements/ep40-launcher/57d357a27cfae250.apk",
-          "sha256": "57d357a27cfae250f3cd8d48b0c698f99cdd2a6c7d3404528b63dcdad41303bb",
-          "filesize": 308907778,
+          "apk": "/enhancements/ep40-launcher/fe6387eee0dc7a65.apk",
+          "sha256": "fe6387eee0dc7a658aea860eb87e4191913eb86d43ed454f0020199cb4a1fc0c",
+          "filesize": 308907700,
           "compatibility": {
             "allOf": [
               {
@@ -100,7 +100,7 @@
             "stockPackageVersionName": "24.08.27.1944.e70ad52.P",
             "stockApkSha256": "5598d08a78b943132eedcd2625878bea142d197cff4443591fcea605956f3548"
           },
-          "id": "ep40-launcher-v2-integrated-test"
+          "id": "ep40-launcher-v3-ev-unlock-test"
         }
       ],
       "simulation": false
