@@ -104,6 +104,66 @@
         }
       ],
       "simulation": false
+    },
+    {
+      "id": "ep36-launcher",
+      "name": "哪吒 GT 地图",
+      "package": "com.hozonauto.launcher",
+      "versions": [
+        {
+          "updateTime": "2026-09-10T00:37:23",
+          "description": "【测试版】只适用于哪吒 GT 车机系统 05.28.03，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持为增程车型解锁纯电车型专属功能，查看电量、续航、预计到达时间和补能信息\n2. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n3. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n4. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
+          "apk": "/enhancements/ep36-launcher/88a387e7504c215e4.apk",
+          "sha256": "88a387e7504c215e4aa79b6f95784b52e24b6610d281982b01bddc8d695e5c05",
+          "filesize": 308876615,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "4"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.28.03"
+              }
+            ],
+            "stockPackageVersionName": "24.08.14.2014.24fef35.P",
+            "stockApkSha256": "86ff3b7f1e7d526a1d18fd5868be5a9aa360b5d20fffb791305345b5f6ccedca"
+          },
+          "id": "ep36-launcher-v1-integrated-test"
+        }
+      ],
+      "simulation": false
+    },
+    {
+      "id": "ep41-launcher",
+      "name": "哪吒 S 猎装地图",
+      "package": "com.hozonauto.launcher",
+      "versions": [
+        {
+          "updateTime": "2026-09-10T00:37:44",
+          "description": "【测试版】只适用于哪吒 S 猎装车机系统 05.31.85，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持为增程车型解锁纯电车型专属功能，查看电量、续航、预计到达时间和补能信息\n2. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n3. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n4. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
+          "apk": "/enhancements/ep41-launcher/864c93dddc337e95.apk",
+          "sha256": "864c93dddc337e95e4c70cc5119411e3d6faff6c1eb3a8a742e938a069caa799",
+          "filesize": 308942232,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "9"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.31.85"
+              }
+            ],
+            "stockPackageVersionName": "24.08.30.1904.70c2fb9.P",
+            "stockApkSha256": "e33107d8d9d2811b540f89c3167b0d09826386b64244857455f811aae96ec2e2"
+          },
+          "id": "ep41-launcher-v1-integrated-test"
+        }
+      ],
+      "simulation": false
     }
   ]
 }
