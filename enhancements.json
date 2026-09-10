@@ -81,10 +81,10 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-10T11:19:33",
+          "updateTime": "2026-09-10T13:50:22",
           "description": "只适用于哪吒 S 车机系统 05.31.50、地图版本 24.08.27，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎\n2. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n3. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n4. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
-          "apk": "/enhancements/ep40-launcher/aca13f9d128ace9b.apk",
-          "sha256": "aca13f9d128ace9bd63e52661cac1d1ef47d36ec417bd45ccb289c582d947da5",
+          "apk": "/enhancements/ep40-launcher/a992f8ab730eb4a4.apk",
+          "sha256": "a992f8ab730eb4a40b309871f1420c285338b3943eb0e8d65b0396bd8bf49820",
           "filesize": 308907778,
           "compatibility": {
             "allOf": [
@@ -100,7 +100,7 @@
             "stockPackageVersionName": "24.08.27.1944.e70ad52.P",
             "stockApkSha256": "5598d08a78b943132eedcd2625878bea142d197cff4443591fcea605956f3548"
           },
-          "id": "netamap-ep40-05.31.50-20260910-111933"
+          "id": "netamap-ep40-05.31.50-20260910-135022"
         }
       ],
       "simulation": false
@@ -111,10 +111,10 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-10T11:19:33",
+          "updateTime": "2026-09-10T13:50:22",
           "description": "只适用于哪吒 GT 车机系统 05.28.03，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎\n2. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n3. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n4. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
-          "apk": "/enhancements/ep36-launcher/f9ead1b3b2953ea2.apk",
-          "sha256": "f9ead1b3b2953ea2dae6131acc00fffd8623c7e1dcded1cb7ea986b86686fe7e",
+          "apk": "/enhancements/ep36-launcher/9c4fee7a42c6d882.apk",
+          "sha256": "9c4fee7a42c6d88256e54333656b0c7f3f5fe0c9eddd3258ef59a3c64d352b9e",
           "filesize": 308876615,
           "compatibility": {
             "allOf": [
@@ -130,7 +130,7 @@
             "stockPackageVersionName": "24.08.14.2014.24fef35.P",
             "stockApkSha256": "86ff3b7f1e7d526a1d18fd5868be5a9aa360b5d20fffb791305345b5f6ccedca"
           },
-          "id": "netamap-ep36-05.28.03-20260910-111933"
+          "id": "netamap-ep36-05.28.03-20260910-135022"
         }
       ],
       "simulation": false
@@ -141,10 +141,10 @@
       "package": "com.hozonauto.launcher",
       "versions": [
         {
-          "updateTime": "2026-09-10T11:19:33",
+          "updateTime": "2026-09-10T13:50:22",
           "description": "只适用于哪吒 S 猎装车机系统 05.31.85，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎\n2. 【巡航红绿灯】未开启导航时也可显示巡航红绿灯，支持多个灯组同时展示，并沿用原车倒计时样式\n3. 【导航多灯】导航时支持展示多个信号灯，可分别调节主要信号灯和辅助信号灯的显示大小\n4. 【专属设置】可通过原车地图中的「地图设置」打开「美式专属设置」，分别调节主要信号灯、辅助信号灯的显示大小，以及巡航红绿灯的探测距离",
-          "apk": "/enhancements/ep41-launcher/a5fd40d327b61498.apk",
-          "sha256": "a5fd40d327b61498b56c60ba4ba3eabc9c4852c60fb646537f47b76b12a495f4",
+          "apk": "/enhancements/ep41-launcher/5f88f301b76249a7.apk",
+          "sha256": "5f88f301b76249a7af222d6ae1cad0758a8bec0fdcdf3526c1624c66749ae3f8",
           "filesize": 308942232,
           "compatibility": {
             "allOf": [
@@ -160,7 +160,7 @@
             "stockPackageVersionName": "24.08.30.1904.70c2fb9.P",
             "stockApkSha256": "e33107d8d9d2811b540f89c3167b0d09826386b64244857455f811aae96ec2e2"
           },
-          "id": "netamap-ep41-05.31.85-20260910-111933"
+          "id": "netamap-ep41-05.31.85-20260910-135022"
         }
       ],
       "simulation": false
