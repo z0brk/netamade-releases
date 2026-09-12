@@ -88,7 +88,7 @@ def format_update_time(value: str) -> str:
 @app.template_filter("update_time_input")
 def format_update_time_input(value: str) -> str:
     try:
-        return EnhancementManager.normalize_update_time(value)
+        return EnhancementManager.normalize_update_time(value).replace(" ", "T")
     except ValueError:
         return ""
 

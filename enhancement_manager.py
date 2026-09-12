@@ -7,6 +7,7 @@ import re
 import shutil
 import uuid
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from typing import Any
 
@@ -33,6 +34,23 @@ class EnhancementManager:
         return data
 
     def save_data(self, data: dict[str, Any]) -> None:
+        # 只约束本次新增或修改的时间，历史版本保持原样。
+        previous = json.loads(self.json_path.read_text(encoding="utf-8")) if self.json_path.exists() else {}
+        old_times = {(entry.get("id"), version.get("id")): version.get("updateTime")
+                     for entry in previous.get("enhancements", []) for version in entry.get("versions", [])}
+        legacy_versions = {(entry.get("id"), json.dumps({k: v for k, v in version.items() if k != "id"}, sort_keys=True))
+                           for entry in previous.get("enhancements", [])
+                           for version in entry.get("versions", []) if not version.get("id")}
+        for entry in data.get("enhancements", []):
+            for version in entry.get("versions", []):
+                key = (entry.get("id"), version.get("id"))
+                value = version.get("updateTime", "")
+                # load_data 给旧版本补 ID 时只改变身份，不改历史时间。
+                without_id = {name: content for name, content in version.items() if name != "id"}
+                legacy_only = (entry.get("id"), json.dumps(without_id, sort_keys=True)) in legacy_versions
+                if not legacy_only and (key not in old_times or value != old_times[key]):
+                    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}", value) or self.normalize_update_time(value) != value:
+                        raise ValueError("updateTime 必须为北京时间 YYYY-MM-DD HH:mm:ss，不含时区")
         self.json_path.parent.mkdir(parents=True, exist_ok=True)
         temp = self.json_path.with_suffix(".json.tmp")
         temp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -41,7 +59,10 @@ class EnhancementManager:
     @staticmethod
     def normalize_update_time(value: str) -> str:
         try:
-            return datetime.fromisoformat(value.strip()).replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%S")
+            moment = datetime.fromisoformat(value.strip())
+            if moment.tzinfo is None:
+                moment = moment.replace(tzinfo=ZoneInfo("Asia/Shanghai"))
+            return moment.astimezone(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S")
         except ValueError as error:
             raise ValueError("更新时间格式无效") from error
 
