@@ -1,9 +1,9 @@
 {
-  "versionName": "5.0.7-TEST-0917_2046",
+  "versionName": "5.0.7-TEST-0917_2233",
   "versionCode": 222,
   "testing": true,
-  "buildTime": "2026-09-17 20:46:06",
-  "releaseVersion": "v5.0.7-TEST-0917_2046-testing",
-  "releaseFilename": "netamade-testing-5.0.7-TEST-0917_2046-222.apk",
-  "apkMd5": "32bb4ba87795387aeacfd8cbaaa3b32b"
+  "buildTime": "2026-09-17 22:33:31",
+  "releaseVersion": "v5.0.7-TEST-0917_2233-testing",
+  "releaseFilename": "netamade-testing-5.0.7-TEST-0917_2233-222.apk",
+  "apkMd5": "a059eb7aa913e4024c63d9849d2e9858"
 }
