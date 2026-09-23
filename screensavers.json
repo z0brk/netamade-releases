@@ -2,6 +2,1108 @@
   "schemaVersion": 1,
   "screensavers": [
     {
+      "id": "3862f44d9124",
+      "name": "水下游泳的猫咪",
+      "meaning": "橘白小猫潜入清澈水中与小鱼、气泡同游，梦幻治愈的童趣画面。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1079,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-3862f44d/08ba2d9aad80.jpg",
+      "preview": "/screensaver-3862f44d/preview.webp",
+      "md5sum": "08ba2d9aad801db22acba81c64e84805",
+      "filesize": 341409,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "b7d069cf4c6c",
+      "name": "人民万岁·伟人挥别",
+      "meaning": "开国领袖在天安门城楼上向群众挥手，配文“人民喊他万岁，他喊人民万岁”，红色主旋律爱国主题。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b7d069cf/0c40d6841213.jpg",
+      "preview": "/screensaver-b7d069cf/preview.webp",
+      "md5sum": "0c40d68412138f21cda4ec641d3bc6bc",
+      "filesize": 463427,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "cc9d6841ce9f",
+      "name": "唐僧贵妃穿越夜都市",
+      "meaning": "古装人物推着购物车穿行现代城市夜景，古今反差带来穿越趣味。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-cc9d6841/11619252d9e4.jpg",
+      "preview": "/screensaver-cc9d6841/preview.webp",
+      "md5sum": "11619252d9e42ea0ee6cb3c0b6f0806c",
+      "filesize": 625782,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "704bb6dd4bb0",
+      "name": "奶龙举旗小火车",
+      "meaning": "呆萌奶龙举起小红旗，身旁红色小火车驶过蓝天白云，可爱童趣。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-704bb6dd/11c40073c08d.jpg",
+      "preview": "/screensaver-704bb6dd/preview.webp",
+      "md5sum": "11c40073c08d0e01681cf94ea5ea1ebc",
+      "filesize": 235831,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "f6ccb50a9e3a",
+      "name": "海贼王群像",
+      "meaning": "《海贼王》草帽一伙全员集结的热血动漫画面。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1081,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-f6ccb50a/19482929111f.jpg",
+      "preview": "/screensaver-f6ccb50a/preview.webp",
+      "md5sum": "19482929111f2311a8040c477186ab8e",
+      "filesize": 648932,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "动漫二次元"
+    },
+    {
+      "id": "ca3d9330bb37",
+      "name": "奶龙花园挥手",
+      "meaning": "奶龙在鲜花阳台前开心挥手，碧海蓝天，清新治愈。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-ca3d9330/1ab12ff258dd.jpg",
+      "preview": "/screensaver-ca3d9330/preview.webp",
+      "md5sum": "1ab12ff258dd046fb138090ae9def1de",
+      "filesize": 238115,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "7cfc16b66d3a",
+      "name": "菩萨会保佑我",
+      "meaning": "金色佛像配网络流行语“无所谓，菩萨会保佑我”，佛系幽默。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-7cfc16b6/235a5f595b4d.jpg",
+      "preview": "/screensaver-7cfc16b6/preview.webp",
+      "md5sum": "235a5f595b4d32b82b6686323d7e525a",
+      "filesize": 289315,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "其他"
+    },
+    {
+      "id": "b68a509def6b",
+      "name": "古装游迪士尼",
+      "meaning": "古装人物乘坐游览车驶入迪士尼城堡，古今梦幻同框。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b68a509d/27c6bb876d6a.jpg",
+      "preview": "/screensaver-b68a509d/preview.webp",
+      "md5sum": "27c6bb876d6afa240a88aab04f9f730c",
+      "filesize": 375437,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "2d23d06a1339",
+      "name": "樱花白裙少女",
+      "meaning": "一群白裙女孩在樱花树下回眸合影，青春清新。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-2d23d06a/2b85f570b8e6.jpg",
+      "preview": "/screensaver-2d23d06a/preview.webp",
+      "md5sum": "2b85f570b8e60f6aa3428f23328a55fb",
+      "filesize": 466573,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "人物群像"
+    },
+    {
+      "id": "4e184837fadb",
+      "name": "奶龙花园闲坐",
+      "meaning": "奶龙靠在花园栏杆边，绿树蓝天，悠闲治愈。",
+      "type": "IMAGE",
+      "width": 1290,
+      "height": 712,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-4e184837/2c4b62070eef.jpg",
+      "preview": "/screensaver-4e184837/preview.webp",
+      "md5sum": "2c4b62070eefd99b4d56342f32db6391",
+      "filesize": 230855,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "64ce4a7269cd",
+      "name": "佛系少女·与世无争",
+      "meaning": "红发卡通少女配“冷静、保持理智、与世无争”的佛系正能量标语。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-64ce4a72/30aa0bcd9c15.jpg",
+      "preview": "/screensaver-64ce4a72/preview.webp",
+      "md5sum": "30aa0bcd9c15d382aefddcad80e14487",
+      "filesize": 429012,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "其他"
+    },
+    {
+      "id": "6ccca933db9f",
+      "name": "国徽耀云海",
+      "meaning": "金色阳光洒在壮阔云海之上，中华人民共和国国徽庄严生辉，爱国主题。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1078,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-6ccca933/36ce601faed2.jpg",
+      "preview": "/screensaver-6ccca933/preview.webp",
+      "md5sum": "36ce601faed2bbd3b0ac6e6646054ede",
+      "filesize": 381999,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "ec7326518b38",
+      "name": "为人民服务",
+      "meaning": "红底书法“为人民服务”，党的根本宗旨，红色爱国主题。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1078,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-ec732651/3a7155dcd88b.jpg",
+      "preview": "/screensaver-ec732651/preview.webp",
+      "md5sum": "3a7155dcd88b4a51f1398f4a053a7b21",
+      "filesize": 137049,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "f22f4d645bd0",
+      "name": "奶龙秋日拾果",
+      "meaning": "奶龙抱着果篮走过秋日湖畔，金黄落叶，丰收治愈。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-f22f4d64/3bcfa06eee89.jpg",
+      "preview": "/screensaver-f22f4d64/preview.webp",
+      "md5sum": "3bcfa06eee89d6bd6412a2ebe2e22ca8",
+      "filesize": 274655,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "3ce5813458f3",
+      "name": "伟大复兴·势不可挡",
+      "meaning": "党徽高悬天安门城楼，标语“伟大复兴 势不可挡”，红旗飘扬，爱国主旋律。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-3ce58134/411e9c64eef0.jpg",
+      "preview": "/screensaver-3ce58134/preview.webp",
+      "md5sum": "411e9c64eef0b8281ea56c069c1f8d51",
+      "filesize": 406041,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "28579e3c076b",
+      "name": "吾辈青春卫中华",
+      "meaning": "红底党徽配“愿以吾辈之青春，捍卫盛世之中华”，青年爱国宣言。",
+      "type": "IMAGE",
+      "width": 1562,
+      "height": 856,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-28579e3c/4ada06021645.jpg",
+      "preview": "/screensaver-28579e3c/preview.webp",
+      "md5sum": "4ada060216454403bb43642dbc282577",
+      "filesize": 70006,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "d0f1b17d69c6",
+      "name": "伟人寄语·永远不要抱怨",
+      "meaning": "领袖肖像与语录“永远不要抱怨”，红色励志爱国主题。",
+      "type": "IMAGE",
+      "width": 1290,
+      "height": 716,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-d0f1b17d/4bd648203ec6.jpg",
+      "preview": "/screensaver-d0f1b17d/preview.webp",
+      "md5sum": "4bd648203ec66f631be07945a0c81e37",
+      "filesize": 189567,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "09371fed378a",
+      "name": "伟人寄语·静夜版",
+      "meaning": "暖色剪影中的领袖肖像与“永远不要抱怨”语录，沉稳励志。",
+      "type": "IMAGE",
+      "width": 1918,
+      "height": 959,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-09371fed/5399bd887c02.jpg",
+      "preview": "/screensaver-09371fed/preview.webp",
+      "md5sum": "5399bd887c02e76c44fe3482599a4686",
+      "filesize": 345965,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "26db3f96c4a1",
+      "name": "樱桃小丸子",
+      "meaning": "樱桃小丸子吐舌做鬼脸，彩色涂鸦背景，童年动漫回忆。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-26db3f96/57403eef71ba.jpg",
+      "preview": "/screensaver-26db3f96/preview.webp",
+      "md5sum": "57403eef71ba8699e63c0c3f6f9b94ea",
+      "filesize": 488926,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "动漫二次元"
+    },
+    {
+      "id": "32b00e66af45",
+      "name": "女皇专座",
+      "meaning": "红底烫金“女皇专座”配玫瑰花瓣，霸气幽默标语。",
+      "type": "IMAGE",
+      "width": 1918,
+      "height": 825,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-32b00e66/5f3bff5be120.jpg",
+      "preview": "/screensaver-32b00e66/preview.webp",
+      "md5sum": "5f3bff5be1201736a756477ea7021fec",
+      "filesize": 152139,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "其他"
+    },
+    {
+      "id": "cf2e440fab1b",
+      "name": "年画娃娃·早日发财",
+      "meaning": "古装年画娃娃合掌祈福，配“保佑我，早日发财赚大钱”，喜庆招财。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1053,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-cf2e440f/641a2711a256.jpg",
+      "preview": "/screensaver-cf2e440f/preview.webp",
+      "md5sum": "641a2711a2561b4a1c1b73bf99a1e966",
+      "filesize": 203203,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "节日喜庆"
+    },
+    {
+      "id": "44ba5be32abd",
+      "name": "国徽金龙·盛世华章",
+      "meaning": "国徽之下金龙腾跃于红绸之上，寓意盛世繁荣的爱国主题。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1078,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-44ba5be3/64ba85a2a37d.jpg",
+      "preview": "/screensaver-44ba5be3/preview.webp",
+      "md5sum": "64ba85a2a37d2fdcde61393eab1dfa9b",
+      "filesize": 490533,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "005b8b8ca44d",
+      "name": "奶龙星空晚安",
+      "meaning": "奶龙躺在星光帐篷里，夜晚温馨，助眠治愈。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-005b8b8c/65af071d1425.jpg",
+      "preview": "/screensaver-005b8b8c/preview.webp",
+      "md5sum": "65af071d142579a3db90c01458440e8f",
+      "filesize": 231871,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "6c6bcc0da7f0",
+      "name": "奶龙雪国圣诞",
+      "meaning": "奶龙置身雪地小镇，雪人彩灯，冬日温馨。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1081,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-6c6bcc0d/6f4e7ae15e00.jpg",
+      "preview": "/screensaver-6c6bcc0d/preview.webp",
+      "md5sum": "6f4e7ae15e006d5c7723590bfb9a0cb2",
+      "filesize": 394204,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "节日喜庆"
+    },
+    {
+      "id": "fd194bf18222",
+      "name": "古装夜泊江桥",
+      "meaning": "古装人物月夜立于江桥栏杆，宫灯映水，唯美古风。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-fd194bf1/70bcec36f553.jpg",
+      "preview": "/screensaver-fd194bf1/preview.webp",
+      "md5sum": "70bcec36f553fa7bc9f737a45bb27282",
+      "filesize": 380843,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "bf5f220ad0aa",
+      "name": "古装跃动都市",
+      "meaning": "古装人物在现代都市街头雀跃，古今碰撞的活力反差。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-bf5f220a/71fcc78d2417.jpg",
+      "preview": "/screensaver-bf5f220a/preview.webp",
+      "md5sum": "71fcc78d24173ad913c5d376bca71458",
+      "filesize": 635682,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "3027b9924e72",
+      "name": "伟人寄语·红色宣言",
+      "meaning": "红绸背景中的领袖肖像与“永远不要抱怨”语录，爱国励志。",
+      "type": "IMAGE",
+      "width": 1918,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-3027b992/73b674e2f85d.jpg",
+      "preview": "/screensaver-3027b992/preview.webp",
+      "md5sum": "73b674e2f85d7c86825bb3472d77126e",
+      "filesize": 398831,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "eb03c0641e9b",
+      "name": "好好学习·天天向上",
+      "meaning": "领袖与少年儿童在一起，题词“好好学习，天天向上”，教育爱国主题。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-eb03c064/79879616eb03.jpg",
+      "preview": "/screensaver-eb03c064/preview.webp",
+      "md5sum": "79879616eb037d80fdabb99d6f9fb3bd",
+      "filesize": 460294,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "54301d1d3065",
+      "name": "哆啦A梦",
+      "meaning": "哆啦A梦与百宝袋，蓝色梦幻天空，童年动漫经典。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-54301d1d/86f8337e2d84.jpg",
+      "preview": "/screensaver-54301d1d/preview.webp",
+      "md5sum": "86f8337e2d84013cbf469dcd7b157b7e",
+      "filesize": 322615,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "动漫二次元"
+    },
+    {
+      "id": "3697f90fb5c3",
+      "name": "奶龙童年积木",
+      "meaning": "奶龙在洒满阳光的房间里玩积木，童真温暖。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-3697f90f/87163f6e21d6.jpg",
+      "preview": "/screensaver-3697f90f/preview.webp",
+      "md5sum": "87163f6e21d62ce517451af146b35675",
+      "filesize": 215453,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "96b6a060f905",
+      "name": "古装夜市温情",
+      "meaning": "古装男女在夜色小吃街相视而笑，市井烟火温情。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-96b6a060/8c367619ac54.jpg",
+      "preview": "/screensaver-96b6a060/preview.webp",
+      "md5sum": "8c367619ac54e263ae4c37941d1dbf10",
+      "filesize": 555627,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "94c5fc61a4eb",
+      "name": "奶龙粉红派对",
+      "meaning": "奶龙在粉红蛋糕与礼物间欢笑，浪漫甜美。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-94c5fc61/8e2deb60a4e1.jpg",
+      "preview": "/screensaver-94c5fc61/preview.webp",
+      "md5sum": "8e2deb60a4e108cf486368d8b431c767",
+      "filesize": 208682,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "147bc6e22956",
+      "name": "国风舞台群舞",
+      "meaning": "红衣舞者在传统戏台上起舞，尽显国风之美。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-147bc6e2/90fc421be372.jpg",
+      "preview": "/screensaver-147bc6e2/preview.webp",
+      "md5sum": "90fc421be372ffb11f1873012cd2e085",
+      "filesize": 958616,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "640457ab88a8",
+      "name": "奶龙气球花海",
+      "meaning": "奶龙手持五彩气球立于花海，晴空万里，欢快治愈。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-640457ab/96951c3fece6.jpg",
+      "preview": "/screensaver-640457ab/preview.webp",
+      "md5sum": "96951c3fece6fafdc96b9b05124b9725",
+      "filesize": 225568,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "9e3b5ba7e8b9",
+      "name": "古装美食街",
+      "meaning": "古装人物流连于灯火通明的小吃街，人间烟火气。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-9e3b5ba7/99f39a8453ec.jpg",
+      "preview": "/screensaver-9e3b5ba7/preview.webp",
+      "md5sum": "99f39a8453ecacaf802fb8fe664b6531",
+      "filesize": 618735,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "6ec473c44397",
+      "name": "蓝天绿野的小火车",
+      "meaning": "红色列车驶过绿野与蓝天白云，清新治愈风景。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-6ec473c4/9dcbb41d0980.jpg",
+      "preview": "/screensaver-6ec473c4/preview.webp",
+      "md5sum": "9dcbb41d09800a98ae845fac8d0c2468",
+      "filesize": 489271,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "风景大片"
+    },
+    {
+      "id": "8e4a21d72d67",
+      "name": "清澈的爱只为中国",
+      "meaning": "红底金色五星配“清澈的爱，只为中国”，致敬戍边英雄的爱国主题。",
+      "type": "IMAGE",
+      "width": 1440,
+      "height": 810,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-8e4a21d7/a228c0b8af13.jpg",
+      "preview": "/screensaver-8e4a21d7/preview.webp",
+      "md5sum": "a228c0b8af1345f178d0ef7bec5f6706",
+      "filesize": 89576,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "c06df1b2c064",
+      "name": "海绵宝宝",
+      "meaning": "海绵宝宝与派大星们齐聚比奇堡，欢乐卡通。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-c06df1b2/a822a42c629e.jpg",
+      "preview": "/screensaver-c06df1b2/preview.webp",
+      "md5sum": "a822a42c629e33ebf9f80710d06314d1",
+      "filesize": 329386,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "动漫二次元"
+    },
+    {
+      "id": "972d334fd26b",
+      "name": "胜似闲庭信步",
+      "meaning": "领袖身影立于惊涛之上，配毛泽东诗词“不管风吹浪打，胜似闲庭信步”。",
+      "type": "IMAGE",
+      "width": 1674,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-972d334f/a8a8fc880f46.jpg",
+      "preview": "/screensaver-972d334f/preview.webp",
+      "md5sum": "a8a8fc880f465bba46df4f86f8d4bdfa",
+      "filesize": 706671,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "3b4bf6c0e96d",
+      "name": "樱花白裙合影",
+      "meaning": "白裙女孩在樱花枝下伸展合影，青春明媚。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-3b4bf6c0/af8939c172f2.jpg",
+      "preview": "/screensaver-3b4bf6c0/preview.webp",
+      "md5sum": "af8939c172f27b055e93dbcc98109a8f",
+      "filesize": 680144,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "人物群像"
+    },
+    {
+      "id": "55c6c8bef86e",
+      "name": "古装雨夜共伞",
+      "meaning": "古装男女在城市雨夜共撑一伞，霓虹倒影，浪漫唯美。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-55c6c8be/ba227b33df55.jpg",
+      "preview": "/screensaver-55c6c8be/preview.webp",
+      "md5sum": "ba227b33df55ff93033fe63badae4cb4",
+      "filesize": 683185,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "e9546416121a",
+      "name": "人民万岁·盛典",
+      "meaning": "领袖在天安门广场向群众挥手，配“人民喊他万岁，他喊人民万岁”，国庆盛典。",
+      "type": "IMAGE",
+      "width": 1258,
+      "height": 708,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-e9546416/bea3e3b51226.jpg",
+      "preview": "/screensaver-e9546416/preview.webp",
+      "md5sum": "bea3e3b51226954f6568fac6f7c6bf35",
+      "filesize": 212267,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "a92304d7d568",
+      "name": "奶龙星光晚安",
+      "meaning": "奶龙躺在星空被窝里安睡，温柔治愈。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a92304d7/c1c445953bd4.jpg",
+      "preview": "/screensaver-a92304d7/preview.webp",
+      "md5sum": "c1c445953bd4d19a8b6fef90011dd649",
+      "filesize": 196261,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "a54ef8e8feb8",
+      "name": "傲娇灰猫",
+      "meaning": "灰色猫咪戴着黄围巾、穿蓝马甲傲娇侧目，红底表情包。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a54ef8e8/c3d56ba097cc.jpg",
+      "preview": "/screensaver-a54ef8e8/preview.webp",
+      "md5sum": "c3d56ba097ccbb821e5aa8b89477cc67",
+      "filesize": 222743,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
+      "id": "4b5175162c00",
+      "name": "高铁站制服丽人",
+      "meaning": "一群制服女孩拉着行李箱立于高铁站台，干练时尚。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-4b517516/cde8e908e276.jpg",
+      "preview": "/screensaver-4b517516/preview.webp",
+      "md5sum": "cde8e908e276d2f9d30acc0e8c475b01",
+      "filesize": 457726,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "人物群像"
+    },
+    {
+      "id": "5a247262c3c6",
+      "name": "蜡笔小新",
+      "meaning": "蜡笔小新在街道搞怪摆姿势，童年动漫经典。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-5a247262/d009a6339d09.jpg",
+      "preview": "/screensaver-5a247262/preview.webp",
+      "md5sum": "d009a6339d095e49e219e1588c28cbe7",
+      "filesize": 338661,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "动漫二次元"
+    },
+    {
+      "id": "64b3e8a04e61",
+      "name": "樱花白裙少女群像",
+      "meaning": "白裙女孩们在樱花树下合影，清新浪漫。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-64b3e8a0/d2035c413529.jpg",
+      "preview": "/screensaver-64b3e8a0/preview.webp",
+      "md5sum": "d2035c413529f080b02bf14d1f7d020b",
+      "filesize": 478169,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "人物群像"
+    },
+    {
+      "id": "c457b03dfff4",
+      "name": "古装打卡兵马俑",
+      "meaning": "古装人物在秦始皇帝陵博物院前互动，古今穿越打卡。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-c457b03d/d3206e6cab2f.jpg",
+      "preview": "/screensaver-c457b03d/preview.webp",
+      "md5sum": "d3206e6cab2f176993ac48e5159d5a43",
+      "filesize": 535545,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "f77b6f7f8a7a",
+      "name": "站台制服丽人团",
+      "meaning": "制服女孩们整齐列队于站台，青春靓丽。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-f77b6f7f/d8fe2fc1fcd0.jpg",
+      "preview": "/screensaver-f77b6f7f/preview.webp",
+      "md5sum": "d8fe2fc1fcd042b6461f672959e35464",
+      "filesize": 375520,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "人物群像"
+    },
+    {
+      "id": "0c72eda4797f",
+      "name": "龙珠·超级赛亚人",
+      "meaning": "《龙珠》孙悟空爆气变身，热血动漫。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1075,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-0c72eda4/dc5e26d638bb.jpg",
+      "preview": "/screensaver-0c72eda4/preview.webp",
+      "md5sum": "dc5e26d638bbec7e43bee4e6b5d5cbd7",
+      "filesize": 448768,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "动漫二次元"
+    },
+    {
+      "id": "cabce14a4458",
+      "name": "碧海银沙",
+      "meaning": "碧绿海水与洁白沙滩，如马尔代夫般的度假治愈风景。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-cabce14a/e172863cbb3a.jpg",
+      "preview": "/screensaver-cabce14a/preview.webp",
+      "md5sum": "e172863cbb3a26ace6d061a733c887d1",
+      "filesize": 333518,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "风景大片"
+    },
+    {
+      "id": "e71859ac7ad0",
+      "name": "海绵宝宝与派大星",
+      "meaning": "海绵宝宝和派大星手忙脚乱的欢乐场景。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-e71859ac/e717dfc9d83e.jpg",
+      "preview": "/screensaver-e71859ac/preview.webp",
+      "md5sum": "e717dfc9d83ee9c85317feaf19f88b2f",
+      "filesize": 361074,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "动漫二次元"
+    },
+    {
+      "id": "565b6a40a396",
+      "name": "伟人寄语·山河",
+      "meaning": "领袖身影与壮阔山河日出，配“永远不要抱怨”语录，爱国励志。",
+      "type": "IMAGE",
+      "width": 1674,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-565b6a40/ee11d09d29f1.jpg",
+      "preview": "/screensaver-565b6a40/preview.webp",
+      "md5sum": "ee11d09d29f15caa6fdf437c5241631e",
+      "filesize": 524952,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "b9b9378457a3",
+      "name": "古装巴黎浪漫",
+      "meaning": "古装情侣在巴黎埃菲尔铁塔下相拥，玫瑰与日落，穿越浪漫。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1280,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-b9b93784/ef4bb35ade55.jpg",
+      "preview": "/screensaver-b9b93784/preview.webp",
+      "md5sum": "ef4bb35ade555bcb6c6102e987461909",
+      "filesize": 609329,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "国风古韵"
+    },
+    {
+      "id": "202b7bb3e386",
+      "name": "祖国·红旗飘扬",
+      "meaning": "国徽高悬，红旗与天安门相映，庄严的爱国主题。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-202b7bb3/f2968ebf776d.jpg",
+      "preview": "/screensaver-202b7bb3/preview.webp",
+      "md5sum": "f2968ebf776d7369202fa15547a4525d",
+      "filesize": 419509,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "a81f1e528031",
+      "name": "八一·红星闪耀",
+      "meaning": "红底金色五角星与“八一”字样，致敬中国人民解放军。",
+      "type": "IMAGE",
+      "width": 1919,
+      "height": 1078,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-a81f1e52/f613210b8e97.jpg",
+      "preview": "/screensaver-a81f1e52/preview.webp",
+      "md5sum": "f613210b8e971cc4542929091e5767d5",
+      "filesize": 69489,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "062840e63bc6",
+      "name": "盛世国徽·金龙献瑞",
+      "meaning": "金色国徽浮雕配金龙与红绸，恢弘庄重。",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 1080,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-062840e6/f9b54eb55949.jpg",
+      "preview": "/screensaver-062840e6/preview.webp",
+      "md5sum": "f9b54eb559496bd27f7161a3e2909dc8",
+      "filesize": 702175,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "爱国主旋律"
+    },
+    {
+      "id": "250549008be8",
+      "name": "奶龙雨后荷叶",
+      "meaning": "奶龙举着荷叶在雨后花丛中微笑，清新治愈。",
+      "type": "IMAGE",
+      "width": 1672,
+      "height": 942,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_SECONDARY_FULL"
+      ],
+      "file": "/screensaver-25054900/ff16e107ea50.jpg",
+      "preview": "/screensaver-25054900/preview.webp",
+      "md5sum": "ff16e107ea503291767229221381ff59",
+      "filesize": 257533,
+      "updateTime": "2026-09-23T06:21:10Z",
+      "category": "萌宠治愈"
+    },
+    {
       "id": "ee982e36b6b4",
       "name": "2026发财雪景",
       "type": "VIDEO",
@@ -16,7 +1118,8 @@
       "preview": "/screensaver-ee982e36/preview.webp",
       "md5sum": "21cb6577c0155972486a7bdd39bbe3bb",
       "filesize": 692492,
-      "updateTime": "2026-07-17T04:10:50Z"
+      "updateTime": "2026-07-17T04:10:50Z",
+      "category": "节日喜庆"
     },
     {
       "id": "a5907313f265",
@@ -33,7 +1136,8 @@
       "preview": "/screensaver-a5907313/preview.webp",
       "md5sum": "22e169cee238f681dc0c4726f5d7fd91",
       "filesize": 1032951,
-      "updateTime": "2026-07-17T04:10:50Z"
+      "updateTime": "2026-07-17T04:10:50Z",
+      "category": "节日喜庆"
     },
     {
       "id": "5e2578d9e212",
@@ -50,7 +1154,8 @@
       "preview": "/screensaver-5e2578d9/preview.webp",
       "md5sum": "3bc7724835d82958309f06f633d95559",
       "filesize": 351559,
-      "updateTime": "2026-07-17T04:10:50Z"
+      "updateTime": "2026-07-17T04:10:50Z",
+      "category": "动漫二次元"
     },
     {
       "id": "ba651e7de0cc",
@@ -67,7 +1172,8 @@
       "preview": "/screensaver-ba651e7d/preview.webp",
       "md5sum": "492156eaeffaed5127a8367c4d2aa0b9",
       "filesize": 1517350,
-      "updateTime": "2026-07-17T04:10:50Z"
+      "updateTime": "2026-07-17T04:10:50Z",
+      "category": "动漫二次元"
     },
     {
       "id": "2e3b8cc554f6",
@@ -83,7 +1189,8 @@
       "preview": "/screensaver-2e3b8cc5/preview.webp",
       "md5sum": "2b7c93e253c3f0b584ef89cea8aadb84",
       "filesize": 2917048,
-      "updateTime": "2026-07-17T04:10:50Z"
+      "updateTime": "2026-07-17T04:10:50Z",
+      "category": "动漫二次元"
     },
     {
       "id": "cafc7360828c",
@@ -100,7 +1207,8 @@
       "preview": "/screensaver-cafc7360/preview.webp",
       "md5sum": "95b9365ebe7ac50a5b8efb2b10a0fa3e",
       "filesize": 484305,
-      "updateTime": "2026-07-17T04:10:51Z"
+      "updateTime": "2026-07-17T04:10:51Z",
+      "category": "国风古韵"
     },
     {
       "id": "b39d26ceb6da",
@@ -116,7 +1224,8 @@
       "preview": "/screensaver-b39d26ce/preview.webp",
       "md5sum": "e255e9c2afa88b425861e58e6702d960",
       "filesize": 11907859,
-      "updateTime": "2026-07-17T04:10:51Z"
+      "updateTime": "2026-07-17T04:10:51Z",
+      "category": "动漫二次元"
     },
     {
       "id": "662fc60bed7d",
@@ -133,7 +1242,8 @@
       "preview": "/screensaver-662fc60b/preview.webp",
       "md5sum": "af9524496af50adad0558af76f49a593",
       "filesize": 1381740,
-      "updateTime": "2026-07-17T04:10:51Z"
+      "updateTime": "2026-07-17T04:10:51Z",
+      "category": "动漫二次元"
     },
     {
       "id": "b000805189ba",
@@ -150,7 +1260,8 @@
       "preview": "/screensaver-b0008051/preview.webp",
       "md5sum": "14826724032d4e281262d322791c26a5",
       "filesize": 2962748,
-      "updateTime": "2026-07-17T04:10:51Z"
+      "updateTime": "2026-07-17T04:10:51Z",
+      "category": "动漫二次元"
     },
     {
       "id": "86de5916e0a2",
@@ -167,7 +1278,8 @@
       "preview": "/screensaver-86de5916/preview.webp",
       "md5sum": "68538961d7e86837844f38857e5bcae4",
       "filesize": 1287722,
-      "updateTime": "2026-07-17T04:10:51Z"
+      "updateTime": "2026-07-17T04:10:51Z",
+      "category": "国风古韵"
     },
     {
       "id": "1fac64099e3c",
@@ -184,7 +1296,8 @@
       "preview": "/screensaver-1fac6409/preview.webp",
       "md5sum": "8dbe78eb27a6c74273e4e2ea3c212c50",
       "filesize": 292612,
-      "updateTime": "2026-07-17T04:10:51Z"
+      "updateTime": "2026-07-17T04:10:51Z",
+      "category": "动漫二次元"
     },
     {
       "id": "f9ef3de4c893",
@@ -201,7 +1314,8 @@
       "preview": "/screensaver-f9ef3de4/preview.webp",
       "md5sum": "b6cba331b0a40df71131744378d7f703",
       "filesize": 1863882,
-      "updateTime": "2026-07-17T04:10:51Z"
+      "updateTime": "2026-07-17T04:10:51Z",
+      "category": "动漫二次元"
     },
     {
       "id": "a22f6c295426",
@@ -217,7 +1331,8 @@
       "preview": "/screensaver-a22f6c29/preview.webp",
       "md5sum": "4073764d99c5ed0f65eabdcc909c1058",
       "filesize": 112340,
-      "updateTime": "2026-07-17T04:10:52Z"
+      "updateTime": "2026-07-17T04:10:52Z",
+      "category": "国风古韵"
     },
     {
       "id": "a1f32915622d",
@@ -233,7 +1348,8 @@
       "preview": "/screensaver-a1f32915/preview.webp",
       "md5sum": "603d1d27bcd59644905a3e92b78e0188",
       "filesize": 105992,
-      "updateTime": "2026-07-17T04:10:52Z"
+      "updateTime": "2026-07-17T04:10:52Z",
+      "category": "国风古韵"
     },
     {
       "id": "2734ccc309ec",
@@ -249,7 +1365,8 @@
       "preview": "/screensaver-2734ccc3/preview.webp",
       "md5sum": "51c4ce8d709c9bc813cf9bb2c9d01b17",
       "filesize": 330815,
-      "updateTime": "2026-07-17T04:10:52Z"
+      "updateTime": "2026-07-17T04:10:52Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "f2a3390105b0",
@@ -266,7 +1383,8 @@
       "preview": "/screensaver-f2a33901/preview.webp",
       "md5sum": "fccdce7774cd259f70e75a55ecd142ea",
       "filesize": 2670120,
-      "updateTime": "2026-07-17T04:10:52Z"
+      "updateTime": "2026-07-17T04:10:52Z",
+      "category": "人物群像"
     },
     {
       "id": "e18bc59aba91",
@@ -283,7 +1401,8 @@
       "preview": "/screensaver-e18bc59a/preview.webp",
       "md5sum": "fc26c7ba7833861af1c0560dbcea0a11",
       "filesize": 2061891,
-      "updateTime": "2026-07-17T04:10:52Z"
+      "updateTime": "2026-07-17T04:10:52Z",
+      "category": "人物群像"
     },
     {
       "id": "61b49c094458",
@@ -299,7 +1418,8 @@
       "preview": "/screensaver-61b49c09/preview.webp",
       "md5sum": "dbf05a36876722a88ae23cecc49d333a",
       "filesize": 1889333,
-      "updateTime": "2026-07-17T04:10:52Z"
+      "updateTime": "2026-07-17T04:10:52Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "78d0895269e5",
@@ -315,7 +1435,8 @@
       "preview": "/screensaver-78d08952/preview.webp",
       "md5sum": "508abb6226a1ed8aab7168e092e316b1",
       "filesize": 37810048,
-      "updateTime": "2026-07-17T04:10:53Z"
+      "updateTime": "2026-07-17T04:10:53Z",
+      "category": "风景大片"
     },
     {
       "id": "48c0038103bf",
@@ -332,7 +1453,8 @@
       "preview": "/screensaver-48c00381/preview.webp",
       "md5sum": "a1d486a7dc2ba7c3591b858655599d17",
       "filesize": 27286001,
-      "updateTime": "2026-07-17T04:10:53Z"
+      "updateTime": "2026-07-17T04:10:53Z",
+      "category": "动漫二次元"
     },
     {
       "id": "7155d2a4a343",
@@ -349,7 +1471,8 @@
       "preview": "/screensaver-7155d2a4/preview.webp",
       "md5sum": "509c99da5984d1a9453ac7b1ca3b8166",
       "filesize": 19997153,
-      "updateTime": "2026-07-17T04:10:53Z"
+      "updateTime": "2026-07-17T04:10:53Z",
+      "category": "动漫二次元"
     },
     {
       "id": "838c3bc22e71",
@@ -366,7 +1489,8 @@
       "preview": "/screensaver-838c3bc2/preview.webp",
       "md5sum": "0c8ae32980d759aa3cf48358d5b656eb",
       "filesize": 1431110,
-      "updateTime": "2026-07-17T04:10:53Z"
+      "updateTime": "2026-07-17T04:10:53Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "6fe3d2d81bc7",
@@ -383,7 +1507,8 @@
       "preview": "/screensaver-6fe3d2d8/preview.webp",
       "md5sum": "c0db62f49a341a5028bfca983635eeff",
       "filesize": 3229842,
-      "updateTime": "2026-07-17T04:10:54Z"
+      "updateTime": "2026-07-17T04:10:54Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "a8f5a0241d47",
@@ -400,7 +1525,8 @@
       "preview": "/screensaver-a8f5a024/preview.webp",
       "md5sum": "e3cc0243b72676a48171112069ec3e03",
       "filesize": 2084133,
-      "updateTime": "2026-07-17T04:10:54Z"
+      "updateTime": "2026-07-17T04:10:54Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "845571b494e3",
@@ -417,7 +1543,8 @@
       "preview": "/screensaver-845571b4/preview.webp",
       "md5sum": "86042ab2909eb6e653811405f0e5d7ae",
       "filesize": 1844697,
-      "updateTime": "2026-07-17T04:10:54Z"
+      "updateTime": "2026-07-17T04:10:54Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "81364edaf2ad",
@@ -434,7 +1561,8 @@
       "preview": "/screensaver-81364eda/preview.webp",
       "md5sum": "a9671d72d1d6c7e2d9fdcc351d2628ed",
       "filesize": 854037,
-      "updateTime": "2026-07-17T04:10:54Z"
+      "updateTime": "2026-07-17T04:10:54Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "9c2d1eced470",
@@ -451,7 +1579,8 @@
       "preview": "/screensaver-9c2d1ece/preview.webp",
       "md5sum": "35573cff584e9ff863ccaf4e0de0dde6",
       "filesize": 198077,
-      "updateTime": "2026-07-17T04:10:54Z"
+      "updateTime": "2026-07-17T04:10:54Z",
+      "category": "节日喜庆"
     },
     {
       "id": "c98627d8d5de",
@@ -468,7 +1597,8 @@
       "preview": "/screensaver-c98627d8/preview.webp",
       "md5sum": "2b82fab86d570d917bc3eb0167ad0a81",
       "filesize": 1693947,
-      "updateTime": "2026-07-17T04:10:54Z"
+      "updateTime": "2026-07-17T04:10:54Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "66cba731789d",
@@ -484,7 +1614,8 @@
       "preview": "/screensaver-66cba731/preview.webp",
       "md5sum": "5593d5a220d0919fe543ab6940a7ba33",
       "filesize": 11957732,
-      "updateTime": "2026-07-17T04:10:55Z"
+      "updateTime": "2026-07-17T04:10:55Z",
+      "category": "动漫二次元"
     },
     {
       "id": "9101f27c8343",
@@ -500,7 +1631,8 @@
       "preview": "/screensaver-9101f27c/preview.webp",
       "md5sum": "1a8db716282d283c6fca20ad266541be",
       "filesize": 11243899,
-      "updateTime": "2026-07-17T04:10:55Z"
+      "updateTime": "2026-07-17T04:10:55Z",
+      "category": "动漫二次元"
     },
     {
       "id": "a3250b83a83a",
@@ -516,7 +1648,8 @@
       "preview": "/screensaver-a3250b83/preview.webp",
       "md5sum": "4d563523ae3b4211c88fcc39addf0cac",
       "filesize": 113665735,
-      "updateTime": "2026-07-17T04:10:55Z"
+      "updateTime": "2026-07-17T04:10:55Z",
+      "category": "其他"
     },
     {
       "id": "9a62f2592c07",
@@ -533,7 +1666,8 @@
       "preview": "/screensaver-9a62f259/preview.webp",
       "md5sum": "c4ef47b8dd310bdab0d8740d7a8ea3d1",
       "filesize": 788561,
-      "updateTime": "2026-07-17T04:10:55Z"
+      "updateTime": "2026-07-17T04:10:55Z",
+      "category": "动漫二次元"
     },
     {
       "id": "26d81d6f6087",
@@ -549,7 +1683,8 @@
       "preview": "/screensaver-26d81d6f/preview.webp",
       "md5sum": "1a9cd0b1edbc0a64825db44e54eaba68",
       "filesize": 1607642,
-      "updateTime": "2026-07-17T04:10:55Z"
+      "updateTime": "2026-07-17T04:10:55Z",
+      "category": "动漫二次元"
     },
     {
       "id": "17e0776b6504",
@@ -566,7 +1701,8 @@
       "preview": "/screensaver-17e0776b/preview.webp",
       "md5sum": "508661efc466b15d8bede9723683a97e",
       "filesize": 5410837,
-      "updateTime": "2026-07-17T04:10:56Z"
+      "updateTime": "2026-07-17T04:10:56Z",
+      "category": "动漫二次元"
     },
     {
       "id": "48b2add289c3",
@@ -583,7 +1719,8 @@
       "preview": "/screensaver-48b2add2/preview.webp",
       "md5sum": "cc0b3cccaed476e19ec2a6268d2045d6",
       "filesize": 2428180,
-      "updateTime": "2026-07-17T04:10:56Z"
+      "updateTime": "2026-07-17T04:10:56Z",
+      "category": "动漫二次元"
     },
     {
       "id": "1731e3babd9f",
@@ -600,7 +1737,8 @@
       "preview": "/screensaver-1731e3ba/preview.webp",
       "md5sum": "e01b89617671ad9ce196e534e4bafd57",
       "filesize": 2422581,
-      "updateTime": "2026-07-17T04:10:56Z"
+      "updateTime": "2026-07-17T04:10:56Z",
+      "category": "动漫二次元"
     },
     {
       "id": "8fa1d76c1de1",
@@ -617,7 +1755,8 @@
       "preview": "/screensaver-8fa1d76c/preview.webp",
       "md5sum": "4b8175f202d6ca44b5a472f0ca8d727e",
       "filesize": 2261828,
-      "updateTime": "2026-07-17T04:10:56Z"
+      "updateTime": "2026-07-17T04:10:56Z",
+      "category": "动漫二次元"
     },
     {
       "id": "61e67f4cb820",
@@ -633,7 +1772,8 @@
       "preview": "/screensaver-61e67f4c/preview.webp",
       "md5sum": "217cfbc75633425b7af2acd496d59e20",
       "filesize": 403087,
-      "updateTime": "2026-07-17T04:10:56Z"
+      "updateTime": "2026-07-17T04:10:56Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "54240ce95cef",
@@ -650,7 +1790,8 @@
       "preview": "/screensaver-54240ce9/preview.webp",
       "md5sum": "9f01ba3e16348808f9e31a5476b9073c",
       "filesize": 942230,
-      "updateTime": "2026-07-17T04:10:56Z"
+      "updateTime": "2026-07-17T04:10:56Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "a9a545f6dfd4",
@@ -667,7 +1808,8 @@
       "preview": "/screensaver-a9a545f6/preview.webp",
       "md5sum": "173a9e88eda3c03a240509537292d75f",
       "filesize": 746684,
-      "updateTime": "2026-07-17T04:10:57Z"
+      "updateTime": "2026-07-17T04:10:57Z",
+      "category": "动漫二次元"
     },
     {
       "id": "e5f81de963fe",
@@ -684,7 +1826,8 @@
       "preview": "/screensaver-e5f81de9/preview.webp",
       "md5sum": "05201c83682842d649bf72063d409b73",
       "filesize": 2722405,
-      "updateTime": "2026-07-17T04:10:57Z"
+      "updateTime": "2026-07-17T04:10:57Z",
+      "category": "动漫二次元"
     },
     {
       "id": "54f96598911e",
@@ -701,7 +1844,8 @@
       "preview": "/screensaver-54f96598/preview.webp",
       "md5sum": "43e35cb7fdc1b8e91ebea14e8182dc36",
       "filesize": 2306918,
-      "updateTime": "2026-07-17T04:10:57Z"
+      "updateTime": "2026-07-17T04:10:57Z",
+      "category": "动漫二次元"
     },
     {
       "id": "0abce6258674",
@@ -718,7 +1862,8 @@
       "preview": "/screensaver-0abce625/preview.webp",
       "md5sum": "81fba384aac72718f8ce1b414db1de75",
       "filesize": 1461436,
-      "updateTime": "2026-07-17T04:10:57Z"
+      "updateTime": "2026-07-17T04:10:57Z",
+      "category": "动漫二次元"
     },
     {
       "id": "1738c4fab15e",
@@ -735,7 +1880,8 @@
       "preview": "/screensaver-1738c4fa/preview.webp",
       "md5sum": "558a5ce85009e3b6d27f153f27789d3e",
       "filesize": 2456260,
-      "updateTime": "2026-07-17T04:10:57Z"
+      "updateTime": "2026-07-17T04:10:57Z",
+      "category": "动漫二次元"
     },
     {
       "id": "285064d9d0e1",
@@ -752,7 +1898,8 @@
       "preview": "/screensaver-285064d9/preview.webp",
       "md5sum": "0bf72fc3c369c4fec47955bcc1168cfd",
       "filesize": 2571861,
-      "updateTime": "2026-07-17T04:10:57Z"
+      "updateTime": "2026-07-17T04:10:57Z",
+      "category": "国风古韵"
     },
     {
       "id": "e5e957f895ee",
@@ -769,7 +1916,8 @@
       "preview": "/screensaver-e5e957f8/preview.webp",
       "md5sum": "8b9b6adbe25676da70d6c4651896047b",
       "filesize": 3179521,
-      "updateTime": "2026-07-17T04:10:57Z"
+      "updateTime": "2026-07-17T04:10:57Z",
+      "category": "国风古韵"
     },
     {
       "id": "19c02b940d5f",
@@ -786,7 +1934,8 @@
       "preview": "/screensaver-19c02b94/preview.webp",
       "md5sum": "f486e6cc637bb71d7d036662e6c55b14",
       "filesize": 2781115,
-      "updateTime": "2026-07-17T04:10:58Z"
+      "updateTime": "2026-07-17T04:10:58Z",
+      "category": "国风古韵"
     },
     {
       "id": "14b4db51911d",
@@ -803,7 +1952,8 @@
       "preview": "/screensaver-14b4db51/preview.webp",
       "md5sum": "a041970869820a4c063cbb74bb28e3f1",
       "filesize": 7131838,
-      "updateTime": "2026-07-17T04:10:58Z"
+      "updateTime": "2026-07-17T04:10:58Z",
+      "category": "国风古韵"
     },
     {
       "id": "d88fea02d677",
@@ -820,7 +1970,8 @@
       "preview": "/screensaver-d88fea02/preview.webp",
       "md5sum": "d5a3507e5d6c86b146a053faed0ba03d",
       "filesize": 3075890,
-      "updateTime": "2026-07-17T04:10:58Z"
+      "updateTime": "2026-07-17T04:10:58Z",
+      "category": "动漫二次元"
     },
     {
       "id": "0862eb7da73e",
@@ -836,7 +1987,8 @@
       "preview": "/screensaver-0862eb7d/preview.webp",
       "md5sum": "5c9aaf65bd21aaac37b6a929f5f243f8",
       "filesize": 27950250,
-      "updateTime": "2026-07-17T04:10:58Z"
+      "updateTime": "2026-07-17T04:10:58Z",
+      "category": "动漫二次元"
     },
     {
       "id": "906a4a08d58a",
@@ -853,7 +2005,8 @@
       "preview": "/screensaver-906a4a08/preview.webp",
       "md5sum": "349ca320c8e61bf3c3e2dab45a2c140b",
       "filesize": 2551570,
-      "updateTime": "2026-07-17T04:10:58Z"
+      "updateTime": "2026-07-17T04:10:58Z",
+      "category": "动漫二次元"
     },
     {
       "id": "7fea0032292e",
@@ -869,7 +2022,8 @@
       "preview": "/screensaver-7fea0032/preview.webp",
       "md5sum": "ebb0a5ab7a9cb74b40b689a321951210",
       "filesize": 1249347,
-      "updateTime": "2026-07-17T04:10:59Z"
+      "updateTime": "2026-07-17T04:10:59Z",
+      "category": "动漫二次元"
     },
     {
       "id": "56d0d73967e2",
@@ -885,7 +2039,8 @@
       "preview": "/screensaver-56d0d739/preview.webp",
       "md5sum": "fb672c729424b879ab4d680846e9058f",
       "filesize": 847547,
-      "updateTime": "2026-07-17T04:10:59Z"
+      "updateTime": "2026-07-17T04:10:59Z",
+      "category": "动漫二次元"
     },
     {
       "id": "a15ac4fd46c6",
@@ -899,7 +2054,8 @@
       "preview": "/screensaver-a15ac4fd/preview.webp",
       "md5sum": "bcc1985d028f9338b3cea32c1244d12e",
       "filesize": 1071275,
-      "updateTime": "2026-07-17T04:10:59Z"
+      "updateTime": "2026-07-17T04:10:59Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "6308d7087b74",
@@ -916,7 +2072,8 @@
       "preview": "/screensaver-6308d708/preview.webp",
       "md5sum": "dabb7a9fe14336d30a0be6b9e8404584",
       "filesize": 57356,
-      "updateTime": "2026-07-17T04:10:59Z"
+      "updateTime": "2026-07-17T04:10:59Z",
+      "category": "动漫二次元"
     },
     {
       "id": "93dd5735d5b7",
@@ -932,7 +2089,8 @@
       "preview": "/screensaver-93dd5735/preview.webp",
       "md5sum": "2b8becd44f5c50827e73fb2ee64fc808",
       "filesize": 12175339,
-      "updateTime": "2026-07-17T04:10:59Z"
+      "updateTime": "2026-07-17T04:10:59Z",
+      "category": "动漫二次元"
     },
     {
       "id": "5190a15ad297",
@@ -949,7 +2107,8 @@
       "preview": "/screensaver-5190a15a/preview.webp",
       "md5sum": "c23f7453986a097b62e764881b3a4f8e",
       "filesize": 778918,
-      "updateTime": "2026-07-17T04:10:59Z"
+      "updateTime": "2026-07-17T04:10:59Z",
+      "category": "动漫二次元"
     },
     {
       "id": "dc27caeb4ee0",
@@ -966,7 +2125,8 @@
       "preview": "/screensaver-dc27caeb/preview.webp",
       "md5sum": "f1ae334957fb05d2ac28d97c9bd7b479",
       "filesize": 3322602,
-      "updateTime": "2026-07-17T04:11:00Z"
+      "updateTime": "2026-07-17T04:11:00Z",
+      "category": "动漫二次元"
     },
     {
       "id": "6d9916d58d50",
@@ -983,7 +2143,8 @@
       "preview": "/screensaver-6d9916d5/preview.webp",
       "md5sum": "7a759f7fb8d4225f65f2de688b9e5b31",
       "filesize": 3004542,
-      "updateTime": "2026-07-17T04:11:00Z"
+      "updateTime": "2026-07-17T04:11:00Z",
+      "category": "动漫二次元"
     },
     {
       "id": "320f4ca0e9e0",
@@ -1000,7 +2161,8 @@
       "preview": "/screensaver-320f4ca0/preview.webp",
       "md5sum": "0e5bc3c8c740dcb34b77db3e7475a1af",
       "filesize": 594080,
-      "updateTime": "2026-07-17T04:11:00Z"
+      "updateTime": "2026-07-17T04:11:00Z",
+      "category": "动漫二次元"
     },
     {
       "id": "e23c87b8e7a8",
@@ -1016,7 +2178,8 @@
       "preview": "/screensaver-e23c87b8/preview.webp",
       "md5sum": "026e7851d6dd29690db7528eadfdcd88",
       "filesize": 634811,
-      "updateTime": "2026-07-17T04:11:00Z"
+      "updateTime": "2026-07-17T04:11:00Z",
+      "category": "动漫二次元"
     },
     {
       "id": "fbd23b0094b6",
@@ -1032,7 +2195,8 @@
       "preview": "/screensaver-fbd23b00/preview.webp",
       "md5sum": "0c66be8e998bdfae36511c213d1f9167",
       "filesize": 2933765,
-      "updateTime": "2026-07-17T04:11:00Z"
+      "updateTime": "2026-07-17T04:11:00Z",
+      "category": "动漫二次元"
     },
     {
       "id": "015ac17927ae",
@@ -1049,7 +2213,8 @@
       "preview": "/screensaver-015ac179/preview.webp",
       "md5sum": "3cf4922d316128576427de89febb0869",
       "filesize": 1286096,
-      "updateTime": "2026-07-17T04:11:00Z"
+      "updateTime": "2026-07-17T04:11:00Z",
+      "category": "动漫二次元"
     },
     {
       "id": "7af88c32c159",
@@ -1066,7 +2231,8 @@
       "preview": "/screensaver-7af88c32/preview.webp",
       "md5sum": "b13a827d72bdab7694d0b458ceaca504",
       "filesize": 2387905,
-      "updateTime": "2026-07-17T04:11:01Z"
+      "updateTime": "2026-07-17T04:11:01Z",
+      "category": "动漫二次元"
     },
     {
       "id": "01846b101946",
@@ -1083,7 +2249,8 @@
       "preview": "/screensaver-01846b10/preview.webp",
       "md5sum": "ecc62420b17d756c693dbe5143d9a690",
       "filesize": 965658,
-      "updateTime": "2026-07-17T04:11:01Z"
+      "updateTime": "2026-07-17T04:11:01Z",
+      "category": "动漫二次元"
     },
     {
       "id": "ae60797b6020",
@@ -1100,7 +2267,8 @@
       "preview": "/screensaver-ae60797b/preview.webp",
       "md5sum": "6ae4db55a5a8b95546bba0b953204670",
       "filesize": 2804489,
-      "updateTime": "2026-07-17T04:11:01Z"
+      "updateTime": "2026-07-17T04:11:01Z",
+      "category": "动漫二次元"
     },
     {
       "id": "a8536460e1b8",
@@ -1116,7 +2284,8 @@
       "preview": "/screensaver-a8536460/preview.webp",
       "md5sum": "8012433a26de97cfdd9bcaaed48fe113",
       "filesize": 10931263,
-      "updateTime": "2026-07-17T04:11:01Z"
+      "updateTime": "2026-07-17T04:11:01Z",
+      "category": "动漫二次元"
     },
     {
       "id": "497871bf7603",
@@ -1133,7 +2302,8 @@
       "preview": "/screensaver-497871bf/preview.webp",
       "md5sum": "c3d98dacaed4c01c996ac3d075ee76cd",
       "filesize": 860445,
-      "updateTime": "2026-07-17T04:11:01Z"
+      "updateTime": "2026-07-17T04:11:01Z",
+      "category": "动漫二次元"
     },
     {
       "id": "fa512a6c59d7",
@@ -1149,7 +2319,8 @@
       "preview": "/screensaver-fa512a6c/preview.webp",
       "md5sum": "4cdadc5a579f398f98b9d8ff6bf867af",
       "filesize": 693827,
-      "updateTime": "2026-07-17T04:11:01Z"
+      "updateTime": "2026-07-17T04:11:01Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "b0e36b3e1d97",
@@ -1165,7 +2336,8 @@
       "preview": "/screensaver-b0e36b3e/preview.webp",
       "md5sum": "7c5f64fede7d8cfdab11791218ba1c1f",
       "filesize": 50312782,
-      "updateTime": "2026-07-17T04:11:02Z"
+      "updateTime": "2026-07-17T04:11:02Z",
+      "category": "风景大片"
     },
     {
       "id": "a97681c28196",
@@ -1182,7 +2354,8 @@
       "preview": "/screensaver-a97681c2/preview.webp",
       "md5sum": "4980c9cf8b93a6059545bb7ed1522d3d",
       "filesize": 189166,
-      "updateTime": "2026-07-17T04:11:02Z"
+      "updateTime": "2026-07-17T04:11:02Z",
+      "category": "其他"
     },
     {
       "id": "35dcbb01e100",
@@ -1199,7 +2372,8 @@
       "preview": "/screensaver-35dcbb01/preview.webp",
       "md5sum": "2765f32f957119546ac10bfb18e9ea60",
       "filesize": 1794133,
-      "updateTime": "2026-07-17T04:11:02Z"
+      "updateTime": "2026-07-17T04:11:02Z",
+      "category": "动漫二次元"
     },
     {
       "id": "ee0102401a96",
@@ -1215,7 +2389,8 @@
       "preview": "/screensaver-ee010240/preview.webp",
       "md5sum": "655e548933bbb4dccdebb2ed799f4d75",
       "filesize": 723442,
-      "updateTime": "2026-07-17T04:11:02Z"
+      "updateTime": "2026-07-17T04:11:02Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "b20417270d0a",
@@ -1232,7 +2407,8 @@
       "preview": "/screensaver-b2041727/preview.webp",
       "md5sum": "ac33ba328e647ecd3429b1a0c54158f7",
       "filesize": 695110,
-      "updateTime": "2026-07-17T04:11:02Z"
+      "updateTime": "2026-07-17T04:11:02Z",
+      "category": "动漫二次元"
     },
     {
       "id": "cf1ceaf9f10f",
@@ -1249,7 +2425,8 @@
       "preview": "/screensaver-cf1ceaf9/preview.webp",
       "md5sum": "9b360017d1524f0f5ab797fe293cb985",
       "filesize": 769352,
-      "updateTime": "2026-07-17T04:11:02Z"
+      "updateTime": "2026-07-17T04:11:02Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "43be8e698d0a",
@@ -1266,7 +2443,8 @@
       "preview": "/screensaver-43be8e69/preview.webp",
       "md5sum": "6deccd395d3ae8ca72c0a49a763b0418",
       "filesize": 1049969,
-      "updateTime": "2026-07-17T04:11:02Z"
+      "updateTime": "2026-07-17T04:11:02Z",
+      "category": "国风古韵"
     },
     {
       "id": "ab954f1e305c",
@@ -1282,7 +2460,8 @@
       "preview": "/screensaver-ab954f1e/preview.webp",
       "md5sum": "8cd1402947c595766f513e9b7c7e42b4",
       "filesize": 27388337,
-      "updateTime": "2026-07-17T04:11:03Z"
+      "updateTime": "2026-07-17T04:11:03Z",
+      "category": "动漫二次元"
     },
     {
       "id": "5675ce6c036c",
@@ -1299,7 +2478,8 @@
       "preview": "/screensaver-5675ce6c/preview.webp",
       "md5sum": "5512d2ac5bb43cac5b9b756366fb75b8",
       "filesize": 321960,
-      "updateTime": "2026-07-17T04:11:03Z"
+      "updateTime": "2026-07-17T04:11:03Z",
+      "category": "动漫二次元"
     },
     {
       "id": "ea2950a571a5",
@@ -1316,7 +2496,8 @@
       "preview": "/screensaver-ea2950a5/preview.webp",
       "md5sum": "ffb7640f0505003d80e6ab1bc943ff02",
       "filesize": 931996,
-      "updateTime": "2026-07-17T04:11:03Z"
+      "updateTime": "2026-07-17T04:11:03Z",
+      "category": "动漫二次元"
     },
     {
       "id": "287fb83662ed",
@@ -1333,7 +2514,8 @@
       "preview": "/screensaver-287fb836/preview.webp",
       "md5sum": "b965df9357b32548e5696df8f623ae7a",
       "filesize": 235284,
-      "updateTime": "2026-07-17T04:11:03Z"
+      "updateTime": "2026-07-17T04:11:03Z",
+      "category": "动漫二次元"
     },
     {
       "id": "be901b1de25e",
@@ -1350,7 +2532,8 @@
       "preview": "/screensaver-be901b1d/preview.webp",
       "md5sum": "804c95f51bdfe2ac10e52e4e251f6580",
       "filesize": 472127,
-      "updateTime": "2026-07-17T04:11:03Z"
+      "updateTime": "2026-07-17T04:11:03Z",
+      "category": "动漫二次元"
     },
     {
       "id": "be5c12fcfe0c",
@@ -1367,7 +2550,8 @@
       "preview": "/screensaver-be5c12fc/preview.webp",
       "md5sum": "7c981d2dfeadef5603f076ff1ffbb7c7",
       "filesize": 2676633,
-      "updateTime": "2026-07-17T04:11:03Z"
+      "updateTime": "2026-07-17T04:11:03Z",
+      "category": "动漫二次元"
     },
     {
       "id": "6033800a9171",
@@ -1384,7 +2568,8 @@
       "preview": "/screensaver-6033800a/preview.webp",
       "md5sum": "2a798e3af08d03978245251dca41761c",
       "filesize": 2772246,
-      "updateTime": "2026-07-17T04:11:04Z"
+      "updateTime": "2026-07-17T04:11:04Z",
+      "category": "动漫二次元"
     },
     {
       "id": "95acbda0dbb9",
@@ -1400,7 +2585,8 @@
       "preview": "/screensaver-95acbda0/preview.webp",
       "md5sum": "5d62e37afca9747aaa562ae4068320a8",
       "filesize": 360487,
-      "updateTime": "2026-07-17T04:11:04Z"
+      "updateTime": "2026-07-17T04:11:04Z",
+      "category": "动漫二次元"
     },
     {
       "id": "e9e9d86feaa3",
@@ -1416,7 +2602,8 @@
       "preview": "/screensaver-e9e9d86f/preview.webp",
       "md5sum": "59e990bf4b18d8e5dcc49bbd3bd58b0f",
       "filesize": 20764521,
-      "updateTime": "2026-07-17T04:11:04Z"
+      "updateTime": "2026-07-17T04:11:04Z",
+      "category": "动漫二次元"
     },
     {
       "id": "a681804a5f39",
@@ -1432,7 +2619,8 @@
       "preview": "/screensaver-a681804a/preview.webp",
       "md5sum": "328732331e26c18fb18f6e8b671a78e2",
       "filesize": 17343378,
-      "updateTime": "2026-07-17T04:11:04Z"
+      "updateTime": "2026-07-17T04:11:04Z",
+      "category": "动漫二次元"
     },
     {
       "id": "29097a00b215",
@@ -1448,7 +2636,8 @@
       "preview": "/screensaver-29097a00/preview.webp",
       "md5sum": "60ecef3c8a0100619bbe37fa7b3e1e3e",
       "filesize": 19586761,
-      "updateTime": "2026-07-17T04:11:04Z"
+      "updateTime": "2026-07-17T04:11:04Z",
+      "category": "动漫二次元"
     },
     {
       "id": "b520725e98ef",
@@ -1465,7 +2654,8 @@
       "preview": "/screensaver-b520725e/preview.webp",
       "md5sum": "d4061c56e54fa66a8f801c8bb01c27c0",
       "filesize": 27205336,
-      "updateTime": "2026-07-17T04:11:05Z"
+      "updateTime": "2026-07-17T04:11:05Z",
+      "category": "动漫二次元"
     },
     {
       "id": "b324d7e716aa",
@@ -1482,7 +2672,8 @@
       "preview": "/screensaver-b324d7e7/preview.webp",
       "md5sum": "0fd28ff6be7fc0767fba41016f58df1c",
       "filesize": 1507275,
-      "updateTime": "2026-07-17T04:11:05Z"
+      "updateTime": "2026-07-17T04:11:05Z",
+      "category": "动漫二次元"
     },
     {
       "id": "441d9fb5ed6e",
@@ -1498,7 +2689,8 @@
       "preview": "/screensaver-441d9fb5/preview.webp",
       "md5sum": "997ae665914aca52a0d38951409e71e8",
       "filesize": 28721925,
-      "updateTime": "2026-07-17T04:11:05Z"
+      "updateTime": "2026-07-17T04:11:05Z",
+      "category": "动漫二次元"
     },
     {
       "id": "147312d0185d",
@@ -1514,7 +2706,8 @@
       "preview": "/screensaver-147312d0/preview.webp",
       "md5sum": "952a0539bd10b42c649c03cfd3f00f1c",
       "filesize": 1393977,
-      "updateTime": "2026-07-17T04:11:05Z"
+      "updateTime": "2026-07-17T04:11:05Z",
+      "category": "动漫二次元"
     },
     {
       "id": "39b017c15b75",
@@ -1531,7 +2724,8 @@
       "preview": "/screensaver-39b017c1/preview.webp",
       "md5sum": "744e7335488f6c10597ddb38ebd3ca2d",
       "filesize": 1580541,
-      "updateTime": "2026-07-17T04:11:05Z"
+      "updateTime": "2026-07-17T04:11:05Z",
+      "category": "动漫二次元"
     },
     {
       "id": "0dc10d006e36",
@@ -1548,7 +2742,8 @@
       "preview": "/screensaver-0dc10d00/preview.webp",
       "md5sum": "9dc23147fab9bf67440ae20b52b45ce7",
       "filesize": 4303882,
-      "updateTime": "2026-07-17T04:11:05Z"
+      "updateTime": "2026-07-17T04:11:05Z",
+      "category": "动漫二次元"
     },
     {
       "id": "b1f60e3b079c",
@@ -1564,7 +2759,8 @@
       "preview": "/screensaver-b1f60e3b/preview.webp",
       "md5sum": "230081d93be543ca60683c0803f53c3a",
       "filesize": 1145132,
-      "updateTime": "2026-07-17T04:11:06Z"
+      "updateTime": "2026-07-17T04:11:06Z",
+      "category": "动漫二次元"
     },
     {
       "id": "b642d1cbfb90",
@@ -1581,7 +2777,8 @@
       "preview": "/screensaver-b642d1cb/preview.webp",
       "md5sum": "cbd0e570e504238c25b31c395902d019",
       "filesize": 1439581,
-      "updateTime": "2026-07-17T04:11:06Z"
+      "updateTime": "2026-07-17T04:11:06Z",
+      "category": "动漫二次元"
     },
     {
       "id": "2f4bd8f3a72d",
@@ -1598,7 +2795,8 @@
       "preview": "/screensaver-2f4bd8f3/preview.webp",
       "md5sum": "eba458ccdb25e97e9dec8423e103292a",
       "filesize": 1773716,
-      "updateTime": "2026-07-17T04:11:06Z"
+      "updateTime": "2026-07-17T04:11:06Z",
+      "category": "动漫二次元"
     },
     {
       "id": "23997b590324",
@@ -1614,7 +2812,8 @@
       "preview": "/screensaver-23997b59/preview.webp",
       "md5sum": "e5eb3407eb11542eca686aaafe2a4c46",
       "filesize": 16341420,
-      "updateTime": "2026-07-17T04:11:06Z"
+      "updateTime": "2026-07-17T04:11:06Z",
+      "category": "动漫二次元"
     },
     {
       "id": "cc0bf401075c",
@@ -1631,7 +2830,8 @@
       "preview": "/screensaver-cc0bf401/preview.webp",
       "md5sum": "bd9aaddc102fd7b04c94d0f13007d138",
       "filesize": 1699755,
-      "updateTime": "2026-07-17T04:11:06Z"
+      "updateTime": "2026-07-17T04:11:06Z",
+      "category": "动漫二次元"
     },
     {
       "id": "75ad46dc31c6",
@@ -1648,7 +2848,8 @@
       "preview": "/screensaver-75ad46dc/preview.webp",
       "md5sum": "c5c0420d08f9ac395e90b8b07a79b47a",
       "filesize": 423772,
-      "updateTime": "2026-07-17T04:11:06Z"
+      "updateTime": "2026-07-17T04:11:06Z",
+      "category": "动漫二次元"
     },
     {
       "id": "5fe65082d50a",
@@ -1665,7 +2866,8 @@
       "preview": "/screensaver-5fe65082/preview.webp",
       "md5sum": "8aeb5c09a2e9ee007ec8d66d66f9b1e5",
       "filesize": 2844136,
-      "updateTime": "2026-07-17T04:11:07Z"
+      "updateTime": "2026-07-17T04:11:07Z",
+      "category": "动漫二次元"
     },
     {
       "id": "ffb1fdd41dc7",
@@ -1681,7 +2883,8 @@
       "preview": "/screensaver-ffb1fdd4/preview.webp",
       "md5sum": "1ae430caa5576c64576b590302604743",
       "filesize": 1383026,
-      "updateTime": "2026-07-17T04:11:07Z"
+      "updateTime": "2026-07-17T04:11:07Z",
+      "category": "动漫二次元"
     },
     {
       "id": "623e480c922f",
@@ -1698,7 +2901,8 @@
       "preview": "/screensaver-623e480c/preview.webp",
       "md5sum": "1eb6344990f2e844bb3cb17e8fd70d34",
       "filesize": 1193253,
-      "updateTime": "2026-07-17T04:11:07Z"
+      "updateTime": "2026-07-17T04:11:07Z",
+      "category": "风景大片"
     },
     {
       "id": "de6559640864",
@@ -1714,7 +2918,8 @@
       "preview": "/screensaver-de655964/preview.webp",
       "md5sum": "710f03c643b983735e8ccce097572f63",
       "filesize": 251691,
-      "updateTime": "2026-07-17T04:11:07Z"
+      "updateTime": "2026-07-17T04:11:07Z",
+      "category": "动漫二次元"
     },
     {
       "id": "4083b68c03aa",
@@ -1730,7 +2935,8 @@
       "preview": "/screensaver-4083b68c/preview.webp",
       "md5sum": "68bea36435b48d86486c5977bca09325",
       "filesize": 160444,
-      "updateTime": "2026-07-17T04:11:07Z"
+      "updateTime": "2026-07-17T04:11:07Z",
+      "category": "动漫二次元"
     },
     {
       "id": "eb7bd201d496",
@@ -1747,7 +2953,8 @@
       "preview": "/screensaver-eb7bd201/preview.webp",
       "md5sum": "9ddcdeb44399262c75f4d88b1f8dc7e3",
       "filesize": 2331092,
-      "updateTime": "2026-07-17T04:11:07Z"
+      "updateTime": "2026-07-17T04:11:07Z",
+      "category": "动漫二次元"
     },
     {
       "id": "079878829f73",
@@ -1763,7 +2970,8 @@
       "preview": "/screensaver-07987882/preview.webp",
       "md5sum": "77daed20dce3ec44d15c2d6e467da292",
       "filesize": 702335,
-      "updateTime": "2026-07-17T04:11:08Z"
+      "updateTime": "2026-07-17T04:11:08Z",
+      "category": "动漫二次元"
     },
     {
       "id": "de9fb564f48e",
@@ -1780,7 +2988,8 @@
       "preview": "/screensaver-de9fb564/preview.webp",
       "md5sum": "b2ad74f29832a8830b4fe4e5e9414f38",
       "filesize": 598715,
-      "updateTime": "2026-07-17T04:11:08Z"
+      "updateTime": "2026-07-17T04:11:08Z",
+      "category": "动漫二次元"
     },
     {
       "id": "5506984d162f",
@@ -1797,7 +3006,8 @@
       "preview": "/screensaver-5506984d/preview.webp",
       "md5sum": "429ae0f0ef8f7bc981ed06a4f43c64f5",
       "filesize": 2288677,
-      "updateTime": "2026-07-17T04:11:08Z"
+      "updateTime": "2026-07-17T04:11:08Z",
+      "category": "动漫二次元"
     },
     {
       "id": "44760a9b38d4",
@@ -1814,7 +3024,8 @@
       "preview": "/screensaver-44760a9b/preview.webp",
       "md5sum": "3fa1c41de96335285f05ee79a8f3a739",
       "filesize": 877222,
-      "updateTime": "2026-07-17T04:11:08Z"
+      "updateTime": "2026-07-17T04:11:08Z",
+      "category": "节日喜庆"
     },
     {
       "id": "1ea30c981001",
@@ -1831,7 +3042,8 @@
       "preview": "/screensaver-1ea30c98/preview.webp",
       "md5sum": "01a8f29b4214a0b3d92a1a288402f272",
       "filesize": 2852190,
-      "updateTime": "2026-07-17T04:11:08Z"
+      "updateTime": "2026-07-17T04:11:08Z",
+      "category": "动漫二次元"
     },
     {
       "id": "386007986ff6",
@@ -1848,7 +3060,8 @@
       "preview": "/screensaver-38600798/preview.webp",
       "md5sum": "bc13f075a8b60181140ca5ba46855a61",
       "filesize": 2012253,
-      "updateTime": "2026-07-17T04:11:08Z"
+      "updateTime": "2026-07-17T04:11:08Z",
+      "category": "动漫二次元"
     },
     {
       "id": "fdd60c9751c5",
@@ -1865,7 +3078,8 @@
       "preview": "/screensaver-fdd60c97/preview.webp",
       "md5sum": "a3f6dfefb36e70931c206f1c2d946b29",
       "filesize": 2421443,
-      "updateTime": "2026-07-17T04:11:09Z"
+      "updateTime": "2026-07-17T04:11:09Z",
+      "category": "动漫二次元"
     },
     {
       "id": "4075a7a94a87",
@@ -1882,7 +3096,8 @@
       "preview": "/screensaver-4075a7a9/preview.webp",
       "md5sum": "b5905aab1cdd99e896132ff3d09b5dc8",
       "filesize": 1886951,
-      "updateTime": "2026-07-17T04:11:09Z"
+      "updateTime": "2026-07-17T04:11:09Z",
+      "category": "动漫二次元"
     },
     {
       "id": "71851e2efe72",
@@ -1899,7 +3114,8 @@
       "preview": "/screensaver-71851e2e/preview.webp",
       "md5sum": "ef3fd754c3e63656f2fa3682a65688d9",
       "filesize": 2239132,
-      "updateTime": "2026-07-17T04:11:09Z"
+      "updateTime": "2026-07-17T04:11:09Z",
+      "category": "动漫二次元"
     },
     {
       "id": "c8833e63cb18",
@@ -1915,7 +3131,8 @@
       "preview": "/screensaver-c8833e63/preview.webp",
       "md5sum": "0436e95f59f5ceb5aca5aac88e99cdb0",
       "filesize": 90458907,
-      "updateTime": "2026-07-17T04:11:09Z"
+      "updateTime": "2026-07-17T04:11:09Z",
+      "category": "动漫二次元"
     },
     {
       "id": "bb17a3a818e5",
@@ -1931,7 +3148,8 @@
       "preview": "/screensaver-bb17a3a8/preview.webp",
       "md5sum": "a6e776d900cdff70048e58ed49fb3140",
       "filesize": 35007467,
-      "updateTime": "2026-07-17T04:11:09Z"
+      "updateTime": "2026-07-17T04:11:09Z",
+      "category": "动漫二次元"
     },
     {
       "id": "cf5d7a48f0c9",
@@ -1948,7 +3166,8 @@
       "preview": "/screensaver-cf5d7a48/preview.webp",
       "md5sum": "82e7a36ff7092d74a1446418f0a09a28",
       "filesize": 2247193,
-      "updateTime": "2026-07-17T04:11:10Z"
+      "updateTime": "2026-07-17T04:11:10Z",
+      "category": "动漫二次元"
     },
     {
       "id": "3c395093e106",
@@ -1965,7 +3184,8 @@
       "preview": "/screensaver-3c395093/preview.webp",
       "md5sum": "db84da0a8b0977b986faefb3fa5e8883",
       "filesize": 2247193,
-      "updateTime": "2026-07-17T04:11:10Z"
+      "updateTime": "2026-07-17T04:11:10Z",
+      "category": "动漫二次元"
     },
     {
       "id": "d679e454fc19",
@@ -1982,7 +3202,8 @@
       "preview": "/screensaver-d679e454/preview.webp",
       "md5sum": "7dce33849c72dad4b6608df79404e5d1",
       "filesize": 211809107,
-      "updateTime": "2026-07-17T04:11:10Z"
+      "updateTime": "2026-07-17T04:11:10Z",
+      "category": "风景大片"
     },
     {
       "id": "5d5902ac1d97",
@@ -1999,7 +3220,8 @@
       "preview": "/screensaver-5d5902ac/preview.webp",
       "md5sum": "6826c61b1c4cf86c526747d597653e58",
       "filesize": 924314,
-      "updateTime": "2026-07-17T04:11:11Z"
+      "updateTime": "2026-07-17T04:11:11Z",
+      "category": "动漫二次元"
     },
     {
       "id": "429cc4b21f87",
@@ -2016,7 +3238,8 @@
       "preview": "/screensaver-429cc4b2/preview.webp",
       "md5sum": "30d00dfcd6a51ae2295806bbd8155da3",
       "filesize": 2301878,
-      "updateTime": "2026-07-17T04:11:11Z"
+      "updateTime": "2026-07-17T04:11:11Z",
+      "category": "节日喜庆"
     },
     {
       "id": "f6d37163ed0d",
@@ -2033,7 +3256,8 @@
       "preview": "/screensaver-f6d37163/preview.webp",
       "md5sum": "ff65c4a8c7123d1dac709fcb35d3c68f",
       "filesize": 205909,
-      "updateTime": "2026-07-17T04:11:11Z"
+      "updateTime": "2026-07-17T04:11:11Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "4a28ec307167",
@@ -2050,7 +3274,8 @@
       "preview": "/screensaver-4a28ec30/preview.webp",
       "md5sum": "cf108f618c1cda616c17c2480c224f69",
       "filesize": 2911545,
-      "updateTime": "2026-07-17T04:11:11Z"
+      "updateTime": "2026-07-17T04:11:11Z",
+      "category": "动漫二次元"
     },
     {
       "id": "47bbe431ab6c",
@@ -2067,7 +3292,8 @@
       "preview": "/screensaver-47bbe431/preview.webp",
       "md5sum": "ef5c1e7f5bea3016f5114764f311c953",
       "filesize": 785989,
-      "updateTime": "2026-07-17T04:11:11Z"
+      "updateTime": "2026-07-17T04:11:11Z",
+      "category": "动漫二次元"
     },
     {
       "id": "9ee459ba0a1c",
@@ -2083,7 +3309,8 @@
       "preview": "/screensaver-9ee459ba/preview.webp",
       "md5sum": "5edf2dd53c18d6c7e9442d2800fa6593",
       "filesize": 8557014,
-      "updateTime": "2026-07-17T04:11:11Z"
+      "updateTime": "2026-07-17T04:11:11Z",
+      "category": "动漫二次元"
     },
     {
       "id": "ef85c58e5b62",
@@ -2099,7 +3326,8 @@
       "preview": "/screensaver-ef85c58e/preview.webp",
       "md5sum": "1c976fec56c3b350686e677f6a376b8f",
       "filesize": 362514,
-      "updateTime": "2026-07-17T04:11:12Z"
+      "updateTime": "2026-07-17T04:11:12Z",
+      "category": "萌宠治愈"
     },
     {
       "id": "a4142edd6ec7",
@@ -2116,7 +3344,18 @@
       "preview": "/screensaver-a4142edd/preview.webp",
       "md5sum": "f86ccd3eba6e07f88ac99f79e78d413c",
       "filesize": 999517,
-      "updateTime": "2026-07-24T09:09:41Z"
+      "updateTime": "2026-07-24T09:09:41Z",
+      "category": "爱国主旋律"
     }
-  ]
+  ],
+  "categoryStats": {
+    "爱国主旋律": 18,
+    "动漫二次元": 95,
+    "国风古韵": 19,
+    "萌宠治愈": 28,
+    "人物群像": 7,
+    "节日喜庆": 7,
+    "风景大片": 6,
+    "其他": 5
+  }
 }
