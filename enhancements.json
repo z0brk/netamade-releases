@@ -182,6 +182,151 @@
           }
         }
       ]
+    },
+    {
+      "id": "ep32-1.2.1-360-panoramic-imaging",
+      "name": "哪吒 L 360全景影像",
+      "package": "com.hozonauto.panoramic.avm",
+      "versions": [
+        {
+          "id": "avm-ep32-1.2.1-20261001-000946",
+          "updateTime": "2026-10-01 00:16:32",
+          "description": "哪吒 L 360全景影像适配 V1.2.1，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+          "apk": "/enhancements/ep32-1.2.1-360-panoramic-imaging/0d585920d8970811.apk",
+          "sha256": "0d585920d89708117a24eea87acf4b1e6dbc3bfc21791c165fcbf150a8107b6f",
+          "filesize": 77294751,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "5"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.30.53"
+              }
+            ],
+            "stockPackageVersionName": "1.4.78",
+            "stockApkSha256": "0b7e2b2a893edd08d7530843af5161fb0132d828b3c8f3f7c2f2eaafcf382e5c"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ep32-1.3.1-360-panoramic-imaging",
+      "name": "哪吒 L 360全景影像",
+      "package": "com.hozonauto.panoramic.avm",
+      "versions": [
+        {
+          "id": "avm-ep32-1.3.1-20261001-001040",
+          "updateTime": "2026-10-01 00:16:32",
+          "description": "哪吒 L 360全景影像适配 V1.3.1，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n退出时正常结束自身页面，不强制跳转车机主页。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+          "apk": "/enhancements/ep32-1.3.1-360-panoramic-imaging/2002f94947aa5eaa.apk",
+          "sha256": "2002f94947aa5eaa11cf950cc0c274fcef3e07009994be1e93c0033ecae2bd8b",
+          "filesize": 77185381,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "5"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.33.33"
+              }
+            ],
+            "stockPackageVersionName": "1.5.00",
+            "stockApkSha256": "b885b10eb87ff06b17dc1a8b3c515db7fd031ebff5386cd6a6da23e5553a19a2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ep36-05.28.03-360-panoramic-imaging",
+      "name": "哪吒 GT 360全景影像",
+      "package": "com.hozonauto.panoramic.avm",
+      "versions": [
+        {
+          "id": "avm-ep36-05.28.03-20261001-001131",
+          "updateTime": "2026-10-01 00:16:32",
+          "description": "哪吒 GT 360全景影像适配 V1.6.3，其他车型或版本请勿使用。\n\n提供全景影像限速解除增强，实际效果请自行实测。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+          "apk": "/enhancements/ep36-05.28.03-360-panoramic-imaging/70b5405e0e57e2cd.apk",
+          "sha256": "70b5405e0e57e2cd4ce3915c2b2a65a538fe6fdd493772483b415593e2ae63bd",
+          "filesize": 77629839,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "4"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.28.03"
+              }
+            ],
+            "stockPackageVersionName": "1.4.70",
+            "stockApkSha256": "523bc9a7ba09178052575aaa5c8469797807e58e0abdcd347c260722cc1166ec"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ep40-avm",
+      "name": "哪吒 S 360全景影像",
+      "package": "com.hozonauto.panoramic.avm",
+      "versions": [
+        {
+          "id": "avm-ep40-05.31.50-20261001-001222",
+          "updateTime": "2026-10-01 00:16:32",
+          "description": "哪吒 S 360全景影像适配 V1.10.4，其他车型或版本请勿使用。\n\n提供全景影像限速解除增强，实际效果请自行实测。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+          "apk": "/enhancements/ep40-avm/dff54d9d44a48668.apk",
+          "sha256": "dff54d9d44a4866866244ed35e6dc0a4ff0647919210e79aee94cefba81a02c9",
+          "filesize": 77629839,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "0"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.31.50"
+              }
+            ],
+            "stockPackageVersionName": "1.4.72",
+            "stockApkSha256": "8034900c5939bfd0bb4cb5b9f7da9fdeea2fdff2e3a9f2dba8f01114841b66c3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ep41-05.31.85-360-panoramic-imaging",
+      "name": "哪吒 S 猎装 360全景影像",
+      "package": "com.hozonauto.panoramic.avm",
+      "versions": [
+        {
+          "id": "avm-ep41-05.31.85-20261001-001313",
+          "updateTime": "2026-10-01 00:16:32",
+          "description": "哪吒 S 猎装 360全景影像适配猎装 V1.0.0，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+          "apk": "/enhancements/ep41-05.31.85-360-panoramic-imaging/1ce8a9b42b42d837.apk",
+          "sha256": "1ce8a9b42b42d837f6279b556fde60b925695aa4d14a931d7757bb163a1e4489",
+          "filesize": 77663153,
+          "compatibility": {
+            "allOf": [
+              {
+                "property": "ro.hozon.car.code",
+                "equals": "9"
+              },
+              {
+                "property": "ro.hozon.car.assembly.version",
+                "equals": "05.31.85"
+              }
+            ],
+            "stockPackageVersionName": "1.4.83",
+            "stockApkSha256": "9ec37efd1d5b950a74c2dbf9e7686b7ad390b6658a714ba6c99edc2faac6837c"
+          }
+        }
+      ]
     }
   ]
 }
