@@ -1,9 +1,9 @@
 {
-  "versionName": "5.1.4-TEST-1013_1808",
+  "versionName": "5.1.4-TEST-1013_2333",
   "versionCode": 228,
   "testing": true,
-  "buildTime": "2026-10-13 18:08:17",
-  "releaseVersion": "v5.1.4-TEST-1013_1808-testing",
-  "releaseFilename": "netamade-testing-5.1.4-TEST-1013_1808-228.apk",
-  "apkMd5": "824562da9d702f94543b031c68792d22"
+  "buildTime": "2026-10-13 23:33:05",
+  "releaseVersion": "v5.1.4-TEST-1013_2333-testing",
+  "releaseFilename": "netamade-testing-5.1.4-TEST-1013_2333-228.apk",
+  "apkMd5": "a0b52d7819836e8f3368e5339a44a605"
 }
