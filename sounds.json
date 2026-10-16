@@ -1,0 +1,1124 @@
+{
+  "schemaVersion": 1,
+  "sounds": [
+    {
+      "id": "5989ecb143e0",
+      "name": "GoGoGo出发咯",
+      "filename": "GoGoGo出发咯.mp3",
+      "tags": [
+        "上下车"
+      ],
+      "file": "/sound-5989ecb1/20b2acb7b3cf.mp3",
+      "md5sum": "20b2acb7b3cfdb844835f6e5aa36027a",
+      "filesize": 54587,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "764218b549a0",
+      "name": "LockChime音效",
+      "filename": "LockChime音效.wav",
+      "tags": [
+        "锁车"
+      ],
+      "file": "/sound-764218b5/f1d83c0ecca4.wav",
+      "md5sum": "f1d83c0ecca4d071a064f993124253c3",
+      "filesize": 932018,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "35ddb1174882",
+      "name": "Oi借过一下-双次",
+      "filename": "Oi借过一下-双次.wav",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-35ddb117/54060fcb934f.wav",
+      "md5sum": "54060fcb934f90cad4a9a73a7aeca148",
+      "filesize": 570426,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "5ed5538a2650",
+      "name": "Oi借过一下-大音量",
+      "filename": "Oi借过一下-大音量.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-5ed5538a/286ff1e80b0b.mp3",
+      "md5sum": "286ff1e80b0b68943f9512408d9ed9c8",
+      "filesize": 44353,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "5f8cc92194ec",
+      "name": "Oi借过一下谢谢-熊猫山",
+      "filename": "Oi借过一下谢谢-熊猫山.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-5f8cc921/21396863b457.mp3",
+      "md5sum": "21396863b457b3b66b1106819ad86cd8",
+      "filesize": 50832,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "8c91817b1c88",
+      "name": "Oi别挡我的路",
+      "filename": "Oi别挡我的路.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-8c91817b/e52579cb1e17.mp3",
+      "md5sum": "e52579cb1e17fbf02cfdba74ed609e70",
+      "filesize": 120078,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "f27732b0c0b8",
+      "name": "Oi劳驾借过一下",
+      "filename": "Oi劳驾借过一下.wav",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-f27732b0/96602b0b7843.wav",
+      "md5sum": "96602b0b7843e175c86e95253e7501d5",
+      "filesize": 331820,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "bc48b8482f4a",
+      "name": "Windows关机-LockChime",
+      "filename": "Windows关机-LockChime.wav",
+      "tags": [
+        "锁车",
+        "系统音效"
+      ],
+      "file": "/sound-bc48b848/cca844317ced.wav",
+      "md5sum": "cca844317ced8c1235cf12a6d4807ce2",
+      "filesize": 417870,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "2ecb9ebd45fc",
+      "name": "Windows关机-立体增强",
+      "filename": "Windows关机-立体增强.wav",
+      "tags": [
+        "系统音效"
+      ],
+      "file": "/sound-2ecb9ebd/f84bcfe407f5.wav",
+      "md5sum": "f84bcfe407f53bb868799b369c35850f",
+      "filesize": 454818,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "d5f0c40dced9",
+      "name": "Windows开机-LockChime",
+      "filename": "Windows开机-LockChime.wav",
+      "tags": [
+        "锁车",
+        "系统音效"
+      ],
+      "file": "/sound-d5f0c40d/83a62fcc4a4c.wav",
+      "md5sum": "83a62fcc4a4c2e6109661ba5455706a8",
+      "filesize": 120414,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "f0346920d8a0",
+      "name": "一Giao我里GiaoGiao",
+      "filename": "一Giao我里GiaoGiao.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-f0346920/a3dc3dea7baa.wav",
+      "md5sum": "a3dc3dea7baaf4bcb7f08055b707685c",
+      "filesize": 376910,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "aa764680e392",
+      "name": "东京热11-车友",
+      "filename": "东京热11-车友.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-aa764680/687795d0d0b2.wav",
+      "md5sum": "687795d0d0b25a5f2ed9f33019275263",
+      "filesize": 581674,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "5f2d51a69836",
+      "name": "主驾离开提示音-1-2",
+      "filename": "主驾离开提示音-1-2.mp3",
+      "tags": [
+        "上下车"
+      ],
+      "file": "/sound-5f2d51a6/b3e9e1e410b8.mp3",
+      "md5sum": "b3e9e1e410b8d5e9eaaba5dc12419799",
+      "filesize": 62946,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "cd4efabe673b",
+      "name": "主驾进入提示音-1-2",
+      "filename": "主驾进入提示音-1-2.mp3",
+      "tags": [
+        "上下车"
+      ],
+      "file": "/sound-cd4efabe/d34370382aa1.mp3",
+      "md5sum": "d34370382aa1a3b159d053532bb352ac",
+      "filesize": 98473,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "d37cb6c89d70",
+      "name": "乌呀咦哈-大声版",
+      "filename": "乌呀咦哈-大声版.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-d37cb6c8/bef1f2fa6b7c.mp3",
+      "md5sum": "bef1f2fa6b7cc1137e56bdc7c9d80c5a",
+      "filesize": 48736,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "cd888b4037d2",
+      "name": "乌拉",
+      "filename": "乌拉.m4a",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-cd888b40/835c9bfe29fa.m4a",
+      "md5sum": "835c9bfe29faed4706eb6e2388c69ef2",
+      "filesize": 124570,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "341ea3244cc0",
+      "name": "乌拉",
+      "filename": "乌拉.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-341ea324/3417d89d5c63.mp3",
+      "md5sum": "3417d89d5c637fdb6ba20c2c6b8c5c05",
+      "filesize": 13424,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "fdc6bcffddad",
+      "name": "乌拉",
+      "filename": "乌拉.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-fdc6bcff/895dd8083542.wav",
+      "md5sum": "895dd808354225776dea924c7a44d8fb",
+      "filesize": 118862,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "fbe0704977ab",
+      "name": "伙伴们，准备出发了",
+      "filename": "伙伴们，准备出发了.mp3",
+      "tags": [
+        "上下车"
+      ],
+      "file": "/sound-fbe07049/cae44e780d6c.mp3",
+      "md5sum": "cae44e780d6ccf5742abc43f3a0f6934",
+      "filesize": 37033,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "e4e189be84e5",
+      "name": "你干嘛哎哟",
+      "filename": "你干嘛哎哟.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-e4e189be/09d20937e90d.wav",
+      "md5sum": "09d20937e90da39cac00e0ba1cde53a7",
+      "filesize": 589902,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "1ad39ac32fe2",
+      "name": "倒车提示音",
+      "filename": "倒车提示音.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-1ad39ac3/28dafee6eb1e.mp3",
+      "md5sum": "28dafee6eb1ea9f8551220370b56e863",
+      "filesize": 106578,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "95baeb3f7c0c",
+      "name": "倒车请注意-LockChime",
+      "filename": "倒车请注意-LockChime.wav",
+      "tags": [
+        "倒车",
+        "锁车"
+      ],
+      "file": "/sound-95baeb3f/377d7130924f.wav",
+      "md5sum": "377d7130924f9a6f6a91af38294e2f78",
+      "filesize": 446542,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "add152de0a4a",
+      "name": "倒车请注意-大音量",
+      "filename": "倒车请注意-大音量.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-add152de/283ce82ba278.mp3",
+      "md5sum": "283ce82ba278f037ad0af098ef17a43d",
+      "filesize": 486852,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "9b899f565dc9",
+      "name": "倒车请注意",
+      "filename": "倒车请注意.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-9b899f56/99e6a1abc9bd.mp3",
+      "md5sum": "99e6a1abc9bdc4346ae74bee57e78490",
+      "filesize": 539515,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "ff671deb3c4b",
+      "name": "倒车音效-立体增强",
+      "filename": "倒车音效-立体增强.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-ff671deb/9d13cda7b9e6.mp3",
+      "md5sum": "9d13cda7b9e6731cdb3018164d258cb9",
+      "filesize": 59084,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "fe63054e2ec6",
+      "name": "倒车音效",
+      "filename": "倒车音效.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-fe63054e/aec68f4ac4a9.mp3",
+      "md5sum": "aec68f4ac4a9e2750c1acd6ac44a500f",
+      "filesize": 226605,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "b00fb42ec1e9",
+      "name": "充电馁-立体增强",
+      "filename": "充电馁-立体增强.wav",
+      "tags": [
+        "充电"
+      ],
+      "file": "/sound-b00fb42e/5182752670c9.wav",
+      "md5sum": "5182752670c98f85a247bc8e13b498a5",
+      "filesize": 408686,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "b26e789e3495",
+      "name": "充电馁",
+      "filename": "充电馁.wav",
+      "tags": [
+        "充电"
+      ],
+      "file": "/sound-b26e789e/91621785fe8a.wav",
+      "md5sum": "91621785fe8a958dc05b03e873f45e88",
+      "filesize": 381582,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "55b5dfabe239",
+      "name": "公主请上车（猴哥）",
+      "filename": "公主请上车（猴哥）.wav",
+      "tags": [
+        "上下车"
+      ],
+      "file": "/sound-55b5dfab/75390afac21b.wav",
+      "md5sum": "75390afac21b96e72f7dbe4169a73fd8",
+      "filesize": 55907,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "391994e7a509",
+      "name": "冰火两重天",
+      "filename": "冰火两重天.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-391994e7/0982717c24de.wav",
+      "md5sum": "0982717c24de29792302272d96f80828",
+      "filesize": 526216,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "825cda1a908f",
+      "name": "副驾离开提示音-1-2",
+      "filename": "副驾离开提示音-1-2.mp3",
+      "tags": [
+        "上下车"
+      ],
+      "file": "/sound-825cda1a/635d9ad56c81.mp3",
+      "md5sum": "635d9ad56c8151a75239c48be0824302",
+      "filesize": 77575,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "1c6706b8f82b",
+      "name": "副驾进入提示音-1-2",
+      "filename": "副驾进入提示音-1-2.mp3",
+      "tags": [
+        "上下车"
+      ],
+      "file": "/sound-1c6706b8/81b66ec93867.mp3",
+      "md5sum": "81b66ec938670dc4b0f9f0fb15398509",
+      "filesize": 104742,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "f3d09ad7f542",
+      "name": "力帆摩托扎西德勒",
+      "filename": "力帆摩托扎西德勒.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-f3d09ad7/1c85c59808db.wav",
+      "md5sum": "1c85c59808db45a4df0d53b9fcc2ea4f",
+      "filesize": 131892,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "dd79e5a8f54e",
+      "name": "动感光波",
+      "filename": "动感光波.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-dd79e5a8/ed5029eb74d9.wav",
+      "md5sum": "ed5029eb74d97206c46ef40f6c5b6552",
+      "filesize": 468774,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "298cd624ae2a",
+      "name": "叫我靓仔-2.14",
+      "filename": "叫我靓仔-2.14.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-298cd624/51f00f38e6e9.wav",
+      "md5sum": "51f00f38e6e924b6de88316293c971fe",
+      "filesize": 156780,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "6fb15bb1cb14",
+      "name": "右侧危险变道提醒",
+      "filename": "右侧危险变道提醒.mp3",
+      "tags": [
+        "安全提醒"
+      ],
+      "file": "/sound-6fb15bb1/0c3e48a1571c.mp3",
+      "md5sum": "0c3e48a1571cea63ed01892e5a1f9c94",
+      "filesize": 52288,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "4e006cf2737a",
+      "name": "后方危险开门提醒",
+      "filename": "后方危险开门提醒.mp3",
+      "tags": [
+        "安全提醒"
+      ],
+      "file": "/sound-4e006cf2/4a797abcc48a.mp3",
+      "md5sum": "4a797abcc48a04180927967821a7a7a0",
+      "filesize": 53960,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "8baec9606ac4",
+      "name": "呱-1-2-呱",
+      "filename": "呱-1-2-呱.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-8baec960/306fe634c3b3.wav",
+      "md5sum": "306fe634c3b307012b0fb64811551b9c",
+      "filesize": 227580,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "d08c55964e41",
+      "name": "呱-版本1",
+      "filename": "呱-版本1.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-d08c5596/39dd4f1cebc6.mp3",
+      "md5sum": "39dd4f1cebc6bf14a78c00514368d014",
+      "filesize": 21658,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "26fcb6850ab8",
+      "name": "呱-锁车音效",
+      "filename": "呱-锁车音效.ogg",
+      "tags": [
+        "锁车"
+      ],
+      "file": "/sound-26fcb685/8dff20680bc1.ogg",
+      "md5sum": "8dff20680bc18278d76cbf7ef8d3bbf7",
+      "filesize": 18680,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "272ccf114049",
+      "name": "呱-音量版",
+      "filename": "呱-音量版.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-272ccf11/6d78743a6e39.wav",
+      "md5sum": "6d78743a6e3906ccb2c45ef358d637ad",
+      "filesize": 278630,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "bea9a6045b89",
+      "name": "呱呱呱1",
+      "filename": "呱呱呱1.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-bea9a604/d24b1ec70fad.mp3",
+      "md5sum": "d24b1ec70fadd4e34ea32e850f296648",
+      "filesize": 104218,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "9a42ce509d4b",
+      "name": "呱呱呱2",
+      "filename": "呱呱呱2.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-9a42ce50/66a8abedb33f.mp3",
+      "md5sum": "66a8abedb33f5f07bd59cdbdf56d9000",
+      "filesize": 109498,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "9c10b0fd21b0",
+      "name": "呱增强版降噪",
+      "filename": "呱增强版降噪.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-9c10b0fd/b4bbb1935786.wav",
+      "md5sum": "b4bbb1935786a5a3b92812b38e54bee1",
+      "filesize": 278630,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "a78de9dc4a38",
+      "name": "哎哟-解锁音效",
+      "filename": "哎哟-解锁音效.ogg",
+      "tags": [
+        "解锁"
+      ],
+      "file": "/sound-a78de9dc/158b3516b16c.ogg",
+      "md5sum": "158b3516b16c0eab28e05f92c11a0b72",
+      "filesize": 49821,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "9648b898ea93",
+      "name": "哨兵警告-音量增强-降噪",
+      "filename": "哨兵警告-音量增强-降噪.wav",
+      "tags": [
+        "安全提醒"
+      ],
+      "file": "/sound-9648b898/ebadf6354851.wav",
+      "md5sum": "ebadf63548514575ff0cd7c8c28f45ce",
+      "filesize": 4309110,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "0f0bc2c7b9f9",
+      "name": "哨兵警告-音量增强",
+      "filename": "哨兵警告-音量增强.mp3",
+      "tags": [
+        "安全提醒"
+      ],
+      "file": "/sound-0f0bc2c7/ce32c92c68e2.mp3",
+      "md5sum": "ce32c92c68e2b00860222e23cf1cf512",
+      "filesize": 451244,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "d3e8519cca3c",
+      "name": "声浪-1",
+      "filename": "声浪-1.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-d3e8519c/7e24dc3efd7e.mp3",
+      "md5sum": "7e24dc3efd7e64581faf8091e5817230",
+      "filesize": 1489447,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "cda57a150e6c",
+      "name": "大小姐驾到-大音量",
+      "filename": "大小姐驾到-大音量.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-cda57a15/487dd025e229.mp3",
+      "md5sum": "487dd025e229e940df48e0088682aeb4",
+      "filesize": 37666,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "32574de5d014",
+      "name": "大小姐驾到通通闪开",
+      "filename": "大小姐驾到通通闪开.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-32574de5/45ee4e180e1f.mp3",
+      "md5sum": "45ee4e180e1faeed2aeec6e635b5a4fb",
+      "filesize": 16384,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "c989dd9232c3",
+      "name": "大运喇叭+别挡我的路",
+      "filename": "大运喇叭+别挡我的路.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-c989dd92/b23d2c405f29.mp3",
+      "md5sum": "b23d2c405f2982f11162f79384033035",
+      "filesize": 287195,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "b22e96d3048b",
+      "name": "太史慈",
+      "filename": "太史慈.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-b22e96d3/c4a5d59ca383.wav",
+      "md5sum": "c4a5d59ca383a6fe01c8fa9e7fd63715",
+      "filesize": 711432,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "6a2dd846c51a",
+      "name": "安全带系好小坏蛋",
+      "filename": "安全带系好小坏蛋.mp3",
+      "tags": [
+        "安全提醒"
+      ],
+      "file": "/sound-6a2dd846/4c3ad00e20ce.mp3",
+      "md5sum": "4c3ad00e20cea3b341e96d6676957566",
+      "filesize": 104421,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "e8451d0e118e",
+      "name": "左侧危险变道提醒",
+      "filename": "左侧危险变道提醒.mp3",
+      "tags": [
+        "安全提醒"
+      ],
+      "file": "/sound-e8451d0e/72743dee8c20.mp3",
+      "md5sum": "72743dee8c20fcf4b4d59eb5cb7b3c0a",
+      "filesize": 53124,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "476f33ae947f",
+      "name": "广西毛蛋借过一下",
+      "filename": "广西毛蛋借过一下.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-476f33ae/5396a58de0b0.mp3",
+      "md5sum": "5396a58de0b09594f417c05b446646e0",
+      "filesize": 68743,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "5acb36d4fb43",
+      "name": "广西毛蛋借过一下减弱版",
+      "filename": "广西毛蛋借过一下减弱版.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-5acb36d4/fbb59e28d96a.mp3",
+      "md5sum": "fbb59e28d96a799a3d04c02c336eed6e",
+      "filesize": 68743,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "e996a1fa6b14",
+      "name": "广西毛蛋借过一下增强版",
+      "filename": "广西毛蛋借过一下增强版.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-e996a1fa/e7c23c701397.mp3",
+      "md5sum": "e7c23c7013970efff0b246f38d4fcdbb",
+      "filesize": 68743,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "7b31ebfa4860",
+      "name": "广西毛蛋借过一下超强版",
+      "filename": "广西毛蛋借过一下超强版.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-7b31ebfa/8a3185af543d.mp3",
+      "md5sum": "8a3185af543d60492fa1d9c4cfc56577",
+      "filesize": 68743,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "129387e5da75",
+      "name": "广西毛蛋女司机倒车减弱版",
+      "filename": "广西毛蛋女司机倒车减弱版.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-129387e5/def1faadce0b.mp3",
+      "md5sum": "def1faadce0b036babe23c5af8f1352e",
+      "filesize": 51943,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "6abcdbcb70eb",
+      "name": "广西毛蛋新手倒车",
+      "filename": "广西毛蛋新手倒车.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-6abcdbcb/4bad9eefb0b8.mp3",
+      "md5sum": "4bad9eefb0b8221651c63c1181d6f0c5",
+      "filesize": 74503,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "9192bd948fdf",
+      "name": "您好，小哥哥借过一下，谢谢",
+      "filename": "您好，小哥哥借过一下，谢谢.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-9192bd94/752dbee073c4.mp3",
+      "md5sum": "752dbee073c4ef458c7ac30336ed6f8f",
+      "filesize": 19083,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "aa19cd3a02bf",
+      "name": "掌声鲜花何在",
+      "filename": "掌声鲜花何在.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-aa19cd3a/c278da06990a.wav",
+      "md5sum": "c278da06990aa2c25cdeec89365e6a35",
+      "filesize": 315740,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "77db9b7a9bcf",
+      "name": "提莫队长正在待命",
+      "filename": "提莫队长正在待命.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-77db9b7a/02063147e338.wav",
+      "md5sum": "02063147e338e204402fc5f24e56e624",
+      "filesize": 266318,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "fc97366daa49",
+      "name": "数码宝贝-音效-01",
+      "filename": "数码宝贝-音效-01.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-fc97366d/c9425217be38.wav",
+      "md5sum": "c9425217be3844bedeecf70a948153de",
+      "filesize": 447516,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "803bd1ccba94",
+      "name": "数码宝贝-音效",
+      "filename": "数码宝贝-音效.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-803bd1cc/e9b5a0095a65.wav",
+      "md5sum": "e9b5a0095a656ba04e2e42a212806240",
+      "filesize": 751858,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "9db2052afb4e",
+      "name": "注意安全停车",
+      "filename": "注意安全停车.mp3",
+      "tags": [
+        "安全提醒"
+      ],
+      "file": "/sound-9db2052a/61e79dcc07e2.mp3",
+      "md5sum": "61e79dcc07e28dfa9cd6c3dcf352d97c",
+      "filesize": 52176,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "67c15707a88e",
+      "name": "海绵宝宝-我来啦兄弟",
+      "filename": "海绵宝宝-我来啦兄弟.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-67c15707/d3824655494b.wav",
+      "md5sum": "d3824655494b8e66c27bb30421650e26",
+      "filesize": 63838,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "17a0d193804b",
+      "name": "潘凤来也",
+      "filename": "潘凤来也.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-17a0d193/fdf900d1c5fa.wav",
+      "md5sum": "fdf900d1c5fa4dadc02770dcc90040e1",
+      "filesize": 373032,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "0e8b49b4d35e",
+      "name": "王牌飞行员申请出战",
+      "filename": "王牌飞行员申请出战.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-0e8b49b4/eb2c82928dab.wav",
+      "md5sum": "eb2c82928dabc17e46a1d0bca693263f",
+      "filesize": 348238,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "fd775fbe1db6",
+      "name": "环太平洋-车友",
+      "filename": "环太平洋-车友.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-fd775fbe/2c9801f78304.wav",
+      "md5sum": "2c9801f7830426420c09ac948c685d5e",
+      "filesize": 684108,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "669ee5375098",
+      "name": "琴音绕九州",
+      "filename": "琴音绕九州.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-669ee537/e485f40f64a3.wav",
+      "md5sum": "e485f40f64a3e7e5aa3d01bbe80b71d7",
+      "filesize": 718504,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "901797e7a4f2",
+      "name": "美少女-2.14",
+      "filename": "美少女-2.14.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-901797e7/a1ed1b4373f8.wav",
+      "md5sum": "a1ed1b4373f85be6511985f0defbebdd",
+      "filesize": 359446,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "315c78853974",
+      "name": "美美桑内",
+      "filename": "美美桑内.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-315c7885/dc5d1232cee1.mp3",
+      "md5sum": "dc5d1232cee1107c51f692baa39b5bba",
+      "filesize": 124044,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "908144d6500f",
+      "name": "请注意倒车",
+      "filename": "请注意倒车.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-908144d6/c060361cc4fd.mp3",
+      "md5sum": "c060361cc4fd703d461a0dca579675ff",
+      "filesize": 649970,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "c554eadfae4d",
+      "name": "赛雷-注意倒车洒水车",
+      "filename": "赛雷-注意倒车洒水车.mp3",
+      "tags": [
+        "倒车"
+      ],
+      "file": "/sound-c554eadf/e053fe5f1fbf.mp3",
+      "md5sum": "e053fe5f1fbf5dc89bd8490f425dceea",
+      "filesize": 287182,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "8c3db2a08e75",
+      "name": "超级玛丽-Game Over",
+      "filename": "超级玛丽-Game Over.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-8c3db2a0/37dd5c57a5e5.wav",
+      "md5sum": "37dd5c57a5e53365dc1776bdbcf2a69f",
+      "filesize": 344142,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "d6bd40491951",
+      "name": "超级玛丽蘑菇",
+      "filename": "超级玛丽蘑菇.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-d6bd4049/c5f60dd988ee.wav",
+      "md5sum": "c5f60dd988ee0c108f92819376afb5ea",
+      "filesize": 48131,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "43c8e4f56d3b",
+      "name": "超级飞侠-系统启动",
+      "filename": "超级飞侠-系统启动.wav",
+      "tags": [
+        "系统音效"
+      ],
+      "file": "/sound-43c8e4f5/b38cd3a85d23.wav",
+      "md5sum": "b38cd3a85d23137edbdb7c2f84bd1a2d",
+      "filesize": 131474,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "0b001e8e4f0b",
+      "name": "车子的门被锁上了",
+      "filename": "车子的门被锁上了.wav",
+      "tags": [
+        "锁车"
+      ],
+      "file": "/sound-0b001e8e/ffeab61f80ad.wav",
+      "md5sum": "ffeab61f80ad656fef92b77400917968",
+      "filesize": 455426,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "7310f2b60d4b",
+      "name": "速度提不起来开慢车道上去",
+      "filename": "速度提不起来开慢车道上去.mp3",
+      "tags": [
+        "车外提醒"
+      ],
+      "file": "/sound-7310f2b6/9a9544f81813.mp3",
+      "md5sum": "9a9544f8181355419369f78c17ef8f50",
+      "filesize": 33871,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "3e2fa8d22dfe",
+      "name": "锁车叭叭声-增强",
+      "filename": "锁车叭叭声-增强.wav",
+      "tags": [
+        "锁车"
+      ],
+      "file": "/sound-3e2fa8d2/bd4e2b92c1dc.wav",
+      "md5sum": "bd4e2b92c1dc1c9f94f3f0eab6cbe4f3",
+      "filesize": 312182,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "b4ceff75b9df",
+      "name": "锁车叭叭声",
+      "filename": "锁车叭叭声.wav",
+      "tags": [
+        "锁车"
+      ],
+      "file": "/sound-b4ceff75/8aa854215c67.wav",
+      "md5sum": "8aa854215c6766ccf63279ae348c6900",
+      "filesize": 143206,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "950acf389d3f",
+      "name": "阿爆-谁拍的",
+      "filename": "阿爆-谁拍的.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-950acf38/c5520891e907.wav",
+      "md5sum": "c5520891e90792086768e76832ddab60",
+      "filesize": 801166,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "5572c3646438",
+      "name": "音频-13秒-版本1",
+      "filename": "音频-13秒-版本1.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-5572c364/eb93edc3ec32.mp3",
+      "md5sum": "eb93edc3ec324914a9b3766e19c67675",
+      "filesize": 212048,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "daa416b47577",
+      "name": "音频-13秒-版本2",
+      "filename": "音频-13秒-版本2.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-daa416b4/81eb81bfd7d9.mp3",
+      "md5sum": "81eb81bfd7d96d3fd52f3135ca836b47",
+      "filesize": 209958,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "82ac540e4bc6",
+      "name": "音频-13秒-版本3",
+      "filename": "音频-13秒-版本3.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-82ac540e/744a7ee2e9ff.mp3",
+      "md5sum": "744a7ee2e9ffab01900b9cac34c2c927",
+      "filesize": 205361,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "e63511ec67f2",
+      "name": "音频-13秒-版本4",
+      "filename": "音频-13秒-版本4.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-e63511ec/8414ec12ab31.mp3",
+      "md5sum": "8414ec12ab31f817d349f3aa0486232f",
+      "filesize": 205361,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "9ea93cfbf685",
+      "name": "音频-13秒",
+      "filename": "音频-13秒.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-9ea93cfb/edb18e089a04.mp3",
+      "md5sum": "edb18e089a0403816f7b5696df86339e",
+      "filesize": 212048,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "d1339b4588ce",
+      "name": "音频-15秒",
+      "filename": "音频-15秒.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-d1339b45/0fd09f3d1b38.mp3",
+      "md5sum": "0fd09f3d1b3863226e919b7661a0bd73",
+      "filesize": 245067,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "f8f1309a7f54",
+      "name": "音频-5秒",
+      "filename": "音频-5秒.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-f8f1309a/7f7f17f33faf.mp3",
+      "md5sum": "7f7f17f33faf1a15e7e92e5d69be4ed1",
+      "filesize": 84570,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "4101987b346e",
+      "name": "饥渴难耐",
+      "filename": "饥渴难耐.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-4101987b/3d2c53e3c613.wav",
+      "md5sum": "3d2c53e3c6139676c9ba573b9a610301",
+      "filesize": 473388,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "f4ec0e560f87",
+      "name": "马超",
+      "filename": "马超.wav",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-f4ec0e56/58bc734f4954.wav",
+      "md5sum": "58bc734f495424510ba2e7bf4fa76e0e",
+      "filesize": 792192,
+      "updateTime": "2026-07-17T03:45:41Z"
+    },
+    {
+      "id": "da83c38c5f58",
+      "name": "骷髅",
+      "filename": "骷髅.mp3",
+      "tags": [
+        "趣味音效"
+      ],
+      "file": "/sound-da83c38c/808048c1a942.mp3",
+      "md5sum": "808048c1a942b1aa13d7957ea77778d5",
+      "filesize": 14441,
+      "updateTime": "2026-07-17T03:45:41Z"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+.DS_Store
+.idea/
+.vscode/
+
+.venv/
+__pycache__/
+tests/__pycache__/
+
+# 开发说明与验证记录仅保留在本地，不进入发布快照。
+*.md
+
+# AEP 协议实现仅供本地管理工具验签，不随资源仓库发布。
+/aep_protocol.py
+/AepCrypto.java
+
+# 作者和平台凭据不属于分发仓库；AEP2 公钥位于已签头部。
+.local/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+activation-*.txt

@@ -1,0 +1,91 @@
+{
+  "exportTime": "2026-01-31T20:50:27Z",
+  "version": "1.0",
+  "workflow": {
+    "enabled": true,
+    "taskIds": [
+      -1769149339803,
+      -1769860134229,
+      -1769859898948,
+      -1769863722281,
+      -1769863618934
+    ],
+    "createdAt": 1769863822834,
+    "updatedAt": 1769863822834,
+    "triggerConditionId": -1769149308231,
+    "id": 1,
+    "triggerParameterJson": "{\"compareType\":\"EQUAL\",\"compareValue\":\"0\",\"propId\":624952957,\"dataType\":\"INT32\",\"propName\":\"HZ_BUCKLE_STATUS\",\"areaId\":1}",
+    "name": "红绿灯自启自隐藏：适应自带地图：带定位修复",
+    "config": {
+      "tags": [],
+      "continueOnTaskFailure": false,
+      "delayMilliseconds": 0,
+      "showDynamicIsland": false,
+      "executeOnlyOnFirstScreenOn": false
+    },
+    "conditionIds": [
+      -1769149308231
+    ]
+  },
+  "appVersion": "1.0.0",
+  "conditions": [
+    {
+      "createdAt": 1769149308231,
+      "updatedAt": 1769149308231,
+      "id": -1769149308231,
+      "type": "CAR_PROPERTY_CONDITION",
+      "parametersJson": "{\"compareType\":\"EQUAL\",\"compareValue\":\"0\",\"propId\":624952957,\"dataType\":\"INT32\",\"propName\":\"HZ_BUCKLE_STATUS\",\"areaId\":1}"
+    }
+  ],
+  "tasks": [
+    {
+      "updatedAt": 1769149339803,
+      "type": "OPEN_APP",
+      "showDynamicIsland": true,
+      "id": -1769149339803,
+      "param": "{\"activityClass\":\"com.xlsyn.nav.feature.main.CoverActivity\",\"appName\":\"红绿灯领航\",\"autoFullscreen\":false,\"crossDisplay\":false,\"displayId\":0,\"openInFreeform\":false,\"packageName\":\"com.mojoxing.light\",\"reopenIfRunning\":false,\"userId\":0}",
+      "name": "打开应用",
+      "createdAt": 1769149339803,
+      "description": "打开 \"红绿灯领航\" (主屏)"
+    },
+    {
+      "updatedAt": 1769860134229,
+      "type": "DELAY",
+      "showDynamicIsland": true,
+      "id": -1769860134229,
+      "param": "1000",
+      "name": "延迟",
+      "createdAt": 1769860134229,
+      "description": "延迟：1秒"
+    },
+    {
+      "updatedAt": 1769859898948,
+      "type": "OPEN_APP",
+      "showDynamicIsland": true,
+      "id": -1769859898948,
+      "param": "{\"activityClass\":\"com.hozonauto.navlbs.home.mvvm.ui.activity.MainHomeActivity\",\"appName\":\"地图\",\"autoFullscreen\":false,\"crossDisplay\":false,\"displayId\":0,\"openInFreeform\":false,\"packageName\":\"com.hozonauto.launcher\",\"reopenIfRunning\":false,\"userId\":0}",
+      "name": "打开应用",
+      "createdAt": 1769859898948,
+      "description": "打开 \"地图\" (主屏)"
+    },
+    {
+      "updatedAt": 1769863722281,
+      "type": "DELAY",
+      "showDynamicIsland": true,
+      "id": -1769863722281,
+      "param": "1000",
+      "name": "延迟",
+      "createdAt": 1769863722281,
+      "description": "延迟：1秒"
+    },
+    {
+      "updatedAt": 1769863618934,
+      "type": "LOCATION_FIX",
+      "showDynamicIsland": true,
+      "id": -1769863618934,
+      "name": "修复定位权限",
+      "createdAt": 1769863618934,
+      "description": "修复定位权限"
+    }
+  ]
+}

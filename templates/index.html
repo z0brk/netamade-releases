@@ -1,0 +1,1762 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppStore Creator</title>
+    <style>
+      :root {
+        --bg: #f5f6f8;
+        --panel: #ffffff;
+        --panel-soft: #f8f9fb;
+        --line: #e5e7eb;
+        --text: #111827;
+        --muted: #6b7280;
+        --primary: #0a84ff;
+        --danger: #d61f3a;
+        --radius: 16px;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: radial-gradient(circle at top, #eef6ff, var(--bg) 28%);
+        color: var(--text);
+        font-family: "SF Pro Display", "SF Pro Text", "PingFang SC", sans-serif;
+      }
+      .wrap {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: clamp(12px, 2.2vw, 28px) clamp(12px, 2.2vw, 32px) clamp(20px, 3vw, 40px);
+      }
+      .hero {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        margin-bottom: 16px;
+        box-shadow: 0 10px 25px rgba(17, 24, 39, 0.05);
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: 30px;
+        letter-spacing: 0.2px;
+      }
+      .hero p {
+        margin: 8px 0 0;
+        color: var(--muted);
+      }
+      .tabs {
+        display: flex;
+        gap: 10px;
+        margin: 16px 0;
+      }
+      .tab-btn {
+        appearance: none;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
+        font-weight: 600;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+      .tab-btn.active {
+        color: #fff;
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .panel {
+        display: none;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(17, 24, 39, 0.05);
+      }
+      .panel.active { display: block; }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 22px;
+      }
+      .sub {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
+      .flash {
+        margin: 10px 0 0;
+        border-radius: 12px;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        font-size: 14px;
+      }
+      .flash.success { color: #166534; background: #ecfdf3; border-color: #b8f0d2; }
+      .flash.error { color: #991b1b; background: #fef2f2; border-color: #fecaca; }
+      textarea, input[type="text"], input[type="file"], select {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px 12px;
+        font: inherit;
+        background: #fff;
+      }
+      textarea { min-height: 112px; resize: vertical; }
+      button {
+        appearance: none;
+        border: 0;
+        border-radius: 12px;
+        background: var(--primary);
+        color: #fff;
+        padding: 10px 16px;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn-ghost {
+        background: #fff;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+      .btn-danger { background: var(--danger); }
+      .upload-card {
+        border: 1px dashed #cdd5df;
+        border-radius: 14px;
+        padding: 18px;
+        background: var(--panel-soft);
+      }
+      .app-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(clamp(220px, 23vw, 320px), 1fr));
+        gap: clamp(10px, 1.4vw, 16px);
+      }
+      .filter-wrap {
+        margin-top: 12px;
+      }
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .filter-btn {
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--muted);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .filter-btn.active {
+        border-color: var(--primary);
+        color: var(--primary);
+        background: #eef6ff;
+      }
+      .filter-summary {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .app-item {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px;
+        background: #fff;
+        cursor: pointer;
+        position: relative;
+      }
+      .app-sort-actions {
+        display: flex;
+        gap: 6px;
+        justify-content: flex-end;
+        margin-top: 10px;
+      }
+      .app-sort-actions button {
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+      }
+      .app-head {
+        display: grid;
+        grid-template-columns: 58px 1fr;
+        gap: 10px;
+        align-items: center;
+      }
+      .app-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        object-fit: cover;
+        background: #eef2f7;
+      }
+      .app-name {
+        margin: 0;
+        font-size: 17px;
+      }
+      .app-package {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 12px;
+        word-break: break-all;
+      }
+      .app-desc {
+        margin-top: 8px;
+        color: #374151;
+        font-size: 14px;
+        line-height: 1.45;
+        min-height: 42px;
+      }
+      .app-meta {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .workflow-badge {
+        width: 58px;
+        height: 58px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: linear-gradient(135deg, #eef6ff, #dbeafe);
+        display: grid;
+        place-items: center;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--primary);
+      }
+      .workflow-extra {
+        margin-top: 10px;
+        color: #374151;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      .tag {
+        border-radius: 999px;
+        padding: 5px 10px;
+        background: #eef6ff;
+        color: #1d4ed8;
+        font-size: 12px;
+        line-height: 1.2;
+      }
+      .tag-empty {
+        background: #f3f4f6;
+        color: var(--muted);
+      }
+      .cats-list {
+        display: grid;
+        gap: 10px;
+      }
+      .cat-row {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        gap: 8px;
+        align-items: center;
+      }
+      dialog {
+        width: min(860px, calc(100% - 24px));
+        border: 0;
+        border-radius: 18px;
+        padding: 0;
+      }
+      dialog::backdrop { background: rgba(17, 24, 39, 0.42); }
+      .dialog-wrap { padding: 18px; }
+      .dialog-wrap { max-height: 90vh; overflow: auto; }
+      .dialog-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+      .dialog-top h3 { margin: 0; font-size: 22px; }
+      .dialog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 10px;
+      }
+      .message-board {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .message-card {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px;
+        background: var(--panel-soft);
+      }
+      .message-card-top {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        gap: 8px;
+        align-items: start;
+      }
+      .message-pair-head,
+      .message-pair-row {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.9fr) minmax(260px, 1.4fr) auto auto auto;
+        gap: 8px;
+        align-items: start;
+        margin-top: 8px;
+      }
+      .message-pair-head {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .message-pair-row textarea {
+        min-height: 54px;
+      }
+      .message-pair-row .message-value {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 12px;
+      }
+      .icon-preview {
+        margin-top: 8px;
+        width: 92px;
+        height: 92px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        object-fit: cover;
+        background: #eef2f7;
+      }
+      .dialog-actions {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+      .action-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        padding: 10px 16px;
+        color: var(--text);
+        text-decoration: none;
+        background: #fff;
+        font-weight: 600;
+      }
+      .action-link.is-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      .sound-toolbar {
+        display: grid;
+        grid-template-columns: minmax(220px, 1fr) minmax(180px, 280px) auto;
+        gap: 10px;
+        margin: 14px 0;
+        align-items: center;
+      }
+      .sound-select {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 20px;
+        height: 20px;
+      }
+      .sound-item { padding-right: 44px; }
+      .sound-item audio { width: 100%; margin-top: 10px; }
+      .bulk-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto auto;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .sr { display: none; }
+      @media (max-width: 700px) {
+        .wrap { padding: 16px; }
+        .hero h1 { font-size: 25px; }
+        .cat-row { grid-template-columns: 1fr auto; }
+        .message-card-top,
+        .message-pair-head,
+        .message-pair-row {
+          grid-template-columns: 1fr;
+        }
+        .sound-toolbar, .bulk-actions { grid-template-columns: 1fr; }
+      }
+      @media (min-width: 1700px) {
+        .app-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>AppStore Creator</h1>
+        <p>管理公告、应用与分类。上传 APK 后自动解析元数据并弹出编辑对话框。</p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+      </section>
+
+      <nav class="tabs" aria-label="主标签页">
+        <button type="button" class="tab-btn active" data-tab="notice">公告</button>
+        <button type="button" class="tab-btn" data-tab="messageboard">留言板</button>
+        <button type="button" class="tab-btn" data-tab="apps">应用列表</button>
+        <button type="button" class="tab-btn" data-tab="workflows">工作流</button>
+        <button type="button" class="tab-btn" data-tab="sounds">车机音效</button>
+        <button type="button" class="tab-btn" data-tab="screensavers">在线屏保</button>
+        <button type="button" class="tab-btn" data-tab="enhancements">应用增强</button>
+        <button type="button" class="tab-btn" data-tab="categories">分类</button>
+      </nav>
+
+      <section class="panel active" id="panel-notice">
+        <h2>公告</h2>
+        <p class="sub">客户端首页公告文案。</p>
+        <form action="/notice" method="post">
+          <textarea id="notice" name="notice" placeholder="请输入公告">{{ notice }}</textarea>
+          <div class="dialog-actions">
+            <button type="submit">保存公告</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-messageboard">
+        <h2>留言板</h2>
+        <p class="sub">维护客户端留言内容，保存到 appstore.json 的 messageBoard 字段。</p>
+        <form action="/message-board" method="post" id="message-board-form">
+          <input type="hidden" name="messageBoard" id="message-board-json" />
+          <div id="message-board-list" class="message-board"></div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="message-add">新增留言</button>
+            <button type="submit">保存留言板</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-apps">
+        <h2>应用列表</h2>
+        <p class="sub">上传新区包或点击已有应用编辑。共 {{ apps|length }} 个应用。</p>
+        <div class="upload-card">
+          <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
+            <input id="apk" name="apk" type="file" accept=".apk,.apk.1,.1,application/vnd.android.package-archive" class="sr" required />
+            <button type="button" id="upload-btn">上传 APK</button>
+          </form>
+        </div>
+        <div class="filter-wrap">
+          <div class="filter-bar" id="cat-filter"></div>
+          <div class="filter-summary" id="filter-summary"></div>
+          <form action="/apps/reorder" method="post" id="app-order-form" class="dialog-actions">
+            <input type="hidden" name="appOrder" id="app-order-json" />
+            <button type="submit" class="btn-ghost">保存排序</button>
+          </form>
+        </div>
+        <div class="app-grid" id="apps-grid" style="margin-top: 14px;">
+          {% for app in apps %}
+            <article class="app-item edit-app-btn" data-app-id="{{ app.id }}" data-category="{{ app.category or '未分类' }}" tabindex="0" role="button">
+              <div class="app-head">
+                <img class="app-icon" src="{{ preview_asset_url(app.icon) }}" alt="{{ app.name }} icon" />
+                <div>
+                  <h3 class="app-name">{{ app.name }}</h3>
+                  <div class="app-package">{{ app.package }}</div>
+                </div>
+              </div>
+              <div class="app-desc">{{ app.description or "暂无描述" }}</div>
+              <div class="app-meta">分类: {{ app.category or "-" }} · 版本: {{ app.versionName or "-" }}</div>
+              <div class="app-sort-actions">
+                <button type="button" class="btn-ghost app-sort-top">置顶</button>
+                <button type="button" class="btn-ghost app-sort-up">上移</button>
+                <button type="button" class="btn-ghost app-sort-down">下移</button>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="panel" id="panel-sounds">
+        <h2>车机音效</h2>
+        <p class="sub">维护 sounds.json 与 CDN 音效资源。共 {{ sounds|length }} 个音效。</p>
+        <div class="upload-card">
+          <form action="/sounds/upload" method="post" enctype="multipart/form-data">
+            <div class="dialog-grid">
+              <div>
+                <label for="sound-files">音频文件</label>
+                <input id="sound-files" name="sounds" type="file" accept=".mp3,.wav,.m4a,.aac,.ogg,.flac,audio/*" multiple required />
+              </div>
+              <div>
+                <label for="sound-upload-tags">本批标签（逗号分隔）</label>
+                <input id="sound-upload-tags" name="tags" type="text" placeholder="锁车, 提示音" />
+              </div>
+            </div>
+            <div class="dialog-actions"><button type="submit">上传音效</button></div>
+          </form>
+        </div>
+
+        <div class="sound-toolbar">
+          <input id="sound-search" type="text" placeholder="搜索名称或文件名" />
+          <select id="sound-tag-filter">
+            <option value="">全部标签</option>
+            {% for tag in sound_tags %}<option value="{{ tag }}">{{ tag }}</option>{% endfor %}
+          </select>
+          <button type="button" class="btn-ghost" id="sound-select-visible">全选当前结果</button>
+        </div>
+
+        <div class="app-grid" id="sounds-grid">
+          {% for sound in sounds %}
+            <article class="app-item sound-item" data-sound-id="{{ sound.id }}" data-name="{{ sound.name }} {{ sound.filename }}" data-tags="{{ (sound.tags or [])|join('||') }}">
+              <input class="sound-select" type="checkbox" aria-label="选择 {{ sound.name }}" />
+              <h3 class="app-name">{{ sound.name }}</h3>
+              <div class="app-package">{{ sound.filename }}</div>
+              <div class="tag-list">
+                {% for tag in sound.tags or [] %}<span class="tag">{{ tag }}</span>{% endfor %}
+                {% if not sound.tags %}<span class="tag tag-empty">无标签</span>{% endif %}
+              </div>
+              <div class="app-meta">{{ sound.filesize or 0 }} bytes · {{ sound.updateTime or "-" }}</div>
+              <audio controls preload="none" src="/sound-files/{{ sound.file.lstrip('/') }}"></audio>
+              <div class="app-sort-actions">
+                <button type="button" class="btn-ghost sound-edit">编辑</button>
+                <button type="button" class="btn-ghost sound-sort-top">置顶</button>
+                <button type="button" class="btn-ghost sound-sort-up">上移</button>
+                <button type="button" class="btn-ghost sound-sort-down">下移</button>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <form action="/sounds/reorder" method="post" id="sound-order-form" class="dialog-actions">
+          <input type="hidden" name="soundOrder" id="sound-order-json" />
+          <button type="submit" class="btn-ghost" id="sound-save-order">保存排序</button>
+        </form>
+        <form action="/sounds/bulk-tags" method="post" id="sound-bulk-tags-form" class="bulk-actions">
+          <input name="add_tags" type="text" placeholder="批量增加标签，逗号分隔" />
+          <input name="remove_tags" type="text" placeholder="批量移除标签，逗号分隔" />
+          <button type="submit">更新标签</button>
+          <button type="submit" class="btn-danger" formaction="/sounds/delete" id="sound-bulk-delete">批量删除</button>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-screensavers">
+        <h2>在线屏保</h2>
+        <p class="sub">维护独立的 screensavers.json 与 CDN 媒体资源。共 {{ screensavers|length }} 个屏保。</p>
+        <div class="upload-card">
+          <form action="/screensavers/upload" method="post" enctype="multipart/form-data">
+            <div class="dialog-grid">
+              <div><label>屏保文件</label><input name="screensavers" type="file" accept="image/*,video/*" multiple required /></div>
+              <div><label>适配状态</label><select name="suitability"><option value="SUITABLE">适合</option><option value="CANDIDATE">候选</option><option value="UNSUITABLE">不适合</option></select></div>
+            </div>
+            <div class="chips" style="margin-top:10px;">
+              {% for value, label in [('L_MAIN_FULL','L 主屏全屏'),('L_MAIN_HALF','L 主屏半屏'),('L_SECONDARY_FULL','L 副屏'),('S_GT_MAIN','S/GT 主屏'),('S_GT_SECONDARY','S/GT 副屏')] %}
+                <label class="chip"><input type="checkbox" name="targets" value="{{ value }}" />{{ label }}</label>
+              {% endfor %}
+            </div>
+            <div class="dialog-actions"><button type="submit">上传屏保</button></div>
+          </form>
+        </div>
+        <div class="sound-toolbar">
+          <input id="screensaver-search" type="text" placeholder="搜索名称" />
+          <select id="screensaver-suitability-filter"><option value="">全部适配状态</option><option value="SUITABLE">适合</option><option value="CANDIDATE">候选</option><option value="UNSUITABLE">不适合</option></select>
+          <select id="screensaver-type-filter"><option value="">全部类型</option><option value="VIDEO">动态</option><option value="IMAGE">静态</option></select>
+          <button type="button" class="btn-ghost" id="screensaver-select-visible">全选当前结果</button>
+        </div>
+        <div class="app-grid" id="screensavers-grid">
+          {% for item in screensavers %}
+            <article class="app-item screensaver-item" data-id="{{ item.id }}" data-name="{{ item.name }}" data-suitability="{{ item.suitability }}" data-type="{{ item.type }}">
+              <input class="screensaver-select" type="checkbox" aria-label="选择 {{ item.name }}" />
+              <img src="/screensaver-files/{{ item.preview.lstrip('/') }}" alt="{{ item.name }}" loading="lazy" style="width:100%;height:150px;object-fit:contain;background:#111;border-radius:8px;" />
+              <h3 class="app-name">{{ item.name }}</h3>
+              <div class="app-meta">{{ item.type }} · {{ item.width }}x{{ item.height }} · {{ item.suitability }}</div>
+              <div class="tag-list">{% for target in item.targets %}<span class="tag">{{ target }}</span>{% endfor %}</div>
+              <div class="app-sort-actions">
+                <button type="button" class="btn-ghost screensaver-edit">编辑</button><button type="button" class="btn-ghost screensaver-top">置顶</button><button type="button" class="btn-ghost screensaver-up">上移</button><button type="button" class="btn-ghost screensaver-down">下移</button>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+        <form action="/screensavers/reorder" method="post" id="screensaver-order-form" class="dialog-actions"><input type="hidden" name="screensaverOrder" id="screensaver-order-json" /><button type="submit" class="btn-ghost" id="screensaver-save-order">保存排序</button></form>
+        <form action="/screensavers/delete" method="post" id="screensaver-bulk-delete-form" class="dialog-actions"><button type="submit" class="btn-danger">批量删除</button></form>
+      </section>
+
+      <section class="panel" id="panel-enhancements">
+        <h2>应用增强 · AEP2</h2>
+        <p class="sub">enhancements.json 使用 schemaVersion=2；aeps 为真实增强包列表，enhancements 仅向旧客户端显示升级提示。仅上传作者本地打包、签名的 AEP2，不接收 APK、AEP v1 或平台私钥。</p>
+        <div class="upload-card">
+          <form action="/enhancements/upload" method="post" enctype="multipart/form-data">
+            <label>已签名 AEP2 文件</label><input name="aep" type="file" accept=".aep" required />
+            <p class="sub">名称、作者、公钥指纹、增强/发行 ID、激活策略和兼容条件均来自验签头部，不能在目录中手工改写。中心只核验结构与作者签名，不解密或验证 APK 载荷；签名不代表平台认可作者或代码安全。</p>
+            <div class="dialog-actions"><button type="submit">核验并保存 AEP2</button></div>
+          </form>
+        </div>
+        <div class="app-grid" style="margin-top:14px;">
+          {% for item in enhancements %}
+            <article class="app-item enhancement-card" data-enhancement-dialog="enhancement-dialog-{{ item.id }}" tabindex="0" role="button">
+              <h3 class="app-name">{{ item.name }}</h3>
+              <div class="app-package">{{ item.package }} · 作者 {{ item.author.name }}</div>
+              <div class="app-meta">作者公钥指纹 {{ item.authorKeyFingerprint }} · 增强 {{ item.enhancementId }}</div>
+              {% for version in item.versions %}
+                <div class="app-desc">{{ version.updateTime|update_time }} · {{ version.releaseId }} · {{ 'VIN 激活' if version.activationMode == 'vin' else '无需激活' }}</div>
+                <div class="app-meta">AEP {{ version.aepSize }} bytes · SHA-256 {{ version.aepSha256 }}</div>
+              {% endfor %}
+            </article>
+          {% else %}
+            <p class="sub">暂无 AEP2 发行包。历史 APK/v1 仅归档保留，不在新版中心提供。</p>
+          {% endfor %}
+        </div>
+        <details style="margin-top:14px;">
+          <summary>历史资源归档（{{ enhancement_history|length }}）</summary>
+          <p class="sub">历史下载地址及文件保留，不会重新加入 v2 中心，也不会自动转换或删除。</p>
+          {% for record in enhancement_history %}
+            <div class="app-desc">{{ record.name }} · {{ record.releaseId }} · {{ record.format }} · {{ record.path }}</div>
+          {% endfor %}
+        </details>
+      </section>
+
+      <section class="panel" id="panel-categories">
+        <h2>分类</h2>
+        <p class="sub">分别维护应用分类和工作流分类顺序。</p>
+        <form action="/categories" method="post" id="categories-form">
+          <h3 style="margin:0 0 10px;font-size:18px;">应用分类</h3>
+          <div class="cats-list" id="cats-list">
+            {% for category in categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="{{ category }}" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endfor %}
+            {% if not categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="未分类" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endif %}
+          </div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="cat-add">新增分类</button>
+            <button type="submit">保存分类</button>
+          </div>
+        </form>
+        <form action="/workflows/categories" method="post" id="workflow-categories-form" style="margin-top:20px;">
+          <h3 style="margin:0 0 10px;font-size:18px;">工作流分类</h3>
+          <div class="cats-list" id="workflow-cats-list">
+            {% for category in workflow_categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="{{ category }}" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endfor %}
+            {% if not workflow_categories %}
+              <div class="cat-row">
+                <input type="text" name="categories" value="未分类" required />
+                <button type="button" class="btn-ghost cat-up">上移</button>
+                <button type="button" class="btn-ghost cat-down">下移</button>
+                <button type="button" class="btn-danger cat-del">删除</button>
+              </div>
+            {% endif %}
+          </div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="workflow-cat-add">新增工作流分类</button>
+            <button type="submit">保存工作流分类</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-workflows">
+        <h2>工作流</h2>
+        <p class="sub">上传并维护 `workflows.json`。共 {{ workflows|length }} 个工作流包。</p>
+        <div class="upload-card">
+          <form action="/workflows/upload" method="post" enctype="multipart/form-data" id="workflow-upload-form">
+            <input id="workflow-file" name="workflow" type="file" accept=".json,application/json" class="sr" required />
+            <button type="button" id="workflow-upload-btn">上传工作流 JSON</button>
+          </form>
+        </div>
+        <div class="filter-wrap">
+          <div class="filter-bar" id="workflow-cat-filter"></div>
+          <div class="filter-summary" id="workflow-filter-summary"></div>
+        </div>
+        <div class="app-grid" style="margin-top: 14px;">
+          {% for workflow in workflows %}
+            <article class="app-item edit-workflow-btn" data-workflow-id="{{ workflow.id }}" data-category="{{ workflow.category or '未分类' }}" tabindex="0" role="button">
+              <div class="app-head">
+                <div class="workflow-badge">{{ workflow.workflowCount or 0 }}</div>
+                <div>
+                  <h3 class="app-name">{{ workflow.name }}</h3>
+                  <div class="app-package">{{ workflow.author or "未填写作者" }}</div>
+                </div>
+              </div>
+              <div class="app-desc">{{ workflow.description or "暂无描述" }}</div>
+              <div class="app-meta">分类: {{ workflow.category or "未分类" }} · 文件: {{ workflow.filename or "-" }} · 内含: {{ workflow.workflowCount or 0 }} 个工作流</div>
+              <div class="workflow-extra">
+                {{ (workflow.workflowNames or [])|join(" / ") if workflow.workflowNames else "未解析到工作流名称" }}
+              </div>
+              <div class="tag-list">
+                {% if workflow.tags %}
+                  {% for tag in workflow.tags %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                {% else %}
+                  <span class="tag tag-empty">无 tags</span>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+
+    <dialog id="edit-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top">
+          <h3 id="dialog-title">编辑应用</h3>
+          <button type="button" id="dialog-close" class="btn-ghost">关闭</button>
+        </div>
+        <form action="/apps/update" method="post" id="edit-form">
+          <input type="hidden" name="app_id" id="edit-id-hidden" />
+          <div class="dialog-grid">
+            <div>
+              <label for="edit-name">名称</label>
+              <input id="edit-name" name="name" type="text" required />
+            </div>
+            <div>
+              <label for="edit-category">分类</label>
+              <select id="edit-category" name="category"></select>
+            </div>
+            <div>
+              <label for="edit-package">package</label>
+              <input id="edit-package" name="package" type="text" />
+            </div>
+            <div>
+              <label for="edit-version">versionName</label>
+              <input id="edit-version" name="versionName" type="text" />
+            </div>
+            <div>
+              <label for="edit-code">code</label>
+              <input id="edit-code" name="code" type="text" />
+            </div>
+            <div>
+              <label for="edit-filesize">filesize</label>
+              <input id="edit-filesize" name="filesize" type="text" />
+            </div>
+            <div>
+              <label for="edit-md5sum">md5sum</label>
+              <input id="edit-md5sum" name="md5sum" type="text" />
+            </div>
+            <div>
+              <label for="edit-update-time">updateTime</label>
+              <input id="edit-update-time" name="updateTime" type="text" />
+            </div>
+            <div>
+              <label for="edit-icon">icon</label>
+              <input id="edit-icon" name="icon" type="text" />
+              <img id="preview-icon" class="icon-preview" src="" alt="icon preview" />
+            </div>
+            <div>
+              <label for="edit-apk">apk</label>
+              <input id="edit-apk" name="apk" type="text" />
+            </div>
+          </div>
+          <div style="margin-top:10px;">
+            <label for="edit-description">描述</label>
+            <textarea id="edit-description" name="description"></textarea>
+          </div>
+          <div style="margin-top:10px;">
+            <label>incompatibility</label>
+            <div class="chips">
+              {% for value in incompatibility_options %}
+                <label class="chip">
+                  <input type="checkbox" class="edit-incompatibility" name="incompatibility" value="{{ value }}" />
+                  {{ value }}
+                </label>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost" id="replace-apk-btn">替换 APK</button>
+            <button type="submit">保存修改</button>
+          </div>
+        </form>
+        <form action="/apps/replace-apk" method="post" enctype="multipart/form-data" id="replace-apk-form">
+          <input type="hidden" name="app_id" id="replace-apk-id-hidden" />
+          <input id="replace-apk-file" name="apk" type="file" accept=".apk,.apk.1,.1,application/vnd.android.package-archive" class="sr" required />
+        </form>
+        <form action="/apps/delete" method="post" id="delete-form">
+          <input type="hidden" name="app_id" id="delete-id-hidden" />
+          <div class="dialog-actions">
+            <button type="submit" class="btn-danger" id="delete-btn">删除应用</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog id="screensaver-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top"><h3>编辑屏保</h3><button type="button" id="screensaver-dialog-close" class="btn-ghost">关闭</button></div>
+        <form action="/screensavers/update" method="post">
+          <input type="hidden" name="screensaver_id" id="screensaver-edit-id" />
+          <div class="dialog-grid"><div><label>名称</label><input name="name" id="screensaver-edit-name" required /></div><div><label>适配状态</label><select name="suitability" id="screensaver-edit-suitability"><option value="SUITABLE">适合</option><option value="CANDIDATE">候选</option><option value="UNSUITABLE">不适合</option></select></div></div>
+          <div class="chips" style="margin-top:10px;">{% for value, label in [('L_MAIN_FULL','L 主屏全屏'),('L_MAIN_HALF','L 主屏半屏'),('L_SECONDARY_FULL','L 副屏'),('S_GT_MAIN','S/GT 主屏'),('S_GT_SECONDARY','S/GT 副屏')] %}<label class="chip"><input class="screensaver-edit-target" type="checkbox" name="targets" value="{{ value }}" />{{ label }}</label>{% endfor %}</div>
+          <div class="dialog-actions"><button type="submit">保存修改</button></div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog id="sound-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top">
+          <h3 id="sound-dialog-title">编辑音效</h3>
+          <button type="button" id="sound-dialog-close" class="btn-ghost">关闭</button>
+        </div>
+        <form action="/sounds/update" method="post">
+          <input type="hidden" name="sound_id" id="sound-edit-id" />
+          <div class="dialog-grid">
+            <div><label for="sound-edit-name">名称</label><input id="sound-edit-name" name="name" type="text" required /></div>
+            <div><label for="sound-edit-tags">标签（逗号分隔）</label><input id="sound-edit-tags" name="tags" type="text" /></div>
+          </div>
+          <div class="dialog-actions"><button type="submit">保存修改</button></div>
+        </form>
+        <form action="/sounds/delete" method="post" id="sound-single-delete-form">
+          <input type="hidden" name="sound_id" id="sound-delete-id" />
+          <div class="dialog-actions"><button type="submit" class="btn-danger">删除音效</button></div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog id="workflow-dialog">
+      <div class="dialog-wrap">
+        <div class="dialog-top">
+          <h3 id="workflow-dialog-title">编辑工作流</h3>
+          <button type="button" id="workflow-dialog-close" class="btn-ghost">关闭</button>
+        </div>
+        <form action="/workflows/update" method="post" id="workflow-edit-form">
+          <input type="hidden" name="workflow_id" id="workflow-id-hidden" />
+          <div class="dialog-grid">
+            <div>
+              <label for="workflow-name">名称</label>
+              <input id="workflow-name" name="name" type="text" required />
+            </div>
+            <div>
+              <label for="workflow-category">分类</label>
+              <select id="workflow-category" name="category"></select>
+            </div>
+            <div>
+              <label for="workflow-author">作者</label>
+              <input id="workflow-author" name="author" type="text" />
+            </div>
+            <div>
+              <label for="workflow-filename">文件名</label>
+              <input id="workflow-filename" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-file-path">文件路径</label>
+              <input id="workflow-file-path" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-count">工作流数量</label>
+              <input id="workflow-count" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-update-time">updateTime</label>
+              <input id="workflow-update-time" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-md5sum">md5sum</label>
+              <input id="workflow-md5sum" type="text" readonly />
+            </div>
+            <div>
+              <label for="workflow-filesize">filesize</label>
+              <input id="workflow-filesize" type="text" readonly />
+            </div>
+          </div>
+          <div style="margin-top:10px;">
+            <label for="workflow-description">描述</label>
+            <textarea id="workflow-description" name="description"></textarea>
+          </div>
+          <div style="margin-top:10px;">
+            <label>包含工作流</label>
+            <div id="workflow-name-list" class="tag-list"></div>
+          </div>
+          <div style="margin-top:10px;">
+            <label>tags</label>
+            <div id="workflow-tag-list" class="tag-list"></div>
+          </div>
+          <div class="dialog-actions">
+            <a id="workflow-download-link" class="action-link" href="#" target="_blank" rel="noreferrer">下载 JSON</a>
+            <button type="submit">保存修改</button>
+          </div>
+        </form>
+        <form action="/workflows/delete" method="post" id="workflow-delete-form">
+          <input type="hidden" name="workflow_id" id="workflow-delete-id-hidden" />
+          <div class="dialog-actions">
+            <button type="submit" class="btn-danger" id="workflow-delete-btn">删除工作流</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    {% for item in enhancements %}
+    <dialog id="enhancement-dialog-{{ item.id }}">
+      <div class="dialog-wrap">
+        <div class="dialog-top"><h3>AEP2 发行管理：{{ item.name }}</h3><button type="button" class="btn-ghost enhancement-close">关闭</button></div>
+        <p class="sub">已签信息只读。修改名称、作者、激活或兼容条件必须由作者重新打包签名，并使用新的 releaseId。移出目录或替换只归档旧索引，保留资源文件。</p>
+        <div class="dialog-grid">
+          <div><label>目标包名</label><input value="{{ item.package }}" readonly /></div>
+          <div><label>作者</label><input value="{{ item.author.name }}（{{ item.author.id }}）" readonly /></div>
+          <div><label>作者公钥指纹</label><input value="{{ item.authorKeyFingerprint }}" readonly /></div>
+          <div><label>增强 ID</label><input value="{{ item.enhancementId }}" readonly /></div>
+        </div>
+        <h4>版本列表</h4>
+        {% for version in item.versions %}
+        <section class="message-card">
+          <div class="dialog-grid">
+            <div><label>发行 ID</label><input value="{{ version.releaseId }}" readonly /></div>
+            <div><label>发布时间（北京时间）</label><input value="{{ version.updateTime|update_time }}" readonly /></div>
+            <div><label>版本名称</label><input value="{{ version.name }}" readonly /></div>
+            <div><label>版本作者</label><input value="{{ version.author.name }}" readonly /></div>
+            <div><label>激活策略</label><input value="{{ version.activationMode }}" readonly /></div>
+            <div><label>AEP SHA-256</label><input value="{{ version.aepSha256 }}" readonly /></div>
+            <div><label>AEP 文件大小</label><input value="{{ version.aepSize }} bytes" readonly /></div>
+            <div><label>APK SHA-256（已签声明）</label><input value="{{ version.apkSha256 }}" readonly /></div>
+            <div><label>APK 大小（已签声明）</label><input value="{{ version.apkSize }} bytes" readonly /></div>
+            <div><label>AEP 资源路径</label><input value="{{ version.aep }}" readonly /></div>
+          </div>
+          <label>已签兼容条件</label><pre>{{ version.compatibility|tojson(indent=2) }}</pre>
+          <label>已签增强说明</label><textarea readonly>{{ version.description }}</textarea>
+          <form action="/enhancements/versions/replace-aep" method="post" enctype="multipart/form-data" class="dialog-actions">
+            <input type="hidden" name="enhancement_id" value="{{ item.id }}" /><input type="hidden" name="version_id" value="{{ version.id }}" />
+            <label>重新签名的 AEP2（新 releaseId）<input name="aep" type="file" accept=".aep" required /></label><button type="submit" class="btn-ghost">核验并替换目录版本</button>
+          </form>
+          <form action="/enhancements/versions/delete" method="post" class="dialog-actions"><input type="hidden" name="enhancement_id" value="{{ item.id }}" /><input type="hidden" name="version_id" value="{{ version.id }}" /><button type="submit" class="btn-danger" onclick="return confirm('将此版本移入历史归档？资源文件不会删除。')">移出中心版本</button></form>
+        </section>
+        {% endfor %}
+        <h4>新增版本</h4>
+        <form action="/enhancements/versions/add" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="enhancement_id" value="{{ item.id }}" />
+          <label>同一作者公钥、同一增强 ID 的 AEP2</label><input name="aep" type="file" accept=".aep" required />
+          <div class="dialog-actions"><button type="submit">核验并新增版本</button></div>
+        </form>
+        <form action="/enhancements/delete" method="post" class="dialog-actions"><input type="hidden" name="enhancement_id" value="{{ item.id }}" /><button type="submit" class="btn-danger" onclick="return confirm('将整个增强移入历史归档？资源文件不会删除。')">移出中心条目</button></form>
+      </div>
+    </dialog>
+    {% endfor %}
+
+    <script>
+      const APPS = {{ apps|tojson }};
+      const APP_MAP = new Map((APPS || []).map((item) => [item.id, item]));
+      const WORKFLOWS = {{ workflows|tojson }};
+      const WORKFLOW_MAP = new Map((WORKFLOWS || []).map((item) => [item.id, item]));
+      const CATEGORIES = {{ categories|tojson }};
+      const WORKFLOW_CATEGORIES = {{ workflow_categories|tojson }};
+      const MESSAGE_BOARD = {{ message_board|tojson }};
+      const SOUNDS = {{ sounds|tojson }};
+      const SCREENSAVERS = {{ screensavers|tojson }};
+      const SCREENSAVER_MAP = new Map((SCREENSAVERS || []).map((item) => [item.id, item]));
+      const SOUND_MAP = new Map((SOUNDS || []).map((item) => [item.id, item]));
+      const ACTIVE_TAB = "{{ active_tab }}";
+      const AUTO_EDIT_ID = "{{ auto_edit_id }}";
+      const AUTO_EDIT_APP = {{ auto_edit_app|tojson }};
+      const AUTO_EDIT_WORKFLOW_ID = "{{ auto_edit_workflow_id }}";
+      const AUTO_EDIT_WORKFLOW = {{ auto_edit_workflow|tojson }};
+      const dialog = document.getElementById("edit-dialog");
+      const closeBtn = document.getElementById("dialog-close");
+      const deleteBtn = document.getElementById("delete-btn");
+      const iconInput = document.getElementById("edit-icon");
+      const messageBoardList = document.getElementById("message-board-list");
+      const messageAddBtn = document.getElementById("message-add");
+      const messageBoardJson = document.getElementById("message-board-json");
+      const messageBoardForm = document.getElementById("message-board-form");
+      const replaceApkBtn = document.getElementById("replace-apk-btn");
+      const replaceApkFile = document.getElementById("replace-apk-file");
+      const replaceApkForm = document.getElementById("replace-apk-form");
+      const uploadBtn = document.getElementById("upload-btn");
+      const apkInput = document.getElementById("apk");
+      const uploadForm = document.getElementById("upload-form");
+      const editButtons = document.querySelectorAll(".edit-app-btn");
+      const editCategorySelect = document.getElementById("edit-category");
+      const appsGrid = document.getElementById("apps-grid");
+      const appOrderForm = document.getElementById("app-order-form");
+      const appOrderJson = document.getElementById("app-order-json");
+      const filterBar = document.getElementById("cat-filter");
+      const filterSummary = document.getElementById("filter-summary");
+      let currentAppFilter = "__ALL__";
+      const workflowFilterBar = document.getElementById("workflow-cat-filter");
+      const workflowFilterSummary = document.getElementById("workflow-filter-summary");
+      const workflowDialog = document.getElementById("workflow-dialog");
+      const workflowCloseBtn = document.getElementById("workflow-dialog-close");
+      const workflowDeleteBtn = document.getElementById("workflow-delete-btn");
+      const workflowUploadBtn = document.getElementById("workflow-upload-btn");
+      const workflowFileInput = document.getElementById("workflow-file");
+      const workflowUploadForm = document.getElementById("workflow-upload-form");
+      const workflowButtons = document.querySelectorAll(".edit-workflow-btn");
+      const workflowCategorySelect = document.getElementById("workflow-category");
+      const soundsGrid = document.getElementById("sounds-grid");
+      const soundSearch = document.getElementById("sound-search");
+      const soundTagFilter = document.getElementById("sound-tag-filter");
+      const soundSelectVisible = document.getElementById("sound-select-visible");
+      const soundOrderForm = document.getElementById("sound-order-form");
+      const soundOrderJson = document.getElementById("sound-order-json");
+      const soundSaveOrder = document.getElementById("sound-save-order");
+      const soundBulkTagsForm = document.getElementById("sound-bulk-tags-form");
+      const soundBulkDelete = document.getElementById("sound-bulk-delete");
+      const soundDialog = document.getElementById("sound-dialog");
+      const screensaverGrid = document.getElementById("screensavers-grid");
+      const screensaverDialog = document.getElementById("screensaver-dialog");
+
+      document.querySelectorAll(".enhancement-card").forEach((card) => {
+        const dialog = document.getElementById(card.dataset.enhancementDialog);
+        const open = () => { switchTab("enhancements"); dialog.showModal(); };
+        card.addEventListener("click", (event) => { if (!event.target.closest("button, form, input, select, textarea")) open(); });
+        card.addEventListener("keydown", (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); open(); } });
+        dialog.querySelector(".enhancement-close").addEventListener("click", () => dialog.close());
+        dialog.addEventListener("click", (event) => { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); });
+      });
+
+      function switchTab(name) {
+        document.querySelectorAll(".tab-btn").forEach((item) => {
+          item.classList.toggle("active", item.dataset.tab === name);
+        });
+        document.querySelectorAll(".panel").forEach((item) => {
+          item.classList.toggle("active", item.id === `panel-${name}`);
+        });
+      }
+      document.querySelectorAll(".tab-btn").forEach((item) => {
+        item.addEventListener("click", () => switchTab(item.dataset.tab));
+      });
+      switchTab(ACTIVE_TAB || "notice");
+
+      function resolvePreviewUrl(path) {
+        const value = (path || "").trim();
+        if (!value) return "";
+        if (value.startsWith("http://") || value.startsWith("https://")) return value;
+        const normalized = value.startsWith("/") ? value.slice(1) : value;
+        return `/preview/${normalized}`;
+      }
+
+      function setCheckboxValues(values) {
+        const selected = new Set(values || []);
+        document.querySelectorAll(".edit-incompatibility").forEach((item) => {
+          item.checked = selected.has(item.value);
+        });
+      }
+
+      function ensureCategoryOption(value) {
+        const normalized = (value || "").trim();
+        if (!normalized) return;
+        if ([...editCategorySelect.options].some((option) => option.value === normalized)) return;
+        const opt = document.createElement("option");
+        opt.value = normalized;
+        opt.textContent = normalized;
+        editCategorySelect.appendChild(opt);
+      }
+
+      function fillCategorySelect(selectedValue) {
+        editCategorySelect.innerHTML = "";
+        const values = CATEGORIES.length > 0 ? CATEGORIES : ["未分类"];
+        values.forEach((value) => {
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = value;
+          editCategorySelect.appendChild(opt);
+        });
+        ensureCategoryOption(selectedValue);
+        editCategorySelect.value = (selectedValue || "未分类");
+      }
+
+      function ensureWorkflowCategoryOption(value) {
+        const normalized = (value || "").trim();
+        if (!normalized) return;
+        if ([...workflowCategorySelect.options].some((option) => option.value === normalized)) return;
+        const opt = document.createElement("option");
+        opt.value = normalized;
+        opt.textContent = normalized;
+        workflowCategorySelect.appendChild(opt);
+      }
+
+      function fillWorkflowCategorySelect(selectedValue) {
+        workflowCategorySelect.innerHTML = "";
+        const values = WORKFLOW_CATEGORIES.length > 0 ? WORKFLOW_CATEGORIES : ["未分类"];
+        values.forEach((value) => {
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = value;
+          workflowCategorySelect.appendChild(opt);
+        });
+        ensureWorkflowCategoryOption(selectedValue);
+        workflowCategorySelect.value = (selectedValue || "未分类");
+      }
+
+      function resolveWorkflowDownloadUrl(path) {
+        const value = (path || "").trim();
+        if (!value) return "";
+        const normalized = value.startsWith("/") ? value.slice(1) : value;
+        return `/workflow-files/${encodeURI(normalized)}`;
+      }
+
+      function renderTagList(elementId, values, emptyText) {
+        const container = document.getElementById(elementId);
+        container.innerHTML = "";
+        const items = (values || []).filter((item) => `${item || ""}`.trim());
+        if (items.length === 0) {
+          const empty = document.createElement("span");
+          empty.className = "tag tag-empty";
+          empty.textContent = emptyText;
+          container.appendChild(empty);
+          return;
+        }
+        items.forEach((value) => {
+          const chip = document.createElement("span");
+          chip.className = "tag";
+          chip.textContent = value;
+          container.appendChild(chip);
+        });
+      }
+
+      function normalizeMessageBoard(items) {
+        if (!Array.isArray(items)) return [];
+        return items.map((item) => {
+          const title = `${item && item.title ? item.title : ""}`.trim();
+          const contents = Array.isArray(item && item.contents) ? item.contents : [];
+          return {
+            title,
+            contents: contents.map((content) => ({
+              text: `${content && content.text ? content.text : ""}`.trim(),
+              canCopy: Boolean(content && content.canCopy),
+            })).filter((content) => content.text),
+          };
+        }).filter((item) => item.title || item.contents.length > 0);
+      }
+
+      function pairMessageContents(contents) {
+        const pairs = [];
+        const values = Array.isArray(contents) ? contents : [];
+        for (let index = 0; index < values.length; index += 1) {
+          const current = values[index] || {};
+          const next = values[index + 1] || {};
+          if (!current.canCopy && next.canCopy) {
+            pairs.push({ label: current.text || "", value: next.text || "" });
+            index += 1;
+            continue;
+          }
+          if (current.canCopy) {
+            pairs.push({ label: "", value: current.text || "" });
+          } else {
+            pairs.push({ label: current.text || "", value: "" });
+          }
+        }
+        return pairs;
+      }
+
+      function createMessagePairRow(pair = {}) {
+        const row = document.createElement("div");
+        row.className = "message-pair-row";
+        row.innerHTML = `
+          <textarea class="message-label" placeholder="说明，如：讴歌&#10;附带直播"></textarea>
+          <textarea class="message-value" placeholder="可复制内容，如 URL / 口令 / 文本"></textarea>
+          <button type="button" class="btn-ghost message-pair-top">置顶</button>
+          <button type="button" class="btn-ghost message-pair-down">下移</button>
+          <button type="button" class="btn-danger message-pair-del">删除</button>
+        `;
+        row.querySelector(".message-label").value = pair.label || "";
+        row.querySelector(".message-value").value = pair.value || "";
+        row.querySelector(".message-pair-top").addEventListener("click", () => {
+          const list = row.parentElement;
+          const first = list.querySelector(".message-pair-row");
+          if (first && first !== row) list.insertBefore(row, first);
+        });
+        row.querySelector(".message-pair-down").addEventListener("click", () => {
+          const next = row.nextElementSibling;
+          if (next) row.parentElement.insertBefore(next, row);
+        });
+        row.querySelector(".message-pair-del").addEventListener("click", () => row.remove());
+        return row;
+      }
+
+      function createMessageCard(item = {}) {
+        const card = document.createElement("div");
+        card.className = "message-card";
+        card.innerHTML = `
+          <div class="message-card-top">
+            <input type="text" class="message-title" placeholder="标题" />
+            <button type="button" class="btn-ghost message-top">置顶</button>
+            <button type="button" class="btn-ghost message-up">上移</button>
+            <button type="button" class="btn-ghost message-down">下移</button>
+            <button type="button" class="btn-danger message-del">删除留言</button>
+          </div>
+          <div class="message-pair-head">
+            <div>说明</div>
+            <div>可复制内容</div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="message-contents"></div>
+          <div class="dialog-actions">
+            <button type="button" class="btn-ghost message-content-add">新增一组</button>
+          </div>
+        `;
+        card.querySelector(".message-title").value = item.title || "";
+        const contentsEl = card.querySelector(".message-contents");
+        const pairs = pairMessageContents(item.contents);
+        pairs.forEach((pair) => contentsEl.appendChild(createMessagePairRow(pair)));
+        if (pairs.length === 0) {
+          contentsEl.appendChild(createMessagePairRow());
+        }
+        card.querySelector(".message-content-add").addEventListener("click", () => {
+          contentsEl.appendChild(createMessagePairRow());
+        });
+        card.querySelector(".message-top").addEventListener("click", () => {
+          const first = messageBoardList.querySelector(".message-card");
+          if (first && first !== card) messageBoardList.insertBefore(card, first);
+        });
+        card.querySelector(".message-up").addEventListener("click", () => {
+          const prev = card.previousElementSibling;
+          if (prev) messageBoardList.insertBefore(card, prev);
+        });
+        card.querySelector(".message-down").addEventListener("click", () => {
+          const next = card.nextElementSibling;
+          if (next) messageBoardList.insertBefore(next, card);
+        });
+        card.querySelector(".message-del").addEventListener("click", () => card.remove());
+        return card;
+      }
+
+      function renderMessageBoard(items) {
+        messageBoardList.innerHTML = "";
+        const values = normalizeMessageBoard(items);
+        values.forEach((item) => messageBoardList.appendChild(createMessageCard(item)));
+        if (values.length === 0) {
+          messageBoardList.appendChild(createMessageCard());
+        }
+      }
+
+      function collectMessageBoard() {
+        const items = [...messageBoardList.querySelectorAll(".message-card")].map((card) => {
+          const title = card.querySelector(".message-title").value.trim();
+          const contents = [];
+          [...card.querySelectorAll(".message-pair-row")].forEach((row) => {
+            const label = row.querySelector(".message-label").value.trim();
+            const value = row.querySelector(".message-value").value.trim();
+            if (label) contents.push({ text: label, canCopy: false });
+            if (value) contents.push({ text: value, canCopy: true });
+          });
+          return { title, contents };
+        });
+        return normalizeMessageBoard(items);
+      }
+
+      function fillDialog(app) {
+        document.getElementById("dialog-title").textContent = `编辑应用: ${app.name || app.package}`;
+        document.getElementById("edit-id-hidden").value = app.id || "";
+        document.getElementById("delete-id-hidden").value = app.id || "";
+        document.getElementById("replace-apk-id-hidden").value = app.id || "";
+        document.getElementById("edit-name").value = app.name || "";
+        fillCategorySelect(app.category || "未分类");
+        document.getElementById("edit-package").value = app.package || "";
+        document.getElementById("edit-version").value = app.versionName || "";
+        document.getElementById("edit-code").value = app.code || "";
+        document.getElementById("edit-filesize").value = app.filesize || "";
+        document.getElementById("edit-md5sum").value = app.md5sum || "";
+        document.getElementById("edit-update-time").value = app.updateTime || "";
+        document.getElementById("edit-icon").value = app.icon || "";
+        document.getElementById("edit-apk").value = app.apk || "";
+        document.getElementById("edit-description").value = app.description || "";
+        document.getElementById("preview-icon").src = resolvePreviewUrl(app.icon || "");
+        setCheckboxValues(app.incompatibility || []);
+      }
+
+      function fillWorkflowDialog(workflow) {
+        document.getElementById("workflow-dialog-title").textContent = `编辑工作流: ${workflow.name || workflow.filename || "未命名工作流"}`;
+        document.getElementById("workflow-id-hidden").value = workflow.id || "";
+        document.getElementById("workflow-delete-id-hidden").value = workflow.id || "";
+        document.getElementById("workflow-name").value = workflow.name || "";
+        fillWorkflowCategorySelect(workflow.category || "未分类");
+        document.getElementById("workflow-author").value = workflow.author || "";
+        document.getElementById("workflow-filename").value = workflow.filename || "";
+        document.getElementById("workflow-file-path").value = workflow.file || "";
+        document.getElementById("workflow-count").value = workflow.workflowCount || 0;
+        document.getElementById("workflow-update-time").value = workflow.updateTime || "";
+        document.getElementById("workflow-md5sum").value = workflow.md5sum || "";
+        document.getElementById("workflow-filesize").value = workflow.filesize || "";
+        document.getElementById("workflow-description").value = workflow.description || "";
+        renderTagList("workflow-name-list", workflow.workflowNames || [], "未解析到工作流名称");
+        renderTagList("workflow-tag-list", workflow.tags || [], "无 tags");
+
+        const downloadLink = document.getElementById("workflow-download-link");
+        const downloadUrl = resolveWorkflowDownloadUrl(workflow.file || "");
+        downloadLink.href = downloadUrl || "#";
+        downloadLink.classList.toggle("is-disabled", !downloadUrl);
+      }
+
+      function openDialog(app) {
+        fillDialog(app);
+        switchTab("apps");
+        try {
+          dialog.showModal();
+        } catch (err) {
+          dialog.setAttribute("open", "open");
+        }
+      }
+
+      function openWorkflowDialog(workflow) {
+        fillWorkflowDialog(workflow);
+        switchTab("workflows");
+        try {
+          workflowDialog.showModal();
+        } catch (err) {
+          workflowDialog.setAttribute("open", "open");
+        }
+      }
+
+      editButtons.forEach((button) => {
+        const openFn = () => {
+          const appId = button.dataset.appId || "";
+          const app = APP_MAP.get(appId) || {};
+          openDialog(app);
+        };
+        button.addEventListener("click", openFn);
+        button.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openFn();
+          }
+        });
+      });
+
+      function visibleAppItems() {
+        return [...appsGrid.querySelectorAll(".app-item")].filter((item) => item.style.display !== "none");
+      }
+
+      function applyVisibleAppOrder(visibleItems, reorderedVisibleItems, focusedItem) {
+        const allItems = [...appsGrid.querySelectorAll(".app-item")];
+        const queue = [...reorderedVisibleItems];
+        allItems.forEach((current) => {
+          if (visibleItems.includes(current)) {
+            appsGrid.appendChild(queue.shift());
+          } else {
+            appsGrid.appendChild(current);
+          }
+        });
+        if (focusedItem && focusedItem.focus) {
+          focusedItem.focus();
+        }
+        applyCategoryFilter(currentAppFilter, "#panel-apps .app-item", filterSummary, "应用");
+      }
+
+      function moveAppItem(item, direction) {
+        const visibleItems = visibleAppItems();
+        const index = visibleItems.indexOf(item);
+        if (index === -1) return;
+        const target = visibleItems[index + direction];
+        if (!target) return;
+
+        const reorderedVisibleItems = [...visibleItems];
+        reorderedVisibleItems[index] = target;
+        reorderedVisibleItems[index + direction] = item;
+        applyVisibleAppOrder(visibleItems, reorderedVisibleItems, item);
+      }
+
+      function topAppItem(item) {
+        const visibleItems = visibleAppItems();
+        const index = visibleItems.indexOf(item);
+        if (index <= 0) return;
+
+        const reorderedVisibleItems = [...visibleItems];
+        reorderedVisibleItems.splice(index, 1);
+        reorderedVisibleItems.unshift(item);
+        applyVisibleAppOrder(visibleItems, reorderedVisibleItems, item);
+      }
+
+      appsGrid.querySelectorAll(".app-sort-top, .app-sort-up, .app-sort-down").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const item = button.closest(".app-item");
+          if (!item) return;
+          if (button.classList.contains("app-sort-top")) {
+            topAppItem(item);
+            return;
+          }
+          moveAppItem(item, button.classList.contains("app-sort-up") ? -1 : 1);
+        });
+      });
+
+      appOrderForm.addEventListener("submit", () => {
+        appOrderJson.value = JSON.stringify(
+          [...appsGrid.querySelectorAll(".app-item")].map((item) => item.dataset.appId || "").filter(Boolean)
+        );
+      });
+
+      function soundItems() {
+        return [...soundsGrid.querySelectorAll(".sound-item")];
+      }
+
+      function isSoundFilterActive() {
+        return soundSearch.value.trim() !== "" || soundTagFilter.value !== "";
+      }
+
+      function applySoundFilter() {
+        const query = soundSearch.value.trim().toLowerCase();
+        const tag = soundTagFilter.value;
+        let visibleCount = 0;
+        soundItems().forEach((item) => {
+          const tags = (item.dataset.tags || "").split("||").filter(Boolean);
+          const visible = (!query || (item.dataset.name || "").toLowerCase().includes(query))
+            && (!tag || tags.includes(tag));
+          item.style.display = visible ? "" : "none";
+          if (visible) visibleCount += 1;
+        });
+        const disabled = isSoundFilterActive();
+        soundSaveOrder.disabled = disabled;
+        soundsGrid.querySelectorAll(".sound-sort-top, .sound-sort-up, .sound-sort-down").forEach((button) => {
+          button.disabled = disabled;
+        });
+        soundSelectVisible.textContent = `全选当前结果 (${visibleCount})`;
+      }
+
+      function moveSoundItem(item, direction, toTop = false) {
+        if (isSoundFilterActive()) return;
+        const items = soundItems();
+        const index = items.indexOf(item);
+        if (index < 0) return;
+        if (toTop) {
+          if (index > 0) soundsGrid.insertBefore(item, items[0]);
+          return;
+        }
+        const target = items[index + direction];
+        if (!target) return;
+        if (direction < 0) soundsGrid.insertBefore(item, target);
+        else soundsGrid.insertBefore(target, item);
+      }
+
+      soundsGrid.querySelectorAll(".sound-sort-top, .sound-sort-up, .sound-sort-down").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".sound-item");
+          if (!item) return;
+          moveSoundItem(
+            item,
+            button.classList.contains("sound-sort-up") ? -1 : 1,
+            button.classList.contains("sound-sort-top")
+          );
+        });
+      });
+
+      soundsGrid.querySelectorAll(".sound-edit").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".sound-item");
+          const sound = SOUND_MAP.get(item ? item.dataset.soundId : "") || {};
+          document.getElementById("sound-dialog-title").textContent = `编辑音效: ${sound.name || sound.filename || "未命名"}`;
+          document.getElementById("sound-edit-id").value = sound.id || "";
+          document.getElementById("sound-delete-id").value = sound.id || "";
+          document.getElementById("sound-edit-name").value = sound.name || "";
+          document.getElementById("sound-edit-tags").value = (sound.tags || []).join(", ");
+          soundDialog.showModal();
+        });
+      });
+
+      soundSearch.addEventListener("input", applySoundFilter);
+      soundTagFilter.addEventListener("change", applySoundFilter);
+      soundSelectVisible.addEventListener("click", () => {
+        const visible = soundItems().filter((item) => item.style.display !== "none");
+        const shouldSelect = visible.some((item) => !item.querySelector(".sound-select").checked);
+        visible.forEach((item) => { item.querySelector(".sound-select").checked = shouldSelect; });
+      });
+      soundOrderForm.addEventListener("submit", (event) => {
+        if (isSoundFilterActive()) {
+          event.preventDefault();
+          return;
+        }
+        soundOrderJson.value = JSON.stringify(soundItems().map((item) => item.dataset.soundId).filter(Boolean));
+      });
+
+      function appendSelectedSoundIds(form) {
+        form.querySelectorAll('input[data-generated="sound-id"]').forEach((item) => item.remove());
+        const ids = soundItems()
+          .filter((item) => item.querySelector(".sound-select").checked)
+          .map((item) => item.dataset.soundId)
+          .filter(Boolean);
+        ids.forEach((id) => {
+          const input = document.createElement("input");
+          input.type = "hidden";
+          input.name = "sound_ids";
+          input.value = id;
+          input.dataset.generated = "sound-id";
+          form.appendChild(input);
+        });
+        return ids;
+      }
+
+      soundBulkTagsForm.addEventListener("submit", (event) => {
+        const ids = appendSelectedSoundIds(soundBulkTagsForm);
+        if (ids.length === 0) {
+          event.preventDefault();
+          window.alert("请先选择音效");
+        }
+      });
+      soundBulkDelete.addEventListener("click", (event) => {
+        const count = soundItems().filter((item) => item.querySelector(".sound-select").checked).length;
+        if (count === 0 || !window.confirm(`确认删除选中的 ${count} 个音效？`)) event.preventDefault();
+      });
+      document.getElementById("sound-dialog-close").addEventListener("click", () => soundDialog.close());
+      document.getElementById("sound-single-delete-form").addEventListener("submit", (event) => {
+        if (!window.confirm("确认删除该音效？")) event.preventDefault();
+      });
+      soundDialog.addEventListener("click", (event) => {
+        const rect = soundDialog.getBoundingClientRect();
+        const inside = rect.top <= event.clientY && event.clientY <= rect.bottom
+          && rect.left <= event.clientX && event.clientX <= rect.right;
+        if (!inside) soundDialog.close();
+      });
+      applySoundFilter();
+
+      function screensaverItems() { return [...screensaverGrid.querySelectorAll(".screensaver-item")]; }
+      function screensaverFilterActive() { return document.getElementById("screensaver-search").value.trim() !== "" || document.getElementById("screensaver-suitability-filter").value !== "" || document.getElementById("screensaver-type-filter").value !== ""; }
+      function applyScreensaverFilter() {
+        const query = document.getElementById("screensaver-search").value.trim().toLowerCase();
+        const suitability = document.getElementById("screensaver-suitability-filter").value;
+        const type = document.getElementById("screensaver-type-filter").value;
+        screensaverItems().forEach((item) => { item.style.display = (!query || item.dataset.name.toLowerCase().includes(query)) && (!suitability || item.dataset.suitability === suitability) && (!type || item.dataset.type === type) ? "" : "none"; });
+        document.getElementById("screensaver-save-order").disabled = screensaverFilterActive();
+      }
+      ["screensaver-search", "screensaver-suitability-filter", "screensaver-type-filter"].forEach((id) => document.getElementById(id).addEventListener(id === "screensaver-search" ? "input" : "change", applyScreensaverFilter));
+      document.getElementById("screensaver-select-visible").addEventListener("click", () => { const visible = screensaverItems().filter((item) => item.style.display !== "none"); const selected = visible.some((item) => !item.querySelector(".screensaver-select").checked); visible.forEach((item) => { item.querySelector(".screensaver-select").checked = selected; }); });
+      screensaverGrid.querySelectorAll(".screensaver-edit").forEach((button) => button.addEventListener("click", () => { const item = SCREENSAVER_MAP.get(button.closest(".screensaver-item").dataset.id); document.getElementById("screensaver-edit-id").value = item.id; document.getElementById("screensaver-edit-name").value = item.name; document.getElementById("screensaver-edit-suitability").value = item.suitability; document.querySelectorAll(".screensaver-edit-target").forEach((target) => { target.checked = (item.targets || []).includes(target.value); }); screensaverDialog.showModal(); }));
+      screensaverGrid.querySelectorAll(".screensaver-top, .screensaver-up, .screensaver-down").forEach((button) => button.addEventListener("click", () => { if (screensaverFilterActive()) return; const item = button.closest(".screensaver-item"); const items = screensaverItems(); const index = items.indexOf(item); if (button.classList.contains("screensaver-top")) { if (index > 0) screensaverGrid.insertBefore(item, items[0]); return; } const direction = button.classList.contains("screensaver-up") ? -1 : 1; const target = items[index + direction]; if (!target) return; if (direction < 0) screensaverGrid.insertBefore(item, target); else screensaverGrid.insertBefore(target, item); }));
+      document.getElementById("screensaver-order-form").addEventListener("submit", (event) => { if (screensaverFilterActive()) { event.preventDefault(); return; } document.getElementById("screensaver-order-json").value = JSON.stringify(screensaverItems().map((item) => item.dataset.id)); });
+      document.getElementById("screensaver-bulk-delete-form").addEventListener("submit", (event) => { const form = event.currentTarget; form.querySelectorAll('[data-generated="screensaver-id"]').forEach((input) => input.remove()); const ids = screensaverItems().filter((item) => item.querySelector(".screensaver-select").checked).map((item) => item.dataset.id); if (!ids.length || !window.confirm(`确认删除选中的 ${ids.length} 个屏保？`)) { event.preventDefault(); return; } ids.forEach((id) => { const input = document.createElement("input"); input.type = "hidden"; input.name = "screensaver_ids"; input.value = id; input.dataset.generated = "screensaver-id"; form.appendChild(input); }); });
+      document.getElementById("screensaver-dialog-close").addEventListener("click", () => screensaverDialog.close());
+      applyScreensaverFilter();
+
+      workflowButtons.forEach((button) => {
+        const openFn = () => {
+          const workflowId = button.dataset.workflowId || "";
+          const workflow = WORKFLOW_MAP.get(workflowId) || {};
+          openWorkflowDialog(workflow);
+        };
+        button.addEventListener("click", openFn);
+        button.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openFn();
+          }
+        });
+      });
+
+      iconInput.addEventListener("input", () => {
+        document.getElementById("preview-icon").src = resolvePreviewUrl(iconInput.value);
+      });
+      messageAddBtn.addEventListener("click", () => {
+        messageBoardList.appendChild(createMessageCard());
+      });
+      messageBoardForm.addEventListener("submit", () => {
+        messageBoardJson.value = JSON.stringify(collectMessageBoard());
+      });
+      renderMessageBoard(MESSAGE_BOARD || []);
+      replaceApkBtn.addEventListener("click", () => replaceApkFile.click());
+      replaceApkFile.addEventListener("change", () => {
+        if (replaceApkFile.files && replaceApkFile.files.length > 0) {
+          replaceApkForm.requestSubmit();
+        }
+      });
+      closeBtn.addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        const rect = dialog.getBoundingClientRect();
+        const inDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+          && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+        if (!inDialog) dialog.close();
+      });
+      deleteBtn.addEventListener("click", (event) => {
+        if (!window.confirm("确认删除该应用？")) event.preventDefault();
+      });
+      workflowCloseBtn.addEventListener("click", () => workflowDialog.close());
+      workflowDialog.addEventListener("click", (event) => {
+        const rect = workflowDialog.getBoundingClientRect();
+        const inDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+          && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+        if (!inDialog) workflowDialog.close();
+      });
+      workflowDeleteBtn.addEventListener("click", (event) => {
+        if (!window.confirm("确认删除该工作流？")) event.preventDefault();
+      });
+
+      uploadBtn.addEventListener("click", () => apkInput.click());
+      apkInput.addEventListener("change", () => {
+        if (apkInput.files && apkInput.files.length > 0) {
+          uploadForm.requestSubmit();
+        }
+      });
+      workflowUploadBtn.addEventListener("click", () => workflowFileInput.click());
+      workflowFileInput.addEventListener("change", () => {
+        if (workflowFileInput.files && workflowFileInput.files.length > 0) {
+          workflowUploadForm.requestSubmit();
+        }
+      });
+
+      if (AUTO_EDIT_APP && AUTO_EDIT_APP.id) {
+        openDialog(AUTO_EDIT_APP);
+        const url = new URL(window.location.href);
+        url.searchParams.delete("edit");
+        window.history.replaceState({}, "", url.toString());
+      } else if (AUTO_EDIT_ID && APP_MAP.has(AUTO_EDIT_ID)) {
+        openDialog(APP_MAP.get(AUTO_EDIT_ID) || {});
+        const url = new URL(window.location.href);
+        url.searchParams.delete("edit");
+        window.history.replaceState({}, "", url.toString());
+      } else if (AUTO_EDIT_WORKFLOW && AUTO_EDIT_WORKFLOW.id) {
+        openWorkflowDialog(AUTO_EDIT_WORKFLOW);
+        const url = new URL(window.location.href);
+        url.searchParams.delete("workflow_edit");
+        window.history.replaceState({}, "", url.toString());
+      } else if (AUTO_EDIT_WORKFLOW_ID && WORKFLOW_MAP.has(AUTO_EDIT_WORKFLOW_ID)) {
+        openWorkflowDialog(WORKFLOW_MAP.get(AUTO_EDIT_WORKFLOW_ID) || {});
+        const url = new URL(window.location.href);
+        url.searchParams.delete("workflow_edit");
+        window.history.replaceState({}, "", url.toString());
+      }
+
+      const catsList = document.getElementById("cats-list");
+      const catAdd = document.getElementById("cat-add");
+      const workflowCatsList = document.getElementById("workflow-cats-list");
+      const workflowCatAdd = document.getElementById("workflow-cat-add");
+
+      function bindCatRow(row, listEl) {
+        row.querySelector(".cat-up").addEventListener("click", () => {
+          const prev = row.previousElementSibling;
+          if (prev) listEl.insertBefore(row, prev);
+        });
+        row.querySelector(".cat-down").addEventListener("click", () => {
+          const next = row.nextElementSibling;
+          if (next) listEl.insertBefore(next, row);
+        });
+        row.querySelector(".cat-del").addEventListener("click", () => {
+          const rows = listEl.querySelectorAll(".cat-row");
+          if (rows.length <= 1) return;
+          row.remove();
+        });
+      }
+
+      function createCategoryRow() {
+        const row = document.createElement("div");
+        row.className = "cat-row";
+        row.innerHTML = `
+          <input type="text" name="categories" value="" required />
+          <button type="button" class="btn-ghost cat-up">上移</button>
+          <button type="button" class="btn-ghost cat-down">下移</button>
+          <button type="button" class="btn-danger cat-del">删除</button>
+        `;
+        return row;
+      }
+
+      catsList.querySelectorAll(".cat-row").forEach((row) => bindCatRow(row, catsList));
+      workflowCatsList.querySelectorAll(".cat-row").forEach((row) => bindCatRow(row, workflowCatsList));
+      catAdd.addEventListener("click", () => {
+        const row = createCategoryRow();
+        catsList.appendChild(row);
+        bindCatRow(row, catsList);
+      });
+      workflowCatAdd.addEventListener("click", () => {
+        const row = createCategoryRow();
+        workflowCatsList.appendChild(row);
+        bindCatRow(row, workflowCatsList);
+      });
+
+      function normalizeCategory(value) {
+        const text = (value || "").trim();
+        return text || "未分类";
+      }
+
+      function buildCategoryCounts(items) {
+        const counts = new Map();
+        (items || []).forEach((item) => {
+          const category = normalizeCategory(item.category);
+          counts.set(category, (counts.get(category) || 0) + 1);
+        });
+        return counts;
+      }
+
+      function applyCategoryFilter(filterValue, itemSelector, summaryEl, itemLabel) {
+        const appItems = document.querySelectorAll(itemSelector);
+        let visibleCount = 0;
+        appItems.forEach((item) => {
+          const category = normalizeCategory(item.dataset.category);
+          const visible = filterValue === "__ALL__" || category === filterValue;
+          item.style.display = visible ? "" : "none";
+          if (visible) visibleCount += 1;
+        });
+        summaryEl.textContent = filterValue === "__ALL__"
+          ? `共 ${visibleCount} 个${itemLabel}`
+          : `${filterValue} 分类共 ${visibleCount} 个${itemLabel}`;
+      }
+
+      function renderCategoryFilters({ items, categories, filterContainer, summaryEl, itemSelector, itemLabel }) {
+        const counts = buildCategoryCounts(items);
+        const orderedCategories = [...(categories || []).map(normalizeCategory)];
+        counts.forEach((_, category) => {
+          if (!orderedCategories.includes(category)) orderedCategories.push(category);
+        });
+        const totalCount = [...counts.values()].reduce((sum, value) => sum + value, 0);
+
+        const createButton = (key, label) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "filter-btn";
+          btn.dataset.filter = key;
+          btn.textContent = label;
+          btn.addEventListener("click", () => {
+            filterContainer.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("active"));
+            btn.classList.add("active");
+            if (filterContainer === filterBar) {
+              currentAppFilter = key;
+            }
+            applyCategoryFilter(key, itemSelector, summaryEl, itemLabel);
+          });
+          return btn;
+        };
+
+        filterContainer.innerHTML = "";
+        const allBtn = createButton("__ALL__", `全部 (${totalCount})`);
+        allBtn.classList.add("active");
+        filterContainer.appendChild(allBtn);
+
+        orderedCategories.forEach((category) => {
+          const count = counts.get(category) || 0;
+          filterContainer.appendChild(createButton(category, `${category} (${count})`));
+        });
+
+        applyCategoryFilter("__ALL__", itemSelector, summaryEl, itemLabel);
+      }
+
+      renderCategoryFilters({
+        items: APPS,
+        categories: CATEGORIES,
+        filterContainer: filterBar,
+        summaryEl: filterSummary,
+        itemSelector: "#panel-apps .app-item",
+        itemLabel: "应用",
+      });
+      renderCategoryFilters({
+        items: WORKFLOWS,
+        categories: WORKFLOW_CATEGORIES,
+        filterContainer: workflowFilterBar,
+        summaryEl: workflowFilterSummary,
+        itemSelector: "#panel-workflows .app-item",
+        itemLabel: "工作流",
+      });
+    </script>
+  </body>
+</html>

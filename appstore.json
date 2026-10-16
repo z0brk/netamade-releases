@@ -1,0 +1,2925 @@
+{
+  "notice": "此处只提供一些实用的软件下载，其他软件不会有，也不会为了你个人需要专门给你增加一个。有别的软件需要自行安装【沙发管家】等带应用市场功能的应用。",
+  "categories": [
+    "导航地图",
+    "影音娱乐",
+    "手车互联",
+    "K 歌软件",
+    "实用工具",
+    "应用市场",
+    "浏览器",
+    "未分类"
+  ],
+  "apps": [
+    {
+      "id": "868ca5a1d0ae",
+      "code": "phonemirrorbox-97e435",
+      "name": "AutoKit",
+      "category": "手车互联",
+      "icon": "/phonemirrorbox-97e435/icon.png",
+      "package": "cn.manstep.phonemirrorBox",
+      "md5sum": "06da8fb60632a4257273c132dc2564fb",
+      "filesize": 10046700,
+      "updateTime": "2026-04-28T07:21:13Z",
+      "versionName": "2025.03.19.1126",
+      "description": "适用车连易carplay",
+      "incompatibility": [],
+      "apk": "/phonemirrorbox-97e435/AutoKit_2025.03.19.1126.apk.1"
+    },
+    {
+      "id": "eda86739097e",
+      "code": "aweme-2332cb",
+      "name": "抖音车机版",
+      "category": "影音娱乐",
+      "icon": "/aweme-2332cb/icon.jpg",
+      "package": "com.ss.android.ugc.aweme",
+      "md5sum": "8532df749d9e1ca967c0e6a958ce907b",
+      "filesize": 14457370,
+      "updateTime": "2026-07-08T12:52:32Z",
+      "versionName": "9.9.82",
+      "description": "支持方向盘切歌",
+      "incompatibility": [],
+      "apk": "/aweme-2332cb/apk"
+    },
+    {
+      "code": "car-9bbb04",
+      "name": "MusicFree",
+      "category": "影音娱乐",
+      "icon": "/car-9bbb04/icon.png",
+      "package": "fun.upup.musicfree",
+      "md5sum": "ab987a1e777989a36068f2733235ff0a",
+      "filesize": 35646093,
+      "updateTime": "2026-08-27T08:19:31Z",
+      "versionName": "2.0.6",
+      "description": "v2.0.6\r\n\r\n 修复QQ歌单导入、歌词显示、内置音源管理\r\n修复：内置平台插件（小秋QQ/小芸网易云/小枸酷狗/小蜜咪咕/小蜗酷我/奇水汽水）被误删，导致歌词全部无法显示、QQ歌单无法导入的问题\r\n新增：统一歌单导入，粘贴任意歌单链接自动识别来源（GD优先，各平台插件兜底）\r\n新增：QQ音乐歌单链接自动识别导入（ryqq_v2 等新版分享链接）\r\n修复：GD音乐台歌词获取改为多音源逐个尝试，提升歌词命中率\r\n优化：插件请求超时由2秒延长到8秒，避免网络波动导致歌词/导入失败\r\n优化：内置音源启动时自动补齐缺失文件，防止功能失效",
+      "incompatibility": [],
+      "apk": "/car-9bbb04/MusicFree-2.0.6-universal.apk",
+      "id": "b8ea2f116687"
+    },
+    {
+      "id": "d62472bccdf3",
+      "code": "car-82a073",
+      "name": "汽水音乐车机版",
+      "category": "影音娱乐",
+      "icon": "/car-82a073/icon.webp",
+      "package": "com.luna.music.car",
+      "md5sum": "11ba8c116d10e75b8df751e1daa15cb4",
+      "filesize": 43206064,
+      "updateTime": "2026-08-22T05:55:26Z",
+      "versionName": "1.1.27",
+      "description": "更新 1.1.27",
+      "incompatibility": [],
+      "apk": "/car-82a073/qishuiyinyue_1.1.27101027.apk"
+    },
+    {
+      "id": "eaaa83ff7986",
+      "code": "appmanage-8418ca",
+      "name": "应用管家",
+      "category": "实用工具",
+      "icon": "/appmanage-8418ca/icon.png",
+      "package": "com.yunpan.appmanage",
+      "md5sum": "a50c9071a0b88d72219d05fa585aa430",
+      "filesize": 15472101,
+      "updateTime": "2026-04-28T04:55:03Z",
+      "versionName": "1.7.7",
+      "description": "对车机上的应用进行管理、支持扫码传输文件、卸载等功能",
+      "incompatibility": [],
+      "apk": "/appmanage-8418ca/1.77.apk.1"
+    },
+    {
+      "id": "06ff4259022b",
+      "code": "mobile-e8006a",
+      "name": "LX Music",
+      "category": "影音娱乐",
+      "icon": "/mobile-e8006a/icon.png",
+      "package": "cn.toside.music.mobile",
+      "md5sum": "5c4b059fc8d84245514940dc35428d8e",
+      "filesize": 14030650,
+      "updateTime": "2026-04-28T09:28:44Z",
+      "versionName": "1.8.2",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/mobile-e8006a/music.apk.1"
+    },
+    {
+      "id": "da968ac726c9",
+      "code": "simple-live-tv-c95078",
+      "name": "Simple Live TV",
+      "category": "影音娱乐",
+      "icon": "/simple-live-tv-c95078/icon.png",
+      "package": "com.xycz.simple_live_tv",
+      "md5sum": "5e84251a09a43c0f1ce163b03a9d4624",
+      "filesize": 35379107,
+      "updateTime": "2026-04-28T05:51:09Z",
+      "versionName": "1.6.4",
+      "description": "多平台聚合直播，支持直播平台：虎牙直播、斗鱼直播、哔哩哔哩直播、抖音直播",
+      "incompatibility": [],
+      "apk": "/simple-live-tv-c95078/simplelive-B-v1.6.5.apk"
+    },
+    {
+      "id": "4e4293b73fb7",
+      "code": "himovceie-1f598e",
+      "name": "影视仓",
+      "category": "影音娱乐",
+      "icon": "/himovceie-1f598e/icon.png",
+      "package": "com.huawei.himovceie",
+      "md5sum": "0fd1d364b026e06b6b20c707edaf16f9",
+      "filesize": 39103626,
+      "updateTime": "2026-04-28T07:11:30Z",
+      "versionName": "6.2.0",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/himovceie-1f598e/6.2.0_opt.apk.1"
+    },
+    {
+      "id": "3665bbc32341",
+      "code": "playcar-d657df",
+      "name": "DJUU车机版",
+      "category": "影音娱乐",
+      "icon": "/playcar-d657df/icon.webp",
+      "package": "com.djuu.playcar",
+      "md5sum": "1fc06fa558e7463d732e1c0b04ade794",
+      "filesize": 35307303,
+      "updateTime": "2026-04-30T06:03:56Z",
+      "versionName": "1.0.1",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/playcar-d657df/DJUUv1.0.1.apk"
+    },
+    {
+      "id": "9d309644c6bc",
+      "code": "car-063149",
+      "name": "DJ音乐盒车机",
+      "category": "影音娱乐",
+      "icon": "/car-063149/icon.png",
+      "package": "com.djbox.car",
+      "md5sum": "74abfb2647550a393bfc770ada68a2ba",
+      "filesize": 12166860,
+      "updateTime": "2026-04-30T06:03:48Z",
+      "versionName": "4.2.0",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/car-063149/DJv4.2.0fun_apk.apk"
+    },
+    {
+      "id": "0f9463626899",
+      "code": "launcher-15e1ec",
+      "name": "布丁UI",
+      "category": "实用工具",
+      "icon": "/launcher-15e1ec/icon.png",
+      "package": "com.sfcar.launcher",
+      "md5sum": "48c00abe026acfb3e5c9e9a0a83ab42b",
+      "filesize": 46384369,
+      "updateTime": "2026-04-28T05:52:35Z",
+      "versionName": "2.0.4",
+      "description": "不要更新，更新后不可用",
+      "incompatibility": [],
+      "apk": "/launcher-15e1ec/ui2.0.4.apk"
+    },
+    {
+      "id": "2ca0b844f3bb",
+      "code": "via-a252b9",
+      "name": "Via",
+      "category": "浏览器",
+      "icon": "/via-a252b9/icon.png",
+      "package": "mark.via",
+      "md5sum": "ddc1059ba46c68866587fe2fa18953fd",
+      "filesize": 2612223,
+      "updateTime": "2026-04-28T07:38:39Z",
+      "versionName": "7.1.0",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/via-a252b9/via-release-cn_1.apk"
+    },
+    {
+      "id": "8e782747aa8c",
+      "code": "xbrowser-82b10d",
+      "name": "XBrowser",
+      "category": "浏览器",
+      "icon": "/xbrowser-82b10d/icon.png",
+      "package": "com.mmbox.xbrowser",
+      "md5sum": "2c730debfd37de313571f6ab8fa25cc9",
+      "filesize": 2051791,
+      "updateTime": "2026-04-28T07:38:46Z",
+      "versionName": "5.5.3",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/xbrowser-82b10d/xbrowser-release.apk"
+    },
+    {
+      "id": "d689dd4b50e5",
+      "code": "easyconn-9645f6",
+      "name": "亿连手机互联",
+      "category": "手车互联",
+      "icon": "/easyconn-9645f6/icon.png",
+      "package": "net.easyconn",
+      "md5sum": "078ea06bc5271101c8f2515d6fd4339d",
+      "filesize": 42759120,
+      "updateTime": "2026-04-28T07:23:29Z",
+      "versionName": "7.0.1-9011d330b-202404121051",
+      "description": "手机投屏软件，适用于安卓手机，无需盒子，功能类似carlife软件，导航自动走头枕通道，会显示状态栏。",
+      "incompatibility": [],
+      "apk": "/easyconn-9645f6/7.0.1__.apk.1"
+    },
+    {
+      "id": "d1540a7584be",
+      "code": "tv-a7ee02",
+      "name": "DongYuTvWeb",
+      "category": "影音娱乐",
+      "icon": "/tv-a7ee02/icon.webp",
+      "package": "xyz.jdynb.tv",
+      "md5sum": "53d1d59e8a2e9538404b95d613b1ea9b",
+      "filesize": 2858405,
+      "updateTime": "2026-04-30T06:03:31Z",
+      "versionName": "1.0.6.3",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/tv-a7ee02/DongYuTVWeb_v1.0.6.3.apk"
+    },
+    {
+      "id": "1c3b24918c36",
+      "code": "manager-ad1c6e",
+      "name": "EX File Manager",
+      "category": "实用工具",
+      "icon": "/manager-ad1c6e/icon.png",
+      "package": "com.ace.ex.file.manager",
+      "md5sum": "448859072ab4a0f0151acf7a87c9d26b",
+      "filesize": 100483158,
+      "updateTime": "2026-04-28T07:34:11Z",
+      "versionName": "1.5.5",
+      "description": "解锁高级版去除弹窗",
+      "incompatibility": [
+        "ALL"
+      ],
+      "apk": "/manager-ad1c6e/EXv1.5.5.apk"
+    },
+    {
+      "id": "5314543acd6e",
+      "code": "solidexplorer2-e24af0",
+      "name": "Solid Explorer",
+      "category": "实用工具",
+      "icon": "/solidexplorer2-e24af0/icon.png",
+      "package": "pl.solidexplorer2",
+      "md5sum": "da3c3c4a0d80daadb24eea2110436925",
+      "filesize": 25339230,
+      "updateTime": "2026-04-28T07:33:57Z",
+      "versionName": "3.4.7",
+      "description": "专业绿色版",
+      "incompatibility": [
+        "ALL"
+      ],
+      "apk": "/solidexplorer2-e24af0/Solid_Explorer_3.4.7-Balatan.apk"
+    },
+    {
+      "id": "48ef61c20f91",
+      "code": "qqdownloader-84e559",
+      "name": "应用宝",
+      "category": "应用市场",
+      "icon": "/qqdownloader-84e559/icon.png",
+      "package": "com.tencent.android.qqdownloader",
+      "md5sum": "6e8978f1737be5d9f7e656acbff98f25",
+      "filesize": 33129056,
+      "updateTime": "2026-04-28T07:41:59Z",
+      "versionName": "9.1.9",
+      "description": "",
+      "incompatibility": [
+        "ALL"
+      ],
+      "apk": "/qqdownloader-84e559/apk"
+    },
+    {
+      "id": "76a2503fb735",
+      "code": "isulewtools-a4c447",
+      "name": "哪吒互联",
+      "category": "实用工具",
+      "icon": "/isulewtools-a4c447/icon.webp",
+      "package": "com.neta.isulewtools",
+      "md5sum": "956dacfebf77ee145eff51a4149c79fe",
+      "filesize": 35536733,
+      "updateTime": "2026-04-28T04:45:20Z",
+      "versionName": "2.1.8",
+      "description": "哪吒互联是一款车机增强应用，支持自定义仪表盘和小组件，也能通过插件扩展功能。它可实时读取车辆数据，提供悬浮窗查看和日志排查，同时支持蓝牙切换、按键映射，让日常驾驶操作更顺手。飞佬 Carplay 功能正在开发中，功能未出，敬请期待",
+      "incompatibility": [],
+      "apk": "/isulewtools-a4c447/NETA_CONNECT-v2.1.8.apk"
+    },
+    {
+      "id": "87c3c74c4b0b",
+      "code": "ad-f2cb81",
+      "name": "MX Player",
+      "category": "影音娱乐",
+      "icon": "/ad-f2cb81/icon.webp",
+      "package": "com.mxtech.videoplayer.ad",
+      "md5sum": "54610e602173117bf85becbe5cb2abf4",
+      "filesize": 87028471,
+      "updateTime": "2026-04-28T07:33:29Z",
+      "versionName": "2.12.2",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/ad-f2cb81/MX_Player_2.12.2-youarefinished.apk"
+    },
+    {
+      "id": "9a6af73759ef",
+      "code": "tv-917e3a",
+      "name": "OK影视",
+      "category": "影音娱乐",
+      "icon": "/tv-917e3a/icon.png",
+      "package": "com.fongmi.android.tv",
+      "md5sum": "56dfe9aa7d9a222d6aab85c8986a09c8",
+      "filesize": 81665926,
+      "updateTime": "2026-04-28T04:55:09Z",
+      "versionName": "3.7.3",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/tv-917e3a/OK3.7.3-64.apk.1"
+    },
+    {
+      "id": "24eca314776f",
+      "code": "permissiondog-5caf28",
+      "name": "权限狗",
+      "category": "实用工具",
+      "icon": "/permissiondog-5caf28/icon.png",
+      "package": "com.web1n.permissiondog",
+      "md5sum": "cea18a461dd561b10ed604a21725f187",
+      "filesize": 1438313,
+      "updateTime": "2026-04-28T09:30:08Z",
+      "versionName": "0.1.0.45",
+      "description": "没必要使用，美式【应用管理】已经可以完全替代此物。",
+      "incompatibility": [],
+      "apk": "/permissiondog-5caf28/permissiondog.apk"
+    },
+    {
+      "id": "71a1dfb5d1d2",
+      "code": "wasuvideoplayer-0fa1f5",
+      "name": "华数TV",
+      "category": "影音娱乐",
+      "icon": "/wasuvideoplayer-0fa1f5/icon.png",
+      "package": "com.wasu.wasuvideoplayer",
+      "md5sum": "265bddf317d3eb25639204f2c7e8af12",
+      "filesize": 51327832,
+      "updateTime": "2026-04-30T06:03:24Z",
+      "versionName": "7.2.9.0",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/wasuvideoplayer-0fa1f5/TV_v7.2.9.0.apk"
+    },
+    {
+      "id": "7af516d367a0",
+      "code": "ad1-94a636",
+      "name": "毒舌电影",
+      "category": "影音娱乐",
+      "icon": "/ad1-94a636/icon.png",
+      "package": "com.dstv.ad1",
+      "md5sum": "9533065153d5122390e6b90e8d9b800f",
+      "filesize": 21239336,
+      "updateTime": "2026-04-30T06:03:16Z",
+      "versionName": "1.1.2",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/ad1-94a636/v1.1.2fun_apk.apk"
+    },
+    {
+      "code": "markethd-cf79bf",
+      "name": "沙发管家HD",
+      "category": "应用市场",
+      "icon": "/markethd-cf79bf/icon.png",
+      "package": "com.shafa.markethd",
+      "md5sum": "35497b958da1f3eed9f5be7e843e320d",
+      "filesize": 11560273,
+      "updateTime": "2026-04-28T04:23:15Z",
+      "versionName": "4.9.53",
+      "description": "这个可以当做应用市场使用",
+      "incompatibility": [],
+      "apk": "/markethd-cf79bf/-_4.9.53.apk",
+      "id": "7ff77b13daa7"
+    },
+    {
+      "id": "e986d1c4305a",
+      "code": "lite-74b000",
+      "name": "番茄音乐（原畅听音乐）",
+      "category": "影音娱乐",
+      "icon": "/lite-74b000/icon.webp",
+      "package": "com.xs.fm.lite",
+      "md5sum": "a33f77d3f383615f8d8a5b90a44a3634",
+      "filesize": 93650903,
+      "updateTime": "2026-04-28T04:46:17Z",
+      "versionName": "6.1.6.32",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/lite-74b000/com.xs.fm.lite.apk"
+    },
+    {
+      "id": "99b4cf985cfe",
+      "code": "carlifevehicle-3836c9-2",
+      "name": "百度 CarLife",
+      "category": "手车互联",
+      "icon": "/carlifevehicle-3836c9-2/icon.png",
+      "package": "com.muyetuge.carlifevehicle",
+      "md5sum": "8c7f5b8a843d8fa03c971d7e2629d794",
+      "filesize": 7427661,
+      "updateTime": "2026-04-28T09:30:55Z",
+      "versionName": "2025.09.29",
+      "description": "不知道谁传的版本，自己尝试",
+      "incompatibility": [],
+      "apk": "/carlifevehicle-3836c9-2/com.muyetuge.carlifevehicle-2025.09.29-20250929.apk"
+    },
+    {
+      "id": "e7e44f6c3bdd",
+      "code": "carlifevehicle-3836c9",
+      "name": "百度CarLife",
+      "category": "手车互联",
+      "icon": "/carlifevehicle-3836c9/icon.png",
+      "package": "com.muyetuge.carlifevehicle",
+      "md5sum": "29f90c3936dc25c9dd1a085843303e88",
+      "filesize": 11149415,
+      "updateTime": "2026-05-11T05:37:58Z",
+      "versionName": "2025.09.26",
+      "description": "车手互联软件，安卓版carplay，无需盒子即可用于手机投屏到车机屏幕。此版本为大橙修改版百度Carlife4.0_2025.9.30，_改哪吒图标_支持哪吒竖屏车机全屏半屏切换_支持WLAN直连_支持连接成功自启_支持有线USB帮点击，方控切歌等，更多功能自行探索。使用中发现最稳定，后面的新版不是直连连不上就是切换后台再返回后黑屏等等问题。推荐手机热点或有线连接方式，最流畅，WLAN直连和车机热点连接方式都比较卡，非常不推荐。",
+      "incompatibility": [],
+      "apk": "/carlifevehicle-3836c9/Carlife4.0_2025.9.30__S_WLAN__USB.apk"
+    },
+    {
+      "id": "8910ab6915dd",
+      "code": "amapauto-d02f31",
+      "name": "高德美式定制版-全车型通用-推荐使用",
+      "category": "导航地图",
+      "icon": "/amapauto-d02f31/icon.png",
+      "package": "com.autonavi.amapauto",
+      "md5sum": "f6e2bdfc79a71be507280e6cd7a0dc7f",
+      "filesize": 136825080,
+      "updateTime": "2026-08-27T15:45:36Z",
+      "versionName": "9.1-0731@美式股东版",
+      "description": "- 无车道级、无车道级指引、无车道级推荐\r\n\r\n> 8 月 27 日更新：修复原车开启导航压低媒体音或语音助手压低媒体音后媒体音量一直被压低无法恢复的问题\r\n\r\n> 8 月 13 日更新：修复使用美式 Dock 时浅色背景有黑色横线的问题，修复自动 3D 问题\r\n\r\n> 8 月 6 日更新：修复巡航状态时触发导航的红绿灯播报问题（之前的“前方左转即将红灯”的问题实际并不是巡航的红绿灯播报）\r\n\r\n> 8 月 1 日更新：\r\n1. 修复有时候系统颜色变化后地图不自动同步\r\n2. 移除悬浮窗投射 HUD 功能、关闭高德车机自带 HUD 功能，后续都通过美式的【高德导航辅助】功能提供\r\n3. 增加导航结束页自动关闭并进入巡航功能，默认 10 秒，可自行调整\r\n4. 修复关闭巡航播报、巡航红绿灯不完整还是会出现“前方路口左转”的播报问题\r\n5. 支持配合美式的【语音识别】联动，有搜索结果时说“第 X 个”即可开始导航（美式需更新到 v4.5.7 及以上的版本）\r\n6. 开启“美”字里的【使用哪吒音色播报】和【哪吒音色通过系统导航出声】开关后，可以通过原车的「主驾头枕」出声并且是哪吒音色（美式需更新到 v4.5.7 及以上的版本）\r\n\r\n\r\n\r\n首次启动会弹出设置对话框，后续在地图左侧找到“美“字的透明小气泡，点击打开设置对话框，请不要随意拖动，并且增大眼睛查看地图左侧的小气泡\r\n\r\n1. 完美适配哪吒车机，支持头枕出声、跟随车机颜色、支持全屏切换、支持原车语音控制\r\n2. 支持 巡航播报+红绿灯倒计时、默认关闭天气播报\r\n3. 支持在“美”字中设置是否使用哪吒音色，关闭哪吒音色时股东使用头枕出声，开启哪吒音色后不能头枕出声\r\n4. 在【股东群】看群公告了解如何实现“替代原车地图“、“语音控制“的效果（多看少问）\r\n5. 哪吒 L 可以通过打开美式的【高德导航辅助】里的融合定位中的增强定位，后续不再需要修复定位（只开*增强定位*，不要开启第二个*融合定位*开关）\r\n6. 单版本实现哪吒 L、S、GT、猎装的分辨率自适应\r\n7. 支持巡航多灯显示到原车 HUD 中（配合「高德导航控制」功能使用）",
+      "incompatibility": [],
+      "apk": "/amapauto-d02f31/9.1.0_-2026-08-27-23.apk"
+    },
+    {
+      "id": "a097f00ab681",
+      "code": "leting-40e6e4",
+      "name": "车联助手lite",
+      "category": "手车互联",
+      "icon": "/leting-40e6e4/icon.png",
+      "package": "com.leting",
+      "md5sum": "d7fce9e1c9696f4ea1f7b0bc1230a42a",
+      "filesize": 8726424,
+      "updateTime": "2026-04-28T04:50:49Z",
+      "versionName": "99999.2.2",
+      "description": "Oppo Vivo 专用",
+      "incompatibility": [],
+      "apk": "/leting-40e6e4/lite_OV.apk"
+    },
+    {
+      "id": "4277a388255a",
+      "code": "kwmusiccar-28105f",
+      "name": "酷我音乐",
+      "category": "影音娱乐",
+      "icon": "/kwmusiccar-28105f/icon.png",
+      "package": "cn.kuwo.kwmusiccar",
+      "md5sum": "c9469c4738eff2adc6b1e8d5799c3152",
+      "filesize": 81127114,
+      "updateTime": "2026-08-30T12:59:27Z",
+      "versionName": "7.6.6.21",
+      "description": "酷我音乐车机版高级版",
+      "incompatibility": [],
+      "apk": "/kwmusiccar-28105f/Ver.7.6.6.21.apk"
+    },
+    {
+      "id": "9e42a9bab41e",
+      "code": "auto-bad607",
+      "name": "酷狗音乐",
+      "category": "影音娱乐",
+      "icon": "/auto-bad607/icon.png",
+      "package": "com.kugou.android.auto",
+      "md5sum": "4d7a841a45dfb47a0f5b70f103c0c1bb",
+      "filesize": 108786592,
+      "updateTime": "2026-04-30T05:36:39Z",
+      "versionName": "6.1.0",
+      "description": "酷狗车机版V6.1.0\r\n支持蝰蛇音效，母带音质，支持14种主题切换，支持5种播放器样式切换。美式方控完美支持，美式授权后可以在线更新。",
+      "incompatibility": [],
+      "apk": "/auto-bad607/com.kugou.android.auto.apk.1"
+    },
+    {
+      "code": "light-cbd5cc",
+      "name": "红绿灯领航",
+      "category": "导航地图",
+      "icon": "/light-cbd5cc/icon.png",
+      "package": "com.mojoxing.light",
+      "md5sum": "33e2308aecb801524c3bc4ec2f2f9821",
+      "filesize": 5628534,
+      "updateTime": "2026-04-28T04:03:27Z",
+      "versionName": "2.3.2",
+      "description": "红绿灯领航的老版本，别更新，新版本会悬浮窗乱跳",
+      "incompatibility": [],
+      "apk": "/light-cbd5cc/com.mojoxing.light_v2.3.2_9663.com.apk",
+      "id": "ef3fe4af4eb8"
+    },
+    {
+      "id": "d81157180e94",
+      "code": "wecarnavi-7b31ab",
+      "name": "腾讯地图车机版",
+      "category": "导航地图",
+      "icon": "/wecarnavi-7b31ab/icon.png",
+      "package": "com.tencent.wecarnavi",
+      "md5sum": "66f0324b74b91436d80edaca320f163b",
+      "filesize": 129970812,
+      "updateTime": "2026-04-28T04:54:49Z",
+      "versionName": "9.6.0.75",
+      "description": "",
+      "incompatibility": [],
+      "apk": "/wecarnavi-7b31ab/V9.6.0.75.apk.1"
+    },
+    {
+      "id": "4825334ac7e6",
+      "code": "minimap-ca6ee2",
+      "name": "高德地图手机版-有推荐车道-无车道级",
+      "category": "导航地图",
+      "icon": "/minimap-ca6ee2/icon.png",
+      "package": "com.autonavi.minimap",
+      "md5sum": "2d60985d64d87d16d82f1a327285955f",
+      "filesize": 199789973,
+      "updateTime": "2026-10-11T14:57:19Z",
+      "versionName": "17.00.0.2005",
+      "description": "1. 不支持语音控制、不支持HUD抬显、不支持 NNP、不能导航头枕通道播报，不能接受的不要用，占用内存很大，内存吃紧的不要用\r\n2. 不支持语音控制、不支持HUD抬显、不支持 NNP、不能导航头枕通道播报，不能接受的不要用  ，占用内存很大，内存吃紧的不要用\r\n3. 不支持语音控制、不支持HUD抬显、不支持 NNP、不能导航头枕通道播报，不能接受的不要用  ，占用内存很大，内存吃紧的不要用\r\n\r\n\r\n4. 有推荐车道-无车道级，车道级有部分准确度（非真车道级），占用内存很大，内存吃紧的不要用\r\n\r\n5. 安装之后，需要在【哪吒美式】-【隐藏通知】 功能里屏蔽这个应用的通知，否则一天到晚铛铛铛，占用内存很大，内存吃紧的不要用\r\n6. 安装之后，需要在【哪吒美式】-【隐藏通知】 功能里屏蔽这个应用的通知，否则一天到晚铛铛铛，占用内存很大，内存吃紧的不要用\r\n7. 安装之后，需要在【哪吒美式】-【隐藏通知】 功能里屏蔽这个应用的通知，否则一天到晚铛铛铛，占用内存很大，内存吃紧的不要用\r\n\r\n\r\n8. 据说变道跟随很快，放大导航页面，放大地图文字，会有些卡，特别是首次打开时。把首页从3D显示设置成2D显示会流畅很多，追求极致流畅的不要用，占用内存很大，内存吃紧的不要用",
+      "incompatibility": [],
+      "apk": "/minimap-ca6ee2/17.00.0.2005_12n.apk.1"
+    },
+    {
+      "id": "67e85113c7dd",
+      "code": "amapnavi-c98a57",
+      "name": "AmapNavi",
+      "category": "导航地图",
+      "icon": "/amapnavi-c98a57/icon.png",
+      "package": "com.carrot.amapnavi",
+      "md5sum": "c853f086faf9bb4c6cd6311f09ad0489",
+      "filesize": 72718855,
+      "updateTime": "2026-04-28T07:25:19Z",
+      "versionName": "1.3.0.0",
+      "description": "Openpilot 点对点导航，依赖 Openpilot 设备和高德地图车机版。",
+      "incompatibility": [
+        "ALL"
+      ],
+      "apk": "/amapnavi-c98a57/AmapNavi-V1.3.0.0.apk.1"
+    },
+    {
+      "id": "c04a03b7102b",
+      "code": "tv-633b0f",
+      "name": "咪咕爱唱",
+      "category": "K 歌软件",
+      "icon": "/tv-633b0f/icon.png",
+      "package": "com.iflytek.aichang.tv",
+      "md5sum": "0c7f2a7b46df3fa15e38359f586a0ee0",
+      "filesize": 15613508,
+      "updateTime": "2026-04-30T08:09:32Z",
+      "versionName": "9.9.012",
+      "description": "网上收集，可用性自测，VIP 版，登录即是连续包月会员",
+      "incompatibility": [],
+      "apk": "/tv-633b0f/9.9.012.apk"
+    },
+    {
+      "id": "918c5887d519",
+      "code": "desktop-7df69d",
+      "name": "智享K歌",
+      "category": "K 歌软件",
+      "icon": "/desktop-7df69d/icon.png",
+      "package": "com.huiaichang.sdm.desktop",
+      "md5sum": "762e9eca9f8569ee24e06efd8dd65c17",
+      "filesize": 74092117,
+      "updateTime": "2026-04-30T08:09:56Z",
+      "versionName": "2.16.58.2411111420",
+      "description": "网上收集，可用性自测，解锁会员版、支持扫码点歌，汇集 70w + 首歌曲，可在线更新曲库，全是 HD 高画质，支持语音助手",
+      "incompatibility": [],
+      "apk": "/desktop-7df69d/K_2.16.58.2411111420.apk"
+    },
+    {
+      "id": "57d80b6c5c3f",
+      "code": "desktop-7df69d-2",
+      "name": "智能K歌",
+      "category": "K 歌软件",
+      "icon": "/desktop-7df69d-2/icon.png",
+      "package": "com.huiaichang.sdm.desktop",
+      "md5sum": "b4c579dd3289f890c52dcba6b6ddb9da",
+      "filesize": 73004849,
+      "updateTime": "2026-04-30T08:10:14Z",
+      "versionName": "2.17.48.2505081546",
+      "description": "网上收集，可用性自测，解锁会员版、支持扫码点歌，汇集 70w + 首歌曲，可在线更新曲库，全是 HD 高画质，支持语音助手",
+      "incompatibility": [],
+      "apk": "/desktop-7df69d-2/Ktv_TVv2.17_.apk"
+    },
+    {
+      "id": "27b2ae3e59cd",
+      "code": "karaoketv-5aed64",
+      "name": "全民K歌",
+      "category": "K 歌软件",
+      "icon": "/karaoketv-5aed64/icon.png",
+      "package": "com.tencent.karaoketv",
+      "md5sum": "cde1c91a2561fde6a7e858b6ee86974d",
+      "filesize": 42160104,
+      "updateTime": "2026-04-30T08:10:22Z",
+      "versionName": "5.9.8.1",
+      "description": "联想盒子提取免登录版",
+      "incompatibility": [],
+      "apk": "/karaoketv-5aed64/K_5.9.8.1VIP.apk"
+    },
+    {
+      "id": "9ebca9e8eb35",
+      "code": "light-cbd5cc-2",
+      "name": "红绿灯领航",
+      "category": "导航地图",
+      "icon": "/light-cbd5cc-2/icon.webp",
+      "package": "com.mojoxing.light",
+      "md5sum": "cee7756b08589c239e5b5d7b6e89a9c2",
+      "filesize": 6768515,
+      "updateTime": "2026-04-30T07:57:12Z",
+      "versionName": "2.6.0",
+      "description": "新版本在S、GT、猎装使用悬浮窗还有问题",
+      "incompatibility": [
+        "EP36",
+        "EP40",
+        "EP41"
+      ],
+      "apk": "/light-cbd5cc-2/nav_v2.6.0_20260429_1048.apk"
+    },
+    {
+      "id": "3ce94fdee7b2",
+      "code": "music-04e5ce",
+      "name": "三太子音乐",
+      "category": "影音娱乐",
+      "icon": "/music-04e5ce/icon.png",
+      "package": "com.sanztaizi.music",
+      "md5sum": "bcae8514a2ab75e188436c4d4cb9d454",
+      "filesize": 15132902,
+      "updateTime": "2026-06-22T08:01:51Z",
+      "versionName": "1.0.3",
+      "description": "适用车型：哪吒L\r\n专属本地音乐播放器，支持读取U盘、车机内置存储中的本地音乐。\r\n\r\n使用小技巧\r\n-搭配哪吒美式工作流联动启动，可通过亮屏、系安全带等多种方式唤起应用。\r\n-如需在副屏展示播放界面，建议开启全屏模式+跨屏启动（需提前关闭无感模式）。\r\n-行车不想前台界面遮挡视线，可开启无感模式，仅通过悬浮窗完成全部操作。\r\n\r\n特色实用功能\r\n-内置多种播放模式，按需自由切换。\r\n-支持自定义曲库分类，灵活整理本地曲目。\r\n-悬浮窗同步展示歌词、专辑封面，集成完整播放控制功能。\r\n-悬浮窗配备十余款背景样式，随心更换。\r\n-悬浮窗自带旋转光碟动效，增添听歌氛围感。\r\n-内置十余种悬浮窗视觉特效，画面样式丰富。\r\n-悬浮窗尺寸、显示位置均可自定义调整。\r\n-播放页分区展示封面与歌词，布局清晰直观。\r\n-深度适配原车方向盘按键，操控稳定流畅。\r\n-无感模式自动后台运行，无前台界面干扰驾驶。\r\n-配备USB设备状态监测，U盘异常重连后自动检测。\r\n-兼容音频内嵌元素、同目录外置同名歌词与封面文件。",
+      "incompatibility": [
+        "EP36",
+        "EP40",
+        "EP41"
+      ],
+      "apk": "/music-04e5ce/V1.0.3.apk.1"
+    },
+    {
+      "id": "273fa8c1e9e6",
+      "code": "audiobox-7089c6",
+      "name": "腾讯视频",
+      "category": "影音娱乐",
+      "icon": "/audiobox-7089c6/icon.png",
+      "package": "com.tencent.qqlive.audiobox",
+      "md5sum": "a3670efb26c7bd63825ae5465c53e212",
+      "filesize": 39848952,
+      "updateTime": "2026-07-08T12:56:42Z",
+      "versionName": "2.7.0.18",
+      "description": "哪吒 S 车机内提取的腾讯视频",
+      "incompatibility": [],
+      "apk": "/audiobox-7089c6/TxVideo.apk"
+    },
+    {
+      "id": "ccc2f3c73c48",
+      "code": "muvizedge-b97646",
+      "name": "音乐律动频谱 Muviz Edge",
+      "category": "实用工具",
+      "icon": "/muvizedge-b97646/icon.png",
+      "package": "com.sparkine.muvizedge",
+      "md5sum": "562a6b75cd2d1d32b9f240f9f513c20e",
+      "filesize": 26069152,
+      "updateTime": "2026-07-22T05:43:03Z",
+      "versionName": "2.0.0.0",
+      "description": "- **已知可能导致车机自动重启、摄像头受限等问题，不建议使用**\r\n- **已知可能导致车机自动重启、摄像头受限等问题，不建议使用**\r\n- **已知可能导致车机自动重启、摄像头受限等问题，不建议使用**\r\n- **已知可能导致车机自动重启、摄像头受限等问题，不建议使用**\r\n- **已知可能导致车机自动重启、摄像头受限等问题，不建议使用**\r\n\r\n\r\n这款音乐律动频谱APP拥有超高自定义权限，频谱颜色、跳动速率、柱条密度、显示高度全部支持精细化调节，内置十余种视觉款式随心切换；显示布局灵活多变，既能全屏铺满营造氛围感，也可做成边框灯带，还能拆分独立显示在屏幕左右侧、顶部或底部。软件兼容性极强，若无法正常抓取音乐播放信息，可开启自动律动模式，无需音源读取也能生成流畅动态光影效果。内存占用约0.1GB。",
+      "incompatibility": [],
+      "apk": "/muvizedge-b97646/muvizEdge.apk"
+    },
+    {
+      "id": "81f9fd1ba0ee",
+      "code": "huntianling-ad641b",
+      "name": "混天绫-车载音乐频谱可视化",
+      "category": "实用工具",
+      "icon": "/huntianling-ad641b/icon.png",
+      "package": "com.perfectapps.muviz",
+      "md5sum": "e5a9750ed466ce0fe84106568d26c1e0",
+      "filesize": 12563737,
+      "updateTime": "2026-09-21T14:28:20Z",
+      "versionName": "2.7.9",
+      "description": "🎵 款式与轮播\r\n\r\n全新「内置效果」页：6 款精选款式出厂内置，一键添加到「我的」，已添加智能识别、防重复；「创作」清空留白，由车友自由创作或从内置导入\r\n自动轮播上线：定时随机切换款式，可设间隔（最快每 5 分钟）；自动区分日间组 / 夜间组 / 不限款式，始终切换符合车机当前日夜主题的效果\r\n悬浮球上/下一款：同样支持按当前日/夜主题筛选，手动切换后自动暂停轮播一个周期，主题变化或重新上电后自动恢复\r\n日夜主题跟随车机：车机切换日夜主题，款式与悬浮球皮肤同步切换\r\n🖥️ 副驾屏（双屏律动）​\r\n\r\n副驾屏款式同步升级为推送式：主屏切款，副屏同拍跟上，基本无感延迟\r\n副驾屏布局实时跟随主屏：位置、高度、对齐方式全量同步，主屏怎么调副屏就怎么变\r\n屏幕方向自动校准：上车唤醒、重新上电后律动位置自动回正，横竖屏状态始终正确\r\n🚗 车型适配\r\n\r\n哪吒 L 车型专属高度自动适配：识别到 L 车自动套用专属律动位置（位置/高度/居中一次到位），仅首次生效，不影响个人后续微调\r\n⚪ 悬浮球\r\n\r\n悬浮球自定义颜色：跟随皮肤或自选颜色，改色即时生效\r\n菜单稳定性增强：菜单打开期间不受后台自动调整干扰，操作更跟手\r\n🧰 工具箱\r\n\r\n新增轮播设置（开关/间隔）、副驾屏设置、悬浮球球色设置\r\n界面配色固定深色，统一跟随 App 风格",
+      "incompatibility": [],
+      "apk": "/huntianling-ad641b/V2.7.9.apk.1"
+    },
+    {
+      "id": "1eca0aa41ff6",
+      "code": "mobile-e8006a-2",
+      "name": "风火轮音乐-车友定制",
+      "category": "影音娱乐",
+      "icon": "/mobile-e8006a-2/icon.png",
+      "package": "cn.toside.music.mobile",
+      "md5sum": "cef41110748124acbec6c7971689ae22",
+      "filesize": 19677336,
+      "updateTime": "2026-08-06T06:16:23Z",
+      "versionName": "3.0.10-car",
+      "description": "基于 LX Music Mobile 开源内核，支持在线搜歌、本地播放、歌词、歌单和后台播放。针对车载场景优化，支持横屏界面、方向盘控制、语音点歌、音乐悬浮窗、实时 K 歌和智能断播恢复。",
+      "incompatibility": [],
+      "apk": "/mobile-e8006a-2/fenghuolun-music-v3.0.10-car-arm64-v8a.apk"
+    },
+    {
+      "id": "ed6c09992520",
+      "code": "awemenplay-a28813",
+      "name": "抖音短视频车机版",
+      "category": "影音娱乐",
+      "icon": "/awemenplay-a28813/icon.png",
+      "package": "com.ss.android.ugc.awemenplay",
+      "md5sum": "005033e536b485cd09262dd80715ffda",
+      "filesize": 19621239,
+      "updateTime": "2026-08-22T05:58:41Z",
+      "versionName": "9.9.1504",
+      "description": "暂未适配",
+      "incompatibility": [],
+      "apk": "/awemenplay-a28813/Douyin_Car_Edition.apk"
+    },
+    {
+      "id": "6b9f5c7530ad",
+      "code": "tv-8874e7",
+      "name": "NewBox TV",
+      "category": "影音娱乐",
+      "icon": "/tv-8874e7/icon.png",
+      "package": "com.newbox.tv",
+      "md5sum": "3d27990f1b4e0874f88b9115c94aff3c",
+      "filesize": 40173568,
+      "updateTime": "2026-09-01T14:47:40Z",
+      "versionName": "2.0.0",
+      "description": "TV版本代替影视仓，启动比较快，关键是切换全屏/半屏没有影视仓那个半截的bug",
+      "incompatibility": [],
+      "apk": "/tv-8874e7/NewBox-2.0.0-arm64-generic-64.apk"
+    },
+    {
+      "id": "4480c68cba50",
+      "code": "bn-85b98b",
+      "name": "NewBox",
+      "category": "影音娱乐",
+      "icon": "/bn-85b98b/icon.png",
+      "package": "com.truthvision.homecare.nb.bn",
+      "md5sum": "594cda9eae65ee5ad65da3717bc9543b",
+      "filesize": 119593228,
+      "updateTime": "2026-08-27T08:05:03Z",
+      "versionName": "1.9.6",
+      "description": "手机版本代替影视仓，启动比较快，关键是切换全屏/半屏没有影视仓那个半截的bug",
+      "incompatibility": [],
+      "apk": "/bn-85b98b/NewBox_v1.9.6__20260824.apk.1"
+    },
+    {
+      "id": "f56d5bdc523c",
+      "code": "cast-33bf30",
+      "name": "九龙神火罩 —— 车机投屏神器",
+      "category": "手车互联",
+      "icon": "/cast-33bf30/icon.png",
+      "package": "com.jiulong.cast",
+      "md5sum": "caf1519e2da7b11f1d8401c4f4a88e8d",
+      "filesize": 6859278,
+      "updateTime": "2026-08-31T13:53:56Z",
+      "versionName": "2.7",
+      "description": "九龙神火罩 —— 车机投屏神器 v2.6\r\n一个专为哪吒L车机打造的 DLNA 投屏接收端 App，手机上的 B站、夸克等视频一键投到车机大屏看。\r\n手机搜索到车机直接投，支持进度拖动、快进快退、倍速（0.5x~3.0x 二级菜单选择）、双击暂停/播放、滑动屏幕快进\r\n全屏/半屏自由切换：等比适配不畸变，自动隐藏状态栏和 dock）；半屏模式窗口播放，不影响其他功能\r\nK 解码 +硬解优先，车机解码资源被行车记录仪抢占崩溃时自动切软解续播，附缓冲动画，不抢资源\r\n两款背景切换，DPI 三档适配（160/170/180）、设置二级菜单（含一键杀死、日志导出）\r\n手机连车机热点（或同一网络）→ 打开 B站/夸克选「投屏/DLNA」→ 搜到「九龙神火罩」点投即可。\r\n针对 8155/8155P 车机芯片深度优化。\r\n帅逼作者：NetaMadeSS\r\n技术指导：GLM-5.3\r\n适配指导：奔",
+      "incompatibility": [],
+      "apk": "/cast-33bf30/-v2.7-release.apk.1"
+    },
+    {
+      "id": "a79a143e62e1",
+      "code": "netal-05531f",
+      "name": "NETA Carplay",
+      "category": "手车互联",
+      "icon": "/netal-05531f/icon.png",
+      "package": "org.community.diplay.netal",
+      "md5sum": "6b89d5340bed743fbafae02a0baa0af4",
+      "filesize": 13831449,
+      "updateTime": "2026-10-11T14:58:22Z",
+      "versionName": "0.2.14-neta.7.5.7-test",
+      "description": "NETA CarPlay\r\n\r\n打破原车限制，重新定义哪吒智能座舱！\r\n\r\n谁说哪吒车机只能将就？\r\n\r\n原车不支持 CarPlay？导航体验不够智能？常用设置藏得太深？明明拥有一块大屏，却用不出应有的体验？\r\n\r\n车机可以有局限，但我们的体验不该被限制！\r\n\r\n🚀 NETA CarPlay，让哪吒车机真正进化！\r\n\r\n🔥 无线 CarPlay｜上车即享智能互联\r\n告别数据线束缚，手机与车机无线连接，导航、音乐、通话轻松掌控。\r\n\r\n🛣️ 车道级导航｜精准指引每一条路\r\n告别传统导航的粗放指引，支持车道级导航显示，复杂路口、高架匝道，路线信息更加直观，出行更从容。\r\n\r\n⚡ 一级菜单设置｜一步直达，高效便捷\r\n拒绝层层翻找！常用功能集中呈现，减少繁琐操作，让设置更直接、使用更高效。\r\n\r\n💎 原车大屏｜释放更多可能\r\n无需更换车机屏幕，让熟悉的 CarPlay 体验融入哪吒智能座舱。\r\n\r\n我们不造车，我们只让你的车机更好用！\r\n\r\n车可以停产，智能体验不能停更！\r\n\r\n不换车、不换屏、不将就！\r\n\r\n让科技回归体验，让每一次出行都更加自由。\r\n\r\nNETA CarPlay\r\n\r\n突破限制 · 无线互联 · 智享出行\r\n\r\n让哪吒车机，拥有本该属于它的实力！",
+      "incompatibility": [],
+      "apk": "/netal-05531f/NETA-CarPlay-v7.5.7.apk.1"
+    },
+    {
+      "id": "3d6ff8db934a",
+      "code": "diplay-166291",
+      "name": "DiPlay-原版-无任何优化",
+      "category": "手车互联",
+      "icon": "/diplay-166291/icon.png",
+      "package": "com.shihab.diplay",
+      "md5sum": "e62f948642393d12ce3fda637b992c24",
+      "filesize": 18170831,
+      "updateTime": "2026-10-11T14:59:50Z",
+      "versionName": "0.2.18",
+      "description": "无需越狱、转接盒、账号或认证服务器。\r\n\r\n请安装在车机上，而非 iPhone。需要 Android 7.1+（API 25）；7.1–8.1 为新增支持，尚需实车验证。支持 USB，以及通过车机热点、Wi-Fi Direct 或现有 Wi-Fi／同一局域网连接。兼容性取决于车机、固件和 iOS。\r\n\r\n这些项目专注于比亚迪汽车。它们可能在其他品牌上运行，但其他品牌不在支持范围内，也没有增加支持或修复其品牌特定兼容性问题的计划。",
+      "incompatibility": [],
+      "apk": "/diplay-166291/DiPlay-0.2.18.apk"
+    },
+    {
+      "id": "4719a18e0701",
+      "code": "zhaguotv-9dcf29",
+      "name": "吒果TV",
+      "category": "影音娱乐",
+      "icon": "/zhaguotv-9dcf29/icon.png",
+      "package": "com.neta.zhaguotv",
+      "md5sum": "94f2091143890eaeb8ee2e3103eb3655",
+      "filesize": 31975081,
+      "updateTime": "2026-10-16T13:07:59Z",
+      "versionName": "2.0.6",
+      "description": "10月16日，更新一下\r\n\r\n吒果TV 是什么 吒果TV 是一个在哪吒车机（Android 11）上看短剧的应用。它基于第三方短剧应用「短剧之家 TV」v2.0.6 重打包（红果短视频的民间 TV 版），针对车机做了适配：方向盘方控上一集/下一集、全屏和分屏一键切换的悬浮球、跟随车机日夜间主题、避让状态栏和导航栏，并屏蔽了应用内自更新。\r\n\r\n和红果短剧的关系 没有官方关系。红果短剧是红果短剧官方的产品；吒果TV 的内容来自「短剧之家 TV」，不是红果，也不是红果的破解版、去广告版——它不修改红果的任何东西。\r\n\r\n如果你想要正版红果，请去官方渠道下载红果短剧。",
+      "incompatibility": [],
+      "apk": "/zhaguotv-9dcf29/TV_v2.0.6.apk"
+    }
+  ],
+  "messageBoard": [
+    {
+      "title": "影视仓视频源",
+      "contents": [
+        {
+          "text": "临时提供直播订阅，以供测试：",
+          "canCopy": false
+        },
+        {
+          "text": "https://14286.kstore.space/zb/yings/zy/Newbox_webview.txt",
+          "canCopy": true
+        },
+        {
+          "text": "软件下载无内容，需订阅下面任意一条链接，订阅配置推荐（来源网友整理）：",
+          "canCopy": false
+        },
+        {
+          "text": "饭太硬订阅：",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.饭太硬.net/tv",
+          "canCopy": true
+        },
+        {
+          "text": "傲呜订阅：",
+          "canCopy": false
+        },
+        {
+          "text": "https://9763.kstore.vip/aowu.json",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "TVAPP 接口源",
+      "contents": [
+        {
+          "text": "肥猫接口",
+          "canCopy": false
+        },
+        {
+          "text": "http://肥猫.net",
+          "canCopy": true
+        },
+        {
+          "text": "王小二放牛娃接口",
+          "canCopy": false
+        },
+        {
+          "text": "http://tvbox.王二小放牛娃.top",
+          "canCopy": true
+        },
+        {
+          "text": "王小二放牛娃新接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://9280.kstore.vip/newwex.json",
+          "canCopy": true
+        },
+        {
+          "text": "哈基米",
+          "canCopy": false
+        },
+        {
+          "text": "https://17264.kstore.space/哈基米.png",
+          "canCopy": true
+        },
+        {
+          "text": "动漫城接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.yingm.cc/dm/dm.json",
+          "canCopy": true
+        },
+        {
+          "text": "俊佬接口",
+          "canCopy": false
+        },
+        {
+          "text": "http://home.jundie.top:81/top98.json",
+          "canCopy": true
+        },
+        {
+          "text": "南风接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+          "canCopy": true
+        },
+        {
+          "text": "菜妮丝接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://tv.菜妮丝.top",
+          "canCopy": true
+        },
+        {
+          "text": "HG接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://api.hgyx.vip/hgyx.json",
+          "canCopy": true
+        },
+        {
+          "text": "dxawi",
+          "canCopy": false
+        },
+        {
+          "text": "https://dxawi.github.io/0/0.json",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子单仓",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/xhz",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子4K",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/4k.json",
+          "canCopy": true
+        },
+        {
+          "text": "香雅情",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+          "canCopy": true
+        },
+        {
+          "text": "宝盒VIP",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json",
+          "canCopy": true
+        },
+        {
+          "text": "真心",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.252035.xyz/z/FongMi.json",
+          "canCopy": true
+        },
+        {
+          "text": "高天流云",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+          "canCopy": true
+        },
+        {
+          "text": "分享",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/maoystv/6/main/000.json",
+          "canCopy": true
+        },
+        {
+          "text": "东篱线路",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+          "canCopy": true
+        },
+        {
+          "text": "L佬线路",
+          "canCopy": false
+        },
+        {
+          "text": "https://android.lushunming.qzz.io/json/index.json",
+          "canCopy": true
+        },
+        {
+          "text": "苹果CMS资源站",
+          "canCopy": false
+        },
+        {
+          "text": "https://pastebin.com/raw/gtbKvnE1",
+          "canCopy": true
+        },
+        {
+          "text": "游魂多仓",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.iyouhun.com/tv/dc",
+          "canCopy": true
+        },
+        {
+          "text": "游魂多仓（备）",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.iyouhun.com/tv/yh",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子多仓",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/dc/",
+          "canCopy": true
+        },
+        {
+          "text": "小盒子多仓（备）",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/DC.txt",
+          "canCopy": true
+        },
+        {
+          "text": "拾光多仓",
+          "canCopy": false
+        },
+        {
+          "text": "http://xmbjm.fh4u.org/dc.txt",
+          "canCopy": true
+        },
+        {
+          "text": "（以下由 0.12yue.de5.net 搬运备份站聚合 · 点播接口 · 2026-10-12）",
+          "canCopy": false
+        },
+        {
+          "text": "饭太硬",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.饭太硬.net/tv",
+          "canCopy": true
+        },
+        {
+          "text": "饭太硬2线",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.饭太硬.cc/tv",
+          "canCopy": true
+        },
+        {
+          "text": "饭太硬3线",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.饭太硬.art/tv",
+          "canCopy": true
+        },
+        {
+          "text": "饭太硬5线",
+          "canCopy": false
+        },
+        {
+          "text": "http://fty.888484.xyz/tv",
+          "canCopy": true
+        },
+        {
+          "text": "饭太硬6线",
+          "canCopy": false
+        },
+        {
+          "text": "http://fty.333232.xyz/tv",
+          "canCopy": true
+        },
+        {
+          "text": "嗷呜",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.英格里希嗷呜.top/tv",
+          "canCopy": true
+        },
+        {
+          "text": "嗷呜2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://9763.kstore.vip/aowu.json",
+          "canCopy": true
+        },
+        {
+          "text": "王二小",
+          "canCopy": false
+        },
+        {
+          "text": "https://9280.kstore.vip/aiwex.json",
+          "canCopy": true
+        },
+        {
+          "text": "王二小2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://9280.kstore.space/aiwex.json",
+          "canCopy": true
+        },
+        {
+          "text": "南风",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghproxy.monkeyray.net/raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+          "canCopy": true
+        },
+        {
+          "text": "南风2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒",
+          "canCopy": false
+        },
+        {
+          "text": "https://9877.kstore.space/sun.json",
+          "canCopy": true
+        },
+        {
+          "text": "挺好",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/thdjk.json",
+          "canCopy": true
+        },
+        {
+          "text": "小马",
+          "canCopy": false
+        },
+        {
+          "text": "https://szyyds.cn/tv/x.json",
+          "canCopy": true
+        },
+        {
+          "text": "周J",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/box",
+          "canCopy": true
+        },
+        {
+          "text": "菜妮丝",
+          "canCopy": false
+        },
+        {
+          "text": "https://tv.xn--yhqu5zs87a.top",
+          "canCopy": true
+        },
+        {
+          "text": "心魔",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+          "canCopy": true
+        },
+        {
+          "text": "clun",
+          "canCopy": false
+        },
+        {
+          "text": "https://clun.top/box.json",
+          "canCopy": true
+        },
+        {
+          "text": "东篱",
+          "canCopy": false
+        },
+        {
+          "text": "https://chigua.eu.org",
+          "canCopy": true
+        },
+        {
+          "text": "天神",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/天神IY.png",
+          "canCopy": true
+        },
+        {
+          "text": "星微Vip",
+          "canCopy": false
+        },
+        {
+          "text": "https://7337.kstore.vip/xw/测试勿传",
+          "canCopy": true
+        },
+        {
+          "text": "小虎斑",
+          "canCopy": false
+        },
+        {
+          "text": "http://hb.小虎斑.site:25252/仅供测试",
+          "canCopy": true
+        },
+        {
+          "text": "传说",
+          "canCopy": false
+        },
+        {
+          "text": "http://tjf1100.serv00.net",
+          "canCopy": true
+        },
+        {
+          "text": "幸福年年",
+          "canCopy": false
+        },
+        {
+          "text": "http://150.158.52.248/tgyg/bbm.json",
+          "canCopy": true
+        },
+        {
+          "text": "夏夏影视",
+          "canCopy": false
+        },
+        {
+          "text": "https://11405.kstore.space/xiaye/qk4k.json",
+          "canCopy": true
+        },
+        {
+          "text": "X4更新专用接口",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.wudaozhe.net/0/666",
+          "canCopy": true
+        },
+        {
+          "text": "X4菠菜园",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.wudaozhe.net/5/x4.json",
+          "canCopy": true
+        },
+        {
+          "text": "X4少儿频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.wudaozhe.net/5/tv少儿.json",
+          "canCopy": true
+        },
+        {
+          "text": "健康家用",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
+          "canCopy": true
+        },
+        {
+          "text": "FongMI线路",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com//gaotianliuyun/gao/master/0827.json",
+          "canCopy": true
+        },
+        {
+          "text": "高天流云js",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+          "canCopy": true
+        },
+        {
+          "text": "高天流云_XYQ",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+          "canCopy": true
+        },
+        {
+          "text": "摸鱼5线",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.y456y.com",
+          "canCopy": true
+        },
+        {
+          "text": "摸鱼6线",
+          "canCopy": false
+        },
+        {
+          "text": "http://fish.y456y.com",
+          "canCopy": true
+        },
+        {
+          "text": "凯弟3线",
+          "canCopy": false
+        },
+        {
+          "text": "https://jihulab.com/jyqhkd/kd/-/raw/main/kai.json",
+          "canCopy": true
+        },
+        {
+          "text": "凯弟1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://jihulab.com/jyqhkd1/kai/-/raw/main/机缘巧盒凯弟.json",
+          "canCopy": true
+        },
+        {
+          "text": "分享者",
+          "canCopy": false
+        },
+        {
+          "text": "http://hucongrong.web3v.work/风水/fxz/fxz.json",
+          "canCopy": true
+        },
+        {
+          "text": "时光",
+          "canCopy": false
+        },
+        {
+          "text": "https://jiekou.netlify.app/svip.json",
+          "canCopy": true
+        },
+        {
+          "text": "X4菠菜pro",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.wudaozhe.net/5/x4pro.json",
+          "canCopy": true
+        },
+        {
+          "text": "宝盒",
+          "canCopy": false
+        },
+        {
+          "text": "http://宝盒接口.top",
+          "canCopy": true
+        },
+        {
+          "text": "肥猫",
+          "canCopy": false
+        },
+        {
+          "text": "http://肥猫.net/tv",
+          "canCopy": true
+        },
+        {
+          "text": "真六",
+          "canCopy": false
+        },
+        {
+          "text": "https://cccimg.com/down.php/7d1f30263b3f2bf3deda2d7faeef4844.zhen6",
+          "canCopy": true
+        },
+        {
+          "text": "嗷呜3线",
+          "canCopy": false
+        },
+        {
+          "text": "http://itv666.cc/aowu/config.webp",
+          "canCopy": true
+        },
+        {
+          "text": "凯弟",
+          "canCopy": false
+        },
+        {
+          "text": "https://jihulab.com/jyqhkd1/jk/-/raw/main/8.json",
+          "canCopy": true
+        },
+        {
+          "text": "小米",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
+          "canCopy": true
+        },
+        {
+          "text": "刺桐",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.cttv.vip/ys/json/ctys.json",
+          "canCopy": true
+        },
+        {
+          "text": "宝盒2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json",
+          "canCopy": true
+        },
+        {
+          "text": "玄珠",
+          "canCopy": false
+        },
+        {
+          "text": "https://jihulab.com/xuanzhuapp/xzys/-/raw/main/xzvip.json",
+          "canCopy": true
+        },
+        {
+          "text": "软件小哥",
+          "canCopy": false
+        },
+        {
+          "text": "http://47.96.82.41:5188/svip/svip.json",
+          "canCopy": true
+        },
+        {
+          "text": "ray",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/dxawi/0/main/0.json",
+          "canCopy": true
+        },
+        {
+          "text": "残月影视2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://bitbucket.org/1771245847/tvbox/raw/main/tvbox.json",
+          "canCopy": true
+        },
+        {
+          "text": "月光宝盒",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/guot55/yg/refs/heads/main/ygbox.json",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒4线",
+          "canCopy": false
+        },
+        {
+          "text": "https://la.kstore.dev/download/2863/01.txt",
+          "canCopy": true
+        },
+        {
+          "text": "分享者2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/maoystv/6/main/001.json",
+          "canCopy": true
+        },
+        {
+          "text": "传说2线",
+          "canCopy": false
+        },
+        {
+          "text": "http://tot.totalh.net/api.txt",
+          "canCopy": true
+        },
+        {
+          "text": "时光2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/xmbjm/svip/refs/heads/main/svip.json",
+          "canCopy": true
+        },
+        {
+          "text": "少儿",
+          "canCopy": false
+        },
+        {
+          "text": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer",
+          "canCopy": true
+        },
+        {
+          "text": "沐辰2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/4TVBox/TVBox/refs/heads/main/config.json",
+          "canCopy": true
+        },
+        {
+          "text": "雷蒙",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/lemj.json",
+          "canCopy": true
+        },
+        {
+          "text": "黄金",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json",
+          "canCopy": true
+        },
+        {
+          "text": "（以下由 GitHub lubin776/tvbox-api-backup 每日自动备份 · 仓库直链 · 点播接口 · 2026-10-12）",
+          "canCopy": false
+        },
+        {
+          "text": "饭太硬（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/饭太硬.json",
+          "canCopy": true
+        },
+        {
+          "text": "摸鱼（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/摸鱼.json",
+          "canCopy": true
+        },
+        {
+          "text": "潇洒（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/潇洒.json",
+          "canCopy": true
+        },
+        {
+          "text": "王二小（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/王二小.json",
+          "canCopy": true
+        },
+        {
+          "text": "嗷呜（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/嗷呜.json",
+          "canCopy": true
+        },
+        {
+          "text": "海量直播聚合接口（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/海量直播聚合接口.json",
+          "canCopy": true
+        },
+        {
+          "text": "海量采集聚合接口（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/海量采集聚合接口.json",
+          "canCopy": true
+        },
+        {
+          "text": "海量py聚合接口（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/海量py聚合接口.json",
+          "canCopy": true
+        },
+        {
+          "text": "X4更新专用接口（新域名 0.12yue.de5.net）",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.12yue.de5.net/0/666",
+          "canCopy": true
+        },
+        {
+          "text": "X4菠菜pro（新域名）",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.12yue.de5.net/5/x4pro.json",
+          "canCopy": true
+        },
+        {
+          "text": "X4菠菜园（新域名）",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.12yue.de5.net/5/x4.json",
+          "canCopy": true
+        },
+        {
+          "text": "X4少儿频道（新域名）",
+          "canCopy": false
+        },
+        {
+          "text": "https://0.12yue.de5.net/5/tv少儿.json",
+          "canCopy": true
+        },
+        {
+          "text": "仓库直链打不开时，可把 raw.githubusercontent.com 换成 cdn.jsdelivr.net/gh 镜像，例如：",
+          "canCopy": false
+        },
+        {
+          "text": "https://cdn.jsdelivr.net/gh/lubin776/tvbox-api-backup@main/tvbox/饭太硬.json",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "TVAPP 直播源",
+      "contents": [
+        {
+          "text": "游魂直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.iyouhun.com/tv/zb",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV4",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv4.txt",
+          "canCopy": true
+        },
+        {
+          "text": "咪咕IPTV",
+          "canCopy": false
+        },
+        {
+          "text": "https://develop202.github.io/migu_video/interface.txt",
+          "canCopy": true
+        },
+        {
+          "text": "IPTV 默认源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "IPTV IPv4",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "IPTV IPv6",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv6/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "myIPTV IPv4",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "myIPTV IPv6",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV4 M3U",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "BurningC4",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "茶客源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/vamoschuck/TV/main/M3U",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV6 TXT",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv6.txt",
+          "canCopy": true
+        },
+        {
+          "text": "直播电视IPV6 M3U",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.zbds.top/tv/iptv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "范明明直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YueChan 直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "Kimentanm源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "BigBigGrandG源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YanG集合源",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "JackTV直播（海外）",
+          "canCopy": false
+        },
+        {
+          "text": "https://php.946985.filegear-sg.me/jackTV.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "海外TV直播",
+          "canCopy": false
+        },
+        {
+          "text": "https://iptv-org.github.io/iptv/index.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国大陆频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国香港频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_hong_kong.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国澳门频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_macau.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国台湾频道（EPG）",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_taiwan.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "中国台湾频道（IPTV-ORG）",
+          "canCopy": false
+        },
+        {
+          "text": "https://iptv-org.github.io/iptv/countries/tw.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "新加坡频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_singapore.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "马来西亚频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://epg.pw/test_channels_malaysia.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "世界各地免费电视频道",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+          "canCopy": true
+        },
+        {
+          "text": "虎牙一起看",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.freetv.top/huyayqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "斗鱼一起看",
+          "canCopy": false
+        },
+        {
+          "text": "https://live.freetv.top/douyuyqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "（以下由 0.12yue.de5.net 搬运备份站聚合 · 直播源 · 2026-10-12）",
+          "canCopy": false
+        },
+        {
+          "text": "develop202",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/interface.txt",
+          "canCopy": true
+        },
+        {
+          "text": "Kimentanm",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "挺好直播",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/tv/thtv.txt",
+          "canCopy": true
+        },
+        {
+          "text": "MV",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/tv/MV.txt",
+          "canCopy": true
+        },
+        {
+          "text": "范明明需开启V6网络",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/3d75a78a0fc7ede372c03598d6d10367.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "世界杯",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/fwc.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "虎牙一起看",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/huyayqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "斗鱼一起看",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/douyuyqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "B站直播",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/bililive.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YY轮播",
+          "canCopy": false
+        },
+        {
+          "text": "https://ztha.top/TVBox/lib/yylunbo.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "咪咕直播",
+          "canCopy": false
+        },
+        {
+          "text": "http://139.224.44.53:1234",
+          "canCopy": true
+        },
+        {
+          "text": "虎牙",
+          "canCopy": false
+        },
+        {
+          "text": "https://sub.ottiptv.cc/huyayqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "斗鱼",
+          "canCopy": false
+        },
+        {
+          "text": "https://sub.ottiptv.cc/douyuyqk.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YY",
+          "canCopy": false
+        },
+        {
+          "text": "https://sub.ottiptv.cc/yylunbo.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "BL",
+          "canCopy": false
+        },
+        {
+          "text": "https://sub.ottiptv.cc/bililive.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "驸马影视电信专线",
+          "canCopy": false
+        },
+        {
+          "text": "http://fmys.top/lib/live.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "驸马影视移动专线",
+          "canCopy": false
+        },
+        {
+          "text": "http://fmys.top/lib/yidong.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "范明明需开启V6网络1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "B站直播1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://file.icve.com.cn/file_doc/220/1003/370FAE41BD301F89BA1FCD6FDB8D5BD6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "没4K",
+          "canCopy": false
+        },
+        {
+          "text": "https://mpimg.cn/text.php?hash=7265d70b6834cefbddb61bcc2d9c99db",
+          "canCopy": true
+        },
+        {
+          "text": "夜空1",
+          "canCopy": false
+        },
+        {
+          "text": "https://pan.29o.cn/down.php/aa846bceb7a1b4adb0385b1f61b192e8.txt",
+          "canCopy": true
+        },
+        {
+          "text": "经典电视剧",
+          "canCopy": false
+        },
+        {
+          "text": "https://wp.kayyw.com/f/XOpgIZ/%E7%BB%8F%E5%85%B8%E7%94%B5%E8%A7%86%E5%89%A7.txt",
+          "canCopy": true
+        },
+        {
+          "text": "很少",
+          "canCopy": false
+        },
+        {
+          "text": "https://mpimg.cn/down.php/fa04b02ffac54ac877f5250d3d70e494.txt",
+          "canCopy": true
+        },
+        {
+          "text": "应该能看",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt",
+          "canCopy": true
+        },
+        {
+          "text": "Kimentanm2线",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "南风直播源",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "Guovin",
+          "canCopy": false
+        },
+        {
+          "text": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "Kimentanm3线",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghfast.top/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "综合直播1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghfast.top/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+          "canCopy": true
+        },
+        {
+          "text": "奥斯卡",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitee.com/OscarWilde/itv/raw/master/tv.txt",
+          "canCopy": true
+        },
+        {
+          "text": "平台直播",
+          "canCopy": false
+        },
+        {
+          "text": "http://47.120.41.246:8025/vip/jar/zb.php",
+          "canCopy": true
+        },
+        {
+          "text": "虎牙一起看1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://file.icve.com.cn/file_doc/946/41/ECB0A5FBED1D8C4D4E049E95DB9F756F.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "斗鱼一起看1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://file.icve.com.cn/file_doc/254/346/3FB56B2C49DF92B3252352FBE5CD00F1.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YY轮播1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://file.icve.com.cn/file_doc/178/700/2C9AF1F98DBC1523826C0CD4DA8D8947.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "澜露TV",
+          "canCopy": false
+        },
+        {
+          "text": "http://zoto.3d.tc/i/i/hulanlu.txt",
+          "canCopy": true
+        },
+        {
+          "text": "Kimentanm4线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh.llkk.cc/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "develop2022线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh.llkk.cc/http://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+          "canCopy": true
+        },
+        {
+          "text": "develop2023线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+          "canCopy": true
+        },
+        {
+          "text": "EPG直播",
+          "canCopy": false
+        },
+        {
+          "text": "http://gh-proxy.org/https://raw.githubusercontent.com/Wirili/IPTV/main/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "电视直播",
+          "canCopy": false
+        },
+        {
+          "text": "http://gh-proxy.org/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "YanG",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "suxuang",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "live",
+          "canCopy": false
+        },
+        {
+          "text": "http://xhztv.top/xhz/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "手动不知何时更新",
+          "canCopy": false
+        },
+        {
+          "text": "https://szyyds.cn/tv/live/x.txt",
+          "canCopy": true
+        },
+        {
+          "text": "有效期27年7月",
+          "canCopy": false
+        },
+        {
+          "text": "http://m.szyyds.cn/api.php?token=8664f352657e8b13585bcf0f84fc3512",
+          "canCopy": true
+        },
+        {
+          "text": "自动更新",
+          "canCopy": false
+        },
+        {
+          "text": "https://z.szyyds.cn/iptv",
+          "canCopy": true
+        },
+        {
+          "text": "音乐所",
+          "canCopy": false
+        },
+        {
+          "text": "https://szyyds.cn/tv/live/yy.txt",
+          "canCopy": true
+        },
+        {
+          "text": "Yoursmile",
+          "canCopy": false
+        },
+        {
+          "text": "https://github.tbap.top/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "cluntop",
+          "canCopy": false
+        },
+        {
+          "text": "https://clun.top/lib/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "cluntoptest",
+          "canCopy": false
+        },
+        {
+          "text": "https://clun.top/lib/iptv_test.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "歌手直播",
+          "canCopy": false
+        },
+        {
+          "text": "https://mgtv.ottiptv.cc/mglist.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "suxuang1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "mlzlzj",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/mlzlzj/TV/main/output/result.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "gambiarras",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/gambiarras/legal-iptv/refs/heads/main/playlist.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "live1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.cttv.vip/ys/json/ctzb.txt",
+          "canCopy": true
+        },
+        {
+          "text": "锋云直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/suale.txt",
+          "canCopy": true
+        },
+        {
+          "text": "综合直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/fleung49/star/refs/heads/main/mit",
+          "canCopy": true
+        },
+        {
+          "text": "各大源合集Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/sese.txt",
+          "canCopy": true
+        },
+        {
+          "text": "电视家Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://github.com/bang359/dsj/raw/main/dsjcs.txt",
+          "canCopy": true
+        },
+        {
+          "text": "薄荷直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/wujiangliu/live-sources/refs/heads/main/bhmb.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "全球直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/wujiangliu/live-sources/refs/heads/main/%E5%85%A8%E7%90%83%E7%9B%B4%E6%92%AD.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "咪咕直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "http://www.52top.com.cn:678/downloads/migu.txt",
+          "canCopy": true
+        },
+        {
+          "text": "iptv直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://wget.la/https://raw.githubusercontent.com/vinkerq/iptv-api/refs/heads/master/iptv.txt",
+          "canCopy": true
+        },
+        {
+          "text": "juliTghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://files.catbox.moe/h3mb5a.txt",
+          "canCopy": true
+        },
+        {
+          "text": "小新TVTghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://d.kstore.dev/download/9565/小新TV.txt",
+          "canCopy": true
+        },
+        {
+          "text": "国际TVTghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/xJEYDAin/iptv/main/output/all_merged.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "MytvTghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://cdn.qd.je/live.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "新加坡梯子Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "http://xtvantsc.xyz/新加坡.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "黄蚂蚁先锋推流源Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "http://ge.html-5.me//ii/黄蚂蚁先锋推流源.txt",
+          "canCopy": true
+        },
+        {
+          "text": "易发源有Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/fafa002/yf2025/refs/heads/main/yiyifafa.txt",
+          "canCopy": true
+        },
+        {
+          "text": "俄罗斯源有Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://ilook.epg.one/EDTZN7ANS84N86",
+          "canCopy": true
+        },
+        {
+          "text": "4GTV怡淳酒店梯子台湾节点720pTghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "http://xtvantsc.xyz/4gtv.txt",
+          "canCopy": true
+        },
+        {
+          "text": "欧美大片直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "http://xtvantsc.xyz/欧美2160.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "国产直播Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghfast.top/https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/01%E5%9B%BD%E4%BA%A7%E7%9B%B4%E6%92%AD_20260417_024507.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "国产精品Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghfast.top/https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/01%E5%9B%BD%E4%BA%A7%E7%B2%BE%E5%93%81_20260417_024507.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "探花Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/01%E6%8E%A2%E8%8A%B1%E7%BA%A6%E7%82%AE_20260417_024507.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "欧美Tghuliys9",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghfast.top/https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/%E6%AC%A7%E7%BE%8E%E9%A2%91%E9%81%93.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "线路",
+          "canCopy": false
+        },
+        {
+          "text": "http://iptv.ruyitv.cc/m3u/tv.txt",
+          "canCopy": true
+        },
+        {
+          "text": "移动",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/https:/raw.githubusercontent.com/zhoujck/config/main/ext/移动",
+          "canCopy": true
+        },
+        {
+          "text": "联通",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/https:/raw.githubusercontent.com/zhoujck/config/main/ext/联通",
+          "canCopy": true
+        },
+        {
+          "text": "优选",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/https:/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "APTV",
+          "canCopy": false
+        },
+        {
+          "text": "https://wget.la/https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "Yoursmile1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "Ipv4",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/lubin776/tvbox/refs/heads/main/xuexiji/lib/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "ipv63",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/lubin776/tvbox/refs/heads/main/xuexiji/lib/ipv6.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "FMMIPV6",
+          "canCopy": false
+        },
+        {
+          "text": "https://m3u.ibert.me/txt/fmml_ipv6.txt",
+          "canCopy": true
+        },
+        {
+          "text": "尘墨",
+          "canCopy": false
+        },
+        {
+          "text": "https://52xiaobai.cn/ceshi/zb.php",
+          "canCopy": true
+        },
+        {
+          "text": "线路",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
+          "canCopy": true
+        },
+        {
+          "text": "初秋语",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/list.txt",
+          "canCopy": true
+        },
+        {
+          "text": "移动1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/移动",
+          "canCopy": true
+        },
+        {
+          "text": "联通1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/联通",
+          "canCopy": true
+        },
+        {
+          "text": "优选1线",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.com/raw.githubusercontent.com/zhoujck/config/main/ext/live.txt",
+          "canCopy": true
+        },
+        {
+          "text": "（以下由 GitHub lubin776/tvbox-api-backup 每日自动备份 · 仓库直链 · 直播源 · 2026-10-12）",
+          "canCopy": false
+        },
+        {
+          "text": "Guovin（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/live/Guovin.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "虎牙一起看（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/live/虎牙一起看.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "斗鱼一起看（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/live/斗鱼一起看.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "YY轮播（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/live/YY轮播.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "B站直播（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/live/B站直播.m3u",
+          "canCopy": true
+        },
+        {
+          "text": "综合直播（仓库备份）",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/tvbox/live/综合直播.php",
+          "canCopy": true
+        },
+        {
+          "text": "Kimentanm（ghproxy.net 新线路）",
+          "canCopy": false
+        },
+        {
+          "text": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "MusicFree 插件",
+      "contents": [
+        {
+          "text": "元力 1.2.0",
+          "canCopy": false
+        },
+        {
+          "text": "https://13413.kstore.vip/yuanli/yuanli.json",
+          "canCopy": true
+        },
+        {
+          "text": "Huibq",
+          "canCopy": false
+        },
+        {
+          "text": "https://fastly.jsdelivr.net/gh/Huibq/keep-alive/Music_Free/myPlugins.json",
+          "canCopy": true
+        },
+        {
+          "text": "在线整合插件",
+          "canCopy": false
+        },
+        {
+          "text": "https://www.imwzh.com/musicfree.json",
+          "canCopy": true
+        },
+        {
+          "text": "MusicFreePlugins 作者整合源",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json",
+          "canCopy": true
+        },
+        {
+          "text": "种子",
+          "canCopy": false
+        },
+        {
+          "text": "https://gitee.com/kevinr/tvbox/raw/master/musicfree/plugins/zz.js",
+          "canCopy": true
+        },
+        {
+          "text": "彩桐",
+          "canCopy": false
+        },
+        {
+          "text": "http://cdn.teyonds.com/music/plugins.json",
+          "canCopy": true
+        },
+        {
+          "text": "Huibq 小芸",
+          "canCopy": false
+        },
+        {
+          "text": "https://fastly.jsdelivr.net/gh/Huibq/keep-alive/Music_Free/xiaoyun.js",
+          "canCopy": true
+        }
+      ]
+    },
+    {
+      "title": "洛雪音源",
+      "contents": [
+        {
+          "text": "SixYin",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/sixyin/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "Huibq",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "Flower",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "LX",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/lx/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "ikun",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/ikun/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "Grass",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/grass/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "JuheApi",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/juhe/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "QDY",
+          "canCopy": false
+        },
+        {
+          "text": "https://gh-proxy.org/raw.githubusercontent.com/pdone/lx-music-source/main/qdy/latest.js",
+          "canCopy": true
+        },
+        {
+          "text": "（以下来自 GitHub lubin776/tvbox-api-backup 收录的落雪音源 · 已验证可用 · 2026-10-12）",
+          "canCopy": false
+        },
+        {
+          "text": "【推荐】长青SVIP音源v1.2.0（全平台无损）",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/【推荐】长青SVIP音源v1.2.0（全平台支持无损）.js",
+          "canCopy": true
+        },
+        {
+          "text": "云端音源 v2.1.0",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/云端音源 v2.1.0.js",
+          "canCopy": true
+        },
+        {
+          "text": "念心音源-V1.0.1",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/念心音源-V1.0.1.js",
+          "canCopy": true
+        },
+        {
+          "text": "星空音源",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/星空音源.js",
+          "canCopy": true
+        },
+        {
+          "text": "独家音源-v5",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/独家音源-v5.js",
+          "canCopy": true
+        },
+        {
+          "text": "独家音源V6",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/独家音源V6(1).js",
+          "canCopy": true
+        },
+        {
+          "text": "lx-music-source-v6+（修复版）",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/lx-music-source-v6+(修复).js",
+          "canCopy": true
+        },
+        {
+          "text": "FreeListen 1.1.2（原小熊猫）",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/FreeListen 1.1.2(原小熊猫).js",
+          "canCopy": true
+        },
+        {
+          "text": "野花音源（强大）",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/野花音源（强大）.js",
+          "canCopy": true
+        },
+        {
+          "text": "野草音源",
+          "canCopy": false
+        },
+        {
+          "text": "https://tvbox.moliys.icu/yinyuan/野草音源.js",
+          "canCopy": true
+        },
+        {
+          "text": "更多音源见仓库 cy/音源.json（共 21 个，已去重）：",
+          "canCopy": false
+        },
+        {
+          "text": "https://raw.githubusercontent.com/lubin776/tvbox-api-backup/main/cy/音源.json",
+          "canCopy": true
+        }
+      ]
+    }
+  ]
+}
