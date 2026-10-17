@@ -1,593 +1,594 @@
 {
-  "schemaVersion": 2,
-  "aeps": [
+ "schemaVersion": 2,
+ "aeps": [
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep32-hmi-v66",
+   "versions": [
     {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep32-hmi-v66",
-      "versions": [
-        {
-          "name": "哪吒地图",
-          "package": "com.hozonauto.launcher",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep32-hmi-v66",
-          "releaseId": "netamap-ep32-1.2.1-20261015-164824",
-          "updateTime": "2026-10-15 16:48:24",
-          "description": "哪吒地图 适配哪吒 L V1.2.1，其他车型或版本请勿使用。\n\n1. 【绿灯读秒】支持解锁绿灯读秒功能。\n2. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n3. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n4. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n5. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n6. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n7. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n8. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n9. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n10. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。\n11. 【地图窗口】支持通过地图左下角工具栏切换全屏和半屏，修复按钮点击无效的问题，配色跟随深色和浅色模式。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "5"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.30.53"
-              }
-            ],
-            "stockPackageVersionName": "24.07.30.2141.3bff76c.P",
-            "stockApkSha256": "0983aea8c1fd10f59c3a13f52a56155e4bb4fca12188252d92e985738bce73d0"
-          },
-          "apkSha256": "c92539de6286d5c25a39eee19ff3a170b7d4cd5f1b4f3d551008b61e51b9931a",
-          "apkSize": 324127258,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "netamap-ep32-1.2.1-20261015-164824",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/71b086497eca92128be5b6020a7d7b879929c2d7cd88945918ba57447ddd0e51/5c9d8b8fad573aec35ab297a0c6616d28161641d917e00e446a289aae23d6507.aep",
-          "aepSha256": "5c9d8b8fad573aec35ab297a0c6616d28161641d917e00e446a289aae23d6507",
-          "aepSize": 324135814
-        },
-        {
-          "name": "哪吒地图",
-          "package": "com.hozonauto.launcher",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep32-hmi-v66",
-          "releaseId": "netamap-ep32-1.3.1-20261015-165058",
-          "updateTime": "2026-10-15 16:50:58",
-          "description": "哪吒地图 适配哪吒 L V1.3.1，其他车型或版本请勿使用。\n\n1. 【绿灯读秒】支持解锁绿灯读秒功能。\n2. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n3. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n4. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n5. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n6. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n7. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n8. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n9. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n10. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "5"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.33.33"
-              }
-            ],
-            "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
-            "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
-          },
-          "apkSha256": "233e88d92f56fd371019b34032e30802d217e6d6a10e0c48b51261f1eb8a89d4",
-          "apkSize": 329595360,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "netamap-ep32-1.3.1-20261015-165058",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/71b086497eca92128be5b6020a7d7b879929c2d7cd88945918ba57447ddd0e51/46b6a2a6566c4138e9fe8906214e3ba5cf7bb7ffa31563c2e3ef824f2f9277c4.aep",
-          "aepSha256": "46b6a2a6566c4138e9fe8906214e3ba5cf7bb7ffa31563c2e3ef824f2f9277c4",
-          "aepSize": 329603839
-        }
+     "name": "哪吒地图",
+     "package": "com.hozonauto.launcher",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep32-hmi-v66",
+     "releaseId": "netamap-ep32-1.2.1-20261015-164824",
+     "updateTime": "2026-10-15 16:48:24",
+     "description": "哪吒地图 适配哪吒 L V1.2.1，其他车型或版本请勿使用。\n\n1. 【绿灯读秒】支持解锁绿灯读秒功能。\n2. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n3. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n4. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n5. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n6. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n7. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n8. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n9. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n10. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。\n11. 【地图窗口】支持通过地图左下角工具栏切换全屏和半屏，修复按钮点击无效的问题，配色跟随深色和浅色模式。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "5"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.30.53"
+       }
       ],
-      "name": "哪吒地图",
-      "package": "com.hozonauto.launcher",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep32-hmi-v66"
+      "stockPackageVersionName": "24.07.30.2141.3bff76c.P",
+      "stockApkSha256": "0983aea8c1fd10f59c3a13f52a56155e4bb4fca12188252d92e985738bce73d0"
+     },
+     "apkSha256": "c92539de6286d5c25a39eee19ff3a170b7d4cd5f1b4f3d551008b61e51b9931a",
+     "apkSize": 324127258,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "netamap-ep32-1.2.1-20261015-164824",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/71b086497eca92128be5b6020a7d7b879929c2d7cd88945918ba57447ddd0e51/5c9d8b8fad573aec35ab297a0c6616d28161641d917e00e446a289aae23d6507.aep",
+     "aepSha256": "5c9d8b8fad573aec35ab297a0c6616d28161641d917e00e446a289aae23d6507",
+     "aepSize": 324135814
     },
     {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep36-launcher",
-      "versions": [
-        {
-          "name": "哪吒 GT 地图",
-          "package": "com.hozonauto.launcher",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep36-launcher",
-          "releaseId": "netamap-ep36-05.28.03-20261015-165312",
-          "updateTime": "2026-10-15 16:53:12",
-          "description": "哪吒 GT 地图 适配 V1.6.3，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。\n2. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n3. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n4. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n5. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n6. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n7. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n8. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "4"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.28.03"
-              }
-            ],
-            "stockPackageVersionName": "24.08.14.2014.24fef35.P",
-            "stockApkSha256": "86ff3b7f1e7d526a1d18fd5868be5a9aa360b5d20fffb791305345b5f6ccedca"
-          },
-          "apkSha256": "2ab3f611511375e90f14c2100e82554dace10ac1f8df7c0cc147d776c17c23b1",
-          "apkSize": 309061004,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "netamap-ep36-05.28.03-20261015-165312",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/7ffd68f2e43032ce81d18f3a7b6ab609d6b9fd0887726e66fa5271df0b7ea304/0ca6c9eb5150a4a337d1c6c968f4886a3b7c131e59e3b0a6693c8e7cfb5a91af.aep",
-          "aepSha256": "0ca6c9eb5150a4a337d1c6c968f4886a3b7c131e59e3b0a6693c8e7cfb5a91af",
-          "aepSize": 309068732
-        }
+     "name": "哪吒地图",
+     "package": "com.hozonauto.launcher",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep32-hmi-v66",
+     "releaseId": "netamap-ep32-1.3.1-20261015-165058",
+     "updateTime": "2026-10-15 16:50:58",
+     "description": "哪吒地图 适配哪吒 L V1.3.1，其他车型或版本请勿使用。\n\n1. 【绿灯读秒】支持解锁绿灯读秒功能。\n2. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n3. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n4. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n5. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n6. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n7. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n8. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n9. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n10. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "5"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.33.33"
+       }
       ],
-      "name": "哪吒 GT 地图",
-      "package": "com.hozonauto.launcher",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep36-launcher"
-    },
-    {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep40-launcher",
-      "versions": [
-        {
-          "name": "哪吒 S 地图",
-          "package": "com.hozonauto.launcher",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep40-launcher",
-          "releaseId": "netamap-ep40-05.31.50-20261015-165548",
-          "updateTime": "2026-10-15 16:55:48",
-          "description": "哪吒 S 地图 适配 V1.10.4，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n2. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n3. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n4. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n5. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n6. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n7. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n8. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n9. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。\n10. 【HUD 红绿灯】配备 HUD 的车辆支持显示路口多灯和倒计时，可调节位置、大小和透明度；巡航与导航使用一致的显示尺寸，地图退到后台后继续刷新，定位或灯态失效时清除。关闭导航路口多灯后，仍支持导航中的 HUD 红绿灯显示。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "0"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.31.50"
-              }
-            ],
-            "stockPackageVersionName": "24.08.27.1944.e70ad52.P",
-            "stockApkSha256": "5598d08a78b943132eedcd2625878bea142d197cff4443591fcea605956f3548"
-          },
-          "apkSha256": "1e52b22b676d18d1dd997d63913c5b7eaf4b5175c35ed6945d46fa75659f5af9",
-          "apkSize": 309120839,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "netamap-ep40-05.31.50-20261015-165548",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/b1c87d9cf71005dc38e4580948a827a0f8d27d3075ec4c0b12fd9eefb4725d5d/68d1b45634abe85a7fbf7cc22ef1538c077e9332f6952dd1d4c80c954afebb59.aep",
-          "aepSha256": "68d1b45634abe85a7fbf7cc22ef1538c077e9332f6952dd1d4c80c954afebb59",
-          "aepSize": 309129256
-        }
-      ],
-      "name": "哪吒 S 地图",
-      "package": "com.hozonauto.launcher",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep40-launcher"
-    },
-    {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep41-launcher",
-      "versions": [
-        {
-          "name": "哪吒 S 猎装地图",
-          "package": "com.hozonauto.launcher",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep41-launcher",
-          "releaseId": "netamap-ep41-05.31.85-20261015-165830",
-          "updateTime": "2026-10-15 16:58:30",
-          "description": "哪吒 S 猎装地图 适配猎装 V1.0.0，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n2. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n3. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n4. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n5. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n6. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n7. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n8. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n9. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。\n10. 【HUD 红绿灯】配备 HUD 的车辆支持显示路口多灯和倒计时，可调节位置、大小和透明度；巡航与导航使用一致的显示尺寸，地图退到后台后继续刷新，定位或灯态失效时清除。关闭导航路口多灯后，仍支持导航中的 HUD 红绿灯显示。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "9"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.31.85"
-              }
-            ],
-            "stockPackageVersionName": "24.08.30.1904.70c2fb9.P",
-            "stockApkSha256": "e33107d8d9d2811b540f89c3167b0d09826386b64244857455f811aae96ec2e2"
-          },
-          "apkSha256": "34fa182d863e9371c39a6fce104f5a42cfcc31071b5711db120e8fa6368d0966",
-          "apkSize": 309143005,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "netamap-ep41-05.31.85-20261015-165830",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/a71b2fd8aba3d6e6eb71b6b112783b9984f247070ed29b92500c794039ed7d9a/7595e110c568cf3367649895b08656cde4736837542b0798f9da5e766599ad58.aep",
-          "aepSha256": "7595e110c568cf3367649895b08656cde4736837542b0798f9da5e766599ad58",
-          "aepSize": 309151438
-        }
-      ],
-      "name": "哪吒 S 猎装地图",
-      "package": "com.hozonauto.launcher",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep41-launcher"
-    },
-    {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep32-1.2.1-360-panoramic-imaging",
-      "versions": [
-        {
-          "name": "哪吒 L 360全景影像",
-          "package": "com.hozonauto.panoramic.avm",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep32-1.2.1-360-panoramic-imaging",
-          "releaseId": "avm-ep32-1.2.1-20261015-170106",
-          "updateTime": "2026-10-15 17:01:06",
-          "description": "哪吒 L 360全景影像适配 V1.2.1，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "5"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.30.53"
-              }
-            ],
-            "stockPackageVersionName": "1.4.78",
-            "stockApkSha256": "0b7e2b2a893edd08d7530843af5161fb0132d828b3c8f3f7c2f2eaafcf382e5c"
-          },
-          "apkSha256": "dac84bc986cac536c13257cd112ae267a62be466676a8880ce16d623e91d9265",
-          "apkSize": 77315358,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "avm-ep32-1.2.1-20261015-170106",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/1f1609bfe9e95d0b85b2ae9d63678b21942d7923af85ddd8836e30054b42a135/f0149d31ed5c2285c9b58148fb321ea42ab69d847cb9b5d705c12b88261849b8.aep",
-          "aepSha256": "f0149d31ed5c2285c9b58148fb321ea42ab69d847cb9b5d705c12b88261849b8",
-          "aepSize": 77318233
-        }
-      ],
-      "name": "哪吒 L 360全景影像",
-      "package": "com.hozonauto.panoramic.avm",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep32-1.2.1-360-panoramic-imaging"
-    },
-    {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep32-1.3.1-360-panoramic-imaging",
-      "versions": [
-        {
-          "name": "哪吒 L 360全景影像",
-          "package": "com.hozonauto.panoramic.avm",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep32-1.3.1-360-panoramic-imaging",
-          "releaseId": "avm-ep32-1.3.1-20261015-170221",
-          "updateTime": "2026-10-15 17:02:21",
-          "description": "哪吒 L 360全景影像适配 V1.3.1，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n退出时正常结束自身页面，不强制跳转车机主页。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "5"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.33.33"
-              }
-            ],
-            "stockPackageVersionName": "1.5.00",
-            "stockApkSha256": "b885b10eb87ff06b17dc1a8b3c515db7fd031ebff5386cd6a6da23e5553a19a2"
-          },
-          "apkSha256": "33a9a811ce23622572eab0800e4b72a0bd12938c5064117b86136532245cf815",
-          "apkSize": 77201892,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "avm-ep32-1.3.1-20261015-170221",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/0ff2cb52453f6fb75517ad3f9a0bcf6814649de6397d3933530593e1beb47a7b/5686f876b37b820e7c2f47d9c59dffbd88bf6ce38f7f101aa8f5bfcfbf7b7492.aep",
-          "aepSha256": "5686f876b37b820e7c2f47d9c59dffbd88bf6ce38f7f101aa8f5bfcfbf7b7492",
-          "aepSize": 77204838
-        }
-      ],
-      "name": "哪吒 L 360全景影像",
-      "package": "com.hozonauto.panoramic.avm",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep32-1.3.1-360-panoramic-imaging"
-    },
-    {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep36-05.28.03-360-panoramic-imaging",
-      "versions": [
-        {
-          "name": "哪吒 GT 360全景影像",
-          "package": "com.hozonauto.panoramic.avm",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep36-05.28.03-360-panoramic-imaging",
-          "releaseId": "avm-ep36-05.28.03-20261015-170334",
-          "updateTime": "2026-10-15 17:03:34",
-          "description": "哪吒 GT 360全景影像适配 V1.6.3，其他车型或版本请勿使用。\n\n提供全景影像限速解除增强，实际效果请自行实测。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "4"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.28.03"
-              }
-            ],
-            "stockPackageVersionName": "1.4.70",
-            "stockApkSha256": "523bc9a7ba09178052575aaa5c8469797807e58e0abdcd347c260722cc1166ec"
-          },
-          "apkSha256": "87ba478f4454b7b3b8b1d84333e5518aad99eed9b6ed29e1bdd6f9f08d4cfb4d",
-          "apkSize": 77646350,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "avm-ep36-05.28.03-20261015-170334",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/3c66e3b8e8df5ad571e598f0a06d2f7738a027fd58d30ce8c779c6b0e5fdc445/43098f96cbe892d168e12cc462d1885c026073fc07ff35971a5185e664e0172a.aep",
-          "aepSha256": "43098f96cbe892d168e12cc462d1885c026073fc07ff35971a5185e664e0172a",
-          "aepSize": 77649215
-        }
-      ],
-      "name": "哪吒 GT 360全景影像",
-      "package": "com.hozonauto.panoramic.avm",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep36-05.28.03-360-panoramic-imaging"
-    },
-    {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep40-avm",
-      "versions": [
-        {
-          "name": "哪吒 S 360全景影像",
-          "package": "com.hozonauto.panoramic.avm",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep40-avm",
-          "releaseId": "avm-ep40-05.31.50-20261015-170446",
-          "updateTime": "2026-10-15 17:04:46",
-          "description": "哪吒 S 360全景影像适配 V1.10.4，其他车型或版本请勿使用。\n\n提供全景影像限速解除增强，实际效果请自行实测。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "0"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.31.50"
-              }
-            ],
-            "stockPackageVersionName": "1.4.72",
-            "stockApkSha256": "8034900c5939bfd0bb4cb5b9f7da9fdeea2fdff2e3a9f2dba8f01114841b66c3"
-          },
-          "apkSha256": "1f1a2a637fa30188a57e167ce28cf131cfb82738c5b7832978d49adb3881927f",
-          "apkSize": 77646350,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "avm-ep40-05.31.50-20261015-170446",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/5e60a052f6539880e4e42f930f3fbb059592837536fbf2cd927aded10c7b72bf/f581e921336ea88e1f92454583d80e097a236a4150bc3d91f10ecf12fdb0d15c.aep",
-          "aepSha256": "f581e921336ea88e1f92454583d80e097a236a4150bc3d91f10ecf12fdb0d15c",
-          "aepSize": 77649188
-        }
-      ],
-      "name": "哪吒 S 360全景影像",
-      "package": "com.hozonauto.panoramic.avm",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep40-avm"
-    },
-    {
-      "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep41-05.31.85-360-panoramic-imaging",
-      "versions": [
-        {
-          "name": "哪吒 S 猎装 360全景影像",
-          "package": "com.hozonauto.panoramic.avm",
-          "author": {
-            "id": "netamade",
-            "name": "美式增强",
-            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-          },
-          "enhancementId": "ep41-05.31.85-360-panoramic-imaging",
-          "releaseId": "avm-ep41-05.31.85-20261015-170600",
-          "updateTime": "2026-10-15 17:06:00",
-          "description": "哪吒 S 猎装 360全景影像适配猎装 V1.0.0，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "9"
-              },
-              {
-                "property": "ro.hozon.car.assembly.version",
-                "equals": "05.31.85"
-              }
-            ],
-            "stockPackageVersionName": "1.4.83",
-            "stockApkSha256": "9ec37efd1d5b950a74c2dbf9e7686b7ad390b6658a714ba6c99edc2faac6837c"
-          },
-          "apkSha256": "bc8529e00fc35a078bfd3333e392e388418789b54f0923136435b538171b2da9",
-          "apkSize": 77679664,
-          "activationMode": "none",
-          "recipientKeyId": "aep2-platform-1",
-          "hostMinVersionCode": 228,
-          "id": "avm-ep41-05.31.85-20261015-170600",
-          "formatVersion": 2,
-          "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-          "aep": "/enhancements/6475c6ddb5f5922f1dadc565d355a0dcf0f83ef35a1a4410b3b515cb95f89865/1ec0f3a98e1e502383308520702fb5b2e2731955a0609a90a91cf31498dcadbc.aep",
-          "aepSha256": "1ec0f3a98e1e502383308520702fb5b2e2731955a0609a90a91cf31498dcadbc",
-          "aepSize": 77682581
-        }
-      ],
-      "name": "哪吒 S 猎装 360全景影像",
-      "package": "com.hozonauto.panoramic.avm",
-      "author": {
-        "id": "netamade",
-        "name": "美式增强",
-        "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
-      },
-      "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
-      "enhancementId": "ep41-05.31.85-360-panoramic-imaging"
+      "stockPackageVersionName": "24.11.07.1416.4dff80d.P",
+      "stockApkSha256": "24bad07fa34a767e5bbdaca71c2ad360a28bb7764558e48e7e327c378252b788"
+     },
+     "apkSha256": "233e88d92f56fd371019b34032e30802d217e6d6a10e0c48b51261f1eb8a89d4",
+     "apkSize": 329595360,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "netamap-ep32-1.3.1-20261015-165058",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/71b086497eca92128be5b6020a7d7b879929c2d7cd88945918ba57447ddd0e51/46b6a2a6566c4138e9fe8906214e3ba5cf7bb7ffa31563c2e3ef824f2f9277c4.aep",
+     "aepSha256": "46b6a2a6566c4138e9fe8906214e3ba5cf7bb7ffa31563c2e3ef824f2f9277c4",
+     "aepSize": 329603839
     }
-  ],
-  "enhancements": [
+   ],
+   "name": "哪吒地图",
+   "package": "com.hozonauto.launcher",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep32-hmi-v66"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep36-launcher",
+   "versions": [
     {
-      "id": "enhancement-upgrade-notice",
-      "name": "应用增强功能已升级，请更新美式",
-      "package": "io.github.netamade",
-      "simulation": false,
-      "versions": [
-        {
-          "id": "update-required-ep32",
-          "updateTime": "2026-10-15 09:00:00",
-          "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
-          "apk": "",
-          "sha256": "",
-          "filesize": 0,
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "5"
-              }
-            ],
-            "stockPackageVersionName": "",
-            "stockApkSha256": ""
-          }
-        },
-        {
-          "id": "update-required-ep40",
-          "updateTime": "2026-10-15 09:00:00",
-          "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
-          "apk": "",
-          "sha256": "",
-          "filesize": 0,
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "0"
-              }
-            ],
-            "stockPackageVersionName": "",
-            "stockApkSha256": ""
-          }
-        },
-        {
-          "id": "update-required-ep36",
-          "updateTime": "2026-10-15 09:00:00",
-          "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
-          "apk": "",
-          "sha256": "",
-          "filesize": 0,
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "4"
-              }
-            ],
-            "stockPackageVersionName": "",
-            "stockApkSha256": ""
-          }
-        },
-        {
-          "id": "update-required-ep41",
-          "updateTime": "2026-10-15 09:00:00",
-          "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
-          "apk": "",
-          "sha256": "",
-          "filesize": 0,
-          "compatibility": {
-            "allOf": [
-              {
-                "property": "ro.hozon.car.code",
-                "equals": "9"
-              }
-            ],
-            "stockPackageVersionName": "",
-            "stockApkSha256": ""
-          }
-        }
-      ]
+     "name": "哪吒 GT 地图",
+     "package": "com.hozonauto.launcher",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep36-launcher",
+     "releaseId": "netamap-ep36-05.28.03-20261015-165312",
+     "updateTime": "2026-10-15 16:53:12",
+     "description": "哪吒 GT 地图 适配 V1.6.3，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。\n2. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n3. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n4. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n5. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n6. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n7. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n8. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "4"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.28.03"
+       }
+      ],
+      "stockPackageVersionName": "24.08.14.2014.24fef35.P",
+      "stockApkSha256": "86ff3b7f1e7d526a1d18fd5868be5a9aa360b5d20fffb791305345b5f6ccedca"
+     },
+     "apkSha256": "2ab3f611511375e90f14c2100e82554dace10ac1f8df7c0cc147d776c17c23b1",
+     "apkSize": 309061004,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "netamap-ep36-05.28.03-20261015-165312",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/7ffd68f2e43032ce81d18f3a7b6ab609d6b9fd0887726e66fa5271df0b7ea304/0ca6c9eb5150a4a337d1c6c968f4886a3b7c131e59e3b0a6693c8e7cfb5a91af.aep",
+     "aepSha256": "0ca6c9eb5150a4a337d1c6c968f4886a3b7c131e59e3b0a6693c8e7cfb5a91af",
+     "aepSize": 309068732
     }
-  ]
+   ],
+   "name": "哪吒 GT 地图",
+   "package": "com.hozonauto.launcher",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep36-launcher"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep40-launcher",
+   "versions": [
+    {
+     "name": "哪吒 S 地图",
+     "package": "com.hozonauto.launcher",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep40-launcher",
+     "releaseId": "netamap-ep40-05.31.50-20261015-165548",
+     "updateTime": "2026-10-15 16:55:48",
+     "description": "哪吒 S 地图 适配 V1.10.4，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n2. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n3. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n4. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n5. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n6. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n7. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n8. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n9. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。\n10. 【HUD 红绿灯】配备 HUD 的车辆支持显示路口多灯和倒计时，可调节位置、大小和透明度；巡航与导航使用一致的显示尺寸，地图退到后台后继续刷新，定位或灯态失效时清除。关闭导航路口多灯后，仍支持导航中的 HUD 红绿灯显示。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "0"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.31.50"
+       }
+      ],
+      "stockPackageVersionName": "24.08.27.1944.e70ad52.P",
+      "stockApkSha256": "5598d08a78b943132eedcd2625878bea142d197cff4443591fcea605956f3548"
+     },
+     "apkSha256": "1e52b22b676d18d1dd997d63913c5b7eaf4b5175c35ed6945d46fa75659f5af9",
+     "apkSize": 309120839,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "netamap-ep40-05.31.50-20261015-165548",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/b1c87d9cf71005dc38e4580948a827a0f8d27d3075ec4c0b12fd9eefb4725d5d/68d1b45634abe85a7fbf7cc22ef1538c077e9332f6952dd1d4c80c954afebb59.aep",
+     "aepSha256": "68d1b45634abe85a7fbf7cc22ef1538c077e9332f6952dd1d4c80c954afebb59",
+     "aepSize": 309129256
+    }
+   ],
+   "name": "哪吒 S 地图",
+   "package": "com.hozonauto.launcher",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep40-launcher"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep41-launcher",
+   "versions": [
+    {
+     "name": "哪吒 S 猎装地图",
+     "package": "com.hozonauto.launcher",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep41-launcher",
+     "releaseId": "netamap-ep41-05.31.85-20261015-165830",
+     "updateTime": "2026-10-15 16:58:30",
+     "description": "哪吒 S 猎装地图 适配猎装 V1.0.0，其他车型或版本请勿使用。\n\n1. 【纯电功能】支持开启纯电车型专属地图能力；电量、续航、预计到达时间和补能信息仍依赖车辆数据与导航引擎。 增程车型支持五项独立续航合并设置：路线及充电规划、自动补能判断默认随纯电解锁开关生效；导航能量计算、合并续航显示、可达范围查询、续航提醒和充电推荐四项默认关闭，可分别开启。纯电车型保持原有续航口径。\n2. 【巡航红绿灯】未开启导航时也可显示多个信号灯，统一各方向灯组的显示大小，无倒计时时显示等待提示。\n3. 【导航多灯】支持展示多个信号灯，分别调节主灯和辅助灯大小；优化气泡构图和方向显示，导航单灯固定按主灯尺寸显示，减少大小反复变化和灯组重建闪烁。\n4. 【OP 联动】支持向 OP 助手提供导航数据，用于导航联动。\n5. 【专属设置】可通过原车地图设置打开美式专属设置，调节红绿灯大小及巡航探测距离。\n6. 【地图更新与离线地图】支持清除本地地图数据并重启地图，也可屏蔽离线地图自动下载，避免离线数据影响 3D 建筑显示。已下载的数据需清除后才能恢复建筑显示；清除会关闭下载屏蔽，需按需重新开启。\n7. 【超速红屏】道路超速红屏默认关闭，可按需开启，并设置 0%～50% 的超速比例，默认 10%，0% 不触发道路提醒；测速超速红屏默认开启，限速拍照持续超速或区间平均速度超速时循环闪红，恢复限速或结束测速后消失；切换应用时及时清除红屏。\n8. 【应用切换】修复应用切换导致地图白屏、红绿灯消失的问题。\n9. 【续航提醒】支持设置低续航提醒阈值和目的地距离阈值，范围均为 10～200 公里；解锁纯电功能后，增程车型默认低于 50 公里提醒，纯电车型默认 100 公里。\n10. 【HUD 红绿灯】配备 HUD 的车辆支持显示路口多灯和倒计时，可调节位置、大小和透明度；巡航与导航使用一致的显示尺寸，地图退到后台后继续刷新，定位或灯态失效时清除。关闭导航路口多灯后，仍支持导航中的 HUD 红绿灯显示。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "9"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.31.85"
+       }
+      ],
+      "stockPackageVersionName": "24.08.30.1904.70c2fb9.P",
+      "stockApkSha256": "e33107d8d9d2811b540f89c3167b0d09826386b64244857455f811aae96ec2e2"
+     },
+     "apkSha256": "34fa182d863e9371c39a6fce104f5a42cfcc31071b5711db120e8fa6368d0966",
+     "apkSize": 309143005,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "netamap-ep41-05.31.85-20261015-165830",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/a71b2fd8aba3d6e6eb71b6b112783b9984f247070ed29b92500c794039ed7d9a/7595e110c568cf3367649895b08656cde4736837542b0798f9da5e766599ad58.aep",
+     "aepSha256": "7595e110c568cf3367649895b08656cde4736837542b0798f9da5e766599ad58",
+     "aepSize": 309151438
+    }
+   ],
+   "name": "哪吒 S 猎装地图",
+   "package": "com.hozonauto.launcher",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep41-launcher"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep32-1.2.1-360-panoramic-imaging",
+   "versions": [
+    {
+     "name": "哪吒 L 360全景影像",
+     "package": "com.hozonauto.panoramic.avm",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep32-1.2.1-360-panoramic-imaging",
+     "releaseId": "avm-ep32-1.2.1-20261017-001047",
+     "updateTime": "2026-10-17 00:10:47",
+     "description": "哪吒 L 360全景影像适配 V1.2.1，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "5"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.30.53"
+       }
+      ],
+      "stockPackageVersionName": "1.4.78",
+      "stockApkSha256": "0b7e2b2a893edd08d7530843af5161fb0132d828b3c8f3f7c2f2eaafcf382e5c"
+     },
+     "apkSha256": "ac014d23eff8b0cc72fdb2beca5e8fa2d1050e26e6747b4f1ddca8d2f894cc80",
+     "apkSize": 77331742,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "avm-ep32-1.2.1-20261017-001047",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/1f1609bfe9e95d0b85b2ae9d63678b21942d7923af85ddd8836e30054b42a135/b7d15711ec26049ceaeed96211bbf7d31951f8a4f26446b93ff3a21729bbf227.aep",
+     "aepSha256": "b7d15711ec26049ceaeed96211bbf7d31951f8a4f26446b93ff3a21729bbf227",
+     "aepSize": 77334617
+    }
+   ],
+   "name": "哪吒 L 360全景影像",
+   "package": "com.hozonauto.panoramic.avm",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep32-1.2.1-360-panoramic-imaging"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep32-1.3.1-360-panoramic-imaging",
+   "versions": [
+    {
+     "name": "哪吒 L 360全景影像",
+     "package": "com.hozonauto.panoramic.avm",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep32-1.3.1-360-panoramic-imaging",
+     "releaseId": "avm-ep32-1.3.1-20261017-001201",
+     "updateTime": "2026-10-17 00:12:01",
+     "description": "哪吒 L 360全景影像适配 V1.3.1，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n退出时正常结束自身页面，不强制跳转车机主页。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "5"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.33.33"
+       }
+      ],
+      "stockPackageVersionName": "1.5.00",
+      "stockApkSha256": "b885b10eb87ff06b17dc1a8b3c515db7fd031ebff5386cd6a6da23e5553a19a2"
+     },
+     "apkSha256": "c985aa9eafff427fa7f8931abb6e1f52bb536dba252c1877c432b94b5ce036db",
+     "apkSize": 77201892,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "avm-ep32-1.3.1-20261017-001201",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/0ff2cb52453f6fb75517ad3f9a0bcf6814649de6397d3933530593e1beb47a7b/dce01e803ec7716645980906793c41fbd2de0297de3952c7f00036c9d7675fdc.aep",
+     "aepSha256": "dce01e803ec7716645980906793c41fbd2de0297de3952c7f00036c9d7675fdc",
+     "aepSize": 77204837
+    }
+   ],
+   "name": "哪吒 L 360全景影像",
+   "package": "com.hozonauto.panoramic.avm",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep32-1.3.1-360-panoramic-imaging"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep36-05.28.03-360-panoramic-imaging",
+   "versions": [
+    {
+     "name": "哪吒 GT 360全景影像",
+     "package": "com.hozonauto.panoramic.avm",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep36-05.28.03-360-panoramic-imaging",
+     "releaseId": "avm-ep36-05.28.03-20261017-001315",
+     "updateTime": "2026-10-17 00:13:15",
+     "description": "哪吒 GT 360全景影像适配 V1.6.3，其他车型或版本请勿使用。\n\n提供全景影像限速解除增强，实际效果请自行实测。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "4"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.28.03"
+       }
+      ],
+      "stockPackageVersionName": "1.4.70",
+      "stockApkSha256": "523bc9a7ba09178052575aaa5c8469797807e58e0abdcd347c260722cc1166ec"
+     },
+     "apkSha256": "74fdc4f12e282495789fe6e6839ed83cca85d523fa5c164d977b9a84daee0a08",
+     "apkSize": 77662734,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "avm-ep36-05.28.03-20261017-001315",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/3c66e3b8e8df5ad571e598f0a06d2f7738a027fd58d30ce8c779c6b0e5fdc445/a6f58f3b0bad8be8764801a99c2a98ed47b166b91da714e6805752a5f3e41493.aep",
+     "aepSha256": "a6f58f3b0bad8be8764801a99c2a98ed47b166b91da714e6805752a5f3e41493",
+     "aepSize": 77665599
+    }
+   ],
+   "name": "哪吒 GT 360全景影像",
+   "package": "com.hozonauto.panoramic.avm",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep36-05.28.03-360-panoramic-imaging"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep40-avm",
+   "versions": [
+    {
+     "name": "哪吒 S 360全景影像",
+     "package": "com.hozonauto.panoramic.avm",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep40-avm",
+     "releaseId": "avm-ep40-05.31.50-20261017-001429",
+     "updateTime": "2026-10-17 00:14:29",
+     "description": "哪吒 S 360全景影像适配 V1.10.4，其他车型或版本请勿使用。\n\n提供全景影像限速解除增强，实际效果请自行实测。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "0"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.31.50"
+       }
+      ],
+      "stockPackageVersionName": "1.4.72",
+      "stockApkSha256": "8034900c5939bfd0bb4cb5b9f7da9fdeea2fdff2e3a9f2dba8f01114841b66c3"
+     },
+     "apkSha256": "e122d7a4f8251efbfcc63a623b343000925651554ca79737f870a88a7b477e21",
+     "apkSize": 77662734,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "avm-ep40-05.31.50-20261017-001429",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/5e60a052f6539880e4e42f930f3fbb059592837536fbf2cd927aded10c7b72bf/089a151ae3543c6f3bf73f24f88b2e3391a5ed344ab0037f838b70eabdb752a5.aep",
+     "aepSha256": "089a151ae3543c6f3bf73f24f88b2e3391a5ed344ab0037f838b70eabdb752a5",
+     "aepSize": 77665572
+    }
+   ],
+   "name": "哪吒 S 360全景影像",
+   "package": "com.hozonauto.panoramic.avm",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep40-avm"
+  },
+  {
+   "id": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b:ep41-05.31.85-360-panoramic-imaging",
+   "versions": [
+    {
+     "name": "哪吒 S 猎装 360全景影像",
+     "package": "com.hozonauto.panoramic.avm",
+     "author": {
+      "id": "netamade",
+      "name": "美式增强",
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+     },
+     "enhancementId": "ep41-05.31.85-360-panoramic-imaging",
+     "releaseId": "avm-ep41-05.31.85-20261017-001544",
+     "updateTime": "2026-10-17 00:15:44",
+     "description": "哪吒 S 猎装 360全景影像适配猎装 V1.0.0，其他车型或版本请勿使用。\n\n解除进入全景影像的速度限制，并取消因超速触发的自动退出，已实测支持。\n\n使用前请关闭：智能场景 → 低速安心 → 退出速度自动关闭，否则会影响限速解除效果。",
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "9"
+       },
+       {
+        "property": "ro.hozon.car.assembly.version",
+        "equals": "05.31.85"
+       }
+      ],
+      "stockPackageVersionName": "1.4.83",
+      "stockApkSha256": "9ec37efd1d5b950a74c2dbf9e7686b7ad390b6658a714ba6c99edc2faac6837c"
+     },
+     "apkSha256": "17193a2bc058ee7b231491be683aae7991b82938dfdfacb5d99c5ae55f54cafb",
+     "apkSize": 77696048,
+     "activationMode": "none",
+     "recipientKeyId": "aep2-platform-1",
+     "hostMinVersionCode": 228,
+     "id": "avm-ep41-05.31.85-20261017-001544",
+     "formatVersion": 2,
+     "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+     "aep": "/enhancements/6475c6ddb5f5922f1dadc565d355a0dcf0f83ef35a1a4410b3b515cb95f89865/cfa2e6e3f57ee38b10411e5b25182d0e4fc42817209e8c88b4735d793292d401.aep",
+     "aepSha256": "cfa2e6e3f57ee38b10411e5b25182d0e4fc42817209e8c88b4735d793292d401",
+     "aepSize": 77698965
+    }
+   ],
+   "name": "哪吒 S 猎装 360全景影像",
+   "package": "com.hozonauto.panoramic.avm",
+   "author": {
+    "id": "netamade",
+    "name": "美式增强",
+    "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEk8uARr7hpSOOj1Gtf4wVIqQf+egXBLYPbeIB6vS0vk0j04bK1M7EXEfurnq1Fflzj4DF8BjnvpoxLBkWNxjZPQ=="
+   },
+   "authorKeyFingerprint": "e9b09fb3013f9bcc7bb3de63243c29ece50ed4de7e8d8888b0be079d528f229b",
+   "enhancementId": "ep41-05.31.85-360-panoramic-imaging"
+  }
+ ],
+ "enhancements": [
+  {
+   "id": "enhancement-upgrade-notice",
+   "name": "应用增强功能已升级，请更新美式",
+   "package": "io.github.netamade",
+   "simulation": false,
+   "versions": [
+    {
+     "id": "update-required-ep32",
+     "updateTime": "2026-10-15 09:00:00",
+     "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
+     "apk": "",
+     "sha256": "",
+     "filesize": 0,
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "5"
+       }
+      ],
+      "stockPackageVersionName": "",
+      "stockApkSha256": ""
+     }
+    },
+    {
+     "id": "update-required-ep40",
+     "updateTime": "2026-10-15 09:00:00",
+     "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
+     "apk": "",
+     "sha256": "",
+     "filesize": 0,
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "0"
+       }
+      ],
+      "stockPackageVersionName": "",
+      "stockApkSha256": ""
+     }
+    },
+    {
+     "id": "update-required-ep36",
+     "updateTime": "2026-10-15 09:00:00",
+     "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
+     "apk": "",
+     "sha256": "",
+     "filesize": 0,
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "4"
+       }
+      ],
+      "stockPackageVersionName": "",
+      "stockApkSha256": ""
+     }
+    },
+    {
+     "id": "update-required-ep41",
+     "updateTime": "2026-10-15 09:00:00",
+     "description": "应用增强功能已升级，请更新美式到最新版本，否则无法下载使用。本条仅为升级提示，请勿点击下载。",
+     "apk": "",
+     "sha256": "",
+     "filesize": 0,
+     "compatibility": {
+      "allOf": [
+       {
+        "property": "ro.hozon.car.code",
+        "equals": "9"
+       }
+      ],
+      "stockPackageVersionName": "",
+      "stockApkSha256": ""
+     }
+    }
+   ]
+  }
+ ],
+ "history": []
 }
