@@ -1,0 +1,38 @@
+{
+  "notice": "应用下载中心升级装修中，升级完毕后会重新开放，建议更新【美式】到最新版本后再使用",
+  "categories": [
+    "系统更新"
+  ],
+  "apps": [
+    {
+      "id": "netamade-self-update",
+      "code": "netamade-self-update",
+      "name": "美式",
+      "category": "系统更新",
+      "icon": "/netamade-self-update/icon.png",
+      "package": "io.github.netamade",
+      "md5sum": "fe11e0ad59286b9a2b7d1c507eb35945",
+      "filesize": 101338217,
+      "updateTime": "2026-10-20T14:02:08Z",
+      "versionName": "5.2.0-REL",
+      "description": "应用下载中心升级装修中，升级完毕后会重新开放，建议更新【美式】到最新版本后再使用\n\n此条目仅用于把美式升级到最新版本；应用下载中心恢复后重新开放。",
+      "incompatibility": [],
+      "apk": "https://github.com/z0brk/netamade-releases/releases/download/v5.2.0-REL-stable/netamade-stable-5.2.0-REL-232.apk"
+    }
+  ],
+  "messageBoard": [
+    {
+      "title": "下载中心升级公告",
+      "contents": [
+        {
+          "text": "应用下载中心升级装修中，升级完毕后会重新开放，建议更新【美式】到最新版本后再使用",
+          "canCopy": false
+        },
+        {
+          "text": "可在美式的更新提醒中直接完成升级；升级后应用、屏保、音效中心自动恢复。",
+          "canCopy": false
+        }
+      ]
+    }
+  ]
+}
