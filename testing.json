@@ -1,0 +1,10 @@
+{
+  "versionName": "5.2.3-TEST-1024_0000",
+  "versionCode": 234,
+  "channel": "testing",
+  "testing": true,
+  "buildTime": "2026-10-24 00:00:09",
+  "releaseVersion": "v5.2.3-TEST-1024_0000-testing",
+  "releaseFilename": "netamade-testing-5.2.3-TEST-1024_0000-234.apk",
+  "apkMd5": "338d74db5f3779bad3765312125ef385"
+}
