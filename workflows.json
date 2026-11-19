@@ -1,0 +1,44 @@
+{
+  "workflows": [
+    {
+      "id": "37716ffa3b63",
+      "code": "workflow-621a5e",
+      "name": "workflow_红绿灯自启带定位修复：适用自带地图",
+      "category": "未分类",
+      "author": "",
+      "description": "红绿灯领航开机自启、自动定位修复、随后打开原车地图",
+      "filename": "workflow_红绿灯自启带定位修复：适用自带地图.json",
+      "file": "/workflow-621a5e/workflow_红绿灯自启带定位修复：适用自带地图.json",
+      "md5sum": "621a5ef7091eeb17e2ac0eb71e473b2c",
+      "filesize": 3054,
+      "updateTime": "2026-04-29T09:27:53Z",
+      "workflowCount": 1,
+      "workflowNames": [
+        "红绿灯自启自隐藏：适应自带地图：带定位修复"
+      ],
+      "tags": []
+    },
+    {
+      "id": "c4ed434f3941",
+      "code": "10-30-24c234",
+      "name": "露营模式期间-保持10分钟外循环30分钟内循环",
+      "category": "空调场景",
+      "author": "",
+      "description": "露营模式期间，保持每 10 分钟外循环然后 30 分钟的内循环运行，持续循环",
+      "filename": "露营模式期间-保持10分钟外循环30分钟内循环.json",
+      "file": "/10-30-24c234/露营模式期间-保持10分钟外循环30分钟内循环.json",
+      "md5sum": "24c2349a2956ca7a34f166c31bbdb89f",
+      "filesize": 3206,
+      "updateTime": "2026-04-29T08:22:48Z",
+      "workflowCount": 1,
+      "workflowNames": [
+        "露营模式期间-保持10分钟外循环30分钟内循环"
+      ],
+      "tags": []
+    }
+  ],
+  "categories": [
+    "空调场景",
+    "未分类"
+  ]
+}

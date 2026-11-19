@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "screensavers": [
+    {
+      "id": "screensaver-upgrade-notice",
+      "name": "屏保中心升级装修中，请更新美式",
+      "category": "公告",
+      "type": "IMAGE",
+      "width": 1920,
+      "height": 720,
+      "suitability": "SUITABLE",
+      "targets": [
+        "L_MAIN_FULL",
+        "L_MAIN_HALF",
+        "L_SECONDARY_FULL",
+        "S_GT_MAIN",
+        "S_GT_SECONDARY"
+      ],
+      "file": "/screensaver-upgrade-notice/notice.jpg",
+      "preview": "/screensaver-upgrade-notice/preview.webp",
+      "md5sum": "00000000000000000000000000000000",
+      "filesize": 30976,
+      "updateTime": "2026-10-20T14:02:08Z"
+    }
+  ],
+  "categoryStats": {
+    "公告": 1
+  }
+}

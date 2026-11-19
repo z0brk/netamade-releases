@@ -1,0 +1,103 @@
+{
+  "appVersion": "1.0.0",
+  "exportTime": "2026-04-09T20:58:42Z",
+  "conditions": [
+    {
+      "createdAt": 1775739310820,
+      "id": -1775739310820,
+      "parametersJson": "{\"areaId\":0,\"compareType\":\"EQUAL\",\"compareValue\":\"5\",\"dataType\":\"INT32\",\"propId\":557846396,\"propName\":\"HZ_USER_SCENE_MODE_SET\"}",
+      "type": "CAR_PROPERTY_CONDITION",
+      "updatedAt": 1775739310820
+    }
+  ],
+  "tasks": [
+    {
+      "createdAt": 1775739340440,
+      "description": "循环开始 (直到 露营模式退出)",
+      "id": -1775739340440,
+      "name": "循环任务",
+      "param": "{\"breakConditionKey\":\"CAR_PROPERTY_VALUE\",\"breakConditionParam\":\"{\\\"areaId\\\":0,\\\"compareType\\\":\\\"NOT_EQUAL\\\",\\\"compareValue\\\":\\\"5\\\",\\\"dataType\\\":\\\"INT32\\\",\\\"propId\\\":557846396,\\\"propName\\\":\\\"HZ_USER_SCENE_MODE_SET\\\"}\",\"isEnd\":false}",
+      "showDynamicIsland": true,
+      "type": "LOOP",
+      "updatedAt": 1775739340440
+    },
+    {
+      "createdAt": 1775739401575,
+      "description": "开启外循环",
+      "id": -1775739401575,
+      "name": "空调控制",
+      "param": "{\"action\":\"外循环\",\"value\":1}",
+      "showDynamicIsland": true,
+      "type": "AIR_CONDITION_CONTROL",
+      "updatedAt": 1775739401575
+    },
+    {
+      "createdAt": 1775739445189,
+      "description": "延迟：10分0秒",
+      "id": -1775739445189,
+      "name": "延迟",
+      "param": "600000",
+      "showDynamicIsland": true,
+      "type": "DELAY",
+      "updatedAt": 1775739445189
+    },
+    {
+      "createdAt": 1775739425207,
+      "description": "开启内循环",
+      "id": -1775739425207,
+      "name": "空调控制",
+      "param": "{\"action\":\"内循环\",\"value\":0}",
+      "showDynamicIsland": true,
+      "type": "AIR_CONDITION_CONTROL",
+      "updatedAt": 1775739425207
+    },
+    {
+      "createdAt": 1775739471163,
+      "description": "延迟：30分0秒",
+      "id": -1775739471163,
+      "name": "延迟",
+      "param": "1800000",
+      "showDynamicIsland": true,
+      "type": "DELAY",
+      "updatedAt": 1775739471163
+    },
+    {
+      "createdAt": 1775739340441,
+      "description": "循环结束",
+      "id": -1775739340442,
+      "name": "循环任务",
+      "param": "{\"isEnd\":true}",
+      "showDynamicIsland": true,
+      "type": "LOOP",
+      "updatedAt": 1775739340441
+    }
+  ],
+  "version": "1.0",
+  "workflow": {
+    "conditionIds": [
+      -1775739310820
+    ],
+    "config": {
+      "continueOnTaskFailure": false,
+      "delayMilliseconds": 1000,
+      "executeOnlyOnFirstScreenOn": false,
+      "showDynamicIsland": true,
+      "tags": []
+    },
+    "createdAt": 1775739501549,
+    "enabled": true,
+    "id": 2,
+    "name": "露营模式期间-保持10分钟外循环30分钟内循环",
+    "taskIds": [
+      -1775739340440,
+      -1775739401575,
+      -1775739445189,
+      -1775739425207,
+      -1775739471163,
+      -1775739340442
+    ],
+    "triggerConditionId": -1775739310820,
+    "triggerParameterJson": "{\"areaId\":0,\"compareType\":\"EQUAL\",\"compareValue\":\"5\",\"dataType\":\"INT32\",\"propId\":557846396,\"propName\":\"HZ_USER_SCENE_MODE_SET\"}",
+    "updatedAt": 1775739501549
+  }
+}

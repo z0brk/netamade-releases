@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sounds": [
+    {
+      "id": "sound-upgrade-notice",
+      "name": "音频中心升级装修中，请更新美式",
+      "filename": "升级公告.mp3",
+      "tags": [
+        "公告"
+      ],
+      "file": "/sound-upgrade-notice/notice.mp3",
+      "md5sum": "00000000000000000000000000000000",
+      "filesize": 0,
+      "updateTime": "2026-10-20T14:02:08Z"
+    }
+  ]
+}
